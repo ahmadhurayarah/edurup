@@ -6,7 +6,7 @@ import { ThemeProvider } from "@/components/providers/theme-provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Placement Booster",
+  title: "Edurup",
   description: "",
   icons: {
     icon: [
