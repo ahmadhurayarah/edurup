@@ -65,7 +65,7 @@ export const Navbar = () => {
     // },
     // { label: "Data Science", href: "/data-science" },
     { label: "Digital Marketing", href: "/digital-marketing" },
-    // { label: "Business Development", href: "/business-development" },
+    { label: "Mern Development", href: "/mern-stack-developer-course" },
     // { label: "Finance Analyst", href: "/finance-analyst" },
     // { label: "Python", href: "/python" },
   ];

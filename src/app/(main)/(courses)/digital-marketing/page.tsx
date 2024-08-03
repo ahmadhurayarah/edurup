@@ -22,7 +22,6 @@ const page = () => {
         <Learning />
         <Faculty />
         <Language />
-        
         <PlacementAssistance />
         <Faq />
       </div>
