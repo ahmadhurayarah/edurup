@@ -82,14 +82,14 @@ export const Navbar = () => {
           <Link href="/">
             <div className="w-[8.5rem] sm:hidden">
               <Image
-                src="/Updated-04.png"
+                src="/logo_dark.png"
                 height="210"
                 width="210"
                 alt="logo"
                 className="object-contain hidden dark:block"
               />
               <Image
-                src="/Updated-02.png"
+                src="/logo_light.png"
                 height="210"
                 width="210"
                 alt="logo"
@@ -98,14 +98,14 @@ export const Navbar = () => {
             </div>
             <div className="hidden sm:block">
               <Image
-                src="/Updated-04.png"
+                src="/logo_dark.png"
                 height="210"
                 width="210"
                 alt="logo"
                 className="object-contain hidden dark:block"
               />
               <Image
-                src="/Updated-02.png"
+                src="/logo_light.png"
                 height="210"
                 width="210"
                 alt="logo"
