@@ -44,7 +44,7 @@ const Footer = () => {
     <>
       <div className="p-4 sm:p-12 dark:bg-dark bg-primary  grid justify-center  grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 space-y-3 sm:space-y-0">
         <div className="pl-0 sm:pl-[3rem] ">
-          <h4 className="font-bold text-lg mb-4">Placement Booster</h4>
+          <h4 className="font-bold text-lg mb-4">Edurup</h4>
           <p>
             Briadge Archade,
             <br />
@@ -117,13 +117,13 @@ const Footer = () => {
         <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 ">
           <div className=" col-span-1 text-center sm:text-left">
             <p className="sm:text-lg ">
-              &copy; Copyright 2024 Placement Booster. All Rights Reserved{" "}
+              &copy; Copyright 2024 Edurup. All Rights Reserved{" "}
             </p>
           </div>
           <div className="block sm:hidden h-3"></div>
           <div className="col-span-1 text-center sm:text-right">
             <p className="sm:text-lg">
-              Developed with ❤️ by{" "}
+              Developed by{" "}
               <strong>
                 <Link
                   href="https://www.linkedin.com/in/ahmadhurayarah/"

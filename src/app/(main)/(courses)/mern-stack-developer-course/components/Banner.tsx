@@ -13,6 +13,7 @@ import { ArrowRight, Flame } from "lucide-react";
 import React from "react";
 import Image from "next/image";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import Link from "next/link";
 
 const images = [
   {
@@ -86,14 +87,14 @@ const Banner = () => {
                 </div>
 
                 <div className="mt-3 hidden sm:block">
-                  <a href="/path/to/your-brochure.pdf" download>
+                  <Link href="Brochures/Web Development.pdf" download>
                     <Button
                       variant="fg"
                       className="border h-8 sm:h-11 sm:rounded-md sm:px-8 text-sm sm:text-[1.0rem] hover:border-fg hover:text-fg text-black hover:bg-dark transition-colors"
                     >
                       Download Brochure
                     </Button>
-                  </a>
+                  </Link>
                   <Button
                     variant="bg"
                     className="ml-4 sm:ml-10 border border-fg dark:border-fg h-8 sm:h-11 sm:rounded-md sm:px-8 text-sm sm:text-[1.0rem] text-fg hover:text-black hover:bg-fg transition-colors dark:hover:bg-fg
@@ -104,12 +105,14 @@ const Banner = () => {
                   </Button>
                 </div>
                 <div className="my-2 flex items-center justify-center sm:hidden">
-                  <Button
-                    variant="fg"
-                    className="border h-8 sm:h-11 sm:rounded-md sm:px-8 text-sm sm:text-[1.0rem] border-fg text-black hover:border-white hover:text-white hover:bg-dark transition-colors "
-                  >
-                    Download Brochure
-                  </Button>
+                  <Link href="Brochures/Web Development.pdf" download>
+                    <Button
+                      variant="fg"
+                      className="border h-8 sm:h-11 sm:rounded-md sm:px-8 text-sm sm:text-[1.0rem] border-fg text-black hover:border-white hover:text-white hover:bg-dark transition-colors "
+                    >
+                      Download Brochure
+                    </Button>
+                  </Link>
                   <Button
                     variant="bg"
                     className="ml-4 sm:ml-10 border h-8 sm:h-11 sm:rounded-md sm:px-8 text-sm sm:text-[1.0rem] border-fg text-fg hover:text-white hover:bg-fg transition-colors dark:hover:bg-fg"
