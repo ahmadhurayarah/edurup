@@ -79,7 +79,7 @@ export const Navbar = () => {
       >
         <div className="flex items-center justify-center ">
           <div className="block h-[5.6rem] w-2 sm:hidden"></div>
-          <Link href="/">
+          <Link href="/" className="mr-0 sm:mr-6">
             <div className="w-[8.5rem] sm:hidden">
               <Image
                 src="/logo_dark.png"
@@ -99,15 +99,15 @@ export const Navbar = () => {
             <div className="hidden sm:block">
               <Image
                 src="/logo_dark.png"
-                height="210"
-                width="210"
+                height="150"
+                width="150"
                 alt="logo"
                 className="object-contain hidden dark:block"
               />
               <Image
                 src="/logo_light.png"
-                height="210"
-                width="210"
+                height="150"
+                width="150"
                 alt="logo"
                 className="object-contain dark:hidden"
               />
