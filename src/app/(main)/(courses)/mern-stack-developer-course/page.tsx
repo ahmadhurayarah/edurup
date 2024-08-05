@@ -4,6 +4,7 @@ import CourseInfo from "./components/CourseInfo";
 import Company from "./components/Company";
 import CourseOverview from "./components/CourseOverview";
 import CareerSteps from "./components/CareerSteps";
+import SkillsAndTools from "./components/SkillsAndTools";
 const page = () => {
   return (
     <>
@@ -13,6 +14,7 @@ const page = () => {
         <Company />
         <CourseOverview />
         <CareerSteps />
+        <SkillsAndTools/>
       </div>
     </>
   );

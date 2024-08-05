@@ -5,10 +5,9 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Separator } from "@/components/ui/separator";
+import Autoplay from "embla-carousel-autoplay";
 
 const CareerSteps = () => {
   const steps = [
@@ -50,6 +49,10 @@ const CareerSteps = () => {
     },
   ];
 
+  const plugin = React.useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: false })
+  );
+
   return (
     <div>
       <div className="py-10 bg-white text-dark">
@@ -57,7 +60,7 @@ const CareerSteps = () => {
           <h2 className="text-2xl sm:text-4xl font-semibold text-center mb-8">
             Start Your IT Career in 3 Steps
           </h2>
-          <div className="hidden sm:flex justify-between">
+          <div className="hidden sm:flex justify-between ">
             {steps.map((step, index) => (
               <div
                 key={index}
@@ -87,21 +90,30 @@ const CareerSteps = () => {
                     ))}
                   </div>
                 </div>
-                <Carousel className="w-full flex justify-center items-center">
+                <Carousel
+                  plugins={[plugin.current]}
+                  opts={{
+                    align: "start",
+                    loop: true,
+                  }}
+                  className="w-full flex justify-center items-center "
+                >
                   <CarouselContent>
                     {step.carouselImages.map((imgSrc, idx) => (
-                      <CarouselItem key={idx}>
+                      <CarouselItem
+                        key={idx}
+                        className="flex justify-center items-center"
+                      >
                         <Image
                           src={imgSrc}
                           alt={`Project ${idx + 1}`}
                           width={300}
                           height={200}
-                          className="rounded-md"
+                          className="rounded-md "
                         />
                       </CarouselItem>
                     ))}
                   </CarouselContent>
-      
                 </Carousel>
               </div>
             ))}
@@ -137,10 +149,20 @@ const CareerSteps = () => {
                       ))}
                     </div>
                   </div>
-                  <Carousel className="w-full">
+                  <Carousel
+                    plugins={[plugin.current]}
+                    opts={{
+                      align: "start",
+                      loop: true,
+                    }}
+                    className="w-full"
+                  >
                     <CarouselContent>
                       {step.carouselImages.map((imgSrc, idx) => (
-                        <CarouselItem key={idx}>
+                        <CarouselItem
+                          key={idx}
+                          className="flex justify-center items-center"
+                        >
                           <Image
                             src={imgSrc}
                             alt={`Project ${idx + 1}`}
@@ -151,7 +173,6 @@ const CareerSteps = () => {
                         </CarouselItem>
                       ))}
                     </CarouselContent>
-                
                   </Carousel>
                 </div>
               ))}
