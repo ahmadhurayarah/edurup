@@ -6,7 +6,7 @@ import { ThemeProvider } from "@/components/providers/theme-provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Esdurup - Empowering Your Future",
+  title: "Edurup - Empowering Your Future",
   description:
     "Edurup offers top-notch courses and training programs to help you achieve your career goals. Join us to learn from industry experts and get job-ready skills in the most sought-after fields.",
   keywords: [
