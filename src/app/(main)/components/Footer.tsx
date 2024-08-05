@@ -12,15 +12,13 @@ import {
 import { Button } from "@/components/ui/button";
 
 const courses = [
-  {
-    label: "Frontend Web",
-    href: "/front-end-web",
-  },
-  { label: "Data Science", href: "/data-science" },
   { label: "Digital Marketing", href: "/digital-marketing" },
-  { label: "Business Development", href: "/business-development" },
-  { label: "Finance Analyst", href: "/finance-analyst" },
-  { label: "Python", href: "/python" },
+  { label: "Mern Development", href: "/mern-stack-developer-course" },
+  // { label: "Data Science", href: "/data-science" },
+  //
+  //   { label: "Business Development", href: "/business-development" },
+  //   { label: "Finance Analyst", href: "/finance-analyst" },
+  //   { label: "Python", href: "/python" },
 ];
 
 const company = [
