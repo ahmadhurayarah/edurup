@@ -7,6 +7,8 @@ import CareerSteps from "./components/CareerSteps";
 import SkillsAndTools from "./components/SkillsAndTools";
 import Projects from "./components/Projects";
 import JobRoles from "./components/JobRoles";
+import DoubtResolution from "./components/DoubtResolution";
+import ReadMore from "./components/ReadMore";
 const page = () => {
   return (
     <>
@@ -19,6 +21,8 @@ const page = () => {
         <SkillsAndTools />
         <Projects />
         <JobRoles />
+        <DoubtResolution />
+        <ReadMore />
       </div>
     </>
   );
