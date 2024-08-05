@@ -6,15 +6,15 @@ import { Separator } from "@/components/ui/separator";
 
 const DoubtResolution = () => {
   return (
-    <div className="bg-[#E9F4ED] py-10">
+    <div className="bg-[#E9F4ED] py-10 text-dark ">
       <div className="container mx-auto px-4">
         <div className="text-center sm:text-left">
-          <h2 className="text-2xl sm:text-4xl font-semibold mb-4">
+          <h2 className="text-2xl text-dark sm:text-4xl font-semibold mb-4">
             Get Your Doubts Clarified
             <br />
             Faster than in Offline Classes
           </h2>
-          <p className="text-xl mb-8">
+          <p className="text-dark text-xl mb-8">
             Our highly motivated team of experts are ready to help you with your
             doubts from <strong>9AM – 9PM Everyday</strong>
           </p>
