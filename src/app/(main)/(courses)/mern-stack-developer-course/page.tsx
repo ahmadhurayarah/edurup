@@ -5,6 +5,8 @@ import Company from "./components/Company";
 import CourseOverview from "./components/CourseOverview";
 import CareerSteps from "./components/CareerSteps";
 import SkillsAndTools from "./components/SkillsAndTools";
+import Projects from "./components/Projects";
+import JobRoles from "./components/JobRoles";
 const page = () => {
   return (
     <>
@@ -14,7 +16,9 @@ const page = () => {
         <Company />
         <CourseOverview />
         <CareerSteps />
-        <SkillsAndTools/>
+        <SkillsAndTools />
+        <Projects />
+        <JobRoles />
       </div>
     </>
   );
