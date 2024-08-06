@@ -68,16 +68,13 @@ const Banner = () => {
                     <div>
                       <CheckCircle color="#6ed290" />
                     </div>
-                    <div> Live classes 3 days/week + bonus sessions</div>
+                    <div> Live classes 4 days/week + bonus sessions</div>
                   </div>
                   <div className="flex gap-x-2">
                     <div>
                       <CheckCircle color="#6ed290" />
                     </div>
-                    <div>
-                      Top rated certification in Data Science & Artificial
-                      Intelligence
-                    </div>
+                    <div>Top rated certification Bootcamps</div>
                   </div>
                 </div>
 
