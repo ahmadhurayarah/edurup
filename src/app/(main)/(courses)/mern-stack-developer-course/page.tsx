@@ -9,6 +9,7 @@ import Projects from "./components/Projects";
 import JobRoles from "./components/JobRoles";
 import DoubtResolution from "./components/DoubtResolution";
 import ReadMore from "./components/ReadMore";
+import Fee from "./components/Fee";
 const page = () => {
   return (
     <>
@@ -23,6 +24,7 @@ const page = () => {
         <JobRoles />
         <DoubtResolution />
         <ReadMore />
+        <Fee />
       </div>
     </>
   );
