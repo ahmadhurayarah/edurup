@@ -18,7 +18,7 @@ import React from "react";
 const FeaturedCourses = () => {
   const softwareCourses = [
     {
-      title: "Certification in Frontend web",
+      title: "",
       description:
         "Become a job-ready Frontend web professional in 20 weeks. Join the largest tech community in India. Pay only after you get a job above 3.6 LPA",
       duration: "4 Months",
@@ -26,15 +26,7 @@ const FeaturedCourses = () => {
       classes: "Part-time online live classes",
       job: "100% Job Assurance",
     },
-    {
-      title: "Certification in Frontend web",
-      description:
-        "Become a job-ready Frontend web professional in 20 weeks. Join the largest tech community in India. Pay only after you get a job above 3.6 LPA",
-      duration: "4 Months",
-      graduation: "For Final year",
-      classes: "Part-time online live classes",
-      job: "100% Job Assurance",
-    },
+
     {
       title: "Certification in Automation Testing",
       description:
