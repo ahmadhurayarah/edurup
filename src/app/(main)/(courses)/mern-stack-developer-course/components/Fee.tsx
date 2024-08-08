@@ -25,7 +25,7 @@ const Fee = () => {
               </h3>
             </div>
             <div className="text-gray-600 dark:text-gray-300 font-medium">
-              Non-refundable Upfront Fee <br />
+              
               EMI starts from 10,000 per month
             </div>
             <div className="text-gray-600 dark:text-gray-300 font-medium"></div>
