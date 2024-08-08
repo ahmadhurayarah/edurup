@@ -16,7 +16,6 @@ export default function Home() {
         <Faculty />
         <Outcomes />
         <News />
-        
       </div>
     </>
   );

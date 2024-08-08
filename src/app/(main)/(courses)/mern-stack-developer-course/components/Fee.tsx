@@ -14,17 +14,18 @@ const Fee = () => {
       <div className="w-full p-[2rem] flex flex-col items-center bg-primary">
         <div className="mb-4">
           <h3 className="text-2xl sm:text-5xl font-semibold text-center text-primary ">
-            Pay After <span className="text-fg">Placement</span>
+            Course <span className="text-fg">Fee</span>
           </h3>
         </div>
         <div className="flex flex-col sm:flex-row justify-center items-center space-x-0 sm:space-x-20">
           <div className="px-[2rem] py-[2rem] sm:px-[4rem] sm:py-[4rem] border border-fg rounded-3xl shadow-2xl dark:shadow-fg">
             <div className="mb-2">
               <h3 className="text-2xl sm:text-3xl text-primary ">
-                ₹ 35,555 (+GST)
+                ₹ 50,000 (+GST)
               </h3>
             </div>
             <div className="text-gray-600 dark:text-gray-300 font-medium">
+              Non-refundable Upfront Fee <br />
               EMI starts from 10,000 per month
             </div>
             <div className="text-gray-600 dark:text-gray-300 font-medium"></div>

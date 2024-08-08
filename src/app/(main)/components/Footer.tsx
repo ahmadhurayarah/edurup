@@ -44,9 +44,9 @@ const Footer = () => {
         <div className="pl-0 sm:pl-[3rem] ">
           <h4 className="font-bold text-lg mb-4">Edurup</h4>
           <p>
-            Briadge Archade,
+            Salarpuria Touch Stone,
             <br />
-            Mahadevpura Bangalore - 560048
+            Kadbuseenahalli - 560103
           </p>
           <div className="flex flex-row items-center mt-5">
             <h5 className="mr-4 text-xl font-semibold">Queries ?</h5>

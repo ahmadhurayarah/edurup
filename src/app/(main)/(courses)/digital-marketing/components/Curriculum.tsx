@@ -7,85 +7,93 @@ import {
 
 const curriculum = [
   {
-    title: "Fundamental of Marketing",
+    title: "Understanding Marketing Fundamentals",
     description: [
-      "Introduction to Marketing",
-      "Segmentation, Targeting and Positioning",
-      "Marketing Management through the Concept of 4Ps",
-      "Branding, Brand Equity, Brand Models with Examples",
+      "Fundamentals of marketing",
+      "Different marketing types",
+      "What is Digital Marketing",
     ],
-  },
-  {
-    title: "Designing and Building a Web Presence",
-    description: [
-      "Elements & Design of a Website",
-      "Information Architecture and Wireframes",
-      "Visual Design, Implementation and Testing",
-      "The Hook Framework",
-    ],
-  },
-  {
-    title: "Blog Creation Project",
-    description: [
-      "Introduction to Plesk & Wordpress",
-      "Blog Guidelines",
-      "Integrating Analytics",
-    ],
-  },
-  {
-    title: "Social Media Marketing (SMM)",
-    description: [
-      "Popular Social Media Channels",
-      "Social Media Plan",
-      "Social Media Execution Strategies - Paid & Organic",
-      "Online Reputation Management",
-      "Social Media Ad Formats",
-      "Measuring Social Media Performance",
-      "Organic & Paid YouTube Marketing",
-    ],
-  },
-  {
-    title: "Social Media Marketing Live Project",
-    description: ["Facebook Live Campaign", "Troubleshooting"],
   },
   {
     title: "Search Engine Optimization (SEO)",
     description: [
-      "SEO Basics",
-      "Keyword Strategy",
-      "SEO Strategy & SEO Audit",
-      "Content Optimization",
-      "Technical Optimization",
-      "Authority",
-      "Keyword Performance",
-      "Future of SEO - Video, Voice, Mobile, Local",
+      "Introduction to SEO",
+      "On-page optimization",
+      "Off-page optimization",
+      "Search console",
+      "Google My Business",
     ],
   },
   {
-    title: "SEO Live Project",
-    description: ["SEO for Blogs"],
-  },
-  {
-    title: "Tools & Resources",
+    title: "Social Media Marketing & Management",
     description: [
-      "Facebook Ads",
-      "Twitter Analytics",
-      "Hootsuite",
-      "Hubspot",
-      "SMM Tools",
-      "Google Search Console",
-      "Keyword Research Tools",
-      "SEO Tools",
+      "Instagram",
+      "Facebook",
+      "LinkedIn",
+      "Google Business Account",
+      "Quora, Medium, Website Blogs",
     ],
   },
   {
-    title: "Google Adwords",
+    title: "PPC Ads - Meta & Google Ads",
     description: [
-      "Creating an Search, Display, Yourtube Campaigns",
-      "Budgeting, Bidding, Keyword Match & Conversion Tracking",
-      "Campaign Optimisition",
-      "Reporting Campaigns",
-      "Adword Metrics",
+      "Introduction to Meta Ads",
+      "Setting up a Business Manager and Ad Accounts",
+      "Types of Meta Ads & Campaigns",
+      "Audience Targeting",
+      "Set your First Facebook Ad (Campaign Structure)",
+    ],
+  },
+  {
+    title: "Meta Ads",
+    description: [
+      "Meta Pixel, Events & Dataset",
+      "Conversion API",
+      "Retargeting, Custom Audience & Lookalike audience",
+      "Different Meta Ads Marketing Strategies",
+    ],
+  },
+  {
+    title: "Google Ads",
+    description: [
+      "Introduction to Google Ads",
+      "Setting up a Google Ads account",
+      "Types of Google Ads",
+      "YouTube Ads",
+      "Audience Targeting",
+      "Set your First Google Ad Campaign",
+    ],
+  },
+  {
+    title: "Advanced Google Ads",
+    description: [
+      "Conversion Tracking",
+      "Google Ads Analytics",
+      "Google Tag Manager",
+    ],
+  },
+  {
+    title: "LinkedIn & Email Marketing",
+    description: [
+      "LinkedIn Ads",
+      "LinkedIn Company Pages",
+      "LinkedIn Sales & Lead Generation",
+      "LinkedIn Analytics",
+      "Introduction to Email Marketing",
+      "Email Campaign Types",
+      "Email Design and Content Creation",
+      "Email Automation and Sequences",
+      "Deliverability and Spam Compliance",
+    ],
+  },
+  {
+    title: "Analytics Tools",
+    description: [
+      "Google Analytics",
+      "Microsoft Clarity",
+      "HotJar",
+      "Semrush - SEO",
+      "AI tools for Analytics",
     ],
   },
 ];
@@ -96,7 +104,7 @@ const Curriculum = () => {
       <div className="w-full flex py-[2rem] flex-col justify-center bg-gradient-to-tr to-green-300 from-blue-300">
         <div className=" flex flex-col">
           <h3 className="text-xl sm:text-5xl font-semibold text-center text-primary dark:text-dark">
-            Our Course curriculum is Developed
+            Our Course Curriculum is Developed
           </h3>
           <h3 className="mt-1 mb-5 sm:mt-5 sm:mb-10 text-center text-xl sm:text-5xl font-semibold text-primary dark:text-dark">
             for College Students like you!
