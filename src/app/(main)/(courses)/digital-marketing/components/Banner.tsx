@@ -30,16 +30,16 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const images = [
   {
-    src: "https://github.com/shadcn.png",
-    alt: "i",
+    src: "/person3.jpg",
+    alt: "student",
   },
   {
-    src: "https://github.com/shadcn.png",
-    alt: "i",
+    src: "/person1.jpg",
+    alt: "student",
   },
   {
-    src: "https://github.com/shadcn.png",
-    alt: "i",
+    src: "/person2.jpg",
+    alt: "student",
   },
 ];
 

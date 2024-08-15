@@ -17,16 +17,16 @@ import Link from "next/link";
 
 const images = [
   {
-    src: "https://github.com/shadcn.png",
-    alt: "i",
+    src: "/person3.jpg",
+    alt: "student",
   },
   {
-    src: "https://github.com/shadcn.png",
-    alt: "i",
+    src: "/person1.jpg",
+    alt: "student",
   },
   {
-    src: "https://github.com/shadcn.png",
-    alt: "i",
+    src: "/person2.jpg",
+    alt: "student",
   },
 ];
 
@@ -70,7 +70,7 @@ const Banner = () => {
                       <div key={index} className="">
                         <Avatar className=" h-[2rem] w-[2rem] sm:h-[3rem] sm:w-[3rem] hover:scale-125 transition-transform duration-300 ease-in-out">
                           <AvatarImage src={image.src} />
-                          <AvatarFallback>Faculty</AvatarFallback>
+                          <AvatarFallback>Student</AvatarFallback>
                         </Avatar>
                       </div>
                     ))}
@@ -238,7 +238,7 @@ const Banner = () => {
                     By proceeding further, I agree to the Terms & Conditions and
                     Privacy Policy of edurup
                   </div>
-                  <div className="ml-2 w-full text-[0.6rem] sm:hidden min-[499px]:text-[0.7rem]">
+                  <div className="ml-2 w-full text-[0.1rem] sm:hidden min-[499px]:text-[0.7rem]">
                     By proceeding further, I agree to the Terms & Conditions and
                     Privacy Policy of edurup
                   </div>
