@@ -10,8 +10,9 @@ import {
 } from "@/components/ui/select";
 import { Separator } from "@/components/ui/separator";
 import { ArrowRight, Flame } from "lucide-react";
-import React from "react";
-import Image from "next/image";
+import React, { useState } from "react";
+import axios from "axios";
+import toast from "react-hot-toast";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Link from "next/link";
 
@@ -31,6 +32,42 @@ const images = [
 ];
 
 const Banner = () => {
+  const [fullName, setFullName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [phoneNumber, setPhoneNumber] = useState<string>("");
+  const [highestQualification, setHighestQualification] = useState<string>("");
+  const [nativeState, setNativeState] = useState<string>("");
+
+  // State for handling form submission
+  const [loading, setLoading] = useState<boolean>(false);
+  const [success, setSuccess] = useState<boolean | null>(null);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    toast.promise(
+      axios.post("/api/mernStack", {
+        fullName,
+        email,
+        phoneNumber,
+        highestQualification,
+        nativeState,
+      }),
+      {
+        loading: "Sending message...",
+        success: () => {
+          setFullName("");
+          setEmail("");
+          setPhoneNumber("");
+          setHighestQualification("");
+          setNativeState("");
+          return "Message sent successfully!";
+        },
+        error: "Failed to send message!",
+      }
+    );
+  };
+
   return (
     <>
       <div
@@ -130,23 +167,32 @@ const Banner = () => {
               <h4 className="text-lg sm:text-3xl text-center mb-2 sm:mb-6">
                 Book A Live Demo For Free!
               </h4>
-              <form>
+              <form onSubmit={handleSubmit}>
                 <Input
                   className="border h-[2.8rem] sm:h-[3rem] text-sm sm:text-[1.05rem] p-2 w-full mb-2 sm:mb-4 rounded-md"
                   type="text"
                   placeholder="Full Name"
+                  value={fullName}
+                  onChange={(e) => setFullName(e.target.value)}
+                  required
                 />
                 <Input
                   className="border h-[2.8rem] sm:h-[3rem] text-sm sm:text-[1.05rem] p-2 w-full mb-2 sm:mb-4 rounded-md"
                   type="email"
                   placeholder="Email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
                 />
                 <Input
-                  className="border h-[2.8rem] sm:h-[3rem] text-sm sm:text-[1.05rem] p-2 w-full mb-2 sm:mb-4 rounded-md dark:cursor-r"
-                  type="phone"
+                  className="border h-[2.8rem] sm:h-[3rem] text-sm sm:text-[1.05rem] p-2 w-full mb-2 sm:mb-4 rounded-md"
+                  type="tel"
                   placeholder="Mobile Number (Whatsapp Number)"
+                  value={phoneNumber}
+                  onChange={(e) => setPhoneNumber(e.target.value)}
+                  required
                 />
-                <Select>
+                <Select onValueChange={setHighestQualification}>
                   <SelectTrigger className="border h-[2.8rem] sm:h-[3rem] text-sm text-muted-foreground sm:text-[1.05rem] p-2 w-full mb-2 sm:mb-4 rounded-md dark:cursor-r">
                     <SelectValue
                       placeholder="Highest Qualification"
@@ -155,16 +201,22 @@ const Banner = () => {
                   </SelectTrigger>
 
                   <SelectContent>
-                    <SelectItem value="1">Graduation (Completed)</SelectItem>
-                    <SelectItem value="2">Graduation (Ongoing)</SelectItem>
-                    <SelectItem value="3">
+                    <SelectItem value="Graduation (Completed)">
+                      Graduation (Completed)
+                    </SelectItem>
+                    <SelectItem value="Graduation (Ongoing)">
+                      Graduation (Ongoing)
+                    </SelectItem>
+                    <SelectItem value="Post Graduation (Completed)">
                       Post Graduation (Completed)
                     </SelectItem>
-                    <SelectItem value="4">Post Graduation (Ongoing)</SelectItem>
-                    <SelectItem value="5">12th/Diploma</SelectItem>
+                    <SelectItem value="Post Graduation (Ongoing)">
+                      Post Graduation (Ongoing)
+                    </SelectItem>
+                    <SelectItem value="12th/Diploma">12th/Diploma</SelectItem>
                   </SelectContent>
                 </Select>
-                <Select>
+                <Select onValueChange={setNativeState}>
                   <SelectTrigger className="border h-[2.8rem] sm:h-[3rem] text-sm text-muted-foreground sm:text-[1.05rem] p-2 w-full mb-2 sm:mb-4 rounded-md dark:cursor-r">
                     <SelectValue placeholder="Native State" className="" />
                   </SelectTrigger>
@@ -258,7 +310,8 @@ const Banner = () => {
                 <Button
                   type="submit"
                   variant="fg"
-                  className="border h-8 sm:h-11 sm:rounded-md sm:px-8 text-sm sm:text-[1.0rem] border-fg text-black hover:border-white hover:text-white hover:bg-dark transition-colors "
+                  className="border h-8 sm:h-11 sm:rounded-md sm:px-8 text-sm sm:text-[1.0rem] border-fg text-black hover:border-white hover:text-white hover:bg-dark transition-colors"
+                  disabled={loading}
                 >
                   Get it now
                 </Button>

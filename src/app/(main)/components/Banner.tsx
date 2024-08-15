@@ -1,10 +1,41 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 import { ArrowRight, CheckCircle } from "lucide-react";
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
+import toast from "react-hot-toast";
 
 const Banner = () => {
+  const [fullName, setFullName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [phoneNumber, setPhoneNumber] = useState<string>("");
+  const [loading, setLoading] = useState<boolean>(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+
+    toast.promise(
+      axios.post("/api/liveDemo", {
+        fullName,
+        email,
+        phoneNumber,
+      }),
+      {
+        loading: "Sending message...",
+        success: () => {
+          setFullName("");
+          setEmail("");
+          setPhoneNumber("");
+          return "Message sent successfully!";
+        },
+        error: "Failed to send message!",
+      }
+    );
+  };
+
   return (
     <>
       <div
@@ -118,21 +149,30 @@ const Banner = () => {
               <h4 className="text-lg sm:text-3xl text-center mb-2 sm:mb-6">
                 Book A Live Demo For Free!
               </h4>
-              <form>
+              <form onSubmit={handleSubmit}>
                 <Input
                   className="border h-[2.8rem] sm:h-[3rem] text-sm sm:text-[1.05rem] p-2 w-full mb-2 sm:mb-4 rounded-md"
                   type="text"
                   placeholder="Full Name"
+                  value={fullName}
+                  onChange={(e) => setFullName(e.target.value)}
+                  required
                 />
                 <Input
                   className="border h-[2.8rem] sm:h-[3rem] text-sm sm:text-[1.05rem] p-2 w-full mb-2 sm:mb-4 rounded-md"
                   type="email"
                   placeholder="Email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
                 />
                 <Input
-                  className="border h-[2.8rem] sm:h-[3rem] text-sm sm:text-[1.05rem] p-2 w-full mb-2 sm:mb-4 rounded-md dark:cursor-r"
-                  type="phone"
+                  className="border h-[2.8rem] sm:h-[3rem] text-sm sm:text-[1.05rem] p-2 w-full mb-2 sm:mb-4 rounded-md"
+                  type="tel"
                   placeholder="Phone Number"
+                  value={phoneNumber}
+                  onChange={(e) => setPhoneNumber(e.target.value)}
+                  required
                 />
 
                 <div className="flex flex-row items-center mb-0 sm:mb-4 ">
@@ -147,17 +187,18 @@ const Banner = () => {
                     />
                   </div>
                   <div className="ml-2 hidden sm:block">
-                    By clicking Sign Up, you agree to our Terms & Conditions
+                    By clicking, you agree to our Terms & Conditions
                   </div>
                   <div className="ml-2 w-full text-[0.6rem] sm:hidden min-[499px]:text-[0.7rem]">
-                    By clicking Sign Up, you agree to our Terms & Conditions
+                    By clicking, you agree to our Terms & Conditions
                   </div>
                 </div>
 
                 <Button
                   type="submit"
                   variant="fg"
-                  className="border h-8 sm:h-11 sm:rounded-md sm:px-8 text-sm sm:text-[1.0rem] border-fg text-black hover:border-white hover:text-white hover:bg-dark transition-colors "
+                  className="border h-8 sm:h-11 sm:rounded-md sm:px-8 text-sm sm:text-[1.0rem] border-fg text-black hover:border-white hover:text-white hover:bg-dark transition-colors"
+                  disabled={loading}
                 >
                   Get it now
                 </Button>

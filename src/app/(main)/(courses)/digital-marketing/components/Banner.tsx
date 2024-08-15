@@ -22,9 +22,12 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { Flame } from "lucide-react";
-import React from "react";
+import toast from "react-hot-toast";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+
+import React, { useState } from "react";
+import axios from "axios"; // Import axios
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
@@ -44,6 +47,43 @@ const images = [
 ];
 
 const Banner = () => {
+  // State for form inputs
+  const [fullName, setFullName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [phoneNumber, setPhoneNumber] = useState<string>("");
+  const [highestQualification, setHighestQualification] = useState<string>("");
+
+  // State for handling form submission
+  const [loading, setLoading] = useState<boolean>(false);
+  const [success, setSuccess] = useState<boolean | null>(null);
+
+  // Form submission handler
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+
+    toast.promise(
+      axios.post("/api/digitalMarketing", {
+        fullName,
+        email,
+        phoneNumber,
+        highestQualification,
+      }),
+      {
+        loading: "Sending message...",
+        success: () => {
+          setSuccess(true);
+          setFullName("");
+          setEmail("");
+          setPhoneNumber("");
+          setHighestQualification("");
+          return "Message sent successfully!";
+        },
+        error: "Failed to send message!",
+      }
+    );
+  };
+
   return (
     <>
       <div
@@ -137,54 +177,57 @@ const Banner = () => {
               <h4 className="text-lg sm:text-3xl text-center mb-2 sm:mb-6">
                 Book A Live Demo For Free!
               </h4>
-              <form>
+              <form onSubmit={handleSubmit}>
                 <Input
                   className="border h-[2.8rem] sm:h-[3rem] text-sm sm:text-[1.05rem] p-2 w-full mb-2 sm:mb-4 rounded-md"
                   type="text"
                   placeholder="Full Name"
+                  value={fullName}
+                  onChange={(e) => setFullName(e.target.value)}
+                  required
                 />
                 <Input
                   className="border h-[2.8rem] sm:h-[3rem] text-sm sm:text-[1.05rem] p-2 w-full mb-2 sm:mb-4 rounded-md"
                   type="email"
                   placeholder="Email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
                 />
                 <Input
-                  className="border h-[2.8rem] sm:h-[3rem] text-sm sm:text-[1.05rem] p-2 w-full mb-2 sm:mb-4 rounded-md dark:cursor-r"
+                  className="border h-[2.8rem] sm:h-[3rem] text-sm sm:text-[1.05rem] p-2 w-full mb-2 sm:mb-4 rounded-md"
                   type="phone"
                   placeholder="Phone Number"
+                  value={phoneNumber}
+                  onChange={(e) => setPhoneNumber(e.target.value)}
+                  required
                 />
-                <Select>
+                <Select onValueChange={setHighestQualification} required>
                   <SelectTrigger className="border h-[2.8rem] sm:h-[3rem] text-sm text-muted-foreground sm:text-[1.05rem] p-2 w-full mb-2 sm:mb-4 rounded-md dark:cursor-r">
-                    <SelectValue placeholder="Select" className="" />
+                    <SelectValue placeholder="Highest Qualification" />
                   </SelectTrigger>
-
                   <SelectContent>
-                    <SelectItem value="1">Graduation (Completed)</SelectItem>
-                    <SelectItem value="2">Graduation (Ongoing)</SelectItem>
-                    <SelectItem value="3">
+                    <SelectItem value="Graduation (Completed)">
+                      Graduation (Completed)
+                    </SelectItem>
+                    <SelectItem value="Graduation (Ongoing)">
+                      Graduation (Ongoing)
+                    </SelectItem>
+                    <SelectItem value="Post Graduation (Completed)">
                       Post Graduation (Completed)
                     </SelectItem>
-                    <SelectItem value="4">Post Graduation (Ongoing)</SelectItem>
-                    <SelectItem value="5">12th/Diploma</SelectItem>
+                    <SelectItem value="Post Graduation (Ongoing)">
+                      Post Graduation (Ongoing)
+                    </SelectItem>
+                    <SelectItem value="12th/Diploma">12th/Diploma</SelectItem>
                   </SelectContent>
                 </Select>
-
-                <div className="flex flex-row items-center mb-0 sm:mb-4 ">
-                  <div>
-                    <Flame className="text-r" />
-                  </div>
-                  <div className="ml-1 hidden sm:block">
-                    Limited Seats Available
-                  </div>
-                  <div className="ml-1 w-full text-[0.6rem] sm:hidden min-[499px]:text-[0.7rem]">
-                    Limited Seats Available
-                  </div>
-                </div>
 
                 <Button
                   type="submit"
                   variant="fg"
-                  className="border h-8 sm:h-11 sm:rounded-md sm:px-8 text-sm sm:text-[1.0rem] border-fg text-black hover:border-white hover:text-white hover:bg-dark transition-colors "
+                  className="border h-8 sm:h-11 sm:rounded-md sm:px-8 text-sm sm:text-[1.0rem] border-fg text-black hover:border-white hover:text-white hover:bg-dark transition-colors"
+                  disabled={loading}
                 >
                   Get it now
                 </Button>
