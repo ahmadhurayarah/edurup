@@ -196,7 +196,7 @@ const Banner = () => {
                 />
                 <Input
                   className="border h-[2.8rem] sm:h-[3rem] text-sm sm:text-[1.05rem] p-2 w-full mb-2 sm:mb-4 rounded-md"
-                  type="phone"
+                  type="tel"
                   placeholder="Phone Number"
                   value={phoneNumber}
                   onChange={(e) => setPhoneNumber(e.target.value)}

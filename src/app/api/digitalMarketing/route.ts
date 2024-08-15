@@ -14,7 +14,7 @@ async function sendEmail({ subject, body }: { subject: string; body: string }) {
 
   return transporter.sendMail({
     from: `"Digital Marketing Lead" <${MAIL_USER}>`,
-    to: "hurayarahsays@gmail.com", // Change this to the email where you want to receive the submissions
+    to: "therupeshneelam@gmail.com", // Change this to the email where you want to receive the submissions
     subject,
     html: body,
   });
