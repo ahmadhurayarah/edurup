@@ -189,13 +189,15 @@ export const Navbar = () => {
         </div>
         <div className="flex item-center justify-center ">
           <div className="flex gap-x-0 sm:gap-x-6 justify-center items-center">
-            <Button
-              variant="fg"
-              size="lg"
-              className="border text-[1.0rem] hover:border-fg hover:text-fg text-black hover:bg-dark transition-colors hidden xl:block"
-            >
-              Talk To A Counsellor ✆
-            </Button>
+            <Link href="https://wa.me/+919100827810" target="_blank">
+              <Button
+                variant="fg"
+                size="lg"
+                className="border text-[1.0rem] hover:border-fg hover:text-fg text-black hover:bg-dark transition-colors hidden xl:block"
+              >
+                Talk To A Counsellor ✆
+              </Button>
+            </Link>
             <ModeToggle />
           </div>
         </div>
