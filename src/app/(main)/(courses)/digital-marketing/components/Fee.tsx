@@ -21,7 +21,7 @@ const Fee = () => {
           <div className="px-[2rem] py-[2rem] sm:px-[4rem] sm:py-[4rem] border border-fg rounded-3xl shadow-2xl dark:shadow-fg">
             <div className="mb-2">
               <h3 className="text-2xl sm:text-3xl text-primary ">
-                ₹ 1 Lac (+GST)
+                ₹ 50,000 (+GST)
               </h3>
             </div>
             <div className="text-gray-600 dark:text-gray-300 font-medium">
