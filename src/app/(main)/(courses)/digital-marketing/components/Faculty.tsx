@@ -23,34 +23,40 @@ const facultyData = [
     designation: "Chief Marketing officer",
     image: "/mentor3.jpg",
     subjects: ["Digital marketing", "Performance marketing"],
-    socialMedia: "linkedin",
-    url: "https://in.linkedin.com/in/neelam-rupesh",
+    // socialMedia: "linkedin",
+    // url: "https://in.linkedin.com/in/neelam-rupesh",
+    socialMedia: null,
+    url: null,
   },
-  {
-    name: "Sirija Neelam",
-    designation: "Data Scientist",
-    image: "/mentor1.jpeg",
-    subjects: [
-      "Python",
-      "Artificial Intelligence",
-      "Data science & Machine Learning",
-    ],
-    socialMedia: "linkedin",
-    url: "https://www.linkedin.com/in/sirija-devi-a35561160?trk=blended-typeahead",
-  },
+  // {
+  //   name: "Sirija Neelam",
+  //   designation: "Data Scientist",
+  //   image: "/mentor1.jpeg",
+  //   subjects: [
+  //     "Python",
+  //     "Artificial Intelligence",
+  //     "Data science & Machine Learning",
+  //   ],
+  //   // socialMedia: "linkedin",
+  //   // url: "https://www.linkedin.com/in/sirija-devi-a35561160?trk=blended-typeahead",
+  //   socialMedia: null,
+  //   url: null,
+  // },
   {
     name: "Mukesh Kumar",
     designation: "General Manager",
     image: "/mentor2.jpg",
     subjects: ["Digital strategy", "Product Marketing"],
-    socialMedia: "linkedin",
-    url: "https://www.linkedin.com/in/askmukesh?trk=blended-typeahead",
+    // socialMedia: "linkedin",
+    // url: "https://www.linkedin.com/in/askmukesh?trk=blended-typeahead",
+    socialMedia: null,
+    url: null,
   },
   {
-    name: "Shabudeen",
-    designation: "Sr Software engineer",
-    image: "/mentor4.jpg",
-    subjects: ["React js & Node JS", "Front end development"],
+    name: "Ahmad Hurayarah",
+    designation: "Faculty",
+    image: "/mentor5.jpg",
+    subjects: ["Next & Node JS", "Full Stack Developer"],
     socialMedia: null,
     url: null,
   },
@@ -62,7 +68,8 @@ const Faculty = () => {
       <div className="pt-[2rem] sm:pt-[2rem] flex flex-col items-center justify-center dark:bg-dark max-w-screen">
         <div className="px-[2rem]">
           <h1 className="text-2xl sm:text-5xl font-semibold text-center text-primary ">
-            Learn from Industry <span className="text-fg"> experts</span>
+            Faculty that brings out the <span className="text-fg"> best</span>{" "}
+            in you
           </h1>
         </div>
         <Carousel

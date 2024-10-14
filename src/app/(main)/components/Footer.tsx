@@ -119,7 +119,7 @@ const Footer = () => {
             </p>
           </div>
           <div className="block sm:hidden h-3"></div>
-          <div className="col-span-1 text-center sm:text-right">
+          {/* <div className="col-span-1 text-center sm:text-right">
             <p className="sm:text-lg">
               Developed by{" "}
               <strong>
@@ -131,7 +131,7 @@ const Footer = () => {
                 </Link>
               </strong>{" "}
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
     </>
