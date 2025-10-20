@@ -11,9 +11,15 @@ const feePoints = [
 
 const Fee = () => {
   return (
-    <section className="w-full py-16 bg-gray-50 dark:bg-gray-900 flex justify-center">
-      <div className="max-w-6xl w-full flex flex-col md:flex-row items-start gap-12 px-4">
+    <section className="w-full py-16 bg-gray-50 dark:bg-gray-900 flex flex-col items-center">
+      
+      {/* Section Heading */}
+      <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-12 text-center">
+        Post Graduate Program Fee
+      </h2>
 
+      <div className="max-w-6xl w-full flex flex-col md:flex-row items-start gap-12 px-4">
+        
         {/* Fee Card */}
         <div className="bg-gradient-to-br from-indigo-600 to-purple-600 text-white rounded-2xl shadow-xl p-8 flex flex-col items-center text-center w-full md:w-1/3 hover:scale-105 transition-transform duration-300">
           <p className="text-sm sm:text-base mb-2">PGP – 8 Months</p>
