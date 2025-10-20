@@ -16,17 +16,17 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import toast from "react-hot-toast";
 import axios from "axios";
 
-const images = [
-  { src: "/person3.jpg", alt: "student" },
-  { src: "/person1.jpg", alt: "student" },
-  { src: "/person2.jpg", alt: "student" },
+const students = [
+  { src: "/person3.jpg", alt: "Student 1" },
+  { src: "/person1.jpg", alt: "Student 2" },
+  { src: "/person2.jpg", alt: "Student 3" },
 ];
 
 const Banner = () => {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
-  const [highestQualification, setHighestQualification] = useState("");
+  const [qualification, setQualification] = useState("");
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -38,65 +38,51 @@ const Banner = () => {
         fullName,
         email,
         phoneNumber,
-        highestQualification,
+        highestQualification: qualification,
       }),
       {
-        loading: "Sending...",
+        loading: "Submitting...",
         success: () => {
           setFullName("");
           setEmail("");
           setPhoneNumber("");
-          setHighestQualification("");
+          setQualification("");
           setLoading(false);
           return "Message sent successfully!";
         },
-        error: "Failed to send message",
+        error: "Failed to submit",
       }
     );
   };
 
   return (
-    <section className="relative bg-primary dark:bg-dark py-16 sm:py-24 overflow-hidden">
-      {/* Gradient Background */}
-      <div
-        className="absolute inset-0 -z-10 transform-gpu blur-3xl"
-        aria-hidden="true"
-      >
-        <div
-          className="absolute top-1/4 left-1/4 w-[60rem] aspect-[1155/678] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 rotate-[30deg]"
-          style={{
-            clipPath:
-              "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-          }}
-        />
-      </div>
+    <section className="relative bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-gray-900 dark:to-gray-800 overflow-hidden py-16 sm:py-24">
+      {/* Animated Background Circles */}
+      <div className="absolute -top-32 -left-32 w-96 h-96 bg-indigo-300 opacity-20 rounded-full animate-pulse-slow"></div>
+      <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-purple-300 opacity-20 rounded-full animate-pulse-slow delay-2000"></div>
 
       <div className="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row items-center gap-12">
-        {/* Left Content */}
+        {/* Hero Text */}
         <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left gap-6">
-          <p className="text-sm sm:text-lg text-primary font-medium">
-            Get a job in 32 Weeks
+          <p className="text-indigo-600 font-semibold text-lg sm:text-xl">
+            Get a Job in 32 Weeks
           </p>
-          <h1 className="text-4xl sm:text-5xl font-bold leading-tight">
-            PG in Digital <br />
-            <span className="border-b-4 border-fg pb-1">Marketing</span>
+          <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight">
+            PG in <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">Digital Marketing</span>
           </h1>
-          <p className="text-sm sm:text-lg text-primary mt-2">
+          <p className="text-gray-700 dark:text-gray-300 mt-2">
             200+ Companies Hired Our Students
           </p>
 
-          {/* Avatars */}
+          {/* Student Avatars */}
           <div className="flex items-center gap-4 mt-4">
-            {images.map((img, idx) => (
-              <Avatar
-                key={idx}
-                className="h-10 w-10 sm:h-12 sm:w-12 hover:scale-125 transition-transform duration-300"
-              >
-                <AvatarImage src={img.src} />
+            {students.map((s, idx) => (
+              <Avatar key={idx} className="h-12 w-12 hover:scale-110 transition-transform duration-300">
+                <AvatarImage src={s.src} />
                 <AvatarFallback>Student</AvatarFallback>
               </Avatar>
             ))}
-            <div className="flex flex-col text-primary text-left text-xs sm:text-sm">
+            <div className="flex flex-col text-gray-700 dark:text-gray-200 text-sm">
               <span>Join Over 1000+ Students</span>
               <span>Have a new idea every week</span>
             </div>
@@ -104,55 +90,37 @@ const Banner = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mt-6">
-            <Button variant="fg" className="w-full sm:w-auto">
+            <Button className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white w-full sm:w-auto hover:from-indigo-700 hover:to-purple-700">
               Download Brochure
             </Button>
-            <Button variant="bg" className="w-full sm:w-auto flex items-center justify-center gap-2">
+            <Button className="w-full sm:w-auto flex items-center justify-center gap-2 border border-indigo-600 text-indigo-600 hover:text-white hover:bg-indigo-600 transition-colors">
               Apply Now <ArrowRight className="h-4 w-4" />
             </Button>
           </div>
         </div>
 
-        {/* Right Form */}
+        {/* Form */}
         <div className="flex-1 w-full max-w-md">
-          <div className="bg-white dark:bg-dark border border-fg rounded-xl shadow-xl p-6 sm:p-8">
-            <h2 className="text-xl sm:text-2xl font-semibold text-center mb-6">
+          <div className="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-xl shadow-xl p-6 sm:p-8">
+            <h2 className="text-2xl font-semibold text-center mb-6">
               Book A Free Live Demo
             </h2>
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-              <Input
-                placeholder="Full Name"
-                value={fullName}
-                onChange={(e) => setFullName(e.target.value)}
-                required
-              />
-              <Input
-                type="email"
-                placeholder="Email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-              <Input
-                type="tel"
-                placeholder="Phone Number"
-                value={phoneNumber}
-                onChange={(e) => setPhoneNumber(e.target.value)}
-                required
-              />
-              <Select onValueChange={setHighestQualification} required>
+              <Input placeholder="Full Name" value={fullName} onChange={(e) => setFullName(e.target.value)} required />
+              <Input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+              <Input type="tel" placeholder="Phone Number" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} required />
+              <Select onValueChange={setQualification} required>
                 <SelectTrigger>
                   <SelectValue placeholder="Highest Qualification" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="Graduation (Completed)">Graduation (Completed)</SelectItem>
-                  <SelectItem value="Graduation (Ongoing)">Graduation (Ongoing)</SelectItem>
-                  <SelectItem value="Post Graduation (Completed)">Post Graduation (Completed)</SelectItem>
-                  <SelectItem value="Post Graduation (Ongoing)">Post Graduation (Ongoing)</SelectItem>
+                  <SelectItem value="Graduation Completed">Graduation (Completed)</SelectItem>
+                  <SelectItem value="Graduation Ongoing">Graduation (Ongoing)</SelectItem>
+                  <SelectItem value="Post Graduation Completed">Post Graduation (Completed)</SelectItem>
+                  <SelectItem value="Post Graduation Ongoing">Post Graduation (Ongoing)</SelectItem>
                   <SelectItem value="12th/Diploma">12th/Diploma</SelectItem>
                 </SelectContent>
               </Select>
-
               <Button type="submit" disabled={loading}>
                 {loading ? "Submitting..." : "Get it now"}
               </Button>
@@ -161,6 +129,18 @@ const Banner = () => {
         </div>
       </div>
       <Separator />
+      <style jsx>{`
+        @keyframes pulse-slow {
+          0%, 100% { transform: scale(0.95); opacity: 0.2; }
+          50% { transform: scale(1.1); opacity: 0.3; }
+        }
+        .animate-pulse-slow {
+          animation: pulse-slow 8s ease-in-out infinite;
+        }
+        .delay-2000 {
+          animation-delay: 2s;
+        }
+      `}</style>
     </section>
   );
 };
