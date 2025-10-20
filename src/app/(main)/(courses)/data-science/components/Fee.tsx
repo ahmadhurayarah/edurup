@@ -1,52 +1,44 @@
 import React from "react";
 import { Dot } from "lucide-react";
-const fee = [
-  { description: "Learn at your convenience" },
-  { description: "Spend only two hours/day" },
-  { description: "One-on-one mentorship and doubt resolution" },
-  { description: "Network with your peers and industry experts" },
-  { description: "Job Guaranteed with Placement Services" },
+
+const feePoints = [
+  "Learn at your convenience",
+  "Spend only two hours/day",
+  "One-on-one mentorship and doubt resolution",
+  "Network with peers and industry experts",
+  "Job Guaranteed with Placement Services",
 ];
 
 const Fee = () => {
   return (
-    <>
-      <div className="w-full p-[2rem] flex flex-col items-center bg-primary">
-        <div className="mb-4">
-          <h3 className="text-2xl sm:text-5xl font-semibold text-center text-primary ">
-            Program <span className="text-fg">Fee</span>
-          </h3>
+    <section className="w-full py-16 bg-gray-50 dark:bg-gray-900 flex flex-col items-center">
+      {/* Heading */}
+      <h2 className="text-3xl sm:text-5xl font-extrabold text-gray-900 dark:text-white mb-12 text-center">
+        Program <span className="text-indigo-600">Fee</span>
+      </h2>
+
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-12 sm:gap-24 w-full max-w-7xl px-4">
+        {/* Fee Card */}
+        <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-3xl shadow-xl p-10 flex flex-col items-center text-center w-full sm:w-1/3">
+          <h3 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">₹30,000 + GST</h3>
+          <p className="text-gray-600 dark:text-gray-300 mb-1">Easy EMI options available</p>
+          <p className="text-gray-600 dark:text-gray-300 mb-6">Starting from ₹20,000/month</p>
+          <button className="px-6 py-3 bg-indigo-600 text-white rounded-full font-semibold hover:bg-indigo-700 transition">
+            Enroll Now
+          </button>
         </div>
-        <div className="flex flex-col sm:flex-row justify-center items-center space-x-0 sm:space-x-20">
-          <div className="px-[2rem] py-[2rem] sm:px-[4rem] sm:py-[4rem] border border-fg rounded-3xl shadow-2xl dark:shadow-fg">
-            <div className="mb-2">
-              <h3 className="text-2xl sm:text-3xl text-primary ">
-                ₹ 30,000 (+GST)
-              </h3>
+
+        {/* Benefits List */}
+        <div className="flex flex-col gap-6 w-full sm:w-2/3">
+          {feePoints.map((point, idx) => (
+            <div key={idx} className="flex items-start gap-4">
+              <Dot size={28} className="text-indigo-600 mt-1 flex-shrink-0" />
+              <p className="text-gray-800 dark:text-gray-200 text-lg sm:text-xl font-medium">{point}</p>
             </div>
-            <div className="text-gray-600 dark:text-gray-300 font-medium">
-              Easy EMIs options available
-            </div>
-            <div className="text-gray-600 dark:text-gray-300 font-medium">
-              Starting from Rs.20,000/month
-            </div>
-          </div>
-          <div className="mt-6 sm:mt-0 flex flex-col ">
-            {fee.map((item, index) => (
-              <div
-                key={index}
-                className="text-black font-normal text-primary text-[1rem] sm:text-xl flex flex-row text-left sm:items-center"
-              >
-                <div>
-                  <Dot size={37} />
-                </div>
-                <div>{item.description}</div>
-              </div>
-            ))}
-          </div>
+          ))}
         </div>
       </div>
-    </>
+    </section>
   );
 };
 
