@@ -79,3 +79,4 @@ const CourseBanner = () => {
 };
 
 export default CourseBanner;
+
