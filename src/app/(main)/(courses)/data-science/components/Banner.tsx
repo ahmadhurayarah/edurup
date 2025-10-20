@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 const CourseBanner = () => {
   return (
     <section className="bg-[#2B1F5F] text-white py-12 px-4 sm:px-16">
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start gap-8 lg:gap-20">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start gap-10 lg:gap-16">
 
         {/* Left: Course Info */}
         <div className="flex-1 flex flex-col gap-4 sm:gap-6">
@@ -17,14 +17,14 @@ const CourseBanner = () => {
           </p>
 
           {/* Features */}
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 mt-4 text-gray-300">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-6 mt-4 text-gray-300">
             {[
               { title: "Live", subtitle: "Sessions on Zoom" },
               { title: "32 Weeks", subtitle: "Course Duration" },
               { title: "Mentorship", subtitle: "With Experienced Professionals" },
               { title: "Placement", subtitle: "100% Support till Job" }
             ].map((feature, idx) => (
-              <div key={idx} className="flex flex-col items-start">
+              <div key={idx} className="flex flex-col items-start bg-[#3B2A80] px-4 py-2 rounded-md w-full sm:w-auto">
                 <span className="font-semibold">{feature.title}</span>
                 <span className="text-xs sm:text-sm">{feature.subtitle}</span>
               </div>
@@ -43,15 +43,17 @@ const CourseBanner = () => {
         </div>
 
         {/* Right: Pricing Box */}
-        <div className="flex-1 w-full lg:max-w-lg bg-white text-black rounded-xl shadow-xl p-6 sm:p-8 relative">
-          <div className="absolute top-3 right-3 bg-green-600 text-white text-xs sm:text-sm font-semibold px-2 py-1 rounded">
+        <div className="flex-1 w-full lg:max-w-lg bg-white text-black rounded-2xl shadow-2xl p-6 sm:p-8 relative">
+          <div className="absolute top-3 right-3 bg-green-600 text-white text-xs sm:text-sm font-semibold px-3 py-1 rounded-full">
             28% OFF
           </div>
-          <div className="mb-4 sm:mb-5">
-            <span className="text-sm sm:text-base text-gray-600">Cohort 14 starts on</span>
+
+          <div className="mb-5">
+            <span className="text-gray-600 text-sm sm:text-base">Cohort 14 starts on</span>
             <h2 className="text-2xl sm:text-3xl font-bold mt-1">Nov 1</h2>
           </div>
-          <div className="mb-4 sm:mb-5">
+
+          <div className="mb-5">
             <span className="text-gray-600 text-sm sm:text-base">Cost</span>
             <h3 className="text-3xl sm:text-4xl font-bold mt-1">
               ₹70,000 <span className="text-gray-400 line-through text-base sm:text-lg">₹1,00,000</span>
@@ -60,10 +62,12 @@ const CourseBanner = () => {
               EMI starts from ₹10,000/month
             </p>
           </div>
+
           <Button className="w-full bg-black text-white flex justify-center items-center gap-2 mt-4 py-3 sm:py-4 hover:bg-gray-900 transition text-sm sm:text-base">
             Enroll Now &rarr;
           </Button>
-          <p className="text-xs text-gray-500 mt-3">
+
+          <p className="text-xs text-gray-500 mt-3 text-center">
             Discount coupon of 28% available at checkout
           </p>
         </div>
