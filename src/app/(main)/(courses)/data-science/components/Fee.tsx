@@ -18,17 +18,24 @@ const Fee = () => {
         Post Graduate Program Fee
       </h2>
 
-      <div className="max-w-6xl w-full flex flex-col md:flex-row items-start gap-12 px-4">
+      <div className="max-w-6xl w-full flex flex-col md:flex-row items-start gap-16 px-4">
         
         {/* Fee Card */}
-        <div className="bg-gradient-to-br from-indigo-600 to-purple-600 text-white rounded-2xl shadow-xl p-8 flex flex-col items-center text-center w-full md:w-1/3 hover:scale-105 transition-transform duration-300">
-          <p className="text-sm sm:text-base mb-2">PGP – 8 Months</p>
+        <div className="bg-gradient-to-br from-indigo-600 to-purple-600 text-white rounded-2xl shadow-xl p-8 flex flex-col items-center text-center w-full md:w-1/3 transform hover:scale-105 transition duration-300">
+          
+          {/* EMI Highlight */}
           <p className="text-3xl sm:text-4xl font-bold mb-1">
             ₹10,000 <span className="text-base font-medium">/month</span>
           </p>
-          <p className="text-sm sm:text-base text-green-200 font-medium mb-2">Flexible EMI options</p>
+          <p className="text-sm sm:text-base text-green-200 font-medium mb-2">
+            Flexible EMI options
+          </p>
+
+          {/* Fee Details */}
           <p className="text-sm text-gray-200 mb-1">Total Fee: ₹1,00,000</p>
           <p className="text-sm text-green-300 font-semibold mb-4">Scholarship: ₹30,000</p>
+
+          {/* CTA Button */}
           <button className="bg-white text-indigo-700 font-semibold px-6 py-2 rounded-full hover:shadow-md transition duration-300 text-sm sm:text-base">
             Enroll Now
           </button>
