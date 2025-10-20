@@ -1,88 +1,101 @@
 import { Separator } from "@/components/ui/separator";
+import { Code } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
-const tools = [
-  { name: "Netflix", src: "/netflix.png" },
-  { name: "Uber", src: "/uber.png" },
-  { name: "Amazon", src: "/amazon.png" },
-  { name: "Dominos", src: "/dominos.png" },
-];
+const logos = ["/netflix.png", "/uber.png", "/amazon.png", "/dominos.png"];
 
 const Language = () => {
   return (
     <>
-      <section className="relative w-full bg-white dark:bg-gray-900 py-16 flex flex-col items-center overflow-hidden">
-        {/* Animated background circles */}
-        <div className="absolute -top-16 -left-16 w-72 h-72 bg-indigo-200 rounded-full opacity-20 animate-pulse-slow"></div>
-        <div className="absolute -bottom-16 -right-16 w-96 h-96 bg-purple-300 rounded-full opacity-20 animate-pulse-slow delay-2000"></div>
+      {/* Desktop View */}
+      <div className="hidden sm:flex w-full flex-col items-center bg-white py-16">
+        <h3 className="text-3xl sm:text-5xl font-semibold text-center text-black mb-12">
+          Language and Tools Covered
+        </h3>
 
-        {/* Section Heading */}
-        <h2 className="relative text-3xl sm:text-5xl font-bold text-center text-black dark:text-white mb-12 z-10">
-          Languages & Tools Covered
-        </h2>
-
-        {/* Desktop Grid */}
-        <div className="hidden sm:grid grid-cols-4 gap-8 max-w-6xl w-full px-8 z-10 relative">
-          {tools.map((tool, idx) => (
-            <div
-              key={idx}
-              className="flex flex-col items-center justify-center bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-gray-800 dark:to-gray-700 p-6 rounded-2xl shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
-            >
-              <Image
-                src={tool.src}
-                alt={tool.name}
-                width={100}
-                height={100}
-                className="object-contain mb-4"
-              />
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                {tool.name}
-              </h3>
-            </div>
-          ))}
+        <div className="w-full max-w-6xl px-8">
+          <Image
+            src="/language.png"
+            alt="Languages"
+            width={3424}
+            height={64}
+            className="object-contain w-full"
+          />
         </div>
 
-        {/* Mobile Horizontal Scroll */}
-        <div className="sm:hidden w-full overflow-x-auto flex gap-4 px-4 z-10 relative">
-          {tools.map((tool, idx) => (
-            <div
-              key={idx}
-              className="flex-shrink-0 flex flex-col items-center justify-center bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-gray-800 dark:to-gray-700 p-4 rounded-2xl shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
-            >
-              <Image
-                src={tool.src}
-                alt={tool.name}
-                width={80}
-                height={80}
-                className="object-contain mb-2"
-              />
-              <h3 className="text-sm font-semibold text-gray-900 dark:text-white">
-                {tool.name}
-              </h3>
+        <div className="mt-12 flex flex-col md:flex-row justify-between items-start gap-12 w-full max-w-6xl px-8">
+          {/* Left Column */}
+          <div className="flex flex-col gap-10 text-black">
+            <div>
+              <h3 className="text-3xl font-semibold mb-2">Hands-on Practice</h3>
+              <p>Data sets from the industry</p>
             </div>
+            <div className="flex flex-row gap-6">
+              {logos.map((logo, idx) => (
+                <Image key={idx} src={logo} alt={logo} height={100} width={100} />
+              ))}
+            </div>
+          </div>
+
+          {/* Right Column */}
+          <div className="flex gap-6">
+            <div className="flex flex-col items-center justify-center bg-fg h-40 w-40 rounded-xl p-4">
+              <Code size={40} className="dark:text-black mb-2" />
+              <h3 className="text-lg font-medium text-center">200+ Projects Completed</h3>
+            </div>
+            <div className="flex flex-col items-center justify-center bg-fg h-40 w-40 rounded-xl p-4">
+              <Code size={40} className="dark:text-black mb-2" />
+              <h3 className="text-lg font-medium text-center">50+ Domains</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile View */}
+      <div className="sm:hidden w-full flex flex-col items-center bg-white py-16">
+        <h3 className="text-2xl font-semibold text-center text-black mb-8">
+          Language and Tools Covered
+        </h3>
+
+        {/* Marquee */}
+        <div className="w-full overflow-x-hidden mb-6">
+          <div className="flex animate-marquee gap-8">
+            <Image src="/language.png" alt="Languages" width={3424} height={64} className="h-12 object-contain" />
+            <Image src="/language.png" alt="Languages" width={3424} height={64} className="h-12 object-contain" />
+          </div>
+        </div>
+
+        {/* Practice Info */}
+        <div className="flex flex-col items-center mb-6">
+          <h3 className="text-lg font-semibold text-black">Hands-on Practice</h3>
+          <p className="text-sm text-black">Data sets from the industry</p>
+        </div>
+
+        {/* Stats Cards */}
+        <div className="flex flex-row gap-6 mb-6">
+          <div className="flex flex-col items-center justify-center bg-fg h-36 w-36 rounded-xl p-4">
+            <Code size={32} className="dark:text-black mb-2" />
+            <h3 className="text-sm font-medium text-center">200+ Projects Completed</h3>
+          </div>
+          <div className="flex flex-col items-center justify-center bg-fg h-36 w-36 rounded-xl p-4">
+            <Code size={32} className="dark:text-black mb-2" />
+            <h3 className="text-sm font-medium text-center">50+ Domains</h3>
+          </div>
+        </div>
+
+        {/* Logos */}
+        <div className="flex flex-row gap-4">
+          {logos.map((logo, idx) => (
+            <Image key={idx} src={logo} alt={logo} height={60} width={60} className="object-contain" />
           ))}
         </div>
-      </section>
+      </div>
 
       <Separator />
-
-      {/* Tailwind animation utilities */}
-      <style jsx>{`
-        @keyframes pulse-slow {
-          0% { transform: scale(0.9); opacity: 0.15; }
-          50% { transform: scale(1.1); opacity: 0.25; }
-          100% { transform: scale(0.9); opacity: 0.15; }
-        }
-        .animate-pulse-slow {
-          animation: pulse-slow 6s ease-in-out infinite;
-        }
-        .delay-2000 {
-          animation-delay: 2s;
-        }
-      `}</style>
     </>
   );
 };
 
 export default Language;
+
