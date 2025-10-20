@@ -68,16 +68,6 @@ const CourseBanner = () => {
           </p>
         </div>
       </div>
-
-      {/* Bottom WhatsApp / Callback Buttons */}
-      <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-        <Button className="bg-yellow-400 text-black hover:bg-yellow-500 w-full sm:w-auto transition">
-          Request a Callback
-        </Button>
-        <Button className="bg-green-500 text-white hover:bg-green-600 w-full sm:w-auto transition">
-          Message us on WhatsApp
-        </Button>
-      </div>
     </section>
   );
 };
