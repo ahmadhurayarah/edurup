@@ -12,13 +12,15 @@ import {
 import { Button } from "@/components/ui/button";
 
 const courses = [
+  {
+    label: "Frontend Web",
+    href: "/front-end-web",
+  },
+  { label: "Data Science", href: "/data-science" },
   { label: "Digital Marketing", href: "/digital-marketing" },
-  { label: "Mern Development", href: "/mern-stack-developer-course" },
-  // { label: "Data Science", href: "/data-science" },
-  //
-  //   { label: "Business Development", href: "/business-development" },
-  //   { label: "Finance Analyst", href: "/finance-analyst" },
-  //   { label: "Python", href: "/python" },
+  { label: "Business Development", href: "/business-development" },
+  { label: "Finance Analyst", href: "/finance-analyst" },
+  { label: "Python", href: "/python" },
 ];
 
 const company = [
@@ -42,11 +44,11 @@ const Footer = () => {
     <>
       <div className="p-4 sm:p-12 dark:bg-dark bg-primary  grid justify-center  grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 space-y-3 sm:space-y-0">
         <div className="pl-0 sm:pl-[3rem] ">
-          <h4 className="font-bold text-lg mb-4">Edurup</h4>
+          <h4 className="font-bold text-lg mb-4">Placement Booster</h4>
           <p>
-            Salarpuria Touch Stone,
+            Briadge Archade,
             <br />
-            Kadbuseenahalli - 560103
+            Mahadevpura Bangalore - 560048
           </p>
           <div className="flex flex-row items-center mt-5">
             <h5 className="mr-4 text-xl font-semibold">Queries ?</h5>
@@ -115,13 +117,13 @@ const Footer = () => {
         <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 ">
           <div className=" col-span-1 text-center sm:text-left">
             <p className="sm:text-lg ">
-              &copy; Copyright 2024 Edurup. All Rights Reserved{" "}
+              &copy; Copyright 2024 Placement Booster. All Rights Reserved{" "}
             </p>
           </div>
           <div className="block sm:hidden h-3"></div>
-          {/* <div className="col-span-1 text-center sm:text-right">
+          <div className="col-span-1 text-center sm:text-right">
             <p className="sm:text-lg">
-              Developed by{" "}
+              Developed with ❤️ by{" "}
               <strong>
                 <Link
                   href="https://www.linkedin.com/in/ahmadhurayarah/"
@@ -131,7 +133,7 @@ const Footer = () => {
                 </Link>
               </strong>{" "}
             </p>
-          </div> */}
+          </div>
         </div>
       </div>
     </>
