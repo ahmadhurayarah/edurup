@@ -63,12 +63,9 @@ const Fee = () => {
                 <div className="space-y-2 text-sm text-gray-600">
                   <div className="flex items-center justify-center">
                     <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Pay only ₹50,000 upfront fee now
+                    Pay only ₹70,000 after a 30% scholarship (original fee ₹ 1,00,000 Lac )
                   </div>
-                  <div className="flex items-center justify-center">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Pay the remaining ₹50,000 after receiving your Placement Offer Letter.
-                  </div>
+                  
                 </div>
               </div>
             </div>
