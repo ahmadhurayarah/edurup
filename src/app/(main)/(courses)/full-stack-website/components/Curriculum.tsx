@@ -6,87 +6,162 @@ import { Separator } from "@/components/ui/separator";
 
 const curriculum = [
   {
-    title: "Fundamental of Marketing",
+    title: "HTML, CSS, and Git Basics",
     duration: "2 weeks",
     lessons: "8 lessons",
     projects: "2 projects",
     description: [
-      "Introduction to Marketing",
-      "Segmentation, Targeting and Positioning",
-      "Marketing Management through the Concept of 4Ps",
-      "Branding, Brand Equity, Brand Models with Examples",
+      "HTML5: Structure, tags, semantic elements",
+      "CSS3: Selectors, Flexbox, Grid, Responsive Design",
+      "CSS Frameworks: Tailwind / Bootstrap",
+      "Git & GitHub: version control, repository, branching, commits",
+      "Mini Project: “Personal Portfolio Website",
     ]
   },
   {
-    title: "Designing and Building a Web Presence",
+    title: "JavaScript Fundamentals",
     duration: "3 weeks",
     lessons: "12 lessons",
     projects: "3 projects",
     description: [
-      "Elements & Design of a Website",
-      "Information Architecture and Wireframes",
-      "Visual Design, Implementation and Testing",
-      "The Hook Framework",
+      "Variables, Data Types, Operators",
+      "Functions, Loops, Conditional statements",
+      "Arrays, Objects, ES6+ features (let/const, arrow functions, template literals)",
+      "DOM Manipulation & Events",
+      "Async JS: Promises, Async/Await",
+      "Mini Project: “Todo List App” (Vanilla JS)",
     ]
   },
   {
-    title: "Social Media Marketing (SMM)",
+    title: "React.js Basics",
     duration: "4 weeks",
     lessons: "16 lessons",
     projects: "4 projects",
     description: [
-      "Popular Social Media Channels",
-      "Social Media Plan",
-      "Social Media Execution Strategies - Paid & Organic",
-      "Online Reputation Management",
-      "Social Media Ad Formats",
-      "Measuring Social Media Performance",
-      "Organic & Paid YouTube Marketing",
+      "React.js Basics",
+      "Functional Components & Hooks (useState, useEffect)",
+      "Event Handling, Lists, Conditional Rendering",
+      "Folder structure & environment setup",
+      "Mini Project: “Weather App using API",
     ]
   },
   {
-    title: "Search Engine Optimization (SEO)",
+    title: "Advanced React",
     duration: "3 weeks",
     lessons: "14 lessons",
     projects: "3 projects",
     description: [
-      "SEO Basics",
-      "Keyword Strategy",
-      "SEO Strategy & SEO Audit",
-      "Content Optimization",
-      "Technical Optimization",
-      "Authority",
-      "Keyword Performance",
-      "Future of SEO - Video, Voice, Mobile, Local",
+      "Advanced React",
+      "State Management with Redux Toolkit (optional)",
+      "API Integration with Axios / Fetch",
+      "Reusable components & UI design systems",
+      "Project 1: “E-commerce Frontend with React",
+      
     ]
   },
   {
-    title: "Google Adwords & Analytics",
+    title: "Node.js Fundamentals",
     duration: "2 weeks",
     lessons: "10 lessons",
     projects: "2 projects",
     description: [
-      "Creating Search, Display, YouTube Campaigns",
-      "Budgeting, Bidding, Keyword Match & Conversion Tracking",
-      "Campaign Optimization",
-      "Reporting Campaigns",
-      "Adwords Metrics",
+      "Node.js Fundamentals",
+      "File System, Event Loop, Async Programming",
+      "Express.js introduction, Routes & Middleware",
+      "REST API basics",
+      "Mini Project: “Simple CRUD API",
     ]
   },
   {
-    title: "Tools & Resources",
+    title: "MongoDB & Mongoose",
     duration: "1 week",
     lessons: "6 lessons",
     projects: "1 project",
     description: [
-      "Facebook Ads",
-      "Twitter Analytics",
-      "Hootsuite",
-      "Hubspot",
-      "SMM Tools",
-      "Google Search Console",
-      "Keyword Research Tools",
-      "SEO Tools",
+      "NoSQL vs SQL databases",
+      "MongoDB CRUD Operations",
+      "Mongoose Schema, Models, and Validation",
+      "Relationship between collections (One-to-Many)",
+      "Mini Project: “Student Management API",
+    ]
+  },
+  {
+    title: "Authentication & Authorization",
+    duration: "1 week",
+    lessons: "6 lessons",
+    projects: "1 project",
+    description: [
+      "JWT Authentication & Security concepts",
+      "Password Hashing (bcrypt)",
+      "Login/Signup functionality",
+      "Protecting routes & middleware authentication",
+      "Project 2: “User Auth System with JWT",
+    ]
+  },
+  {
+    title: "Advanced Backend",
+    duration: "1 week",
+    lessons: "6 lessons",
+    projects: "1 project",
+    description: [
+       "File uploads (Multer/Cloudinary)",
+ "Error handling & validation",
+" Environment variables (.env)",
+ "API documentation using Postman / Swagger",
+" Deploying backend on Render / Railway",
+"Project 3: “Blog API”",
+    ]
+  },
+  {
+    title: "MERN Integration",
+    duration: "1 week",
+    lessons: "6 lessons",
+    projects: "1 project",
+    description: [
+      "Connecting React frontend with Node.js backend",
+ "Using Axios for API calls",
+"Handling CORS & environment setup",
+ "Authentication flow (Login/Logout on both sides)",
+" Mini Project: “Notes App (Full Stack)”",
+    ]
+  },
+  {
+    title: "Real-World Full Stack Project",
+    duration: "1 week",
+    lessons: "6 lessons",
+    projects: "1 project",
+    description: [
+      "Project planning & folder structuring",
+"Role-based authentication",
+ "CRUD Operations on both sides",
+ "Integrating image uploads, pagination, filters",
+" Project 4: “Job Portal / Task Manager / E-Commerce App”",
+    ]
+  },
+  {
+    title: "Deployment & DevOps Basics",
+    duration: "1 week",
+    lessons: "6 lessons",
+    projects: "1 project",
+    description: [
+      "Deploying React app on Netlify/Vercel",
+" Deploying backend on Render/Railway",
+ "Connecting MongoDB Atlas",
+ "Environment management, SSL, Domain setup",
+-"CI/CD overview (GitHub Actions intro)",
+    ]
+  },
+  {
+    title: "Interview & Placement Preparation",
+    duration: "1 week",
+    lessons: "6 lessons",
+    projects: "1 project",
+    description: [
+      " Resume & LinkedIn optimization",
+       "GitHub Portfolio & Projects review",
+      "Common MERN interview questions",
+       "Mock interviews, coding tests, and DSA basics",
+        "Final Project Presentation & Demo Day",
     ]
   },
 ];
