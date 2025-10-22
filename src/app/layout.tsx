@@ -86,16 +86,10 @@ export default function RootLayout({
         <meta name="format-detection" content="telephone=no" />
       </head>
       <body className={inter.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-          storageKey="pb-theme"
-        >
+        
           <ToastProvider />
           {children}
-        </ThemeProvider>
+       
       </body>
     </html>
   );

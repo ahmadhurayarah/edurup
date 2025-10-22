@@ -7,7 +7,7 @@ import {
   TabsList,
   TabsTrigger,
 } from "@/components/ui/tabs_learning";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, BookOpen } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 
@@ -45,13 +45,18 @@ const Learning = () => {
 
   return (
     <div className="w-full flex py-[2rem] flex-col justify-center ">
-      <div className=" flex flex-col">
-        <h3 className="text-xl sm:text-5xl font-semibold text-center text-primary dark:text-white">
-          The New Immersive
-        </h3>
-        <h3 className="mt-1 mb-5 sm:mt-5 sm:mb-10 text-center text-xl sm:text-5xl text-fg font-semibold">
-          Learning Experience
-        </h3>
+      {/* Header Section */}
+      <div className="text-center mb-12">
+        <div className="inline-flex items-center px-3 py-1 rounded-full bg-green-100 text-[#004F4E] text-sm font-medium mb-4">
+          <BookOpen className="w-4 h-4 mr-2" />
+          Learning Journey
+        </div>
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          The New Immersive <span className="text-[#004F4E]">Learning Experience</span>
+        </h2>
+        <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          Follow our structured learning path from enrollment to job placement
+        </p>
       </div>
 
       <div className="flex flex-col sm:flex-row items-start justify-center">

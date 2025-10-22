@@ -198,7 +198,6 @@ export const Navbar = () => {
                 Talk To A Counsellor ✆
               </Button>
             </Link>
-            <ModeToggle />
           </div>
         </div>
       </div>

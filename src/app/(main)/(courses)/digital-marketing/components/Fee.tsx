@@ -1,48 +1,104 @@
 import React from "react";
-import { Dot } from "lucide-react";
+import { CheckCircle, Clock, Users, GraduationCap, Shield } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+
 const fee = [
-  { description: "Spend only two hours/day" },
-  { description: "One-on-one mentorship and doubt resolution" },
-  { description: "Network with your peers and industry experts" },
-  { description: "Job Guaranteed with Placement Services" },
+  { 
+    description: "Spend only two hours/day",
+    icon: Clock,
+    color: "text-blue-600"
+  },
+  { 
+    description: "One-on-one mentorship and doubt resolution",
+    icon: Users,
+    color: "text-green-600"
+  },
+  { 
+    description: "Network with your peers and industry experts",
+    icon: GraduationCap,
+    color: "text-purple-600"
+  },
+  { 
+    description: "Job Guaranteed with Placement Services",
+    icon: Shield,
+    color: "text-orange-600"
+  },
 ];
 
 const Fee = () => {
   return (
     <>
-      <div className="w-full p-[2rem] flex flex-col items-center bg-primary">
-        <div className="mb-4">
-          <h3 className="text-2xl sm:text-5xl font-semibold text-center text-primary ">
-            Course <span className="text-fg">Fee</span>
-          </h3>
-        </div>
-        <div className="flex flex-col sm:flex-row justify-center items-center space-x-0 sm:space-x-20">
-          <div className="px-[2rem] py-[2rem] sm:px-[4rem] sm:py-[4rem] border border-fg rounded-3xl shadow-2xl dark:shadow-fg">
-            <div className="mb-2">
-              <h3 className="text-2xl sm:text-3xl text-primary ">
-                ₹ 50,000 (+GST)
-              </h3>
+      <div className="w-full py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-6xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center px-3 py-1 rounded-full bg-green-100 text-green-600 text-sm font-medium mb-4">
+              <Shield className="w-4 h-4 mr-2" />
+              Course Pricing
             </div>
-            <div className="text-gray-600 dark:text-gray-300 font-medium">
-              Pay Only ₹ 19,999 as an upfront fee
-              <br />
-              EMI starts from 10,000 per month
-            </div>
-            <div className="text-gray-600 dark:text-gray-300 font-medium"></div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+              Pay After <span className="text-green-500">Placement</span>
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Pay ₹50,000 upfront and the rest after you get placed.
+            </p>
           </div>
-          <div className="mt-6 sm:mt-0 flex flex-col ">
-            {fee.map((item, index) => (
-              <div
-                key={index}
-                className="text-black font-normal text-primary text-[1rem] sm:text-xl flex flex-row text-left sm:items-center"
-              >
-                <div>
-                  <Dot size={37} />
+
+          {/* Main Content */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Pricing */}
+            <div className="text-center">
+              <div className="bg-gray-50 rounded-xl p-8">
+                <div className="text-5xl font-bold text-gray-900 mb-2">
+                  ₹1,00,000
                 </div>
-                <div>{item.description}</div>
+                <div className="text-gray-600 mb-6">+ GST</div>
+                
+                <div className="bg-green-100 rounded-lg p-4 mb-6">
+                  <div className="text-green-600 font-semibold text-lg">
+                    EMI: ₹10,000/month
+                  </div>
+                </div>
+
+                <div className="space-y-2 text-sm text-gray-600">
+                  <div className="flex items-center justify-center">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    Pay only ₹50,000 upfront fee now
+                  </div>
+                  <div className="flex items-center justify-center">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    Pay the remaining ₹50,000 after receiving your Placement Offer Letter.
+                  </div>
+                </div>
               </div>
-            ))}
+            </div>
+
+            {/* Features */}
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                What&apos;s Included
+              </h3>
+              
+              <div className="space-y-4">
+                {fee.map((item, index) => {
+                  const IconComponent = item.icon;
+                  return (
+                    <div key={index} className="flex items-center space-x-3">
+                      <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                        <IconComponent className="w-4 h-4 text-green-600" />
+                      </div>
+                      <p className="text-gray-700">{item.description}</p>
+                    </div>
+                  );
+                })}
+              </div>
+
+              <div className="mt-8">
+                <button className="w-full bg-green-500 text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-600 transition-colors">
+                  Enroll Now - Pay Later
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
