@@ -10,6 +10,8 @@ import Faq from "./components/Faq";
 import Faculty from "./components/Faculty";
 import CertificatePage from "./components/CertificatePage";
 import Language from "./components/Language";
+import ProductAnalyst from "./components/ProductAnalyst";
+import Reviews from "./components/Reviews";
 
 const page = () => {
   return (
@@ -18,6 +20,8 @@ const page = () => {
         <Banner />
         <Company />
         <Curriculum />
+        <ProductAnalyst />
+        <Reviews />
         <Fee />
         <Learning />
         <Faculty />
