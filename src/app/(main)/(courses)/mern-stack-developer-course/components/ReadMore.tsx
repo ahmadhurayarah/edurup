@@ -11,7 +11,7 @@ const mernFaq = [
   {
     question: "What is MERN Stack?",
     answer:
-      "MERN Stack is a powerful JavaScript framework including MongoDB, Express.js, React, and Node.js. This allows developers to create dynamic, efficient, and scalable web applications. The placement booster MERN Stack Developer course is an intensive training course designed to provide you with the industry-leading skills necessary to succeed in this challenging industry. Whether you are a beginner or a professional looking to take your coding skills to the next level, this course has something for everyone. The course is designed by a team of IIT alumni and industry experts from top companies like Amazon and Microsoft. This ensures that you’re learning the latest skills and best practices used in the real world.",
+      "MERN Stack is a powerful JavaScript framework including MongoDB, Express.js, React, and Node.js. This allows developers to create dynamic, efficient, and scalable web applications. The edurup MERN Stack Developer course is an intensive training course designed to provide you with the industry-leading skills necessary to succeed in this challenging industry. Whether you are a beginner or a professional looking to take your coding skills to the next level, this course has something for everyone. The course is designed by a team of IIT alumni and industry experts from top companies like Amazon and Microsoft. This ensures that you’re learning the latest skills and best practices used in the real world.",
   },
   {
     question: "Who is a MERN Stack Developer?",
@@ -41,12 +41,12 @@ const mernFaq = [
   {
     question: "Is MERN Stack easy to learn?",
     answer:
-      "Learning the MERN (MongoDB, Express.js, React.js, Node.js) stack varies based on existing web development and JavaScript knowledge. It’s more straightforward for those already familiar, given the consistent language use. Beginners may find it a bit challenging initially, as mastering all components takes time and practice. Accessible documentation and a supportive learning environment can help both beginners and experienced developers in the learning process. At placement booster, we further improve this journey by offering a structured curriculum, hands-on projects, and personalized mentorship, ensuring greater student success.",
+      "Learning the MERN (MongoDB, Express.js, React.js, Node.js) stack varies based on existing web development and JavaScript knowledge. It’s more straightforward for those already familiar, given the consistent language use. Beginners may find it a bit challenging initially, as mastering all components takes time and practice. Accessible documentation and a supportive learning environment can help both beginners and experienced developers in the learning process. At edurup, we further improve this journey by offering a structured curriculum, hands-on projects, and personalized mentorship, ensuring greater student success.",
   },
   {
     question: "How many months will it take to learn the MERN stack?",
     answer:
-      "On average, it takes three to six months to become proficient in MERN Stack development. However, personal dedication and more focused hours a day can speed up the learning process. placement booster focuses on realistic goals, celebrating small achievements. We guide students with practical skills and personalized support, building confidence for success in mastering the MERN stack and pursuing tech career goals.",
+      "On average, it takes three to six months to become proficient in MERN Stack development. However, personal dedication and more focused hours a day can speed up the learning process. edurup focuses on realistic goals, celebrating small achievements. We guide students with practical skills and personalized support, building confidence for success in mastering the MERN stack and pursuing tech career goals.",
   },
   {
     question: "Which is better Java Full Stack or MERN Full Stack?",

@@ -11,7 +11,7 @@ const Company = () => {
             <span className="text-fg">500+</span> Companies have hired
           </h3>
           <h3 className="mt-1 mb-5 sm:mt-5 sm:mb-10 text-center text-2xl sm:text-5xl font-semibold text-primary dark:text-dark">
-            Placement Booster learners
+             Edurup learners
           </h3>
         </div>
         <div className="mb-1 sm:mb-10 px-[2rem] sm:px-[14rem] space-y-6">

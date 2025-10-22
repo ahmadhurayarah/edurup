@@ -35,7 +35,7 @@ const DoubtResolution = () => {
               </h3>
               <p className="text-gray-600 mb-4">
                 Including Subject Matter Experts, IITians, Teaching Assistants,
-                placement booster Alumni, etc.
+                edurup  Alumni, etc.
               </p>
               <Button variant="default">Book A Free Demo</Button>
             </div>

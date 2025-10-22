@@ -162,7 +162,7 @@ const Outcomes = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Placement Booster offers extensive list of services to help you become Job ready.
+            Edurup offers extensive list of services to help you become Job ready.
           </motion.p>
         </motion.div>
 
