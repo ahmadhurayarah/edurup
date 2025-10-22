@@ -37,10 +37,10 @@ const Fee = () => {
               Course Pricing
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-              Pay After <span className="text-green-500">Placement</span>
+              Post Graduate Program <span className="text-green-500">Fee</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Pay ₹50,000 upfront and the rest after you get placed.
+              30% Scholarship Avaliable for students
             </p>
           </div>
 
@@ -50,7 +50,7 @@ const Fee = () => {
             <div className="text-center">
               <div className="bg-gray-50 rounded-xl p-8">
                 <div className="text-5xl font-bold text-gray-900 mb-2">
-                  ₹1,00,000
+                  ₹70,000
                 </div>
                 <div className="text-gray-600 mb-6">+ GST</div>
                 
