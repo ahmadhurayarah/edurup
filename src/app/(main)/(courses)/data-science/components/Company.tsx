@@ -20,7 +20,7 @@ const Company = () => {
           <span className="text-fg">500+</span> Companies have hired
         </h3>
         <p className="text-lg sm:text-2xl font-medium text-gray-700 dark:text-gray-300 mb-10">
-          Placement Booster learners from our industry-ready programs
+          Edurup learners from our industry-ready programs
         </p>
 
         {/* Glass Card */}
