@@ -6,10 +6,8 @@ import {
   SiNumpy,
   SiTensorflow,
   SiTableau,
-  SiPowerbi,
   SiMysql,
-  SiMicrosoftexcel,
-  SiMatplotlib,
+
 } from 'react-icons/si';
 
 export default function ToolsInDemand() {
@@ -17,11 +15,11 @@ export default function ToolsInDemand() {
     { name: 'Pandas', icon: <SiPandas className="text-purple-700 text-4xl" /> },
     { name: 'Tableau', icon: <SiTableau className="text-blue-500 text-4xl" /> },
     { name: 'SQL', icon: <SiMysql className="text-orange-500 text-4xl" /> },
-    { name: 'Power BI', icon: <SiPowerbi className="text-yellow-500 text-4xl" /> },
+    // { name: 'Power BI', icon: <SiPowerbi className="text-yellow-500 text-4xl" /> },
     { name: 'TensorFlow', icon: <SiTensorflow className="text-orange-400 text-4xl" /> },
     { name: 'Python', icon: <FaPython className="text-yellow-400 text-4xl" /> },
-    { name: 'Matplotlib', icon: <SiMatplotlib className="text-blue-700 text-4xl" /> },
-    { name: 'Excel', icon: <SiMicrosoftexcel className="text-green-600 text-4xl" /> },
+    // { name: 'Matplotlib', icon: <SiMatplotlib className="text-blue-700 text-4xl" /> },
+    // { name: 'Excel', icon: <SiMicrosoftexcel className="text-green-600 text-4xl" /> },
     { name: 'NumPy', icon: <SiNumpy className="text-blue-400 text-4xl" /> },
   ];
 
