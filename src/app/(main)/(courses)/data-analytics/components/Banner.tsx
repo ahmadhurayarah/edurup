@@ -11,10 +11,10 @@ const CourseBanner = () => {
         {/* Left: Course Info */}
         <div className="flex-1 flex flex-col gap-4 sm:gap-6">
           <h1 className="text-3xl sm:text-5xl font-bold leading-snug">
-            Digital Marketing PGP
+            Data Analytics PGP
           </h1>
           <p className="text-base sm:text-lg text-gray-300">
-            32-week online Digital Marketing Course with Certification and 100% Placement Support
+            32-week online Data Analytics Course with Certification and 100% Placement Support
           </p>
 
           {/* Features */}
