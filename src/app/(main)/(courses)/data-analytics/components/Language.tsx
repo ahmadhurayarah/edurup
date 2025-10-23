@@ -4,15 +4,15 @@ import React from "react";
 
 const Language = () => {
   const tools = [
-    { name: "pandas", icon: "/Language/Pandas.png", color: "bg-purple-100 text-purple-700" },
-    { name: "tableau", icon: "/Language/Tableau.png", color: "bg-blue-100 text-blue-700" },
+       { name: "pandas", icon: "/Language/Pandas.png", color: "bg-purple-100 text-purple-700" },
+    { name: "tableau", icon: "/Language/tableau.png", color: "bg-blue-100 text-blue-700" },
     { name: "Power BI", icon: "/Language/PowerBI.png", color: "bg-yellow-100 text-yellow-700" },
     { name: "TensorFlow", icon: "/Language/TensorFlow.png", color: "bg-orange-100 text-orange-700" },
-    { name: "SQL", icon: "/Language/SQL.png", color: "bg-red-100 text-red-700" },
+    { name: "SQL", icon: "/Language/sql.png", color: "bg-red-100 text-red-700" },
     { name: "matplotlib", icon: "/Language/Matplotlib.png", color: "bg-green-100 text-green-700" },
     { name: "python", icon: "/Language/Python.png", color: "bg-blue-100 text-blue-700" },
     { name: "NumPy", icon: "/Language/NumPy.png", color: "bg-indigo-100 text-indigo-700" },
-    { name: "Excel", icon: "/Language/Excel.png", color: "bg-emerald-100 text-emerald-700" },
+    { name: "Excel", icon: "/Language/excel.png", color: "bg-emerald-100 text-emerald-700" },
   ];
 
   return (
