@@ -14,7 +14,7 @@ import Image from "next/image";
 const curriculum = [
   {
     title: "Start Learning",
-    description: ["Pay 49,999 and join the course", "Live Classes by Experts"],
+    description: ["Pay 70,000 and join the course", "Live Classes by Experts"],
     image: "/learning1.svg",
   },
   {

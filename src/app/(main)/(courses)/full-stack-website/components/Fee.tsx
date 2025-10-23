@@ -32,10 +32,10 @@ const Fee = () => {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12">
-            <div className="inline-flex items-center px-3 py-1 rounded-full bg-green-100 text-green-600 text-sm font-medium mb-4">
+            {/* <div className="inline-flex items-center px-3 py-1 rounded-full bg-green-100 text-green-600 text-sm font-medium mb-4">
               <Shield className="w-4 h-4 mr-2" />
               Course Pricing
-            </div>
+            </div> */}
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
               Post Graduate Program <span className="text-green-500">Fee</span>
             </h2>
@@ -61,10 +61,10 @@ const Fee = () => {
                 </div>
 
                 <div className="space-y-2 text-sm text-gray-600">
-                  <div className="flex items-center justify-center">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Pay only ₹70,000 after a 30% scholarship (original fee ₹ 1,00,000 Lac )
-                  </div>
+                 <div className="flex items-center justify-center whitespace-nowrap">
+  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+  Pay only ₹70,000 after a 30% scholarship (original fee ₹ 1,00,000 Lac )
+</div>
                   
                 </div>
               </div>
@@ -92,7 +92,7 @@ const Fee = () => {
 
               <div className="mt-8">
                 <button className="w-full bg-green-500 text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-600 transition-colors">
-                  Enroll Now - Pay Later
+                  Apply Now - Limited seats
                 </button>
               </div>
             </div>
