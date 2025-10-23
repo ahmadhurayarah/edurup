@@ -15,43 +15,43 @@ const FeaturedCourses = () => {
   const allCourses = [
     // Software Courses
     {
-      title: "Data Science & Artificial Intelligence",
-      duration: "14 MONTHS",
-      batchStart: "Sep 27, 2025",
+      title: "Data Science",
+      duration: "8 MONTHS",
+      batchStart: "Nov 15, 2025",
       scholarship: "Yes",
-      emi: "Rs. 7,200",
+      emi: "Rs. 9,900",
       eligibility: "Open for All",
-      enrolled: "1,200+",
+      enrolled: "400+",
       color: "blue",
       category: "software",
       features: [
-        "Get a professional certificate on completion of course",
+        "Get a post Graduate certificate on completion of course",
         "Unlimited mock interviews for your interview practice",
-        "Access to 10,000+ coding questions in our Arena",
+        "Access to 1000+ coding challenges & Projects",
         "100% Placement Assistance (Lifetime)",
         "No coding experience required"
       ]
     },
     {
-      title: "Advanced Full Stack Development",
+      title: "PGP-Advanced Full Stack Development",
       duration: "6-8 MONTHS",
-      batchStart: "Nov 12, 2025",
+      batchStart: "Nov 5, 2025",
       scholarship: "Yes",
-      emi: "Rs. 6,167",
+      emi: "Rs. 9,900",
       eligibility: "Open for All",
-      enrolled: "6,300+",
+      enrolled: "300+",
       color: "green",
       category: "software",
       features: [
-        "Get a professional certificate on completion of course",
+        "Get a post Graduate certificate on completion of course",
         "Unlimited mock interviews for your interview practice",
-        "Access to 10,000+ coding questions in our Arena",
+        "Access to 1000+ coding challenges & Projects",
         "100% Placement Assistance (Lifetime)",
         "No coding experience required"
       ]
     },
     {
-      title: "Certification in Automation Testing",
+      title: "PGP - Data Analyst",
       duration: "3 MONTHS",
       batchStart: "Dec 15, 2025",
       scholarship: "Yes",
@@ -61,9 +61,9 @@ const FeaturedCourses = () => {
       color: "purple",
       category: "software",
       features: [
-        "Get a professional certificate on completion of course",
+        "Get a post Graduate certificate on completion of course",
         "Unlimited mock interviews for your interview practice",
-        "Access to 10,000+ coding questions in our Arena",
+        "Access to 1000+ coding challenges & Projects",
         "100% Placement Assistance (Lifetime)",
         "No coding experience required"
       ]
