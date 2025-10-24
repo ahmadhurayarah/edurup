@@ -16,7 +16,7 @@ import Reviews from "./components/Reviews";
 const page = () => {
   return (
     <>
-      <div className="min-h-full flex flex-col">
+<div className="min-h-full flex flex-col overflow-x-hidden">
         <Banner />
         <Company />
         <Curriculum />
