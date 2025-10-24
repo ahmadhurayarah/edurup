@@ -31,22 +31,22 @@ const facultyData = [
     rating: "4.9",
     color: "blue",
   },
-  {
-    name: "Sirija Neelam",
-    designation: "Data Scientist",
-    image: "/mentor1.jpeg",
-    subjects: [
-      "Python",
-      "Artificial Intelligence",
-      "Data Science & Machine Learning",
-    ],
-    socialMedia: "linkedin",
-    url: "https://www.linkedin.com/in/sirija-devi-a35561160?trk=blended-typeahead",
-    experience: "6+ Years",
-    students: "1,800+",
-    rating: "4.8",
-    color: "green",
-  },
+  // {
+  //   name: "Sirija Neelam",
+  //   designation: "Data Scientist",
+  //   image: "/mentor1.jpeg",
+  //   subjects: [
+  //     "Python",
+  //     "Artificial Intelligence",
+  //     "Data Science & Machine Learning",
+  //   ],
+  //   socialMedia: "linkedin",
+  //   url: "https://www.linkedin.com/in/sirija-devi-a35561160?trk=blended-typeahead",
+  //   experience: "6+ Years",
+  //   students: "1,800+",
+  //   rating: "4.8",
+  //   color: "green",
+  // },
   {
     name: "Mukesh Kumar",
     designation: "General Manager",
@@ -59,18 +59,18 @@ const facultyData = [
     rating: "4.9",
     color: "purple",
   },
-  {
-    name: "Shabudeen",
-    designation: "Senior Software Engineer",
-    image: "/mentor4.jpg",
-    subjects: ["React.js & Node.js", "Frontend Development"],
-    socialMedia: null,
-    url: null,
-    experience: "5+ Years",
-    students: "1,200+",
-    rating: "4.7",
-    color: "orange",
-  },
+  // {
+  //   name: "Shabudeen",
+  //   designation: "Senior Software Engineer",
+  //   image: "/mentor4.jpg",
+  //   subjects: ["React.js & Node.js", "Frontend Development"],
+  //   socialMedia: null,
+  //   url: null,
+  //   experience: "5+ Years",
+  //   students: "1,200+",
+  //   rating: "4.7",
+  //   color: "orange",
+  // },
 ];
 
 const getColorClasses = (color: string) => {
@@ -81,24 +81,24 @@ const getColorClasses = (color: string) => {
       border: "border-blue-200",
       gradient: "from-blue-50 to-blue-100",
     },
-    green: {
-      primary: "text-green-600",
-      bg: "bg-green-50",
-      border: "border-green-200",
-      gradient: "from-green-50 to-green-100",
-    },
+    // green: {
+    //   primary: "text-green-600",
+    //   bg: "bg-green-50",
+    //   border: "border-green-200",
+    //   gradient: "from-green-50 to-green-100",
+    // },
     purple: {
       primary: "text-purple-600",
       bg: "bg-purple-50",
       border: "border-purple-200",
       gradient: "from-purple-50 to-purple-100",
     },
-    orange: {
-      primary: "text-orange-600",
-      bg: "bg-orange-50",
-      border: "border-orange-200",
-      gradient: "from-orange-50 to-orange-100",
-    },
+    // orange: {
+    //   primary: "text-orange-600",
+    //   bg: "bg-orange-50",
+    //   border: "border-orange-200",
+    //   gradient: "from-orange-50 to-orange-100",
+    // },
   };
   return colorMap[color as keyof typeof colorMap] || colorMap.blue;
 };
@@ -179,7 +179,7 @@ const Faculty = () => {
             }}
             className="w-full"
           >
-            <CarouselContent>
+             <CarouselContent className="flex justify-center">
               {facultyData.map((faculty, index) => {
                 const colors = getColorClasses(faculty.color);
                 return (

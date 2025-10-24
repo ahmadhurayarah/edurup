@@ -4,7 +4,7 @@ import React from "react";
 
 const Language = () => {
   const tools = [
-       { name: "pandas", icon: "/Language/Pandas.png", color: "bg-purple-100 text-purple-700" },
+     { name: "pandas", icon: "/Language/Pandas.png", color: "bg-purple-100 text-purple-700" },
     { name: "tableau", icon: "/Language/tableau.png", color: "bg-blue-100 text-blue-700" },
     { name: "Power BI", icon: "/Language/PowerBI.png", color: "bg-yellow-100 text-yellow-700" },
     { name: "TensorFlow", icon: "/Language/TensorFlow.png", color: "bg-orange-100 text-orange-700" },

@@ -2,37 +2,37 @@ import Image from "next/image";
 
 const stories = [
   {
-    name: "Vansh Agrawal",
+    name: "Akshay Naik ",
     role: "Fresher",
     from: "IIT Kharagpur",
-    company: "Zomato",
+    company: "value leaf",
     title: "Product Analyst",
-    text: "I got an offer from Zomato for PA role, the learning at NextLeap helped me a lot. Thank you for the course and all the learning 💗",
-    profile: "/person1.jpg",
-    fromLogo: "/iit.png",
-    companyLogo: "/zomato.png",
+    text: "I joined the Digital Marketing course at Edurup as a fresher, and it really helped me build strong practical skills. Thanks to the training and guidance, I got placed as a Campaign Manager at Valueleaf.",
+    profile: "/Picture1.png",
+    fromLogo: "/img1.png",
+    companyLogo: "/logo1.png",
   },
   {
-    name: "Vanshu Saini",
-    role: "JM Financial Ltd",
+    name: "Sree Hari Ponappan",
+    role: "Btech ",
     from: "Product Management Intern",
     company: "Phenom",
-    title: "Product Analyst",
-    text: "Great support from Arindam and the NextLeap team for placements. Even after the fellowship ended, they responded to queries and helped with placements. I enjoyed my time during the 8 weeks of the fellowship program. Mentor sessions were really helpful.",
-    profile: "/person2.jpg",
-    fromLogo: "/jm.png",
-    companyLogo: "/phenom.png",
+    title: "Sr Marketing Manager",
+    text: "I’m a B.Tech graduate and decided to switch my career into digital marketing with Edurup’s program. The training and mentorship helped me gain real marketing skills, and today I’m working as a Marketing Manager at QpiAI.",
+    profile: "/Picture2.png",
+    fromLogo: "/img2.png",
+    companyLogo: "/logo2.png",
   },
   {
-    name: "Ankita B",
+    name: "SabySachi Moha patra",
     role: "Byjus",
     from: "Associate Manager",
     company: "Inito",
-    title: "Lead Product Analyst",
-    text: "Throughout this journey, I got to collaborate with brilliant minds, learned from seasoned mentors, and put my analytical and creative skills to the test. The experience was highly enriching!",
-    profile: "/person3.jpg",
-    fromLogo: "/byjus.png",
-    companyLogo: "/inito.png",
+    title: "Company Manager",
+    text: "I was working as a Marketing Manager at Amazon and joined Edurup to upgrade my digital marketing skills. The advanced training helped me level up my career, and I’m now working as a Campaign Manager at Amazon.",
+    profile: "/Picture3.png",
+    fromLogo: "/img3.png",
+    companyLogo: "/logo3.png",
   },
 ];
 
@@ -48,7 +48,7 @@ export default function Reviews() {
           <div
             key={index}
             /* fixed height so all cards match */
-            className="bg-white text-gray-900 rounded-xl shadow-lg overflow-hidden flex flex-col h-[460px]"
+            className="bg-white text-gray-900 rounded-xl shadow-lg overflow-hidden flex flex-col h-[400px]"
           >
             {/* Top: Profile */}
             <div className="flex items-center justify-between p-4 border-b border-gray-200">
@@ -77,19 +77,20 @@ export default function Reviews() {
             <div className="flex items-center justify-between px-6 py-6">
               <div className="flex flex-col items-start text-sm">
                 {/* FROM logo: taller / larger */}
-                <div className="mb-2">
-                  <Image
-                    src={story.fromLogo}
-                    alt={story.from}
-                    width={88}
-                    height={64}
-                    className="object-contain"
-                  />
+                 <div className="mb-2">
+                 <Image
+  src={story.fromLogo}
+  alt={story.from}
+  width={88}
+  height={64}
+  className="object-contain h-[64px]"
+/>
+
                 </div>
-                <span className="font-semibold text-[#ffb300]">
+                {/* <span className="font-semibold text-[#ffb300]">
                   {story.role}
                 </span>
-                <span className="text-gray-700">{story.from}</span>
+                <span className="text-gray-700">{story.from}</span> */}
               </div>
 
               {/* simple black arrow */}
@@ -99,15 +100,16 @@ export default function Reviews() {
                 {/* COMPANY logo: smaller */}
                 <div className="mb-2">
                   <Image
-                    src={story.companyLogo}
-                    alt={story.company}
-                    width={56}
-                    height={28}
-                    className="object-contain"
-                  />
+  src={story.companyLogo}
+  alt={story.company}
+  width={56}
+  height={28}
+  className="object-contain h-[28px]"
+/>
+
                 </div>
                 <span className="font-semibold text-black">{story.company}</span>
-                <span className="text-gray-700">{story.title}</span>
+                <span className="text-gray-700 whitespace-nowrap">{story.title}</span>
               </div>
             </div>
 
