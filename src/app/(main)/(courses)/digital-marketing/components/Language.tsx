@@ -4,16 +4,23 @@ import React from "react";
 
 const Language = () => {
   const tools = [
-    { name: "pandas", icon: "/Language/Pandas.png", color: "bg-purple-100 text-purple-700" },
-    { name: "tableau", icon: "/Language/tableau.png", color: "bg-blue-100 text-blue-700" },
-    { name: "Power BI", icon: "/Language/PowerBI.png", color: "bg-yellow-100 text-yellow-700" },
-    { name: "TensorFlow", icon: "/Language/TensorFlow.png", color: "bg-orange-100 text-orange-700" },
-    { name: "SQL", icon: "/Language/sql.png", color: "bg-red-100 text-red-700" },
-    { name: "matplotlib", icon: "/Language/Matplotlib.png", color: "bg-green-100 text-green-700" },
-    { name: "python", icon: "/Language/Python.png", color: "bg-blue-100 text-blue-700" },
-    { name: "NumPy", icon: "/Language/NumPy.png", color: "bg-indigo-100 text-indigo-700" },
-    { name: "Excel", icon: "/Language/excel.png", color: "bg-emerald-100 text-emerald-700" },
+    { name: "Google ads manager", icon: "/Language/googleads.png", color: "bg-purple-100 text-purple-700" },
+    { name: "Search console", icon: "/Language/searchconsole.png", color: "bg-blue-100 text-blue-700" },
+    { name: "Analytics", icon: "/Language/analytics.png", color: "bg-yellow-100 text-yellow-700" },
+    { name: "Adwords", icon: "/Language/adwords.png", color: "bg-orange-100 text-orange-700" },
+    { name: "Tag manager", icon: "/Language/tagmanager.png", color: "bg-red-100 text-red-700" },
+    { name: "WordPress", icon: "/Language/wordpress.png", color: "bg-green-100 text-green-700" },
+    { name: "Canva", icon: "/Language/canva.png", color: "bg-blue-100 text-blue-700" },
+    { name: "Chat gpt", icon: "/Language/chatgpt.png", color: "bg-indigo-100 text-indigo-700" },
+    { name: "Meta ads", icon: "/Language/metaads.png", color: "bg-emerald-100 text-emerald-700" },
+    { name: "Quillbot", icon: "/Language/quillbot.png", color: "bg-emerald-100 text-emerald-700" },
+    { name: "Sem rush", icon: "/Language/semrush.png", color: "bg-emerald-100 text-emerald-700" },
+    { name: "Ahref", icon: "/Language/ahrefs.png", color: "bg-emerald-100 text-emerald-700" },
+    { name: "Hootsuite", icon: "/Language/hootsuite.png", color: "bg-emerald-100 text-emerald-700" },
+      { name: "Mail chimp", icon: "/Language/mailchimp.png", color: "bg-emerald-100 text-emerald-700" },
   ];
+
+
 
   return (
     <>

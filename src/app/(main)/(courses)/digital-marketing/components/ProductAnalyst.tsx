@@ -6,10 +6,10 @@ export default function ProductAnalyst() {
   const [isAnimating, setIsAnimating] = useState(false);
   
  const titles = [
-  'Marketing\nAnalyst', 
-  'Data\nAnalyst', 
-  'Business\nAnalyst', 
-  'Product\nAnalyst'
+  'Seo\nanalyst',
+'Social media\nmanager ',
+'Digital Ads\nspecialist' ,
+'Digital Marketing\nManager' 
 ];
 
   useEffect(() => {
