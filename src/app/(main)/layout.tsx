@@ -1,104 +1,88 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import { ToastProvider } from "@/providers/toast-provider";
+import { Navbar } from "@/components/Navbar";
+import Footer from "./components/Footer";
+import Head from "next/head";
 
-const inter = Inter({ subsets: ["latin"] });
-
-export const metadata: Metadata = {
-  title:
-    "Edurup Learning | Job-Guaranteed Online Courses in PGP Data Science, Digital Marketing, Data Analytics & Full Stack Developer",
-  description:
-    "Edurup Learning offers industry-ready online PGP programs in Data Science, Digital Marketing, Data Analytics, and Full Stack Developer. 100% placement support. Learn from Real time Working Experts.",
-  keywords: [
-    "Edurup Learning",
-    "PGP Data Science",
-    "Digital Marketing",
-    "Data Analytics",
-    "Full Stack Developer",
-    "Job Guaranteed Courses",
-    "Online Learning",
-    "Placement Support",
-  ],
-  authors: [{ name: "Edurup Learning", url: "https://www.edurup.in" }],
-  viewport: "width=device-width, initial-scale=1.0",
-  icons: {
-    icon: [
-      {
-        media: "(prefers-color-scheme: light)",
-        url: "/icon_light.png",
-        href: "/icon_light.png",
-      },
-      {
-        media: "(prefers-color-scheme: dark)",
-        url: "/icon_dark.png",
-        href: "/icon_dark.png",
-      },
-    ],
-  },
-  openGraph: {
-    title:
-      "Edurup Learning | Job-Guaranteed Online Courses in PGP Data Science, Digital Marketing, Data Analytics & Full Stack Developer",
-    description:
-      "Edurup Learning offers industry-ready online PGP programs in Data Science, Digital Marketing, Data Analytics, and Full Stack Developer. 100% placement support. Learn from Real time Working Experts.",
-    url: "https://www.edurup.in",
-    siteName: "Edurup Learning",
-    images: [
-      {
-        url: "/og_image.png",
-        width: 1200,
-        height: 630,
-        alt: "Edurup Learning",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title:
-      "Edurup Learning | Job-Guaranteed Online Courses in PGP Data Science, Digital Marketing, Data Analytics & Full Stack Developer",
-    description:
-      "Edurup Learning offers industry-ready online PGP programs in Data Science, Digital Marketing, Data Analytics, and Full Stack Developer. 100% placement support. Learn from Real time Working Experts.",
-    images: "/twitter_image.png",
-    site: "@EdurupLearning",
-  },
-  robots: "index, follow",
-  other: {
-    "script:type": "application/ld+json",
-    "script:innerHTML": JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Edurup Learning",
-      "url": "https://www.edurup.in",
-      "logo": "https://www.edurup.in/images/logo.png",
-      "description":
-        "Edurup Learning provides job-guaranteed online and classroom courses in Digital Marketing, Data Analytics and Full Stack Development.",
-      "sameAs": [
-        "https://www.instagram.com/edurup_learning/",
-        "https://www.linkedin.com/school/edurup-learning/",
-        "https://www.facebook.com/eduruplearning",
-        "https://maps.app.goo.gl/Lp8gWA41rM5ikMe49",
-      ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+91-XXXXXXXXXX",
-        "contactType": "Admissions",
-        "areaServed": "IN",
-        "availableLanguage": "English",
-      },
-    }),
-  },
-};
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+const MainLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <html lang="en">
-      <head>
+    <>
+      <Head>
+        {/* 🔹 SEO Title */}
+        <title>
+          Edurup Learning | PGP in Digital Marketing, Full Stack, Data Science & Analytics in Bangalore
+        </title>
+
+        {/* 🔹 Meta Description */}
+        <meta
+          name="description"
+          content="Edurup Learning offers industry-recognized Post Graduate Programs (PGP) in Digital Marketing, Full Stack Development, Data Science, and Data Analytics in Bangalore. Learn from MNC professionals, work on live projects, and get 100% placement support."
+        />
+
+        {/* 🔹 Keywords */}
+        <meta
+          name="keywords"
+          content="Edurup Learning, Digital Marketing Course Bangalore, Data Science Course Bangalore, Data Analytics Course Bangalore, Full Stack Developer Course Bangalore, Software Training Institute Bangalore, PGP Courses, 100% Placement Training"
+        />
+
+        {/* 🔹 Open Graph Tags */}
+        <meta
+          property="og:title"
+          content="Edurup Learning | PGP in Digital Marketing, Full Stack, Data Science & Analytics in Bangalore"
+        />
+        <meta
+          property="og:description"
+          content="Advance your career with Edurup Learning’s Post Graduate Programs in Digital Marketing, Data Science, Full Stack & Analytics. 100% placement support from MNC mentors."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://edurup.in/" />
+        <meta property="og:image" content="https://edurup.in/images/edurup-banner.jpg" />
+
+        {/* 🔹 Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Edurup Learning | Job-Guaranteed Online Courses in PGP Data Science, Digital Marketing, Data Analytics & Full Stack Developer"
+        />
+        <meta
+          name="twitter:description"
+          content="Edurup Learning offers industry-ready online PGP programs in Data Science, Digital Marketing, Data Analytics, and Full Stack Developer. 100% placement support. Learn from Real time Working Experts."
+        />
+        <meta name="twitter:image" content="https://edurup.in/images/edurup-banner.jpg" />
+        <meta name="twitter:site" content="@EdurupLearning" />
+
+        {/* 🔹 Basic Meta */}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="index, follow" />
+        <link rel="icon" href="/favicon.ico" />
+
+        {/* 🔹 Structured Data / Schema.org */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Edurup Learning",
+              url: "https://www.edurup.in",
+              logo: "https://www.edurup.in/images/logo.png",
+              description:
+                "Edurup Learning provides job-guaranteed online and classroom courses in Digital Marketing, Data Analytics and Full Stack Development.",
+              sameAs: [
+                "https://www.instagram.com/edurup_learning/",
+                "https://www.linkedin.com/school/edurup-learning/",
+                "https://www.facebook.com/eduruplearning",
+                "https://maps.app.goo.gl/Lp8gWA41rM5ikMe49",
+              ],
+              contactPoint: {
+                "@type": "ContactPoint",
+                telephone: "+91-XXXXXXXXXX",
+                contactType: "Admissions",
+                areaServed: "IN",
+                availableLanguage: "English",
+              },
+            }),
+          }}
+        />
+
         {/* ✅ Google Tag Manager */}
         <script
           dangerouslySetInnerHTML={{
@@ -136,37 +120,29 @@ export default function RootLayout({
           }}
         />
 
-        {/* Other meta tags */}
+        {/* 🔹 Extra Meta */}
         <meta name="theme-color" content="#000000" />
-        <meta name="msapplication-navbutton-color" content="#000000" />
-        <meta
-          name="apple-mobile-web-app-status-bar-style"
-          content="black-translucent"
-        />
         <meta name="application-name" content="Edurup Learning" />
         <meta name="apple-mobile-web-app-title" content="Edurup Learning" />
-        <meta
-          name="msapplication-tooltip"
-          content="Edurup Learning | Job-Guaranteed Online Courses in PGP Data Science, Digital Marketing, Data Analytics & Full Stack Developer"
-        />
-        <meta name="format-detection" content="telephone=no" />
-      </head>
+      </Head>
 
-      <body className={inter.className}>
-        {/* ✅ Google Tag Manager (noscript) */}
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-MBBG98KF"
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          ></iframe>
-        </noscript>
+      {/* ✅ Google Tag Manager (noscript) */}
+      <noscript>
+        <iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-MBBG98KF"
+          height="0"
+          width="0"
+          style={{ display: "none", visibility: "hidden" }}
+        ></iframe>
+      </noscript>
 
-        {/* Removed ThemeProvider wrapper */}
-        <ToastProvider />
-        {children}
-      </body>
-    </html>
+      <div className="min-h-full dark:bg-dark">
+        <Navbar />
+        <main className="h-full mt-[94px] dark:bg-dark">{children}</main>
+        <Footer />
+      </div>
+    </>
   );
-}
+};
+
+export default MainLayout;
