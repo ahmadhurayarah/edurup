@@ -39,69 +39,67 @@ export const metadata: Metadata = {
 const CoursesLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Course",
-              "name": "Digital Marketing Course in Bangalore",
-              "description":
-                "Join Edurup Learning’s Digital Marketing Course in Bangalore and learn SEO, Google Ads, Social Media Marketing, and Analytics with 100% placement assistance.",
-              "provider": {
-                "@type": "Organization",
-                "name": "Edurup Learning",
-                "url": "https://www.edurup.in",
-                "logo": "https://www.edurup.in/images/logo.png",
-                "sameAs": [
-                  "https://www.instagram.com/edurup_learning",
-                  "https://www.linkedin.com/school/edurup-learning",
-                  "https://maps.app.goo.gl/Lp8gWA41rM5ikMe49",
-                ],
-                "contactPoint": {
-                  "@type": "ContactPoint",
-                  "telephone": "+91-XXXXXXXXXX",
-                  "contactType": "Admissions",
-                  "areaServed": "IN",
-                  "availableLanguage": "English",
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Course",
+            "name": "Digital Marketing Course in Bangalore",
+            "description":
+              "Join Edurup Learning’s Digital Marketing Course in Bangalore and learn SEO, Google Ads, Social Media Marketing, and Analytics with 100% placement assistance.",
+            "provider": {
+              "@type": "Organization",
+              "name": "Edurup Learning",
+              "url": "https://www.edurup.in",
+              "logo": "https://www.edurup.in/images/logo.png",
+              "sameAs": [
+                "https://www.instagram.com/edurup_learning",
+                "https://www.linkedin.com/school/edurup-learning",
+                "https://maps.app.goo.gl/Lp8gWA41rM5ikMe49",
+              ],
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+91-XXXXXXXXXX",
+                "contactType": "Admissions",
+                "areaServed": "IN",
+                "availableLanguage": "English",
+              },
+            },
+            "educationalCredentialAwarded":
+              "Post graduate in Digital Marketing",
+            "learningResourceType": "Online & Classroom Course",
+            "occupationalCredentialAwarded":
+              "Campaign Manager / Digital Marketing Executive",
+            "courseMode": "Online and Offline (Bangalore)",
+            "inLanguage": "en",
+            "hasCourseInstance": {
+              "@type": "CourseInstance",
+              "courseMode": "Offline and Online",
+              "startDate": "2025-11-15",
+              "endDate": "2026-07-15",
+              "instructor": {
+                "@type": "Person",
+                "name": "Industry Experts from Google & Meta",
+                "description":
+                  "Trainers with 10+ years of experience in SEO, Google Ads, and Social Media Marketing.",
+              },
+              "location": {
+                "@type": "Place",
+                "name": "Edurup Learning - Bangalore",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "marathahalli , Bangalore",
+                  "addressLocality": "Bangalore",
+                  "addressRegion": "Karnataka",
+                  "postalCode": "560001",
+                  "addressCountry": "IN",
                 },
               },
-              "educationalCredentialAwarded":
-                "Post graduate in Digital Marketing",
-              "learningResourceType": "Online & Classroom Course",
-              "occupationalCredentialAwarded":
-                "Campaign Manager / Digital Marketing Executive",
-              "courseMode": "Online and Offline (Bangalore)",
-              "inLanguage": "en",
-              "hasCourseInstance": {
-                "@type": "CourseInstance",
-                "courseMode": "Offline and Online",
-                "startDate": "2025-11-15",
-                "endDate": "2026-07-15",
-                "instructor": {
-                  "@type": "Person",
-                  "name": "Industry Experts from Google & Meta",
-                  "description":
-                    "Trainers with 10+ years of experience in SEO, Google Ads, and Social Media Marketing.",
-                },
-                "location": {
-                  "@type": "Place",
-                  "name": "Edurup Learning - Bangalore",
-                  "address": {
-                    "@type": "PostalAddress",
-                    "streetAddress": "marathahalli , Bangalore",
-                    "addressLocality": "Bangalore",
-                    "addressRegion": "Karnataka",
-                    "postalCode": "560001",
-                    "addressCountry": "IN",
-                  },
-                },
-              },
-            }),
-          }}
-        />
-      </head>
+            },
+          }),
+        }}
+      />
 
       <div className="h-full dark:bg-dark">
         <main className="h-full mt-[94px] dark:bg-dark">{children}</main>

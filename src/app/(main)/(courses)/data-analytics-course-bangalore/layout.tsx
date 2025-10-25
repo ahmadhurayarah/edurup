@@ -4,14 +4,14 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Data Analyst Course in Bangalore with Placement | Edurup Learning",
   description:
-    "Build a data-driven career with Edurup’s Data Analytics Course in Bangalore. Learn Python, SQL, Excel, Power BI, and AI tools with job guarantee.",
+    "Build a data-driven career with Edurup's Data Analytics Course in Bangalore. Learn Python, SQL, Excel, Power BI, and AI tools with job guarantee.",
   alternates: {
     canonical: "https://www.edurup.in/data-analytics-course-bangalore",
   },
   openGraph: {
     title: "Data Analyst Course in Bangalore with Placement | Edurup Learning",
     description:
-      "Build a data-driven career with Edurup’s Data Analytics Course in Bangalore. Learn Python, SQL, Excel, Power BI, and AI tools with job guarantee.",
+      "Build a data-driven career with Edurup's Data Analytics Course in Bangalore. Learn Python, SQL, Excel, Power BI, and AI tools with job guarantee.",
     url: "https://www.edurup.in/data-analytics-course-bangalore",
     siteName: "Edurup Learning",
     images: [
@@ -37,7 +37,7 @@ const CoursesLayout = ({ children }: { children: React.ReactNode }) => {
             "@type": "Course",
             name: "Data Analytics Course in Bangalore",
             description:
-              "Build a data-driven career with Edurup Learning’s Data Analytics Course in Bangalore. Learn Python, SQL, Excel, Power BI, and AI tools with job guarantee and placement support.",
+              "Build a data-driven career with Edurup Learning's Data Analytics Course in Bangalore. Learn Python, SQL, Excel, Power BI, and AI tools with job guarantee and placement support.",
             provider: {
               "@type": "Organization",
               name: "Edurup Learning",

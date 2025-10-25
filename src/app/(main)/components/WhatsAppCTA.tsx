@@ -4,6 +4,8 @@
 import React from "react";
 import { FaWhatsapp } from "react-icons/fa";
 
+const WhatsAppIcon = FaWhatsapp as unknown as React.ComponentType<{ className?: string }>;
+
 const WhatsAppCTA = () => {
   const phoneNumber = "919964150039"; 
   const message = "Hi, I'm interested in learning more about your courses!"; 
@@ -23,7 +25,7 @@ const WhatsAppCTA = () => {
         <span className="text-sm font-medium whitespace-nowrap">
           Message us on
         </span>
-        <FaWhatsapp className="text-xl flex-shrink-0" />
+        <WhatsAppIcon className="text-xl flex-shrink-0" />
         <span className="text-sm font-medium whitespace-nowrap">
           WhatsApp
         </span>

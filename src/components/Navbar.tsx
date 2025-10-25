@@ -122,26 +122,26 @@ export const Navbar = () => {
                   COURSES
                 </NavigationMenuTrigger>
 
+                
                 <NavigationMenuContent>
-                  <NavigationMenuLink>
-                    {courses.map((course) => (
-                      <Link
-                        className={cn(
-                          "flex text-left ml-2 w-[13.1rem] hover:text-fg py-2 transition-colors",
-                          {
-                            "text-fg": course.href === currentPath,
-                            "text-primary": course.href !== currentPath,
-                            "hover:text-fg transition-colors": true,
-                          }
-                        )}
-                        key={course.href}
-                        href={course.href}
-                      >
-                        {course.label}
-                      </Link>
-                    ))}
-                  </NavigationMenuLink>
-                </NavigationMenuContent>
+  {courses.map((course) => (
+    <NavigationMenuLink asChild key={course.href}>
+      <Link
+        className={cn(
+          "flex text-left ml-2 w-[13.1rem] hover:text-fg py-2 transition-colors",
+          {
+            "text-fg": course.href === currentPath,
+            "text-primary": course.href !== currentPath,
+            "hover:text-fg transition-colors": true,
+          }
+        )}
+        href={course.href}
+      >
+        {course.label}
+      </Link>
+    </NavigationMenuLink>
+  ))}
+</NavigationMenuContent>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>

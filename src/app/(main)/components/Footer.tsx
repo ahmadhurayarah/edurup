@@ -32,11 +32,11 @@ const company = [
 ];
 
 const socialLinks = [
-  { label: "Facebook", href: "/", icon: faFacebook },
-  { label: "Instagram", href: "/", icon: faInstagram },
-  { label: "Twitter", href: "/", icon: faTwitter },
-  { label: "Linkedin", href: "/", icon: faLinkedin },
-  { label: "Youtube", href: "/", icon: faYoutube },
+  { label: "Facebook", href: "https://facebook.com/edurup", icon: faFacebook },
+  { label: "Instagram", href: "https://instagram.com/edurup", icon: faInstagram },
+  { label: "Twitter", href: "https://twitter.com/edurup", icon: faTwitter },
+  { label: "Linkedin", href: "https://linkedin.com/company/edurup", icon: faLinkedin },
+  { label: "Youtube", href: "https://youtube.com/@edurup", icon: faYoutube },
 ];
 
 const Footer = () => {
