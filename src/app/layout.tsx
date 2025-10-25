@@ -64,31 +64,6 @@ export const metadata: Metadata = {
     site: "@EdurupLearning",
   },
   robots: "index, follow",
-  other: {
-    "script:type": "application/ld+json",
-    "script:innerHTML": JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Edurup Learning",
-      "url": "https://www.edurup.in",
-      "logo": "https://www.edurup.in/images/logo.png",
-      "description":
-        "Edurup Learning provides job-guaranteed online and classroom courses in Digital Marketing, Data Analytics and Full Stack Development.",
-      "sameAs": [
-        "https://www.instagram.com/edurup_learning/",
-        "https://www.linkedin.com/school/edurup-learning/",
-        "https://www.facebook.com/eduruplearning",
-        "https://maps.app.goo.gl/Lp8gWA41rM5ikMe49",
-      ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+91-XXXXXXXXXX",
-        "contactType": "Admissions",
-        "areaServed": "IN",
-        "availableLanguage": "English",
-      },
-    }),
-  },
 };
 
 export default function RootLayout({
@@ -99,6 +74,35 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* ✅ Structured Data - Fixed */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Edurup Learning",
+              "url": "https://www.edurup.in",
+              "logo": "https://www.edurup.in/images/logo.png",
+              "description":
+                "Edurup Learning provides job-guaranteed online and classroom courses in Digital Marketing, Data Analytics and Full Stack Development.",
+              "sameAs": [
+                "https://www.instagram.com/edurup_learning/",
+                "https://www.linkedin.com/school/edurup-learning/",
+                "https://www.facebook.com/eduruplearning",
+                "https://maps.app.goo.gl/Lp8gWA41rM5ikMe49",
+              ],
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+91-XXXXXXXXXX",
+                "contactType": "Admissions",
+                "areaServed": "IN",
+                "availableLanguage": "English",
+              },
+            }),
+          }}
+        />
+
         {/* ✅ Google Tag Manager */}
         <script
           dangerouslySetInnerHTML={{
