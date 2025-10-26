@@ -117,12 +117,12 @@ const Footer = () => {
         <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 ">
           <div className=" col-span-1 text-center sm:text-left">
             <p className="sm:text-lg ">
-              &copy; Copyright 2024 Edurup. All Rights Reserved{" "}
+              &copy; Copyright 2025 Edurup. All Rights Reserved{" "}
             </p>
           </div>
           <div className="block sm:hidden h-3"></div>
           <div className="col-span-1 text-center sm:text-right">
-            <p className="sm:text-lg">
+            {/* <p className="sm:text-lg">
               Developed with ❤️ by{" "}
               <strong>
                 <Link
@@ -132,7 +132,7 @@ const Footer = () => {
                   Ahmad Hurayarah
                 </Link>
               </strong>{" "}
-            </p>
+            </p> */}
           </div>
         </div>
       </div>
