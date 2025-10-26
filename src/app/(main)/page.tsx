@@ -9,13 +9,15 @@ import Outcomes from "./components/Outcome";
 export default function Home() {
   return (
     <>
-      <div className="min-h-full flex flex-col">
-        <Banner />
-        <Company />
-        <FeaturedCourses />
-        <Faculty />
-        <Outcomes />
-        <News />
+      <div className="min-h-full flex flex-col overflow-x-hidden">
+        <div className="w-full max-w-full overflow-hidden">
+          <Banner />
+          <Company />
+          <FeaturedCourses />
+          <Faculty />
+          <Outcomes />
+          <News />
+        </div>
       </div>
     </>
   );
