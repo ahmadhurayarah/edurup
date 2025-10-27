@@ -5,12 +5,12 @@ export default function ProductAnalyst() {
   const [currentTitle, setCurrentTitle] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   
- const titles = [
-  'Seo\nanalyst',
-'Social media\nmanager ',
-'Digital Ads\nspecialist' ,
-'Digital Marketing\nManager' 
-];
+  const titles = [
+    'Seo\nanalyst',
+    'Social media\nmanager',
+    'Digital Ads\nspecialist',
+    'Digital Marketing\nManager'
+  ];
 
   useEffect(() => {
     const startAnimation = () => {
@@ -41,39 +41,39 @@ export default function ProductAnalyst() {
   }, [titles.length]);
 
   return (
-    <section className="w-full bg-[#1b0944] text-white py-24 px-4 flex flex-col items-center">
-      <div className="text-center">
-        <p className="text-sm uppercase tracking-wide text-gray-300 mb-8">
+    <section className="w-full bg-[#1b0944] text-white py-16 sm:py-24 px-4 sm:px-6 flex flex-col items-center">
+      <div className="text-center w-full max-w-6xl">
+        <p className="text-sm sm:text-base uppercase tracking-wide text-gray-300 mb-6 sm:mb-8">
           Your Future Job Title
         </p>
 
-        <div className="relative h-40 flex items-center justify-center mb-8">
+        <div className="relative h-32 sm:h-40 flex items-center justify-center mb-8 sm:mb-8">
           {/* Single heading that transforms */}
-         <h2 
-  className="text-6xl font-bold absolute transition-all duration-600 ease-in-out whitespace-pre-line text-center"
-  style={{
-    transform: isAnimating ? 'translateY(80px) scale(0.95)' : 'translateY(0) scale(1)',
-    opacity: isAnimating ? 0 : 1
-  }}
->
-  {titles[currentTitle]}
-</h2>
+          <h2 
+            className="text-4xl sm:text-5xl md:text-6xl font-bold absolute transition-all duration-600 ease-in-out whitespace-pre-line text-center leading-tight"
+            style={{
+              transform: isAnimating ? 'translateY(80px) scale(0.95)' : 'translateY(0) scale(1)',
+              opacity: isAnimating ? 0 : 1
+            }}
+          >
+            {titles[currentTitle]}
+          </h2>
         </div>
 
-        <div className="mt-8 w-[900px] h-1.5 bg-white mx-auto"></div>
+        <div className="mt-8 w-full max-w-2xl h-1.5 bg-white mx-auto"></div>
       </div>
 
-      <div className="mt-16 flex flex-col md:flex-row gap-2">
+      <div className="mt-12 sm:mt-16 flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center w-full max-w-4xl">
         {/* Average Salary Card */}
-        <div className="bg-[#5a1cc4] px-24 py-8 rounded-l text-center min-w-[320px] shadow-lg">
-          <p className="text-l text-gray-200">Average Analyst Salary</p>
-          <h3 className="text-4xl font-bold mt-1">8-10 Lakhs</h3>
+        <div className="bg-[#5a1cc4] px-8 sm:px-16 md:px-24 py-6 sm:py-8 rounded-lg sm:rounded-l text-center w-full sm:min-w-[280px] md:min-w-[320px] shadow-lg">
+          <p className="text-sm sm:text-base text-gray-200 mb-2">Average Analyst Salary</p>
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold">8-10 Lakhs</h3>
         </div>
 
         {/* Highest Salary Card */}
-        <div className="bg-[#742bff] px-24 py-8 rounded-l text-center min-w-[320px] shadow-lg">
-          <p className="text-l text-gray-200">Highest Salary at NextLeap</p>
-          <h3 className="text-4xl font-bold mt-1">31 Lakhs</h3>
+        <div className="bg-[#742bff] px-8 sm:px-16 md:px-24 py-6 sm:py-8 rounded-lg sm:rounded-l text-center w-full sm:min-w-[280px] md:min-w-[320px] shadow-lg">
+          <p className="text-sm sm:text-base text-gray-200 mb-2">Highest Salary at NextLeap</p>
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold">31 Lakhs</h3>
         </div>
       </div>
     </section>
