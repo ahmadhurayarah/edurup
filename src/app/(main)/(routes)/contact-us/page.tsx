@@ -9,6 +9,7 @@ import { CheckCircle, Mail, Phone, MapPin, Clock, MessageCircle } from "lucide-r
 import axios from "axios";
 import toast from "react-hot-toast";
 import Image from "next/image";
+import WhatsAppCTA from "../../components/WhatsAppCTA";
 
 const ContactUsPage = () => {
   const [formData, setFormData] = useState({
@@ -330,6 +331,7 @@ const ContactUsPage = () => {
         </div>
       </div>
       </section>
+      <WhatsAppCTA />
     </>
   );
 };

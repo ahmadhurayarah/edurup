@@ -3,6 +3,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Users, Award, Target, BookOpen, Briefcase, TrendingUp, Globe } from "lucide-react";
 import Image from "next/image";
+import WhatsAppCTA from "../../components/WhatsAppCTA";
+
 
 const AboutUsPage = () => {
   const stats = [
@@ -343,6 +345,7 @@ const AboutUsPage = () => {
           </div>
         </div>
       </section>
+      <WhatsAppCTA />
     </>
   );
 };

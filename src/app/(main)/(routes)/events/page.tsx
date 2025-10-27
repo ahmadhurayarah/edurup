@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Calendar, Clock, MapPin, Users, PlayCircle, BookOpen, MessageCircle } from "lucide-react";
-
+import WhatsAppCTA from "../../components/WhatsAppCTA";
 const EventsPage = () => {
   const [activeFilter, setActiveFilter] = useState("all");
 
@@ -428,6 +428,7 @@ const EventsPage = () => {
           </div>
         </div>
       </section>
+      <WhatsAppCTA />
     </>
   );
 };
