@@ -536,25 +536,41 @@ const FeaturedCourses = () => {
           </TabsContent>
 
           {/* Mobile views (below 700px) - using the new mobile card renderer */}
-          <TabsContent value="sc" className="block min-[700px]:hidden w-full">
-            <div className="w-full">
-              <div className="flex flex-col space-y-6">
-                {allCourses
-                  .filter(course => course.category === "software")
-                  .map((course, index) => renderMobileCourseCard(course, index))}
-              </div>
-            </div>
-          </TabsContent>
+        {/* Mobile views (below 700px) - using the new mobile card renderer */}
+<TabsContent value="sc" className="block min-[700px]:hidden">
+  <div className="w-full px-4">
+    <div className="flex overflow-x-auto space-x-4 snap-x snap-mandatory scrollbar-hide">
+      {allCourses
+        .filter(course => course.category === "software")
+        .map((course, index) => (
+          <div
+            key={index}
+            className="snap-center flex-shrink-0 w-[92%] sm:w-[400px]"
+          >
+            {renderMobileCourseCard(course, index)}
+          </div>
+        ))}
+    </div>
+  </div>
+</TabsContent>
 
-          <TabsContent value="bc" className="block min-[700px]:hidden w-full">
-            <div className="w-full">
-              <div className="flex flex-col space-y-6">
-                {allCourses
-                  .filter(course => course.category === "business")
-                  .map((course, index) => renderMobileCourseCard(course, index))}
-              </div>
-            </div>
-          </TabsContent>
+<TabsContent value="bc" className="block min-[700px]:hidden">
+  <div className="w-full px-4">
+    <div className="flex overflow-x-auto space-x-4 snap-x snap-mandatory scrollbar-hide">
+      {allCourses
+        .filter(course => course.category === "business")
+        .map((course, index) => (
+          <div
+            key={index}
+            className="snap-center flex-shrink-0 w-[92%] sm:w-[400px]"
+          >
+            {renderMobileCourseCard(course, index)}
+          </div>
+        ))}
+    </div>
+  </div>
+</TabsContent>
+
 
         </Tabs>
       </div>
