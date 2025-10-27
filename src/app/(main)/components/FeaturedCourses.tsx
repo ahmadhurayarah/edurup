@@ -535,11 +535,16 @@ const FeaturedCourses = () => {
             </div>
           </TabsContent>
 
-          {/* Mobile views (below 700px) - using the new mobile card renderer */}
- {/* Mobile views (below 700px) - using the new mobile card renderer */}
+     {/* Mobile views (below 700px) - using the new mobile card renderer */}
 <TabsContent value="sc" className="block min-[700px]:hidden">
   <div className="w-full px-4">
-    <div className="flex overflow-x-auto space-x-4 snap-x snap-mandatory scrollbar-hide">
+    <div
+      className="flex overflow-x-scroll space-x-4 snap-x snap-mandatory"
+      style={{
+        WebkitOverflowScrolling: "touch", // smooth scroll on iOS
+        scrollbarWidth: "none", // Firefox
+      }}
+    >
       {allCourses
         .filter(course => course.category === "software")
         .map((course, index) => (
@@ -556,7 +561,13 @@ const FeaturedCourses = () => {
 
 <TabsContent value="bc" className="block min-[700px]:hidden">
   <div className="w-full px-4">
-    <div className="flex overflow-x-auto space-x-4 snap-x snap-mandatory scrollbar-hide">
+    <div
+      className="flex overflow-x-scroll space-x-4 snap-x snap-mandatory"
+      style={{
+        WebkitOverflowScrolling: "touch",
+        scrollbarWidth: "none",
+      }}
+    >
       {allCourses
         .filter(course => course.category === "business")
         .map((course, index) => (
@@ -570,6 +581,7 @@ const FeaturedCourses = () => {
     </div>
   </div>
 </TabsContent>
+
 
 
         </Tabs>
