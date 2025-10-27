@@ -249,7 +249,7 @@ const FeaturedCourses = () => {
     return (
       <Card
         key={index}
-        className="w-full bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden"
+        className="w-full mx-4 bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden"
       >
         <CardHeader className="p-6 pb-4">
           {/* Course name at top */}
@@ -536,8 +536,8 @@ const FeaturedCourses = () => {
           </TabsContent>
 
           {/* Mobile views (below 700px) - using the new mobile card renderer */}
-          <TabsContent value="sc" className="block min-[700px]:hidden">
-            <div className="w-full px-4">
+          <TabsContent value="sc" className="block min-[700px]:hidden w-full">
+            <div className="w-full">
               <div className="flex flex-col space-y-6">
                 {allCourses
                   .filter(course => course.category === "software")
@@ -546,8 +546,8 @@ const FeaturedCourses = () => {
             </div>
           </TabsContent>
 
-          <TabsContent value="bc" className="block min-[700px]:hidden">
-            <div className="w-full px-4">
+          <TabsContent value="bc" className="block min-[700px]:hidden w-full">
+            <div className="w-full">
               <div className="flex flex-col space-y-6">
                 {allCourses
                   .filter(course => course.category === "business")
