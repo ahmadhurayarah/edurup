@@ -243,6 +243,81 @@ const FeaturedCourses = () => {
     );
   };
 
+  // Mobile-specific card renderer
+  const renderMobileCourseCard = (course: any, index: number) => {
+    const colors = getColorClasses(course.color);
+    return (
+      <Card
+        key={index}
+        className="w-full bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden"
+      >
+        <CardHeader className="p-6 pb-4">
+          {/* Course name at top */}
+          <CardTitle className={`text-xl font-bold ${colors.primary} leading-tight mb-3`}>
+            {course.title}
+          </CardTitle>
+          {/* ONLINE and duration buttons below course name */}
+          <div className="flex items-center gap-3">
+            <span className={`px-3 py-1 rounded-full text-sm font-medium ${colors.bg} ${colors.primary}`}>
+              ONLINE
+            </span>
+            <span className={`px-3 py-1 rounded-full text-sm font-medium ${colors.bg} ${colors.primary}`}>
+              {course.duration}
+            </span>
+          </div>
+        </CardHeader>
+        
+        <CardContent className="p-6 pt-0">
+          {/* Four gray boxes - unchanged */}
+          <div className="grid grid-cols-2 gap-4 mb-6">
+            <div className="bg-gray-100 rounded-lg p-1">
+              <p className="text-sm text-gray-700 mb-1">NEW BATCH START FROM</p>
+              <p className="text-sm font-medium text-gray-900">{course.batchStart}</p>
+            </div>
+            <div className="bg-gray-100 rounded-lg p-1">
+              <p className="text-sm text-gray-700 mb-1">SCHOLARSHIP AVAILABLE</p>
+              <p className="text-sm font-medium text-gray-900">{course.scholarship}</p>
+            </div>
+            <div className="bg-gray-100 rounded-lg p-1">
+              <p className="text-sm text-gray-700 mb-1">EMI STARTS FROM</p>
+              <p className="text-sm font-medium text-gray-900">{course.emi}</p>
+            </div>
+            <div className="bg-gray-100 rounded-lg p-1">
+              <p className="text-sm text-gray-700 mb-1">ELIGIBILITY</p>
+              <p className="text-sm font-medium text-gray-900">{course.eligibility}</p>
+            </div>
+          </div>
+          
+          <div className="space-y-3 mb-6">
+            {course.features.map((feature: string, idx: number) => (
+              <div key={idx} className="flex items-start gap-3">
+                <Check className={`w-5 h-5 mt-0.5 ${colors.check}`} />
+                <p className="text-sm text-gray-700">{feature}</p>
+              </div>
+            ))}
+          </div>
+          
+          {/* Buttons stacked vertically for mobile */}
+          <div className="flex flex-col gap-3 mb-4">
+            <Button className={`w-full ${colors.button} text-white`}>
+              Explore Course
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Button>
+            <Button variant="outline" className="w-full border-gray-300 text-gray-600 hover:bg-gray-50">
+              <Download className="w-4 h-4 mr-2" />
+              Download Brochure
+            </Button>
+          </div>
+          
+          <div className="flex items-center gap-2 text-sm text-gray-600">
+            <Flame className="w-4 h-4 text-orange-500" />
+            <span>{course.enrolled} Students already enrolled</span>
+          </div>
+        </CardContent>
+      </Card>
+    );
+  };
+
   return (
     <>
       <div className="pt-[1.3rem] sm:pt-[2rem] pb-[4rem] flex flex-col items-center justify-center dark:bg-dark">
@@ -460,77 +535,13 @@ const FeaturedCourses = () => {
             </div>
           </TabsContent>
 
+          {/* Mobile views (below 700px) - using the new mobile card renderer */}
           <TabsContent value="sc" className="block min-[700px]:hidden">
             <div className="w-full px-4">
               <div className="flex flex-col space-y-6">
                 {allCourses
                   .filter(course => course.category === "software")
-                  .map((course, index) => (
-                  <Card
-                    key={index}
-                      className="w-full bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden"
-                    >
-                      <CardHeader className="p-6 pb-4">
-                        <div className="flex items-center gap-3 mb-3">
-                          <span className={`px-3 py-1 rounded-full text-sm font-medium ${getColorClasses(course.color).bg} ${getColorClasses(course.color).primary}`}>
-                            ONLINE
-                          </span>
-                          <span className={`px-3 py-1 rounded-full text-sm font-medium ${getColorClasses(course.color).bg} ${getColorClasses(course.color).primary}`}>
-                            {course.duration}
-                          </span>
-                        </div>
-                        <CardTitle className={`text-xl font-bold ${getColorClasses(course.color).primary} leading-tight`}>
-                          {course.title}
-                        </CardTitle>
-                    </CardHeader>
-                      
-                      <CardContent className="p-6 pt-0">
-                        <div className="grid grid-cols-2 gap-4 mb-6">
-                          <div>
-                            <p className="text-sm text-gray-500 mb-1">NEW BATCH START FROM</p>
-                            <p className="text-sm font-medium text-gray-900">{course.batchStart}</p>
-                          </div>
-                          <div>
-                            <p className="text-sm text-gray-500 mb-1">SCHOLARSHIP AVAILABLE</p>
-                            <p className="text-sm font-medium text-gray-900">{course.scholarship}</p>
-                          </div>
-                          <div>
-                            <p className="text-sm text-gray-500 mb-1">EMI STARTS FROM</p>
-                            <p className="text-sm font-medium text-gray-900">{course.emi}</p>
-                          </div>
-                          <div>
-                            <p className="text-sm text-gray-500 mb-1">ELIGIBILITY</p>
-                            <p className="text-sm font-medium text-gray-900">{course.eligibility}</p>
-                          </div>
-                        </div>
-                        
-                        <div className="space-y-3 mb-6">
-                          {course.features.map((feature: string, idx: number) => (
-                            <div key={idx} className="flex items-start gap-3">
-                              <Check className={`w-5 h-5 mt-0.5 ${getColorClasses(course.color).check}`} />
-                              <p className="text-sm text-gray-700">{feature}</p>
-                      </div>
-                          ))}
-                      </div>
-                        
-                        <div className="flex gap-3 mb-4">
-                          <Button className={`flex-1 ${getColorClasses(course.color).button} text-white`}>
-                            Explore Course
-                            <ArrowRight className="w-4 h-4 ml-2" />
-                          </Button>
-                          <Button variant="outline" className="flex-1 border-gray-300 text-gray-600 hover:bg-gray-50">
-                            <Download className="w-4 h-4 mr-2" />
-                            Download Brochure
-                          </Button>
-                      </div>
-                        
-                        <div className="flex items-center gap-2 text-sm text-gray-600">
-                          <Flame className="w-4 h-4 text-orange-500" />
-                          <span>{course.enrolled} Students already enrolled</span>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
+                  .map((course, index) => renderMobileCourseCard(course, index))}
               </div>
             </div>
           </TabsContent>
@@ -540,73 +551,8 @@ const FeaturedCourses = () => {
               <div className="flex flex-col space-y-6">
                 {allCourses
                   .filter(course => course.category === "business")
-                  .map((course, index) => (
-                <Card
-                  key={index}
-                      className="w-full bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden"
-                    >
-                      <CardHeader className="p-6 pb-4">
-                        <div className="flex items-center gap-3 mb-3">
-                          <span className={`px-3 py-1 rounded-full text-sm font-medium ${getColorClasses(course.color).bg} ${getColorClasses(course.color).primary}`}>
-                            ONLINE
-                          </span>
-                          <span className={`px-3 py-1 rounded-full text-sm font-medium ${getColorClasses(course.color).bg} ${getColorClasses(course.color).primary}`}>
-                            {course.duration}
-                          </span>
-                        </div>
-                        <CardTitle className={`text-xl font-bold ${getColorClasses(course.color).primary} leading-tight`}>
-                          {course.title}
-                        </CardTitle>
-                  </CardHeader>
-                      
-                      <CardContent className="p-6 pt-0">
-                        <div className="grid grid-cols-2 gap-4 mb-6">
-                          <div>
-                            <p className="text-sm text-gray-500 mb-1">NEW BATCH START FROM</p>
-                            <p className="text-sm font-medium text-gray-900">{course.batchStart}</p>
-                          </div>
-                          <div>
-                            <p className="text-sm text-gray-500 mb-1">SCHOLARSHIP AVAILABLE</p>
-                            <p className="text-sm font-medium text-gray-900">{course.scholarship}</p>
-                          </div>
-                          <div>
-                            <p className="text-sm text-gray-500 mb-1">EMI STARTS FROM</p>
-                            <p className="text-sm font-medium text-gray-900">{course.emi}</p>
-                          </div>
-                          <div>
-                            <p className="text-sm text-gray-500 mb-1">ELIGIBILITY</p>
-                            <p className="text-sm font-medium text-gray-900">{course.eligibility}</p>
-                          </div>
-                        </div>
-                        
-                        <div className="space-y-3 mb-6">
-                          {course.features.map((feature: string, idx: number) => (
-                            <div key={idx} className="flex items-start gap-3">
-                              <Check className={`w-5 h-5 mt-0.5 ${getColorClasses(course.color).check}`} />
-                              <p className="text-sm text-gray-700">{feature}</p>
-                    </div>
-                          ))}
-                    </div>
-                        
-                        <div className="flex gap-3 mb-4">
-                          <Button className={`flex-1 ${getColorClasses(course.color).button} text-white`}>
-                            Explore Course
-                            <ArrowRight className="w-4 h-4 ml-2" />
-                          </Button>
-                          <Button variant="outline" className="flex-1 border-gray-300 text-gray-600 hover:bg-gray-50">
-                            <Download className="w-4 h-4 mr-2" />
-                            Download Brochure
-                          </Button>
-                    </div>
-                        
-                        <div className="flex items-center gap-2 text-sm text-gray-600">
-                          <Flame className="w-4 h-4 text-orange-500" />
-                          <span>{course.enrolled} Students already enrolled</span>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+                  .map((course, index) => renderMobileCourseCard(course, index))}
+              </div>
             </div>
           </TabsContent>
 
