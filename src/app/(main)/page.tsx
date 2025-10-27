@@ -5,6 +5,7 @@ import Faculty from "./components/Faculty";
 import FeaturedCourses from "./components/FeaturedCourses";
 import Footer from "./components/Footer";
 import Outcomes from "./components/Outcome";
+import WhatsAppCTA from "./components/WhatsAppCTA"; 
 
 export default function Home() {
   return (
@@ -17,6 +18,8 @@ export default function Home() {
           <Faculty />
           <Outcomes />
           <News />
+
+      <WhatsAppCTA />
         </div>
       </div>
     </>
