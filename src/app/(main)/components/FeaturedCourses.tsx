@@ -535,14 +535,15 @@ const FeaturedCourses = () => {
             </div>
           </TabsContent>
 
-     {/* Mobile views (below 700px) - using the new mobile card renderer */}
-<TabsContent value="sc" className="block min-[700px]:hidden">
-  <div className="w-full px-4">
+    {/* Mobile views (below 700px) - Fixed */}
+<TabsContent value="sc" className="block min-[700px]:hidden w-full">
+  <div className="w-full">
     <div
-      className="flex overflow-x-scroll space-x-4 snap-x snap-mandatory"
+      className="flex overflow-x-auto space-x-4 px-4 pb-4 snap-x snap-mandatory scrollbar-hide"
       style={{
-        WebkitOverflowScrolling: "touch", // smooth scroll on iOS
-        scrollbarWidth: "none", // Firefox
+        WebkitOverflowScrolling: "touch",
+        scrollbarWidth: "none",
+        msOverflowStyle: "none",
       }}
     >
       {allCourses
@@ -550,7 +551,7 @@ const FeaturedCourses = () => {
         .map((course, index) => (
           <div
             key={index}
-            className="snap-center flex-shrink-0 w-[90vw] sm:w-[85vw]"
+            className="snap-start flex-shrink-0 w-[85vw] max-w-[400px]"
           >
             {renderMobileCourseCard(course, index)}
           </div>
@@ -559,13 +560,14 @@ const FeaturedCourses = () => {
   </div>
 </TabsContent>
 
-<TabsContent value="bc" className="block min-[700px]:hidden">
-  <div className="w-full px-4">
+<TabsContent value="bc" className="block min-[700px]:hidden w-full">
+  <div className="w-full">
     <div
-      className="flex overflow-x-scroll space-x-4 snap-x snap-mandatory"
+      className="flex overflow-x-auto space-x-4 px-4 pb-4 snap-x snap-mandatory scrollbar-hide"
       style={{
         WebkitOverflowScrolling: "touch",
         scrollbarWidth: "none",
+        msOverflowStyle: "none",
       }}
     >
       {allCourses
@@ -573,7 +575,7 @@ const FeaturedCourses = () => {
         .map((course, index) => (
           <div
             key={index}
-            className="snap-center flex-shrink-0 w-[90vw] sm:w-[85vw]"
+            className="snap-start flex-shrink-0 w-[85vw] max-w-[400px]"
           >
             {renderMobileCourseCard(course, index)}
           </div>
@@ -581,7 +583,6 @@ const FeaturedCourses = () => {
     </div>
   </div>
 </TabsContent>
-
 
 
         </Tabs>
