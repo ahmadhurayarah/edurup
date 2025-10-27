@@ -42,97 +42,113 @@ const socialLinks = [
 const Footer = () => {
   return (
     <>
-      <div className="p-4 sm:p-12 dark:bg-dark bg-primary  grid justify-center  grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 space-y-3 sm:space-y-0">
-        <div className="pl-0 sm:pl-[3rem] ">
-          <h4 className="font-bold text-lg mb-4">Edurup</h4>
-          <p>
-            Briadge Archade,
-            <br />
-            Mahadevpura Bangalore - 560048
-          </p>
-          <div className="flex flex-row items-center mt-5">
-            <h5 className="mr-4 text-xl font-semibold">Queries ?</h5>
+      <div className="p-6 sm:p-12 dark:bg-dark bg-primary grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
+        {/* Company Info Section */}
+        <div className="space-y-6">
+          <h4 className="font-bold text-2xl mb-6">Edurup</h4>
+          <div className="space-y-3">
+            <p className="text-lg leading-relaxed">
+              Briadge Archade,
+              <br />
+              Mahadevpura Bangalore - 560048
+            </p>
+          </div>
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mt-8">
+            <h5 className="text-xl font-semibold whitespace-nowrap">Queries ?</h5>
             <Button
               type="submit"
               variant="fg"
-              className="border h-8 sm:h-11 sm:rounded-md sm:px-8 text-sm sm:text-[1.0rem] border-fg text-black hover:border-white hover:text-white hover:bg-dark transition-colors "
+              className="border h-11 px-8 rounded-md text-base border-fg text-black hover:border-white hover:text-white hover:bg-dark transition-colors whitespace-nowrap"
             >
               Contact us
             </Button>
           </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:flex md:flex-row justify-evenly space-y-5 sm:space-y-0">
-          <div className="space-y-0 sm:space-y-3">
-            <h4 className="font-bold text-xl mb-2 sm:mb-4">Program</h4>
-            <ul className="">
+
+        {/* Links Section */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-6">
+          {/* Programs */}
+          <div className="space-y-4">
+            <h4 className="font-bold text-xl mb-4">Program</h4>
+            <ul className="space-y-3">
               {courses.map((course) => (
-                <Link
-                  key={course.href}
-                  href={course.href}
-                  className=" hover:text-fg transition-colors"
-                >
-                  <li>{course.label}</li>
-                </Link>
-              ))}
-            </ul>
-          </div>
-          <div className="space-y-0 sm:space-y-3">
-            <h4 className="font-bold text-xl mb-2 sm:mb-4">Company</h4>
-            <ul>
-              {company.map((c) => (
-                <Link
-                  key={c.href}
-                  href={c.href}
-                  className=" hover:text-fg transition-colors"
-                >
-                  <li>{c.label}</li>
-                </Link>
-              ))}
-            </ul>
-          </div>
-          <div className="space-y-0 sm:space-y-3">
-            <h4 className="font-bold text-xl mb-2 sm:mb-4">Follow us</h4>
-            <div className="">
-              <ul>
-                {socialLinks.map((s) => (
+                <li key={course.href}>
                   <Link
-                    key={s.href}
-                    href={s.href}
-                    className="hover:text-fg transition-colors"
+                    href={course.href}
+                    className="text-lg hover:text-fg transition-colors duration-200 block py-1"
                   >
-                    <li>
-                      <FontAwesomeIcon icon={s.icon} className="h-4 mr-3" />
-                      {s.label}
-                    </li>
+                    {course.label}
                   </Link>
-                ))}
-              </ul>
-            </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div className="space-y-4">
+            <h4 className="font-bold text-xl mb-4">Company</h4>
+            <ul className="space-y-3">
+              {company.map((c) => (
+                <li key={c.href}>
+                  <Link
+                    href={c.href}
+                    className="text-lg hover:text-fg transition-colors duration-200 block py-1"
+                  >
+                    {c.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Social Links */}
+          <div className="space-y-4">
+            <h4 className="font-bold text-xl mb-4">Follow us</h4>
+            <ul className="space-y-3">
+              {socialLinks.map((s) => (
+                <li key={s.href}>
+                  <Link
+                    href={s.href}
+                    className="text-lg hover:text-fg transition-colors duration-200 flex items-center py-1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FontAwesomeIcon icon={s.icon} className="h-5 w-5 mr-3" />
+                    {s.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>
 
       <Separator />
-      <div className="p-4 sm:p-12 dark:bg-dark bg-primary py-4">
-        <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 ">
-          <div className=" col-span-1 text-center sm:text-left">
-            <p className="sm:text-lg ">
-              &copy; Copyright 2025 Edurup. All Rights Reserved{" "}
-            </p>
-          </div>
-          <div className="block sm:hidden h-3"></div>
-          <div className="col-span-1 text-center sm:text-right">
-            {/* <p className="sm:text-lg">
-              Developed with ❤️ by{" "}
-              <strong>
-                <Link
-                  href="https://www.linkedin.com/in/ahmadhurayarah/"
-                  className="hover:text-fg transition-colors"
-                >
-                  Ahmad Hurayarah
-                </Link>
-              </strong>{" "}
-            </p> */}
+
+      {/* Copyright Section */}
+      <div className="p-6 sm:p-12 dark:bg-dark bg-primary py-6">
+        <div className="container mx-auto">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div className="text-center sm:text-left">
+              <p className="text-lg">
+                &copy; Copyright 2025 Edurup. All Rights Reserved
+              </p>
+            </div>
+            <div className="text-center sm:text-right">
+              {/* Uncomment if needed
+              <p className="text-lg">
+                Developed with ❤️ by{" "}
+                <strong>
+                  <Link
+                    href="https://www.linkedin.com/in/ahmadhurayarah/"
+                    className="hover:text-fg transition-colors"
+                  >
+                    Ahmad Hurayarah
+                  </Link>
+                </strong>
+              </p>
+              */}
+            </div>
           </div>
         </div>
       </div>
