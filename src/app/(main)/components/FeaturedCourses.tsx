@@ -536,7 +536,7 @@ const FeaturedCourses = () => {
           </TabsContent>
 
           {/* Mobile views (below 700px) - using the new mobile card renderer */}
-        {/* Mobile views (below 700px) - using the new mobile card renderer */}
+ {/* Mobile views (below 700px) - using the new mobile card renderer */}
 <TabsContent value="sc" className="block min-[700px]:hidden">
   <div className="w-full px-4">
     <div className="flex overflow-x-auto space-x-4 snap-x snap-mandatory scrollbar-hide">
@@ -545,7 +545,7 @@ const FeaturedCourses = () => {
         .map((course, index) => (
           <div
             key={index}
-            className="snap-center flex-shrink-0 w-[92%] sm:w-[400px]"
+            className="snap-center flex-shrink-0 w-[90vw] sm:w-[85vw]"
           >
             {renderMobileCourseCard(course, index)}
           </div>
@@ -562,7 +562,7 @@ const FeaturedCourses = () => {
         .map((course, index) => (
           <div
             key={index}
-            className="snap-center flex-shrink-0 w-[92%] sm:w-[400px]"
+            className="snap-center flex-shrink-0 w-[90vw] sm:w-[85vw]"
           >
             {renderMobileCourseCard(course, index)}
           </div>
