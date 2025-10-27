@@ -551,7 +551,7 @@ const FeaturedCourses = () => {
         .map((course, index) => (
           <div
             key={index}
-            className="snap-start flex-shrink-0 w-[85vw] max-w-[400px]"
+            className="snap-start flex-shrink-0 w-[95vw] max-w-[400px]"
           >
             {renderMobileCourseCard(course, index)}
           </div>
