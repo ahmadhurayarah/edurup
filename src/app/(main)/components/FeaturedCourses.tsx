@@ -539,7 +539,7 @@ const FeaturedCourses = () => {
 <TabsContent value="sc" className="block min-[700px]:hidden w-full">
   <div className="w-full">
     <div
-      className="flex overflow-x-auto space-x-4 px-4 pb-4 snap-x snap-mandatory scrollbar-hide"
+      className="flex overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide"
       style={{
         WebkitOverflowScrolling: "touch",
         scrollbarWidth: "none",
@@ -551,7 +551,7 @@ const FeaturedCourses = () => {
         .map((course, index) => (
           <div
             key={index}
-            className="snap-start flex-shrink-0 w-[95vw] max-w-[400px]"
+            className="snap-start flex-shrink-0 w-[85vw] mx-2 first:ml-4 last:mr-4 max-w-[400px]"
           >
             {renderMobileCourseCard(course, index)}
           </div>
@@ -563,7 +563,7 @@ const FeaturedCourses = () => {
 <TabsContent value="bc" className="block min-[700px]:hidden w-full">
   <div className="w-full">
     <div
-      className="flex overflow-x-auto space-x-4 px-4 pb-4 snap-x snap-mandatory scrollbar-hide"
+      className="flex overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide"
       style={{
         WebkitOverflowScrolling: "touch",
         scrollbarWidth: "none",
@@ -575,7 +575,7 @@ const FeaturedCourses = () => {
         .map((course, index) => (
           <div
             key={index}
-            className="snap-start flex-shrink-0 w-[95vw] max-w-[400px]"
+            className="snap-start flex-shrink-0 w-[85vw] mx-2 first:ml-4 last:mr-4 max-w-[400px]"
           >
             {renderMobileCourseCard(course, index)}
           </div>
