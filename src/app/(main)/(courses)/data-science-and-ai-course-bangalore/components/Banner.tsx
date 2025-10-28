@@ -11,7 +11,7 @@ const CourseBanner = () => {
         {/* Left: Course Info */}
         <div className="flex-1 flex flex-col gap-4 sm:gap-6">
           <h1 className="text-3xl sm:text-5xl font-bold leading-snug">
-            DPGP - Data Science &  AI
+            PGP - Data Science &  AI
           </h1>
           <p className="text-base sm:text-lg text-black">
             32-week online Data science & AI Course with Certification and 100% Placement Support
