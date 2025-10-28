@@ -1,30 +1,31 @@
+
 "use client";
 import React from "react";
 import { Button } from "@/components/ui/button";
 
 const CourseBanner = () => {
   return (
-    <section className="bg-[#2B1F5F] text-white py-12 px-4 sm:px-16">
+    <section className="bg-[#6ed290] text-black py-12 px-4 sm:px-16">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start gap-10 lg:gap-16">
 
         {/* Left: Course Info */}
         <div className="flex-1 flex flex-col gap-4 sm:gap-6">
           <h1 className="text-3xl sm:text-5xl font-bold leading-snug">
-            Digital Marketing PGP
+            Data science & AI PGP
           </h1>
-          <p className="text-base sm:text-lg text-gray-300">
-            32-week online Digital Marketing Course with Certification and 100% Placement Support
+          <p className="text-base sm:text-lg text-black">
+            32-week online Data science & AI Course with Certification and 100% Placement Support
           </p>
 
           {/* Features */}
-          <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-6 mt-4 text-gray-300">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-6 mt-4 text-black">
             {[
               { title: "Live", subtitle: "Sessions on Zoom" },
               { title: "32 Weeks", subtitle: "Course Duration" },
               { title: "Mentorship", subtitle: "With Experienced Professionals" },
               { title: "Placement", subtitle: "100% Support till Job" }
             ].map((feature, idx) => (
-              <div key={idx} className="flex flex-col items-start bg-[#3B2A80] px-4 py-2 rounded-md w-full sm:w-auto">
+              <div key={idx} className="flex flex-col items-start bg-[#ffffff] px-4 py-2 rounded-md w-full sm:w-auto">
                 <span className="font-semibold">{feature.title}</span>
                 <span className="text-xs sm:text-sm">{feature.subtitle}</span>
               </div>
@@ -36,7 +37,7 @@ const CourseBanner = () => {
             <Button className="bg-yellow-400 text-black hover:bg-yellow-500 w-full sm:w-auto py-3 sm:py-2 transition text-sm sm:text-base">
               Request a Callback
             </Button>
-            <Button className="bg-white text-[#2B1F5F] hover:bg-gray-200 w-full sm:w-auto py-3 sm:py-2 transition text-sm sm:text-base">
+            <Button className="bg-white text-black hover:bg-gray-200 w-full sm:w-auto py-3 sm:py-2 transition text-sm sm:text-base">
               Download Curriculum
             </Button>
           </div>

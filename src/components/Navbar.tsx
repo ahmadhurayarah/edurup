@@ -64,10 +64,12 @@ export const Navbar = () => {
     //   href: "/full-stack-web-development",
     // },
     // { label: "Data Science", href: "/data-science" },
-    { label: "Digital Marketing", href: "/digital-marketing-course-bangalore" },
+    { label: "PG Digital Marketing", href: "/digital-marketing-course-bangalore" },
     // { label: "Mern Development", href: "/mern-stack-developer-course" },
-    { label: "Full Stack Website", href: "/full-stack-developer-course-bangalore" },
-    { label: "Data Analytics", href: "data-analytics-course-bangalore" },
+   { label: "PG Data Analytics", href: "data-analytics-course-bangalore" },
+   { label: "PG Data Science & AI", href: "data-science-and-ai-course-bangalore" },
+    { label: "PG Full Stack Developer", href: "/full-stack-developer-course-bangalore" },
+    
     // { label: "Finance Analyst", href: "/finance-analyst" },
     // { label: "Python", href: "/python" },
   ];
