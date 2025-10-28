@@ -3,10 +3,9 @@ import News from "./components/News";
 import Company from "./components/Company";
 import Faculty from "./components/Faculty";
 import FeaturedCourses from "./components/FeaturedCourses";
-import FeaturedCourses1 from "./components/FeaturedCourses1";
 import Footer from "./components/Footer";
 import Outcomes from "./components/Outcome";
-import WhatsAppCTA from "./components/WhatsAppCTA"; 
+import WhatsAppCTA from "./components/WhatsAppCTA";
 
 export default function Home() {
   return (
@@ -16,12 +15,11 @@ export default function Home() {
           <Banner />
           <Company />
           <FeaturedCourses />
-          <FeaturedCourses1 />
           <Faculty />
           <Outcomes />
           <News />
 
-      <WhatsAppCTA />
+          <WhatsAppCTA />
         </div>
       </div>
     </>
