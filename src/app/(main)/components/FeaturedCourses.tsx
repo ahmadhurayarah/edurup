@@ -27,7 +27,7 @@ const FeaturedCourses = () => {
   const allCourses = [
     // Software Courses
     {
-      title: "Data Science",
+      title: "PGP - Data Science &  AI",
       duration: "8 MONTHS",
       batchStart: "Nov 15, 2025",
       scholarship: "Yes",
@@ -45,7 +45,7 @@ const FeaturedCourses = () => {
       ],
     },
     {
-      title: "PGP-Advanced Full Stack Development",
+      title: "PGP- Full Stack Developer",
       duration: "6-8 MONTHS",
       batchStart: "Nov 5, 2025",
       scholarship: "Yes",
