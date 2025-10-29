@@ -11,7 +11,7 @@ const tools = [
   { name: "Express.js", icon: "/Language/express.png", color: "bg-gray-100 text-gray-700" },
   { name: "React", icon: "/Language/react.png", color: "bg-cyan-100 text-cyan-700" },
   { name: "Postman", icon: "/Language/postman.png", color: "bg-orange-100 text-orange-700" },
-  { name: "Redux", icon: "/Language/redux1.png", color: "bg-purple-100 text-purple-700" },
+  { name: "Redux", icon: "/Language/redux.png", color: "bg-purple-100 text-purple-700" },
   { name: "Docker", icon: "/Language/docker.png", color: "bg-blue-100 text-blue-700" },
   { name: "Vercel", icon: "/Language/vercel.png", color: "bg-black-100 text-black-700" },
 ];
