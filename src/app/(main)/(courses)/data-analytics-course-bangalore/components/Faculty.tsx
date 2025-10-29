@@ -174,13 +174,15 @@ const Faculty = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          <Carousel
-            opts={{
-              align: "center",
-            }}
-            className="w-full"
-          >
-            <CarouselContent>
+  <div className="w-full flex justify-center items-center py-10">
+  <Carousel
+    opts={{
+      align: "center",
+    }}
+    className="w-full px-6"
+  >
+
+            <CarouselContent className="flex justify-center w-full">
               {facultyData.map((faculty, index) => {
                 const colors = getColorClasses(faculty.color);
                 return (
@@ -403,8 +405,9 @@ const Faculty = () => {
                 );
               })}
             </CarouselContent>
-          </Carousel>
+          </Carousel></div>
         </motion.div>
+        
       </div>
       <Separator />
     </>
