@@ -91,6 +91,59 @@ const CoursesLayout = ({ children }: { children: React.ReactNode }) => {
         }}
       />
 
+      {/* ✅ FAQ Schema Markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is the Data Analytics Course offered by Edurup Learning?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The Data Analytics PGP by Edurup Learning is an 8-month comprehensive program covering Excel, SQL, Python, Tableau, and Power BI, with 100% placement support."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Who can enroll in this course?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The course is ideal for fresh graduates, working professionals, and career changers with no prior programming experience."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What tools and technologies will I learn?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "You will learn Excel, SQL, Python, Tableau, Power BI, and key data visualization tools at Edurup Learning."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does Edurup Learning provide placement support?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, Edurup Learning offers 100% placement support including resume building, mock interviews, and career mentoring."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Will I receive a certificate after completion?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, you will receive an Industry-Recognized Certificate from Edurup Learning upon completion."
+                }
+              }
+            ]
+          }),
+        }}
+      />
+
       <div className="h-full dark:bg-dark">
         <main className="h-full mt-[94px] dark:bg-dark">{children}</main>
       </div>

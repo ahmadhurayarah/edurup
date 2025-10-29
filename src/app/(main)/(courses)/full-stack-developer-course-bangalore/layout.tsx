@@ -111,6 +111,115 @@ const CoursesLayout = ({ children }: { children: React.ReactNode }) => {
         }}
       />
 
+      {/* ✅ Full Stack Developer FAQ Schema Markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is the Full Stack Developer Course offered by Edurup Learning in Bangalore?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The Full Stack Developer Course in Bangalore by Edurup Learning is a job-ready, industry-oriented program that covers front-end and back-end technologies, live projects and placement support."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Who can apply for the Full Stack Developer course in Bangalore?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Anyone eager to become a full stack web developer can apply — including fresh graduates, working professionals, and non-IT backgrounds. No prior coding knowledge required."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the duration and format of this Full Stack Developer course in Bangalore?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The program spans several weeks, is delivered through live online classes (and optionally hybrid in Bangalore), and includes assignments and project work."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What technologies and tools are covered in the curriculum?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Learners will be trained in HTML5, CSS3, JavaScript, React/Angular, Node.js, Express, MongoDB/MySQL, Git, deployment tools and full-stack application development."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does Edurup Learning provide placement assistance for this Full Stack Developer course?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes — Edurup provides placement support including resume building, mock interviews, hiring partner access, and assistance until job placement."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the fee structure and payment/EMI options for this course?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Fees vary by batch and mode; scholarships and early-bird discounts may apply. Flexible EMI and payment options are available."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the eligibility criteria for enrolling in the Full Stack Developer Course in Bangalore?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Minimal eligibility: basic logic/maths aptitude helps, no strict coding background required, just the willingness to learn and complete the program."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Will I receive a certificate upon completion of the program?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes — Upon successful completion, you will receive an industry-recognised certification for the Full Stack Developer course from Edurup Learning."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What kinds of projects will I work on during the course?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Projects include building responsive web apps, RESTful APIs, full-stack MERN/MEAN applications, deploying to cloud/servers, and a personalized capstone portfolio."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is the course available offline in Bangalore or only online?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The course is offered online with live classes, and may include optional in-person classroom sessions in Bangalore; check current batch mode."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What job roles and salary can I expect after completing the Full Stack Developer course?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Graduates can target roles like Full Stack Developer, Web Application Developer, Front/Back-End Developer. In Bangalore freshers may start at ~₹ 5-10 LPA, scaling up with skills."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I apply or enrol for the Edurup Learning Full Stack Developer Course in Bangalore?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Visit the course page on Edurup Learning's website, click 'Apply' or 'Book a Demo', fill the registration form and secure your seat for the next batch."
+                }
+              }
+            ]
+          }),
+        }}
+      />
+
       <div className="h-full dark:bg-dark">
         <main className="h-full mt-[94px] dark:bg-dark">{children}</main>
       </div>
