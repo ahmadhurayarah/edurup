@@ -5,39 +5,58 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
+
 const faq = [
   {
-    question: "What is Digital Marketing?",
-    answer:
-      "In this digital era, marketing and other advertisements are generally done with the help of digital services rather than manual services. Digital Marketing is the process of using the Internet, social media, mobile devices, search engines, etc. to reach out to business customers. This allows you to gain new leads and sales and garner traffic, thereby improving your business.",
+    question: "1. What is the Full Stack Developer Course offered by Edurup Learning in Bangalore?",
+    answer: "The Full Stack Developer Course in Bangalore by Edurup Learning is a job-ready, industry-oriented program that covers front-end (HTML, CSS, JavaScript, React/Angular) and back-end (Node.js, Express, Databases) technologies, and ends with live projects and placement support for learners in Bengaluru and beyond."
   },
   {
-    question: "Why learn Digital Marketing courses?",
-    answer:
-      "LinkedIn shows over 36,000 Digital Marketing job openings in the United States and more than 10,000 jobs in India. Digital Marketers in the United States earn in the range of US$61,027 to US$77,238 per annum – Indeed.",
+    question: "2. Who can apply for the Full Stack Developer course in Bangalore?",
+    answer: "Anyone eager to become a full-stack web developer can apply — including fresh graduates, working professionals looking to upskill or switch careers, and even non-IT background learners. No prior coding knowledge is strictly required."
   },
   {
-    question: "Is Digital Marketing a good career?",
-    answer:
-      "In the world we live in today, most of the marketing process is done over the Internet through various platforms, such as websites, social media, etc. Companies from all around the world have digitized their systems, which has given rise to numerous job opportunities in top organizations. Besides, Digital Marketing is a vast field and provides a platform for professionals with numerous skills. Digital Marketing is one of the most sought-after career opportunities as well.",
+    question: "3. What is the duration and format of this Full Stack Developer course in Bangalore?",
+    answer: "The program spans several weeks (often 20-32 weeks depending on batch type) and is delivered through live online classes (and optionally in-person or hybrid in Bangalore). Learners get real-time interaction, assignments, and project work."
   },
   {
-    question: "What are the skills needed to learn Digital Marketing?",
-    answer:
-      "There are no prerequisites to learn Digital Marketing. No prior knowledge or skill is required to take up these digital marketing classes online.",
+    question: "4. What technologies and tools are covered in the curriculum?",
+    answer: "You will learn essential web technologies including HTML5, CSS3, JavaScript, front-end frameworks (React or Angular), back-end frameworks (Node.js, Express), databases (MongoDB, MySQL), version control (Git), and deployment tools—equipping you for full-stack development roles."
   },
   {
-    question:
-      "What are the various job opportunities available after doing online Digital Marketing courses?",
-    answer:
-      "1. Digital Marketing Specialist\n2. Digital Marketing Strategist\n3. Digital Marketing Manager\n4. Social Media Marketer\n5. Digital Marketing Executive\n6. SEO Expert\n7. Digital Marketing Analyst\n8. Content Marketer",
+    question: "5. Does Edurup Learning provide placement assistance for this Full Stack Developer course?",
+    answer: "Yes — Edurup Learning offers robust placement support including resume building, mock interviews, access to hiring partner networks, and assistance until you secure a relevant full-stack developer position in or around Bangalore."
   },
   {
-    question: "What are the various Digital Marketing courses available?",
-    answer:
-      "1. Google Analytics Training\n2. Search Engine Marketing (SEM) Training\n3. Search Engine Optimization (SEO) Training\n4. SEO, SEM, and Google Analytics Master’s Course",
+    question: "6. What is the fee structure and payment/EMI options for this course?",
+    answer: "The fee for the Full Stack Developer course varies by batch and mode (online vs classroom) and may include scholarships or early-bird discounts. Flexible EMI/payment plans are typically offered to make the course accessible."
   },
+  {
+    question: "7. What are the eligibility criteria for enrolling in the Full Stack Developer Course in Bangalore?",
+    answer: "There are generally minimal eligibility criteria: a basic mathematical/logical aptitude helps, but no strict coding background is required. Openness to learning programming and the dedication to complete the course are key."
+  },
+  {
+    question: "8. Will I receive a certificate upon completion of the full-stack developer program?",
+    answer: "Yes — upon successful completion of all modules, projects and assessments, you will receive an industry-recognised certificate from Edurup Learning for the Full Stack Developer course."
+  },
+  {
+    question: "9. What kinds of projects will I work on during the course?",
+    answer: "You will engage in hands-on real-world projects such as building responsive web applications, RESTful APIs, full-stack MERN/MEAN applications, deployment to cloud or servers, and personalized capstone project portfolios that make you job-ready."
+  },
+  {
+    question: "10. Is the course available offline in Bangalore or only online?",
+    answer: "The Full Stack Developer course is offered as an online live-class format (so you can join from anywhere) and may also include optional classroom sessions in Bangalore. Check current batch details for in-person/online modes."
+  },
+  {
+    question: "11. What job roles and salary can I expect after completing the Full Stack Developer course?",
+    answer: "After completion you can aim for roles such as Full Stack Developer, Web Application Developer, Front-End/Back-End Developer, with salary ranges varying by company and location. In Bangalore freshers may begin at ~₹ 5-10 lakhs per annum and grow from there depending on skill and experience."
+  },
+  {
+    question: "12. How do I apply or enrol for the Edurup Learning Full Stack Developer Course in Bangalore?",
+    answer: "To apply, visit the official course page on Edurup Learning's website, click 'Apply' or 'Book a Demo', fill the registration form, attend the counselling/demo session and secure your seat for the next batch."
+  }
 ];
+
 
 const Faq = () => {
   return (

@@ -7,36 +7,53 @@ import {
 
 const faq = [
   {
-    question: "What is Digital Marketing?",
-    answer:
-      "In this digital era, marketing and other advertisements are generally done with the help of digital services rather than manual services. Digital Marketing is the process of using the Internet, social media, mobile devices, search engines, etc. to reach out to business customers. This allows you to gain new leads and sales and garner traffic, thereby improving your business.",
+    question: "1. What is the Data Science and AI course offered by Edurup Learning?",
+    answer: "The Data Science and Artificial Intelligence Course in Bangalore by Edurup Learning is a comprehensive PGP (Post Graduate Program) designed for beginners and professionals. It covers Python, Machine Learning, Deep Learning, and AI tools with 100% placement support and industry projects."
   },
   {
-    question: "Why learn Digital Marketing courses?",
-    answer:
-      "LinkedIn shows over 36,000 Digital Marketing job openings in the United States and more than 10,000 jobs in India. Digital Marketers in the United States earn in the range of US$61,027 to US$77,238 per annum – Indeed.",
+    question: "2. Who can apply for this Data Science course in Bangalore?",
+    answer: "Anyone interested in building a career in data science or AI can apply. This includes fresh graduates, working professionals, and non-tech learners. No prior coding experience is required."
   },
   {
-    question: "Is Digital Marketing a good career?",
-    answer:
-      "In the world we live in today, most of the marketing process is done over the Internet through various platforms, such as websites, social media, etc. Companies from all around the world have digitized their systems, which has given rise to numerous job opportunities in top organizations. Besides, Digital Marketing is a vast field and provides a platform for professionals with numerous skills. Digital Marketing is one of the most sought-after career opportunities as well.",
+    question: "3. What is the duration of the Data Science and AI program?",
+    answer: "The course duration is 8 months (32 weeks) with live online classes, weekend batches, and recorded sessions for flexibility."
   },
   {
-    question: "What are the skills needed to learn Digital Marketing?",
-    answer:
-      "There are no prerequisites to learn Digital Marketing. No prior knowledge or skill is required to take up these digital marketing classes online.",
+    question: "4. What tools and technologies will I learn?",
+    answer: "You'll learn essential tools like Python, NumPy, Pandas, Matplotlib, Seaborn, Scikit-learn, TensorFlow, Keras, and SQL — plus real-time project deployment techniques using Flask and Streamlit."
   },
   {
-    question:
-      "What are the various job opportunities available after doing online Digital Marketing courses?",
-    answer:
-      "1. Digital Marketing Specialist\n2. Digital Marketing Strategist\n3. Digital Marketing Manager\n4. Social Media Marketer\n5. Digital Marketing Executive\n6. SEO Expert\n7. Digital Marketing Analyst\n8. Content Marketer",
+    question: "5. Does Edurup Learning offer placement support?",
+    answer: "Yes, Edurup provides 100% placement support, including resume building, mock interviews, internship opportunities, and access to hiring partners in top tech companies across Bangalore and India."
   },
   {
-    question: "What are the various Digital Marketing courses available?",
-    answer:
-      "1. Google Analytics Training\n2. Search Engine Marketing (SEM) Training\n3. Search Engine Optimization (SEO) Training\n4. SEO, SEM, and Google Analytics Master’s Course",
+    question: "6. What is the course fee for the Data Science and AI program?",
+    answer: "The total course fee is ₹1,00,000, but students can avail up to 30% scholarship, bringing the fee down to ₹70,000. Easy EMI options are also available."
   },
+  {
+    question: "7. What are the eligibility criteria for joining this course?",
+    answer: "Basic understanding of mathematics and logical reasoning is helpful, but not mandatory. Anyone with a passion for data and technology can join this program."
+  },
+  {
+    question: "8. Will I get a certificate after completing the course?",
+    answer: "Yes, you'll receive an industry-recognized certification from Edurup Learning upon successful completion of all modules and projects."
+  },
+  {
+    question: "9. What kind of projects will I work on during the course?",
+    answer: "Learners will work on real-world projects such as sentiment analysis, stock market prediction, image recognition, and customer churn analysis to build a strong portfolio."
+  },
+  {
+    question: "10. Is this course available offline in Bangalore?",
+    answer: "The Data Science and AI course is conducted online with live instructor-led sessions. You can attend from anywhere in India, though Edurup Learning also has an office in Bangalore."
+  },
+  {
+    question: "11. What job roles can I expect after completing the program?",
+    answer: "Graduates can apply for roles such as Data Analyst, Machine Learning Engineer, Data Scientist, Business Analyst, and AI Engineer with salaries ranging from ₹5 – 15 LPA depending on experience."
+  },
+  {
+    question: "12. How can I apply for the Edurup Learning Data Science and AI course?",
+    answer: "You can visit the official page edurup.in/data-science-and-ai-course-bangalore and click on 'Apply for Course' or 'Book a Demo' to get started."
+  }
 ];
 
 const Faq = () => {

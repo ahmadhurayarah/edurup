@@ -5,39 +5,74 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
+
 const faq = [
   {
-    question: "What is Digital Marketing?",
-    answer:
-      "In this digital era, marketing and other advertisements are generally done with the help of digital services rather than manual services. Digital Marketing is the process of using the Internet, social media, mobile devices, search engines, etc. to reach out to business customers. This allows you to gain new leads and sales and garner traffic, thereby improving your business.",
+    question: "1. What is the Data Analytics Course offered by Edurup Learning?",
+    answer: "The Data Analytics PGP by Edurup Learning is an 8-month (32-week) comprehensive program that helps learners master data analysis tools like Excel, SQL, Python, Tableau, and Power BI. It is designed to make you job-ready with 100% placement support."
   },
   {
-    question: "Why learn Digital Marketing courses?",
-    answer:
-      "LinkedIn shows over 36,000 Digital Marketing job openings in the United States and more than 10,000 jobs in India. Digital Marketers in the United States earn in the range of US$61,027 to US$77,238 per annum – Indeed.",
+    question: "2. Who can enroll in this course?",
+    answer: "This course by Edurup Learning is ideal for fresh graduates, working professionals, and anyone looking to switch their career into data analytics. No prior programming experience is required."
   },
   {
-    question: "Is Digital Marketing a good career?",
-    answer:
-      "In the world we live in today, most of the marketing process is done over the Internet through various platforms, such as websites, social media, etc. Companies from all around the world have digitized their systems, which has given rise to numerous job opportunities in top organizations. Besides, Digital Marketing is a vast field and provides a platform for professionals with numerous skills. Digital Marketing is one of the most sought-after career opportunities as well.",
+    question: "3. What tools and technologies will I learn?",
+    answer: "At Edurup Learning, you'll get hands-on experience with:\n• Excel\n• SQL\n• Python (NumPy, Pandas)\n• Tableau\n• Power BI\n• Statistics & Data Visualization Tools"
   },
   {
-    question: "What are the skills needed to learn Digital Marketing?",
-    answer:
-      "There are no prerequisites to learn Digital Marketing. No prior knowledge or skill is required to take up these digital marketing classes online.",
+    question: "4. What is the duration of the Data Analytics course?",
+    answer: "The Data Analytics Course by Edurup Learning runs for approximately 8 months (32 weeks) with live online sessions conducted by industry experts."
   },
   {
-    question:
-      "What are the various job opportunities available after doing online Digital Marketing courses?",
-    answer:
-      "1. Digital Marketing Specialist\n2. Digital Marketing Strategist\n3. Digital Marketing Manager\n4. Social Media Marketer\n5. Digital Marketing Executive\n6. SEO Expert\n7. Digital Marketing Analyst\n8. Content Marketer",
+    question: "5. Does Edurup Learning provide placement support?",
+    answer: "Yes! Edurup Learning offers 100% Placement Support including resume building, mock interviews, internship opportunities, and interview preparation until you get placed."
   },
   {
-    question: "What are the various Digital Marketing courses available?",
-    answer:
-      "1. Google Analytics Training\n2. Search Engine Marketing (SEM) Training\n3. Search Engine Optimization (SEO) Training\n4. SEO, SEM, and Google Analytics Master’s Course",
+    question: "6. What is the program fee and payment options?",
+    answer: "The total program fee is ₹1,00,000, but after a 30% scholarship, you pay ₹70,000. EMI options start from ₹10,000/month for your convenience."
   },
+  {
+    question: "7. Are the classes online or offline?",
+    answer: "The Edurup Learning Data Analytics Course is conducted live online via Zoom, with access to recorded sessions if you miss a class."
+  },
+  {
+    question: "8. Will I receive a certificate after completing the course?",
+    answer: "Yes, you'll receive an Industry-Recognized Certificate from Edurup Learning upon successfully completing the program and final project."
+  },
+  {
+    question: "9. What projects will I work on?",
+    answer: "You'll build multiple hands-on projects including:\n• Excel data dashboards\n• SQL data queries\n• Tableau & Power BI visualizations\n• Python data analysis using Pandas\n• Final capstone project based on real-world business data"
+  },
+  {
+    question: "10. What career roles can I apply for after this course?",
+    answer: "After completing the Data Analytics Course from Edurup Learning, you can apply for roles like:\n• Data Analyst\n• Business Analyst\n• Data Visualization Specialist\n• Junior Data Scientist\n• Reporting Analyst"
+  },
+  {
+    question: "11. What is the average salary after completing this program?",
+    answer: "Students from Edurup Learning have received placements with average salaries of ₹8–10 LPA, with top performers earning up to ₹31 LPA in reputed companies."
+  },
+  {
+    question: "12. What if I miss a live class?",
+    answer: "All live sessions conducted by Edurup Learning are recorded. You'll have lifetime access to class recordings through the student learning portal."
+  },
+  {
+    question: "13. Does Edurup Learning offer a demo session?",
+    answer: "Yes! You can attend a Free Demo Class by Edurup Learning to understand the teaching style, course content, and mentorship before enrolling."
+  },
+  {
+    question: "14. Is there any eligibility requirement?",
+    answer: "Anyone with basic computer knowledge can join. Students from B.Tech, B.Com, B.Sc, MBA, or any graduate background are welcome to apply."
+  },
+  {
+    question: "15. When does the next batch start?",
+    answer: "The upcoming batch (Cohort 14) for Edurup Learning's Data Analytics course starts November 1. Limited seats are available — enroll early!"
+  },
+  {
+    question: "16. What makes Edurup Learning different from other institutes?",
+    answer: "At Edurup Learning, we provide:\n✅ Mentor-led Live Classes\n✅ Real-world Projects\n✅ Lifetime Learning Access\n✅ 100% Placement Assistance\n✅ One-on-One Career Mentoring"
+  }
 ];
+
 
 const Faq = () => {
   return (
