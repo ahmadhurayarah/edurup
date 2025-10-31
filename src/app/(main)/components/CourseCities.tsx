@@ -69,12 +69,22 @@ const courses = [
   },
   {
     name: "MCA Data Science Course",
-    slugBase: "mca-data-science-course",
+    slugBase: "Mca-data-science-course",
     cities: [],
   },
   {
     name: "MCA Data Science Online",
-    slugBase: "mca-data-science-online",
+    slugBase: "Mca-data-science-online",
+    cities: [],
+  },
+  {
+    name: "MBA Digital Marketing Course",
+    slugBase: "MBA-Digital-Marketing-course",
+    cities: [],
+  },
+  {
+    name: "MBA Digital Marketing Online",
+    slugBase: "MBA-Digital-Marketing-course-online",
     cities: [],
   },
 ];
