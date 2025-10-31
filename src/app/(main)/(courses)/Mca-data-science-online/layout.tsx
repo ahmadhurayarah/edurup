@@ -1,77 +1,62 @@
-"use client";
-import { usePathname } from "next/navigation";
-import Head from "next/head";
-import { ReactNode } from 'react';
+import { Metadata } from "next";
+import path from "path";
+import url from "url";
 
-export default function DynamicLayout({ children }: { children: ReactNode }) {
-  const pathname = usePathname();
+interface LayoutProps {
+  children: React.ReactNode;
+}
 
-  // Extract course type and city from URL
-  // Example: /data-science-course-bangalore
-  const slug = pathname.replace("/", ""); 
-  const [courseType, city] = slug
-    .replace("course-", "course ")
-    .split("-course-")
-    .join("-")
-    .split("-")
-    .reduce((acc, val, i) => {
-      if (i === 0) acc[0] = val.replace(/-/g, " ");
-      else acc[1] = val.replace(/-/g, " ");
-      return acc;
-    }, ["", ""]);
+// ✅ Helper to extract course & city from folder name
+function extractMetaFromFolder(currentFileUrl: string) {
+  const currentPath = url.fileURLToPath(currentFileUrl);
+  const folderName = path.basename(path.dirname(currentPath)); 
 
-  // Build dynamic title and description
-  const formattedCourse =
-    courseType?.replace(/-/g, " ")?.replace(/\b\w/g, (ch) => ch.toUpperCase()) || "";
-  const formattedCity =
-    city?.replace(/-/g, " ")?.replace(/\b\w/g, (ch) => ch.toUpperCase()) || "";
+  const parts = folderName.split("-course-");
+  const courseType = parts[0]?.replace(/-/g, " ") || "Professional";
+  const city = parts[1]?.replace(/-/g, " ") || "Your City";
 
-  const title = `${formattedCourse} Course ${formattedCity} | Edurup`;
-  const description = `Join the best ${formattedCourse.toLowerCase()} course  ${formattedCity}. Learn from experts and enhance your career prospects with Edurup's industry-driven curriculum.`;
+  const formattedCourse = courseType
+    .split(" ")
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(" ");
+  const formattedCity = city
+    .split(" ")
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(" ");
 
-  const canonical = `https://www.edurup.in${pathname}`;
+  const title = `${formattedCourse}  ${formattedCity} | Edurup`;
+  const description = `Join the best ${formattedCourse.toLowerCase()}  ${formattedCity}. Learn from experts and enhance your career prospects with Edurup's industry-driven curriculum.`;
+
+  return { title, description, slug: folderName };
+}
+
+// ✅ Server-side metadata generation (works in static folders)
+export async function generateMetadata(): Promise<Metadata> {
+  const { title, description, slug } = extractMetaFromFolder(import.meta.url);
+
+  const canonical = `https://www.edurup.in/${slug}`;
   const image = "https://www.edurup.in/images/logo.png";
 
-  return (
-    <>
-      <Head>
-        {/* Basic SEO */}
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <link rel="canonical" href={canonical} />
+  return {
+    title,
+    description,
+    alternates: { canonical },
+    openGraph: {
+      title,
+      description,
+      url: canonical,
+      images: [image],
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [image],
+    },
+  };
+}
 
-        {/* Open Graph (Facebook, LinkedIn) */}
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:url" content={canonical} />
-        <meta property="og:image" content={image} />
-        <meta property="og:type" content="website" />
-
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={image} />
-
-        {/* JSON-LD Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Course",
-              name: title,
-              description,
-              provider: {
-                "@type": "Organization",
-                name: "Edurup",
-                sameAs: "https://www.edurup.in",
-              },
-            }),
-          }}
-        />
-      </Head>
-      {children}
-    </>
-  );
+export default function DynamicLayout({ children }: LayoutProps) {
+  return <>{children}</>;
 }

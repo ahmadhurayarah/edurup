@@ -8,8 +8,8 @@ interface LayoutProps {
 
 // ✅ Helper to extract course & city from folder name
 function extractMetaFromFolder(currentFileUrl: string) {
-  const currentPath = url.fileURLToPath(currentFileUrl); // e.g. /.../app/main/courses/data-science-course-mumbai/layout.tsx
-  const folderName = path.basename(path.dirname(currentPath)); // "data-science-course-mumbai"
+  const currentPath = url.fileURLToPath(currentFileUrl);
+  const folderName = path.basename(path.dirname(currentPath)); 
 
   const parts = folderName.split("-course-");
   const courseType = parts[0]?.replace(/-/g, " ") || "Professional";
