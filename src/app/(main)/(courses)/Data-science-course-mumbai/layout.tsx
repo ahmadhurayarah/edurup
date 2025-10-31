@@ -1,18 +1,20 @@
 import { Metadata } from "next";
+import { headers } from "next/headers";
 
 interface LayoutProps {
   children: React.ReactNode;
-  params: { slug?: string[] } | Promise<{ slug?: string[] }>;
 }
 
-export async function generateMetadata({ params }: LayoutProps): Promise<Metadata> {
-  const resolvedParams = await params;
-  const slugArray = resolvedParams?.slug || [];
+export async function generateMetadata(): Promise<Metadata> {
+  // Get full URL from request headers
+  const headersList = headers();
+  const url = headersList.get("x-url") || headersList.get("referer") || "";
 
-  // Convert slug array to string (e.g., ['data-science-course-bangalore'] → 'data-science-course-bangalore')
-  const slug = Array.isArray(slugArray) ? slugArray.join("-") : "";
+  // Try to extract last part of URL (e.g., data-science-course-mumbai)
+  const match = url.match(/data-science-course-[a-z-]+/i);
+  const slug = match ? match[0] : "";
 
-  // Extract parts — handles both “data-science-course-bangalore” or “ai-course-in-mumbai”
+  // Extract course and city names
   const parts = slug.split("-course-");
   const courseType = parts[0]?.replace(/-/g, " ") || "Professional";
   const city = parts[1]?.replace(/-/g, " ") || "Your City";
