@@ -5,7 +5,7 @@ import Link from "next/link";
 const courses = [
   {
     name: "Digital Marketing Course",
-    slugBase: "Digital-marketing-course",
+    slugBase: "digital-marketing-course",
     cities: [
       "Chennai",
       "Hyderabad",
@@ -37,7 +37,7 @@ const courses = [
   },
   {
     name: "Full Stack Website Developer Course",
-    slugBase: "full-stack-developer-course",
+    slugBase: "full-stack-website-course",
     cities: [
       "Chennai",
       "Hyderabad",
