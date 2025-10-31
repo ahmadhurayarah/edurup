@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/Navbar";
 import Footer from "./components/Footer";
+import CourseCities from "./components/CourseCities";
 import Head from "next/head";
 
 const MainLayout = ({ children }: { children: React.ReactNode }) => {
@@ -139,6 +140,7 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
       <div className="min-h-full dark:bg-dark">
         <Navbar />
         <main className="h-full mt-[94px] dark:bg-dark">{children}</main>
+        <CourseCities />
         <Footer />
       </div>
     </>
