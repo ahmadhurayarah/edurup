@@ -1,3 +1,4 @@
+"use client";
 import { usePathname } from "next/navigation";
 import Head from "next/head";
 import { ReactNode } from 'react';
