@@ -5,7 +5,7 @@ import Link from "next/link";
 const courses = [
   {
     name: "Digital Marketing Course",
-    slugBase: "digital-marketing-course",
+    slugBase: "Digital-marketing-course",
     cities: [
       "Chennai",
       "Hyderabad",
@@ -21,7 +21,7 @@ const courses = [
   },
   {
     name: "Data Science Course",
-    slugBase: "data-science-course",
+    slugBase: "Data-science-course",
     cities: [
       "Chennai",
       "Hyderabad",
@@ -90,21 +90,23 @@ export default function CourseCities() {
             </h2>
             <div className="flex flex-wrap gap-x-3 gap-y-2 text-sm">
               {course.cities.length > 0 ? (
-                course.cities.map((city, i) => (
-                  <span key={i} className="flex items-center">
-                    <Link
-                      href={`/${course.slugBase}-${city
-                        .toLowerCase()
-                        .replace(/\s+/g, "-")}`}
-                      className="hover:text-blue-500 transition-colors"
-                    >
-                      {city}
-                    </Link>
-                    {i !== course.cities.length - 1 && (
-                      <span className="mx-1 text-gray-400">|</span>
-                    )}
-                  </span>
-                ))
+                course.cities.map((city, i) => {
+                  const citySlug = city.toLowerCase().replace(/\s+/g, "-");
+                  const href = `/${course.slugBase}-${citySlug}`; // ✅ Correct route
+                  return (
+                    <span key={i} className="flex items-center">
+                      <Link
+                        href={href}
+                        className="hover:text-blue-500 transition-colors"
+                      >
+                        {city}
+                      </Link>
+                      {i !== course.cities.length - 1 && (
+                        <span className="mx-1 text-gray-400">|</span>
+                      )}
+                    </span>
+                  );
+                })
               ) : (
                 <p className="text-gray-400 text-sm italic">
                   Available Nationwide
