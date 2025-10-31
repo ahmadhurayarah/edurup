@@ -102,7 +102,7 @@ export default function CourseCities() {
               {course.cities.length > 0 ? (
                 course.cities.map((city, i) => {
                   const citySlug = city.toLowerCase().replace(/\s+/g, "-");
-                  const href = `/${course.slugBase}-${citySlug}`; // ✅ Correct route
+                  const href = `/${course.slugBase}-${citySlug}`; 
                   return (
                     <span key={i} className="flex items-center">
                       <Link
