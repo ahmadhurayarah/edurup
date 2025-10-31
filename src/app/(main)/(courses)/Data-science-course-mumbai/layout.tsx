@@ -10,7 +10,6 @@ export async function generateMetadata(): Promise<Metadata> {
   const headersList = await headers();
   const url = headersList.get("x-url") || headersList.get("referer") || "";
 
-  // Try to extract last part of URL (e.g., data-science-course-mumbai)
   const match = url.match(/data-science-course-[a-z-]+/i);
   const slug = match ? match[0] : "";
 
