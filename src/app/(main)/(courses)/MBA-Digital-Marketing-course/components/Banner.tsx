@@ -1,9 +1,26 @@
-
 "use client";
 import React from "react";
+import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 
 const CourseBanner = () => {
+  const pathname = usePathname(); // e.g. /main/courses/data-science-course-chennai
+  const parts = pathname.split("/").filter(Boolean);
+
+  // Extract course and city names from URL
+  const lastPart = parts[parts.length - 1] || "";
+  const formatted = lastPart.replace(/-/g, " "); // → data science course chennai
+  const words = formatted.split(" ");
+  const city = words.pop(); // last word
+  const course = words.join(" "); // remaining words
+
+  // Capitalize nicely
+  const formatTitle = (text: string) =>
+    text.replace(/\b\w/g, (char) => char.toUpperCase());
+
+  const courseTitle = formatTitle(course);
+  const cityTitle = formatTitle(city || "Your City");
+
   return (
     <section className="bg-[#6ed290] text-black py-12 px-4 sm:px-16">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start gap-10 lg:gap-16">
@@ -11,10 +28,10 @@ const CourseBanner = () => {
         {/* Left: Course Info */}
         <div className="flex-1 flex flex-col gap-4 sm:gap-6">
           <h1 className="text-3xl sm:text-5xl font-bold leading-snug">
-             MBA Best Digital Marketing Course.
+            Best {courseTitle}  {cityTitle}.
           </h1>
           <p className="text-base sm:text-lg text-black">
-            32-week online Digital Marketing Course with Certification and 100% Placement Support
+            32-week online {courseTitle} with Certification and 100% Placement Support in {cityTitle}.
           </p>
 
           {/* Features */}
@@ -23,9 +40,12 @@ const CourseBanner = () => {
               { title: "Live", subtitle: "Sessions on Zoom" },
               { title: "32 Weeks", subtitle: "Course Duration" },
               { title: "Mentorship", subtitle: "With Experienced Professionals" },
-              { title: "Placement", subtitle: "100% Support till Job" }
+              { title: "Placement", subtitle: "100% Support till Job" },
             ].map((feature, idx) => (
-              <div key={idx} className="flex flex-col items-start bg-[#ffffff] px-4 py-2 rounded-md w-full sm:w-auto">
+              <div
+                key={idx}
+                className="flex flex-col items-start bg-[#ffffff] px-4 py-2 rounded-md w-full sm:w-auto"
+              >
                 <span className="font-semibold">{feature.title}</span>
                 <span className="text-xs sm:text-sm">{feature.subtitle}</span>
               </div>
@@ -72,7 +92,6 @@ const CourseBanner = () => {
             Discount coupon of 28% available at checkout
           </p>
         </div>
-
       </div>
     </section>
   );
