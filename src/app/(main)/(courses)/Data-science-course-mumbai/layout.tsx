@@ -1,25 +1,22 @@
 import { Metadata } from "next";
 
-interface Props {
+interface LayoutProps {
   children: React.ReactNode;
-  params: { slug?: string[] };
+  params: any; // ✅ Fixes typing issue with Next.js 16 dynamic layouts
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  // Extract course type and city from URL
-  // Handles routes like /data-science-course-bangalore
-  const path = params?.slug?.join("-") || "";
+export async function generateMetadata({ params }: LayoutProps): Promise<Metadata> {
+  const resolvedParams = await params; // ✅ handles both sync and async params
+
+  const path = resolvedParams?.slug?.join("-") || "";
   const parts = path.split("-course-");
   const courseType = parts[0]?.replace(/-/g, " ") || "";
   const city = parts[1]?.replace(/-/g, " ") || "";
 
-  // Format nicely
   const formattedCourse =
     courseType.charAt(0).toUpperCase() + courseType.slice(1);
-  const formattedCity =
-    city.charAt(0).toUpperCase() + city.slice(1);
+  const formattedCity = city.charAt(0).toUpperCase() + city.slice(1);
 
-  // Build dynamic title and description
   const title = `${formattedCourse} Course in ${formattedCity} | Edurup`;
   const description = `Join the best ${formattedCourse.toLowerCase()} course in ${formattedCity}. Learn from experts and enhance your career prospects with Edurup's industry-driven curriculum.`;
 
@@ -29,9 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title,
     description,
-    alternates: {
-      canonical,
-    },
+    alternates: { canonical },
     openGraph: {
       title,
       description,
@@ -48,6 +43,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function DynamicLayout({ children }: Props) {
+export default function DynamicLayout({ children }: LayoutProps) {
   return <>{children}</>;
 }
