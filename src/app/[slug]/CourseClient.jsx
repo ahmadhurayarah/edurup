@@ -2,6 +2,7 @@
 import dynamic from "next/dynamic";
 import React from "react";
 
+
 // ✅ Import all your course pages dynamically
 const DigitalMarketingCourse = dynamic(
   () => import("../(main)/components/digital-marketing/page"),
@@ -19,7 +20,7 @@ const DataScienceCourse = dynamic(
 );
 
 const FullStackWebsiteCourse = dynamic(
-  () => import("../(main)/components/full-stack-website/page"),
+  () => import("../(main)/components/full-stack-developer/page"),
   { ssr: false }
 );
 

@@ -37,7 +37,7 @@ const courses = [
   },
   {
     name: "Full Stack Website Developer Course",
-    slugBase: "full-stack-website-course",
+    slugBase: "full-stack-developer-course",
     cities: [
       "Chennai",
       "Hyderabad",
