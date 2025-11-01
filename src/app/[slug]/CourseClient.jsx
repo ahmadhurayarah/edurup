@@ -20,7 +20,7 @@ const DataScienceCourse = dynamic(
 );
 
 const FullStackWebsiteCourse = dynamic(
-  () => import("../(main)/components/full-stack-developer/page"),
+  () => import("../(main)/components/full-stack-website/page"),
   { ssr: false }
 );
 
@@ -29,7 +29,7 @@ const componentsMap = {
   "digital-marketing-course": DigitalMarketingCourse,
   "data-analytics-course": DataAnalyticsCourse,
   "data-science-course": DataScienceCourse,
-  "full-stack-website-course": FullStackWebsiteCourse,
+  "full-stack-developer-course": FullStackWebsiteCourse,
 };
 
 export default function CourseClient({ courseKey, city }) {
