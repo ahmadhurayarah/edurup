@@ -2,21 +2,56 @@ import { Navbar } from "@/components/Navbar";
 import Footer from "./components/Footer";
 import CourseCities from "./components/CourseCities";
 import Head from "next/head";
+import { useRouter } from "next/router";
+import { useMemo } from "react";
 
 const MainLayout = ({ children }: { children: React.ReactNode }) => {
+  const router = useRouter();
+
+  // ✅ Extract course & city from URL (e.g. /data-science-course-bangalore)
+  const { dynamicTitle, dynamicDescription } = useMemo(() => {
+    const path = router.asPath || "";
+    const match = path.match(/\/([^\/]+-course-[^\/]+)/);
+
+    if (match && match[1]) {
+      const folderName = match[1];
+      const parts = folderName.split("-course-");
+      const courseType = parts[0]?.replace(/-/g, " ") || "";
+      const city = parts[1]?.replace(/-/g, " ") || "";
+
+      const formattedCourse = courseType
+        .split(" ")
+        .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+        .join(" ");
+      const formattedCity = city
+        .split(" ")
+        .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+        .join(" ");
+
+      return {
+        dynamicTitle: `${formattedCourse} Course in ${formattedCity} | Edurup`,
+        dynamicDescription: `Join the best ${formattedCourse.toLowerCase()} course in ${formattedCity}. Learn from industry experts and enhance your skills with Edurup’s hands-on projects and placement guidance.`,
+      };
+    }
+
+    return { dynamicTitle: null, dynamicDescription: null };
+  }, [router.asPath]);
+
+  const title =
+    dynamicTitle ||
+    "Edurup Learning | PGP in Digital Marketing, Full Stack, Data Science & Analytics in Bangalore";
+  const description =
+    dynamicDescription ||
+    "Edurup Learning offers industry-recognized Post Graduate Programs (PGP) in Digital Marketing, Full Stack Development, Data Science, and Data Analytics in Bangalore. Learn from MNC professionals, work on live projects, and get 100% placement support.";
+
   return (
     <>
       <Head>
         {/* 🔹 SEO Title */}
-        <title>
-          Edurup Learning | PGP in Digital Marketing, Full Stack, Data Science & Analytics in Bangalore
-        </title>
+        <title>{title}</title>
 
         {/* 🔹 Meta Description */}
-        <meta
-          name="description"
-          content="Edurup Learning offers industry-recognized Post Graduate Programs (PGP) in Digital Marketing, Full Stack Development, Data Science, and Data Analytics in Bangalore. Learn from MNC professionals, work on live projects, and get 100% placement support."
-        />
+        <meta name="description" content={description} />
 
         {/* 🔹 Keywords */}
         <meta
@@ -25,28 +60,16 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
         />
 
         {/* 🔹 Open Graph Tags */}
-        <meta
-          property="og:title"
-          content="Edurup Learning | PGP in Digital Marketing, Full Stack, Data Science & Analytics in Bangalore"
-        />
-        <meta
-          property="og:description"
-          content="Advance your career with Edurup Learning’s Post Graduate Programs in Digital Marketing, Data Science, Full Stack & Analytics. 100% placement support from MNC mentors."
-        />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://edurup.in/" />
         <meta property="og:image" content="https://edurup.in/images/edurup-banner.jpg" />
 
         {/* 🔹 Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Edurup Learning | Job-Guaranteed Online Courses in PGP Data Science, Digital Marketing, Data Analytics & Full Stack Developer"
-        />
-        <meta
-          name="twitter:description"
-          content="Edurup Learning offers industry-ready online PGP programs in Data Science, Digital Marketing, Data Analytics, and Full Stack Developer. 100% placement support. Learn from Real time Working Experts."
-        />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content="https://edurup.in/images/edurup-banner.jpg" />
         <meta name="twitter:site" content="@EdurupLearning" />
 
