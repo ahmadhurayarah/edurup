@@ -21,7 +21,7 @@ const courses = [
   },
   {
     name: "Data Science Course",
-    slugBase: "Data-science-course",
+    slugBase: "data-science-course",
     cities: [
       "Chennai",
       "Hyderabad",
@@ -95,14 +95,26 @@ export default function CourseCities() {
       <div className="max-w-6xl mx-auto space-y-10">
         {courses.map((course, index) => (
           <div key={index}>
-            <h2 className="text-lg md:text-xl font-semibold text-black mb-3">
-              {course.name}
-            </h2>
+            {/* ✅ Make heading clickable when no cities */}
+            {course.cities.length === 0 ? (
+              <Link
+                href={`/${course.slugBase}`}
+                className="text-lg md:text-xl font-semibold text-black mb-3 hover:text-blue-500 transition-colors inline-block"
+              >
+                {course.name}
+              </Link>
+            ) : (
+              <h2 className="text-lg md:text-xl font-semibold text-black mb-3">
+                {course.name}
+              </h2>
+            )}
+
+            {/* ✅ Render cities or fallback */}
             <div className="flex flex-wrap gap-x-3 gap-y-2 text-sm">
               {course.cities.length > 0 ? (
                 course.cities.map((city, i) => {
                   const citySlug = city.toLowerCase().replace(/\s+/g, "-");
-                  const href = `/${course.slugBase}-${citySlug}`; 
+                  const href = `/${course.slugBase}-${citySlug}`;
                   return (
                     <span key={i} className="flex items-center">
                       <Link
