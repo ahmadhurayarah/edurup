@@ -1,16 +1,18 @@
+"use client";
+
 import { Navbar } from "@/components/Navbar";
 import Footer from "./components/Footer";
 import CourseCities from "./components/CourseCities";
 import Head from "next/head";
-import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 import { useMemo } from "react";
 
 const MainLayout = ({ children }: { children: React.ReactNode }) => {
-  const router = useRouter();
+  const pathname = usePathname();
 
   // ✅ Extract course & city from URL (e.g. /data-science-course-bangalore)
   const { dynamicTitle, dynamicDescription } = useMemo(() => {
-    const path = router.asPath || "";
+    const path = pathname || "";
     const match = path.match(/\/([^\/]+-course-[^\/]+)/);
 
     if (match && match[1]) {
@@ -35,7 +37,7 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
     }
 
     return { dynamicTitle: null, dynamicDescription: null };
-  }, [router.asPath]);
+  }, [pathname]);
 
   const title =
     dynamicTitle ||
@@ -64,13 +66,19 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://edurup.in/" />
-        <meta property="og:image" content="https://edurup.in/images/edurup-banner.jpg" />
+        <meta
+          property="og:image"
+          content="https://edurup.in/images/edurup-banner.jpg"
+        />
 
         {/* 🔹 Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content="https://edurup.in/images/edurup-banner.jpg" />
+        <meta
+          name="twitter:image"
+          content="https://edurup.in/images/edurup-banner.jpg"
+        />
         <meta name="twitter:site" content="@EdurupLearning" />
 
         {/* 🔹 Basic Meta */}
