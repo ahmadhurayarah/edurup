@@ -1,51 +1,52 @@
 "use client";
 import dynamic from "next/dynamic";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-
-// ✅ Import all your course pages dynamically
-const DigitalMarketingCourse = dynamic(
-  () => import("../(main)/components/digital-marketing/page"),
-  { ssr: false }
-);
-
-const DataAnalyticsCourse = dynamic(
-  () => import("../(main)/components/data-analytics/page"),
-  { ssr: false }
-);
-
-const DataScienceCourse = dynamic(
-  () => import("../(main)/components/data-science/page"),
-  { ssr: false }
-);
-
-const FullStackWebsiteCourse = dynamic(
-  () => import("../(main)/components/full-stack-website/page"),
-  { ssr: false }
-);
-
-// ✅ Map slug keys to their corresponding components
-const componentsMap = {
-  "digital-marketing-course": DigitalMarketingCourse,
-  "data-analytics-course": DataAnalyticsCourse,
-  "data-science-course": DataScienceCourse,
-  "full-stack-developer-course": FullStackWebsiteCourse,
+const courseFolders = {
+  "digital-marketing-course": "../(main)/components/digital-marketing",
+  "data-analytics-course": "../(main)/components/data-analytics",
+  "data-science-course": "../(main)/components/data-science",
+  "full-stack-developer-course": "../(main)/components/full-stack-website",
 };
 
 export default function CourseClient({ courseKey, city }) {
-  const SelectedComponent = componentsMap[courseKey];
+  const [meta, setMeta] = useState(null);
+  const [Component, setComponent] = useState(null);
 
-  if (!SelectedComponent) {
-    return (
-      <div style={{ padding: 40 }}>
-        <h1>404 — Course not found</h1>
-        <p>
-          No course registered for <code>{courseKey}</code>
-        </p>
-      </div>
-    );
-  }
+  useEffect(() => {
+    const loadCourse = async () => {
+      const folder = courseFolders[courseKey];
+      if (!folder) return;
 
-  // ✅ Pass `city` prop to dynamically display city-based content
-  return <SelectedComponent city={city} />;
+      const PageComponent = dynamic(() => import(`${folder}/page`), { ssr: false });
+
+      // ✅ Import meta.js (client-safe)
+      try {
+        const metaModule = await import(`${folder}/meta`);
+        setMeta(metaModule.meta);
+      } catch (err) {
+        console.warn(`No meta.js found in ${folder}`);
+      }
+
+      setComponent(() => PageComponent);
+    };
+
+    loadCourse();
+  }, [courseKey]);
+
+  if (!Component) return <div style={{ padding: 40 }}>Loading...</div>;
+
+  const SelectedComponent = Component;
+
+  return (
+    <div style={{ padding: 40 }}>
+      {meta && (
+        <>
+          <h1>{meta.title}</h1>
+          <p>{meta.description}</p>
+        </>
+      )}
+      <SelectedComponent city={city} />
+    </div>
+  );
 }
