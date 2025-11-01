@@ -22,7 +22,7 @@ const CourseBanner = () => {
   const cityTitle = formatTitle(city || "Your City");
 
   return (
-    <section className="bg-[#6ed290] text-black py-12 px-4 sm:px-16">
+    <section className="bg-[#6ed290] text-black mt-24 py-12 px-4 sm:px-16">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start gap-10 lg:gap-16">
 
         {/* Left: Course Info */}

@@ -1,5 +1,8 @@
-// ✅ Server Component (default in app/ routes)
+// ✅ Server Component
 import CourseClient from "./CourseClient";
+import { Navbar } from "../../components/Navbar";
+import Footer from "../(main)/components/Footer";
+import CourseCities from "../(main)/components/CourseCities";
 
 export default async function CoursePage({ params }) {
   const slug = (await params)?.slug?.toLowerCase();
@@ -10,5 +13,18 @@ export default async function CoursePage({ params }) {
   const city = tokens.pop();
   const courseKey = tokens.join("-");
 
-  return <CourseClient courseKey={courseKey} city={city} />;
+  return (
+    <>
+      {/* fixed navbar with height 64px on mobile, 80px on md */}
+      <Navbar /> 
+
+      {/* content pushed below the fixed navbar */}
+      <main className="pt-16 md:pt-20">
+        <CourseClient courseKey={courseKey} city={city} />
+        <CourseCities />
+      </main>
+
+      <Footer />
+    </>
+  );
 }
