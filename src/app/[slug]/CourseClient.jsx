@@ -2,7 +2,6 @@
 import dynamic from "next/dynamic";
 import React, { useEffect, useState } from "react";
 
-// ✅ Define base paths for all course folders
 const courseFolders = {
   "digital-marketing-course": "../(main)/components/digital-marketing",
   "data-analytics-course": "../(main)/components/data-analytics",
@@ -19,38 +18,34 @@ export default function CourseClient({ courseKey, city }) {
       const folder = courseFolders[courseKey];
       if (!folder) return;
 
-      // ✅ Dynamically import both page and layout
       const PageComponent = dynamic(() => import(`${folder}/page`), { ssr: false });
-      const layoutModule = await import(`${folder}/layout`);
 
-      setMeta(layoutModule.metadata || null);
+      // ✅ Import meta.js (client-safe)
+      try {
+        const metaModule = await import(`${folder}/meta`);
+        setMeta(metaModule.meta);
+      } catch (err) {
+        console.warn(`No meta.js found in ${folder}`);
+      }
+
       setComponent(() => PageComponent);
     };
 
     loadCourse();
   }, [courseKey]);
 
-  if (!Component) {
-    return (
-      <div style={{ padding: 40 }}>
-        <h1>Loading...</h1>
-      </div>
-    );
-  }
+  if (!Component) return <div style={{ padding: 40 }}>Loading...</div>;
 
   const SelectedComponent = Component;
 
   return (
     <div style={{ padding: 40 }}>
-      {/* ✅ Use metadata from layout.tsx */}
       {meta && (
         <>
           <h1>{meta.title}</h1>
           <p>{meta.description}</p>
         </>
       )}
-
-      {/* ✅ Render the page */}
       <SelectedComponent city={city} />
     </div>
   );
