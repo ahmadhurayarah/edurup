@@ -11,7 +11,7 @@ const CourseBanner = () => {
         {/* Left: Course Info */}
         <div className="flex-1 flex flex-col gap-4 sm:gap-6">
           <h1 className="text-3xl sm:text-5xl font-bold leading-snug">
-           Pg In Python Course Bangalore
+           Pg | Python Course Bangalore
           </h1>
           <p className="text-base sm:text-lg text-black">
             32-week online Python Course with Certification and 100% Placement Support
