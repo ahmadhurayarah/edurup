@@ -1,8 +1,11 @@
 import CourseClient from "./CourseClient";
 import { getCourseMeta } from "@/app/utils/data";
+import { COURSE_KEYS } from "@/app/utils/courses";
+import { VALID_CITIES } from "@/app/utils/city";
 import { Navbar } from "../../components/Navbar";
 import Footer from "../(main)/components/Footer";
 import CourseCities from "../(main)/components/CourseCities";
+import NotFoundCourseCity from "../(main)/components/NotFoundCourseCity";
 // import CourseBanner from "../(main)/components/CourseBanner"; // ✅ Import it here
 
 export default async function CoursePage({ params }) {
@@ -14,6 +17,8 @@ export default async function CoursePage({ params }) {
   const city = tokens.pop();
   const courseKey = tokens.join("-");
 
+  const isValid = COURSE_KEYS.has(courseKey) && VALID_CITIES.has(city);
+
   return (
     <>
       <Navbar />
@@ -23,10 +28,17 @@ export default async function CoursePage({ params }) {
           {/* <CourseBanner /> */}
         </div>
 
-        {/* Your main course content */}
-        <CourseClient courseKey={courseKey} city={city} />
-
-        <CourseCities />
+        {isValid ? (
+          <>
+            <CourseClient courseKey={courseKey} city={city} />
+            <CourseCities />
+          </>
+        ) : (
+          <>
+            <NotFoundCourseCity />
+            <CourseCities />
+          </>
+        )}
       </main>
       <Footer />
     </>
@@ -41,7 +53,13 @@ export async function generateMetadata({ params }) {
   const city = tokens.pop();
   const courseKey = tokens.join("-");
 
-  const meta = getCourseMeta(courseKey, city);
+  const isValid = COURSE_KEYS.has(courseKey) && VALID_CITIES.has(city);
+  const meta = isValid
+    ? getCourseMeta(courseKey, city)
+    : {
+        title: "Course Not Found | Edurup",
+        description: "The requested course or city could not be found.",
+      };
   return {
     title: meta.title,
     description: meta.description,
