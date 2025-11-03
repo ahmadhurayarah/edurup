@@ -69,6 +69,7 @@ export const Navbar = () => {
    { label: "PG Data Analytics", href: "data-analytics-course-bangalore" },
    { label: "PG Data Science & AI", href: "data-science-and-ai-course-bangalore" },
     { label: "PG Full Stack Developer", href: "/full-stack-developer-course-bangalore" },
+    { label: "PG Python", href: "/python-course-bangalore" },
     
     // { label: "Finance Analyst", href: "/finance-analyst" },
     // { label: "Python", href: "/python" },

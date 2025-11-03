@@ -13,14 +13,20 @@ import { Button } from "@/components/ui/button";
 
 const courses = [
   {
-    label: "Frontend Web",
-    href: "/front-end-web",
+    label: "Full Stack Developer",
+    href: "/full-stack-developer-course-bangalore",
   },
-  { label: "Data Science", href: "/data-science" },
-  { label: "Digital Marketing", href: "/digital-marketing" },
-  { label: "Business Development", href: "/business-development" },
-  { label: "Finance Analyst", href: "/finance-analyst" },
-  { label: "Python", href: "/python" },
+  { label: "Data Science & AI", href: "/data-science-and-ai-course-bangalore" },
+  { label: "Digital Marketing", href: "/digital-marketing-course-bangalore" },
+  { label: "Data Analyst", href: "/data-analytics-course-bangalore" },
+  // { label: "Finance Analyst", href: "/finance-analyst" },
+  { label: "Python", href: "/python-course-bangalore" },
+
+  
+
+ 
+
+
 ];
 
 const company = [
