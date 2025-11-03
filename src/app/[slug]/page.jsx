@@ -19,7 +19,7 @@ export default async function CoursePage({ params }) {
       <Navbar /> 
 
       {/* content pushed below the fixed navbar */}
-      <main className="pt-16 md:pt-20">
+      <main >
         <CourseClient courseKey={courseKey} city={city} />
         <CourseCities />
       </main>

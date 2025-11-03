@@ -51,7 +51,7 @@ export default function CourseClient({ courseKey, city }) {
     loadCourse();
   }, [courseKey, city]);
 
-  if (!Component) return <div style={{ padding: 40 }}>Loading...</div>;
+  if (!Component) return <div style={{ padding: 20 }}>Loading...</div>;
 
   const SelectedComponent = Component;
 
