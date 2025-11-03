@@ -1,6 +1,7 @@
 "use client";
 import dynamic from "next/dynamic";
 import React, { useEffect, useState } from "react";
+import { getCourseMeta } from "@/app/utils/data";
 
 const courseFolders = {
   "digital-marketing-course": "../(main)/components/digital-marketing",
@@ -18,28 +19,25 @@ export default function CourseClient({ courseKey, city }) {
       const folder = courseFolders[courseKey];
       if (!folder) return;
 
-      const PageComponent = dynamic(() => import(`${folder}/page`), { ssr: false });
+      const PageComponent = dynamic(() => import(`${folder}/page`), {
+        ssr: false,
+      });
 
-      // ✅ Import meta.js (client-safe)
-      try {
-        const metaModule = await import(`${folder}/meta`);
-        setMeta(metaModule.meta);
-      } catch (err) {
-        console.warn(`No meta.js found in ${folder}`);
-      }
+      // ✅ Centralized meta
+      setMeta(getCourseMeta(courseKey, city));
 
       setComponent(() => PageComponent);
     };
 
     loadCourse();
-  }, [courseKey]);
+  }, [courseKey, city]);
 
   if (!Component) return <div style={{ padding: 40 }}>Loading...</div>;
 
   const SelectedComponent = Component;
 
   return (
-    <div style={{ padding: 0 }}>
+    <div style={{ padding: 40 }}>
       {meta && (
         <>
           <h1>{meta.title}</h1>
