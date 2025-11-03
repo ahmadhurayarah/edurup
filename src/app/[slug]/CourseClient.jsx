@@ -60,7 +60,7 @@ export default function CourseClient({ courseKey, city }) {
       {meta && (
         <>
           <h1>{meta.title}</h1>
-          <p>{meta.description}</p>
+          {/* <p>{meta.description}</p> */}
         </>
       )}
       <SelectedComponent city={city} />
