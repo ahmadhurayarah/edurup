@@ -39,7 +39,7 @@ export default function CourseClient({ courseKey, city }) {
   const SelectedComponent = Component;
 
   return (
-    <div style={{ padding: 40 }}>
+    <div style={{ padding: 0 }}>
       {meta && (
         <>
           <h1>{meta.title}</h1>
