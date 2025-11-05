@@ -5,7 +5,6 @@ import { getCourseMeta } from "@/app/utils/data";
 import { COURSE_FOLDERS } from "@/app/utils/courses";
 
 export default function CourseClient({ courseKey, city }) {
-  const [meta, setMeta] = useState(null);
   const [Component, setComponent] = useState(null);
 
   useEffect(() => {
@@ -38,12 +37,9 @@ export default function CourseClient({ courseKey, city }) {
           break;
         default:
           PageComponent = () => (
-            <div style={{ padding: 40 }}>No course found.</div>
+            <div className="p-8 text-center">No course found.</div>
           );
       }
-
-      // ✅ Centralized meta
-      setMeta(getCourseMeta(courseKey, city));
 
       setComponent(() => PageComponent);
     };
@@ -51,18 +47,21 @@ export default function CourseClient({ courseKey, city }) {
     loadCourse();
   }, [courseKey, city]);
 
-  if (!Component) return <div style={{ padding: 20 }}>Loading...</div>;
+  if (!Component) {
+    return (
+      <div className="w-full flex justify-center items-center py-16">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <p>Loading course content...</p>
+        </div>
+      </div>
+    );
+  }
 
   const SelectedComponent = Component;
 
   return (
-    <div style={{ padding: 1 }}>
-      {meta && (
-        <>
-          <h1>{meta.title}</h1>
-          <p>{meta.description}</p>
-        </>
-      )}
+    <div className="w-full">
       <SelectedComponent city={city} />
     </div>
   );
