@@ -71,8 +71,8 @@ export default async function CoursePage({ params }) {
         <Navbar />
         <main className="min-h-screen w-full">
           <div className="p-8 text-center">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">Course Not Found</h2>
-            <p className="text-gray-600">The requested course is not available.</p>
+            <h2 className="text-2xl font-bold text-gray-800 mb-16">Course Not Found</h2>
+            <p className="text-gray-600 t-100"><br/><br/><br/><br/><br/>The requested course is not available.<br/><br/><br/><br/><br/><br/></p>
           </div>
           <CourseCities />
         </main>

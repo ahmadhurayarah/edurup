@@ -56,9 +56,9 @@ export default function CourseClient({ courseKey, city }) {
         default:
           // This should never happen since page.jsx already filters, but as fallback
           PageComponent = () => (
-            <div className="p-8 text-center">
+            <div className="p-8 mt-30 text-center">
               <h2 className="text-2xl font-bold text-gray-800 mb-4">Course Not Found</h2>
-              <p className="text-gray-600">The requested course is not available.</p>
+              <p className="text-gray-600 mt-600">The requested course is not available.</p>
             </div>
           );
       }
