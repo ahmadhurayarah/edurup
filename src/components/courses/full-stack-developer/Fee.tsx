@@ -1,9 +1,24 @@
 import React from "react";
-import { CheckCircle, Clock, Users, GraduationCap, Shield, Star, Zap } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
+import {
+  CheckCircle,
+  Clock,
+  Users,
+  GraduationCap,
+  Shield,
+  Star,
+  Zap,
+} from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { fullStackDeveloperCourseData } from "./data";
 
 const Fee = () => {
+  const iconMap: Record<string, LucideIcon> = {
+    Clock,
+    Users,
+    GraduationCap,
+    Shield,
+  };
   return (
     <>
       <div className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-white to-gray-50/30">
@@ -37,15 +52,26 @@ const Fee = () => {
                 {/* Price */}
                 <div className="text-center pt-4">
                   <div className="flex items-baseline justify-center gap-2 mb-2">
-                    <span className="text-6xl font-bold text-gray-900">₹{fullStackDeveloperCourseData.course.price.discounted.toLocaleString("en-IN")}</span>
+                    <span className="text-6xl font-bold text-gray-900">
+                      ₹
+                      {fullStackDeveloperCourseData.course.price.discounted.toLocaleString(
+                        "en-IN"
+                      )}
+                    </span>
                   </div>
                   <div className="text-gray-500 text-lg mb-6">+ GST</div>
-                  
+
                   {/* EMI Banner */}
                   <div className="bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl p-4 mb-8 text-white shadow-lg">
                     <div className="flex items-center justify-center gap-3">
                       <Star className="w-5 h-5" />
-                      <span className="text-xl font-bold">EMI: ₹{fullStackDeveloperCourseData.course.price.emi.toLocaleString("en-IN")}/month</span>
+                      <span className="text-xl font-bold">
+                        EMI: ₹
+                        {fullStackDeveloperCourseData.course.price.emi.toLocaleString(
+                          "en-IN"
+                        )}
+                        /month
+                      </span>
                       <Star className="w-5 h-5" />
                     </div>
                   </div>
@@ -55,9 +81,26 @@ const Fee = () => {
                     <div className="flex items-center justify-center gap-3 text-gray-700">
                       <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
                       <div className="text-left">
-                        <span className="font-semibold">Pay only ₹{fullStackDeveloperCourseData.fee.scholarship.discountedPrice.toLocaleString("en-IN")}</span> after {fullStackDeveloperCourseData.fee.scholarship.percentage}% scholarship
+                        <span className="font-semibold">
+                          Pay only ₹
+                          {fullStackDeveloperCourseData.fee.scholarship.discountedPrice.toLocaleString(
+                            "en-IN"
+                          )}
+                        </span>{" "}
+                        after{" "}
+                        {
+                          fullStackDeveloperCourseData.fee.scholarship
+                            .percentage
+                        }
+                        % scholarship
                         <div className="text-sm text-gray-500 mt-1">
-                          Original fee: <span className="line-through">₹{fullStackDeveloperCourseData.fee.scholarship.originalPrice.toLocaleString("en-IN")}</span>
+                          Original fee:{" "}
+                          <span className="line-through">
+                            ₹
+                            {fullStackDeveloperCourseData.fee.scholarship.originalPrice.toLocaleString(
+                              "en-IN"
+                            )}
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -73,22 +116,26 @@ const Fee = () => {
                   <div className="w-2 h-8 bg-green-500 rounded-full"></div>
                   What's Included in Your Journey
                 </h3>
-                
+
                 <div className="space-y-6">
-                  {fullStackDeveloperCourseData.fee.features.map((item, index) => {
-                    const IconComponent = {Clock, Users, GraduationCap, Shield}[item.icon as keyof typeof import("lucide-react")] || Clock;
-                    return (
-                      <div 
-                        key={index} 
-                        className="flex items-center gap-4 p-4 rounded-xl hover:bg-white hover:shadow-md transition-all duration-200 group"
-                      >
-                        <div className="w-12 h-12 bg-gradient-to-br from-green-100 to-emerald-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
-                          <IconComponent className="w-6 h-6 text-green-600" />
+                  {fullStackDeveloperCourseData.fee.features.map(
+                    (item, index) => {
+                      const IconComponent = iconMap[item.icon] || Clock;
+                      return (
+                        <div
+                          key={index}
+                          className="flex items-center gap-4 p-4 rounded-xl hover:bg-white hover:shadow-md transition-all duration-200 group"
+                        >
+                          <div className="w-12 h-12 bg-gradient-to-br from-green-100 to-emerald-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
+                            <IconComponent className="w-6 h-6 text-green-600" />
+                          </div>
+                          <p className="text-lg text-gray-800 font-medium">
+                            {item.description}
+                          </p>
                         </div>
-                        <p className="text-lg text-gray-800 font-medium">{item.description}</p>
-                      </div>
-                    );
-                  })}
+                      );
+                    }
+                  )}
                 </div>
               </div>
 
