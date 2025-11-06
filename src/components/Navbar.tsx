@@ -26,7 +26,14 @@ import {
   DialogClose,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { Menu } from "lucide-react";
+import {
+  Menu,
+  Megaphone,
+  BarChart3,
+  BrainCircuit,
+  Code2,
+  ArrowRight,
+} from "lucide-react";
 
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -59,29 +66,39 @@ export const Navbar = () => {
   ];
 
   const courses = [
-    // {
-    //   label: "Full Stack Web Development",
-    //   href: "/full-stack-web-development",
-    // },
-    // { label: "Data Science", href: "/data-science" },
     {
       label: "PG Digital Marketing",
       href: "/digital-marketing-course-bangalore",
+      desc: "SEO, SEM, SMM, Google Ads, Analytics",
+      icon: Megaphone,
+      badge: "Popular",
     },
-    // { label: "Mern Development", href: "/mern-stack-developer-course" },
-    { label: "PG Data Analytics", href: "data-analytics-course-bangalore" },
+    {
+      label: "PG Data Analytics",
+      href: "/data-analytics-course-bangalore",
+      desc: "SQL, Excel, Power BI, Tableau",
+      icon: BarChart3,
+    },
     {
       label: "PG Data Science & AI",
-      href: "data-science-and-ai-course-bangalore",
+      href: "/data-science-and-ai-course-bangalore",
+      desc: "Python, ML, DL, TensorFlow",
+      icon: BrainCircuit,
     },
     {
       label: "PG Full Stack Developer",
       href: "/full-stack-developer-course-bangalore",
+      desc: "MERN: MongoDB, Express, React, Node.js",
+      icon: Code2,
     },
-    { label: "PG Python", href: "/python-course-bangalore" },
-
-    // { label: "Finance Analyst", href: "/finance-analyst" },
-    // { label: "Python", href: "/python" },
+    {
+      label: "PG Python",
+      href: "/python-course-bangalore",
+      desc: "Core to Advanced Python",
+      icon: Code2,
+      badge: "Upcoming",
+      disabled: true,
+    },
   ];
   return (
     <>
@@ -135,23 +152,83 @@ export const Navbar = () => {
                 </NavigationMenuTrigger>
 
                 <NavigationMenuContent>
-                  {courses.map((course) => (
-                    <NavigationMenuLink asChild key={course.href}>
-                      <Link
-                        className={cn(
-                          "flex text-left ml-2 w-[13.1rem] hover:text-fg py-2 transition-colors",
-                          {
-                            "text-fg": course.href === currentPath,
-                            "text-primary": course.href !== currentPath,
-                            "hover:text-fg transition-colors": true,
-                          }
-                        )}
-                        href={course.href}
-                      >
-                        {course.label}
-                      </Link>
-                    </NavigationMenuLink>
-                  ))}
+                  <div className="p-3 sm:p-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-3 md:gap-4 w-[20rem] sm:w-[36rem] md:w-[48rem]">
+                      {courses.map((course) => (
+                        <NavigationMenuLink asChild key={course.href}>
+                          {course.disabled ? (
+                            <div
+                              role="link"
+                              aria-disabled="true"
+                              className={cn(
+                                "group relative border border-gray-200 dark:border-gray-700 rounded-lg p-3 sm:p-4 bg-white dark:bg-dark transition-colors pointer-events-none cursor-not-allowed opacity-60",
+                                {
+                                  "ring-1 ring-fg": course.href === currentPath,
+                                }
+                              )}
+                            >
+                              <div className="flex items-start gap-3">
+                                <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-gradient-to-br from-emerald-100 to-emerald-50 dark:from-gray-700 dark:to-gray-800 text-emerald-600 dark:text-emerald-300">
+                                  {course.icon && <course.icon size={18} />}
+                                </div>
+                                <div className="min-w-0">
+                                  <div className="flex items-center gap-2">
+                                    <div className="text-[0.95rem] font-semibold text-primary">
+                                      {course.label}
+                                    </div>
+                                    {course.badge && (
+                                      <span className="inline-flex items-center rounded-md bg-amber-100 dark:bg-amber-900/40 px-1.5 py-0.5 text-[10px] font-medium text-amber-700 dark:text-amber-300">
+                                        {course.badge}
+                                      </span>
+                                    )}
+                                  </div>
+                                  {course.desc && (
+                                    <div className="mt-1 text-xs sm:text-[0.82rem] text-muted-foreground line-clamp-2">
+                                      {course.desc}
+                                    </div>
+                                  )}
+                                </div>
+                              </div>
+                            </div>
+                          ) : (
+                            <Link
+                              href={course.href}
+                              className={cn(
+                                "group relative border border-gray-200 dark:border-gray-700 rounded-lg p-3 sm:p-4 bg-white dark:bg-dark hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-fg",
+                                {
+                                  "ring-1 ring-fg": course.href === currentPath,
+                                }
+                              )}
+                            >
+                              <div className="flex items-start gap-3">
+                                <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-gradient-to-br from-emerald-100 to-emerald-50 dark:from-gray-700 dark:to-gray-800 text-emerald-600 dark:text-emerald-300">
+                                  {course.icon && <course.icon size={18} />}
+                                </div>
+                                <div className="min-w-0">
+                                  <div className="flex items-center gap-2">
+                                    <div className="text-[0.95rem] font-semibold text-primary group-hover:text-fg">
+                                      {course.label}
+                                    </div>
+                                    {course.badge && (
+                                      <span className="inline-flex items-center rounded-md bg-emerald-100 dark:bg-emerald-900/40 px-1.5 py-0.5 text-[10px] font-medium text-emerald-700 dark:text-emerald-300">
+                                        {course.badge}
+                                      </span>
+                                    )}
+                                  </div>
+                                  {course.desc && (
+                                    <div className="mt-1 text-xs sm:text-[0.82rem] text-muted-foreground line-clamp-2">
+                                      {course.desc}
+                                    </div>
+                                  )}
+                                </div>
+                                <ArrowRight className="ml-auto mt-1 size-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
+                              </div>
+                            </Link>
+                          )}
+                        </NavigationMenuLink>
+                      ))}
+                    </div>
+                  </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>
             </NavigationMenuList>
