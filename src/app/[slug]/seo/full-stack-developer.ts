@@ -52,7 +52,10 @@ export function getFullStackDeveloperMetadata(
   };
 }
 
-export function generateFullStackDeveloperSchema(cityName: string, url: string) {
+export function generateFullStackDeveloperSchema(
+  cityName: string,
+  url: string
+) {
   const { course, provider } = fullStackDeveloperCourseData;
   return {
     "@context": "https://schema.org",
@@ -101,7 +104,7 @@ export function generateFullStackDeveloperSchema(cityName: string, url: string) 
 
 // FAQ Schema
 export function generateFullStackDeveloperFAQSchema(cityName: string) {
-  const { faq } = (fullStackDeveloperCourseData as any);
+  const { faq } = fullStackDeveloperCourseData as any;
   if (!faq || !Array.isArray(faq) || faq.length === 0) return null;
   const replaceCity = (text: string) => text.replace(/\{city\}/g, cityName);
   return {
@@ -124,4 +127,3 @@ export function generateAllFullStackDeveloperSchemas(
   const faq = generateFullStackDeveloperFAQSchema(cityName);
   return [course, faq].filter(Boolean);
 }
-

@@ -19,6 +19,21 @@ export const fullStackDeveloperCourseData = {
       discountPercentage: 28,
       validUntil: "2025-12-31",
     },
+    rating: {
+      value: 4.8,
+      count: 1200,
+      best: 5,
+      worst: 1,
+    },
+    teaches: [
+      "MongoDB",
+      "Express.js",
+      "React",
+      "Node.js",
+      "JavaScript",
+      "Full Stack Development",
+      "Web Development",
+    ],
     features: [
       { title: "Live", subtitle: "Sessions on Zoom" },
       { title: "32 Weeks", subtitle: "Course Duration" },
@@ -52,8 +67,7 @@ export const fullStackDeveloperCourseData = {
       from: "IIT Kharagpur",
       company: "Zomato",
       title: "Product Analyst",
-      text:
-        "I got an offer from Zomato for PA role, the learning at NextLeap helped me a lot. Thank you for the course and all the learning",
+      text: "I got an offer from Zomato for PA role, the learning at NextLeap helped me a lot. Thank you for the course and all the learning",
       profile: "/person1.jpg",
       fromLogo: "/iit.png",
       companyLogo: "/zomato.png",
@@ -64,8 +78,7 @@ export const fullStackDeveloperCourseData = {
       from: "Product Management Intern",
       company: "Phenom",
       title: "Product Analyst",
-      text:
-        "Great support from the team for placements. Mentor sessions were really helpful.",
+      text: "Great support from the team for placements. Mentor sessions were really helpful.",
       profile: "/person2.jpg",
       fromLogo: "/jm.png",
       companyLogo: "/phenom.png",
@@ -76,8 +89,7 @@ export const fullStackDeveloperCourseData = {
       from: "Associate Manager",
       company: "Inito",
       title: "Lead Product Analyst",
-      text:
-        "Got to collaborate with brilliant minds, learned from seasoned mentors, and put my analytical skills to the test.",
+      text: "Got to collaborate with brilliant minds, learned from seasoned mentors, and put my analytical skills to the test.",
       profile: "/person3.jpg",
       fromLogo: "/byjus.png",
       companyLogo: "/inito.png",
@@ -306,10 +318,26 @@ export const fullStackDeveloperCourseData = {
       gst: true,
     },
     features: [
-      { description: "Spend only two hours/day", icon: "Clock", color: "text-blue-600" },
-      { description: "One-on-one mentorship and doubt resolution", icon: "Users", color: "text-green-600" },
-      { description: "Network with your peers and industry experts", icon: "GraduationCap", color: "text-purple-600" },
-      { description: "Job Guaranteed with Placement Services", icon: "Shield", color: "text-orange-600" },
+      {
+        description: "Spend only two hours/day",
+        icon: "Clock",
+        color: "text-blue-600",
+      },
+      {
+        description: "One-on-one mentorship and doubt resolution",
+        icon: "Users",
+        color: "text-green-600",
+      },
+      {
+        description: "Network with your peers and industry experts",
+        icon: "GraduationCap",
+        color: "text-purple-600",
+      },
+      {
+        description: "Job Guaranteed with Placement Services",
+        icon: "Shield",
+        color: "text-orange-600",
+      },
     ],
     badge: "Most Popular",
     cta: {
@@ -321,31 +349,95 @@ export const fullStackDeveloperCourseData = {
     heading: "Learning Journey",
     title: "Learn all the Tools that are In-demand",
     tools: [
-      { name: "VS Code", icon: "/Language/vscode.png", color: "bg-blue-100 text-blue-700" },
-      { name: "GitHub", icon: "/Language/github.png", color: "bg-gray-100 text-gray-700" },
-      { name: "Node.js", icon: "/Language/node.png", color: "bg-green-100 text-green-700" },
-      { name: "MongoDB", icon: "/Language/mongo.png", color: "bg-emerald-100 text-emerald-700" },
-      { name: "Express.js", icon: "/Language/express.png", color: "bg-gray-100 text-gray-700" },
-      { name: "React", icon: "/Language/react.png", color: "bg-cyan-100 text-cyan-700" },
-      { name: "Postman", icon: "/Language/postman.png", color: "bg-orange-100 text-orange-700" },
-      { name: "Redux", icon: "/Language/redux1.png", color: "bg-purple-100 text-purple-700" },
-      { name: "Docker", icon: "/Language/docker.png", color: "bg-blue-100 text-blue-700" },
-      { name: "Vercel", icon: "/Language/vercel.png", color: "bg-black-100 text-black-700" },
+      {
+        name: "VS Code",
+        icon: "/Language/vscode.png",
+        color: "bg-blue-100 text-blue-700",
+      },
+      {
+        name: "GitHub",
+        icon: "/Language/github.png",
+        color: "bg-gray-100 text-gray-700",
+      },
+      {
+        name: "Node.js",
+        icon: "/Language/node.png",
+        color: "bg-green-100 text-green-700",
+      },
+      {
+        name: "MongoDB",
+        icon: "/Language/mongo.png",
+        color: "bg-emerald-100 text-emerald-700",
+      },
+      {
+        name: "Express.js",
+        icon: "/Language/express.png",
+        color: "bg-gray-100 text-gray-700",
+      },
+      {
+        name: "React",
+        icon: "/Language/react.png",
+        color: "bg-cyan-100 text-cyan-700",
+      },
+      {
+        name: "Postman",
+        icon: "/Language/postman.png",
+        color: "bg-orange-100 text-orange-700",
+      },
+      {
+        name: "Redux",
+        icon: "/Language/redux1.png",
+        color: "bg-purple-100 text-purple-700",
+      },
+      {
+        name: "Docker",
+        icon: "/Language/docker.png",
+        color: "bg-blue-100 text-blue-700",
+      },
+      {
+        name: "Vercel",
+        icon: "/Language/vercel.png",
+        color: "bg-black-100 text-black-700",
+      },
     ],
   },
   learning: {
     heading: "Learning Journey",
     title: "The New Immersive Learning Experience",
-    description: "Follow our structured learning path from enrollment to job placement",
+    description:
+      "Follow our structured learning path from enrollment to job placement",
     steps: [
-      { title: "Start Learning", description: ["Pay 70,000 and join the course", "Live Classes by Experts"], image: "/learning1.svg" },
-      { title: "Get Assessed", description: ["Write Online Assessment", "Get Eligibility for placements"], image: "/learning2.svg" },
-      { title: "Apply for jobs", description: ["Access Placement videos", "Apply for Jobs", "Get an offer letter"], image: "/learning3.svg" },
+      {
+        title: "Start Learning",
+        description: [
+          "Pay 70,000 and join the course",
+          "Live Classes by Experts",
+        ],
+        image: "/learning1.svg",
+      },
+      {
+        title: "Get Assessed",
+        description: [
+          "Write Online Assessment",
+          "Get Eligibility for placements",
+        ],
+        image: "/learning2.svg",
+      },
+      {
+        title: "Apply for jobs",
+        description: [
+          "Access Placement videos",
+          "Apply for Jobs",
+          "Get an offer letter",
+        ],
+        image: "/learning3.svg",
+      },
     ],
   },
   placementAssistance: {
     heading: "Placement Assistance",
-    description: "Stand out from your peers in front of the recruiters and start your career.",
+    description:
+      "Stand out from your peers in front of the recruiters and start your career.",
     features: [
       { icon: "Code", title: "One-on-one Sessions" },
       { icon: "LineChart", title: "Career Guidance" },
@@ -358,8 +450,17 @@ export const fullStackDeveloperCourseData = {
   },
   productAnalyst: {
     heading: "Your Future Job Title",
-    titles: ["Marketing\nAnalyst", "Data\nAnalyst", "Business\nAnalyst", "Product\nAnalyst"],
-    salaries: { average: "8-10 Lakhs", highest: "31 Lakhs", highestCompany: "Top Firms" },
+    titles: [
+      "Marketing\nAnalyst",
+      "Data\nAnalyst",
+      "Business\nAnalyst",
+      "Product\nAnalyst",
+    ],
+    salaries: {
+      average: "8-10 Lakhs",
+      highest: "31 Lakhs",
+      highestCompany: "Top Firms",
+    },
   },
   faq: [
     {
@@ -375,5 +476,3 @@ export const fullStackDeveloperCourseData = {
     },
   ],
 };
-
-
