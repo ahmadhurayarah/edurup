@@ -3,189 +3,11 @@ import { Clock, Eye, FileText, Star, ChevronDown, ChevronUp } from "lucide-react
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Separator } from "@/components/ui/separator";
-
-const curriculum = [
-  {
-    title: "Introduction to Digital Marketing",
-    duration: "2 weeks",
-    lessons: "8 lessons",
-    projects: "1 project",
-    description: [
-      "What is Digital Marketing? Scope & Career Opportunities",
-      "Traditional vs Digital Marketing",
-      "Understanding Marketing Funnel (TOFU, MOFU, BOFU)",
-      "Overview of Marketing Channels: SEO, SEM, SMM, Email, Content, Performance",
-      "Tools Overview: Google Workspace, ChatGPT, Canva",
-      "Mini Project: Create a Digital Strategy for a Local Brand",
-    ],
-  },
-  {
-    title: "Website Planning & WordPress Development",
-    duration: "2 weeks",
-    lessons: "10 lessons",
-    projects: "1 project",
-    description: [
-      "Domain, Hosting, SSL Setup",
-      "WordPress Installation, Themes, Plugins",
-      "Page Builders (Elementor, Astra)",
-      "Landing Pages & Lead Form Integration",
-      "SEO Basics for Websites",
-      "Project: Create a Business Landing Page",
-    ],
-  },
-  {
-    title: "SEO (Search Engine Optimization)",
-    duration: "3 weeks",
-    lessons: "12 lessons",
-    projects: "1 project",
-    description: [
-      "Keyword Research (Ubersuggest, Google Keyword Planner)",
-      "On-Page SEO: Title, Meta Tags, Schema, Internal Linking",
-      "Off-Page SEO: Link Building, Backlinks, Citations",
-      "Google Search Console & Page Speed Optimization",
-      "Project: Optimize a Website for Google Rankings",
-    ],
-  },
-  {
-    title: "Content Marketing & Blogging",
-    duration: "2 weeks",
-    lessons: "10 lessons",
-    projects: "1 project",
-    description: [
-      "Copywriting Techniques for Digital Ads & Blogs",
-      "Content Strategy: Blog Calendar, SEO Blogs",
-      "Tools: Grammarly, Canva, SurferSEO, ChatGPT for content generation",
-      "YouTube Content Planning & Repurposing",
-      "Project: Create a Content Strategy & SEO Blog",
-    ],
-  },
-  {
-    title: "Social Media Marketing (Organic)",
-    duration: "3 weeks",
-    lessons: "14 lessons",
-    projects: "1 project",
-    description: [
-      "Social Media Strategy & Content Planning",
-      "Platforms Overview: Instagram, Facebook, LinkedIn, YouTube, X (Twitter)",
-      "Brand Positioning, Tone, and Audience Targeting",
-      "Hashtag Research & Content Calendar Creation",
-      "Canva Design Mastery (Reels, Stories, Carousels)",
-      "Scheduling Tools: Meta Planner, Buffer, Later",
-      "Project: Create 15-Day Social Media Calendar for a Brand",
-    ],
-  },
-  {
-    title: "Social Media Advertising (Meta Ads)",
-    duration: "3 weeks",
-    lessons: "12 lessons",
-    projects: "1 project",
-    description: [
-      "Meta Business Suite Setup (Facebook & Instagram)",
-      "Campaign Objectives: Awareness, Leads, Conversions",
-      "Audience Targeting: Demographics, Interests, Custom, Lookalike",
-      "Creative Strategy: Copy, Visuals, CTA",
-      "Pixel Setup & Conversion Tracking",
-      "A/B Testing, CPL Optimization",
-      "Project: Run a Real Meta Lead Generation Campaign",
-    ],
-  },
-  {
-    title: "Google Ads & YouTube Marketing",
-    duration: "3 weeks",
-    lessons: "12 lessons",
-    projects: "1 project",
-    description: [
-      "Google Ads Overview (Search, Display, Video)",
-      "Keyword Targeting, Match Types, Ad Rank",
-      "YouTube Channel Optimization & Monetization",
-      "Video Ads Setup & Targeting",
-      "Remarketing & Performance Tracking",
-      "Project: Run a Google Search & YouTube Video Campaign",
-    ],
-  },
-  {
-    title: "LinkedIn & Performance Marketing",
-    duration: "2 weeks",
-    lessons: "10 lessons",
-    projects: "1 project",
-    description: [
-      "LinkedIn Profile Optimization for B2B",
-      "LinkedIn Ads: Sponsored Content, InMail, Carousel Ads",
-      "B2B Lead Generation Strategy",
-      "Understanding Performance Metrics: ROI, ROAS, CAC, LTV",
-      "Retargeting & Funnel Marketing",
-      "Project: B2B Campaign using LinkedIn + Google Ads",
-    ],
-  },
-  {
-    title: "Email & Marketing Automation",
-    duration: "2 weeks",
-    lessons: "8 lessons",
-    projects: "1 project",
-    description: [
-      "Email Marketing Tools (Mailchimp, HubSpot)",
-      "Drip Campaigns, Segmentation, Personalization",
-      "WhatsApp Marketing Tools",
-      "Chatbots for Lead Nurturing (ManyChat, BotPress)",
-      "Project: Automate Email Campaign for a Local Business",
-    ],
-  },
-  {
-    title: "Web Analytics & Google Tag Manager",
-    duration: "2 weeks",
-    lessons: "8 lessons",
-    projects: "1 project",
-    description: [
-      "Google Analytics 4 (GA4) Setup & Reporting",
-      "UTM Tracking, Event & Conversion Setup",
-      "Google Tag Manager Integration",
-      "Data Studio Dashboards",
-      "Project: Create Analytics Dashboard for an Ad Campaign",
-    ],
-  },
-  {
-    title: "AI Tools for Marketing",
-    duration: "1 week",
-    lessons: "6 lessons",
-    projects: "1 project",
-    description: [
-      "AI Copywriting Tools (ChatGPT, Jasper, Writesonic)",
-      "AI Design Tools (Canva AI, Leonardo, Pika Labs)",
-      "AI SEO Tools (NeuronWriter, SurferSEO)",
-      "Video Creation Tools (Pictory, Synthesia)",
-      "Project: AI-Powered Marketing Campaign Strategy",
-    ],
-  },
-  {
-    title: "Personal Branding, Freelancing & Placement Prep",
-    duration: "2 weeks",
-    lessons: "10 lessons",
-    projects: "1 project",
-    description: [
-      "Resume & LinkedIn Optimization",
-      "Building a Freelance Portfolio (Behance / Notion / Canva)",
-      "Upwork, Fiverr, and Client Proposal Writing",
-      "50+ Interview Questions in Digital Marketing",
-      "Final Project Presentation & Certification",
-    ],
-  },
-  {
-    title: "Final Projects (Choose Any 2–3)",
-    duration: "—",
-    lessons: "—",
-    projects: "3 projects",
-    description: [
-      "SEO Optimized Business Website",
-      "Meta & Google Ads Campaign",
-      "Social Media Content Strategy + 15-Day Plan",
-      "YouTube Ad Campaign",
-      "Marketing Automation Funnel",
-    ],
-  },
-];
-
+import { digitalMarketingCourseData } from "./data";
 
 const Curriculum = () => {
+  const curriculum = digitalMarketingCourseData.curriculum;
+  const highlights = digitalMarketingCourseData.curriculumHighlights;
   const [expandedModule, setExpandedModule] = useState<number | null>(null);
 
   const toggleModule = (index: number) => {
@@ -363,27 +185,27 @@ const Curriculum = () => {
                   <div className="grid grid-cols-2 gap-4 text-white">
                     <div>
                       <div className="text-sm text-teal-200">Duration</div>
-                      <div className="font-semibold">8 months</div>
+                      <div className="font-semibold">{highlights.duration}</div>
                     </div>
                     <div>
                       <div className="text-sm text-teal-200">Format</div>
-                      <div className="font-semibold">Live + Recorded</div>
+                      <div className="font-semibold">{highlights.format}</div>
                     </div>
                     <div>
                       <div className="text-sm text-teal-200">Projects</div>
-                      <div className="font-semibold">15+ Real-world</div>
+                      <div className="font-semibold">{highlights.projects}</div>
                     </div>
                     <div>
                       <div className="text-sm text-teal-200">Mentorship</div>
-                      <div className="font-semibold">1:1 Support</div>
+                      <div className="font-semibold">{highlights.mentorship}</div>
                     </div>
                     <div>
                       <div className="text-sm text-teal-200">Placement</div>
-                      <div className="font-semibold">Guaranteed</div>
+                      <div className="font-semibold">{highlights.placement}</div>
                     </div>
                     <div>
                       <div className="text-sm text-teal-200">Certificate</div>
-                      <div className="font-semibold">Industry Recognized</div>
+                      <div className="font-semibold">{highlights.certificate}</div>
                     </div>
                   </div>
                 </div>
@@ -398,7 +220,7 @@ const Curriculum = () => {
                           <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                         ))}
                       </div>
-                      <span className="font-semibold">4.8/5 (1,250 reviews)</span>
+                      <span className="font-semibold">{highlights.rating.value}/5 ({highlights.rating.reviews.toLocaleString()} reviews)</span>
                     </div>
                   </div>
                 </div>

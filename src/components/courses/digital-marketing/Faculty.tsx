@@ -8,6 +8,7 @@ import "keen-slider/keen-slider.min.css";
 import { ArrowUpRight, GraduationCap, Star, Users } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { motion } from "framer-motion";
+import { digitalMarketingCourseData } from "./data";
 
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -17,33 +18,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-
-const facultyData = [
-  {
-    name: "Rupesh Kumar",
-    designation: "Chief Marketing Officer",
-    image: "/mentor3.jpg",
-    subjects: ["Digital Marketing", "Performance Marketing"],
-    socialMedia: "linkedin",
-    url: "https://in.linkedin.com/in/neelam-rupesh",
-    experience: "8+ Years",
-    students: "2,500+",
-    rating: "4.9",
-    color: "blue",
-  },
-  {
-    name: "Mukesh Kumar",
-    designation: "General Manager",
-    image: "/mentor2.jpg",
-    subjects: ["Digital Strategy", "Product Marketing"],
-    socialMedia: "linkedin",
-    url: "https://www.linkedin.com/in/askmukesh?trk=blended-typeahead",
-    experience: "10+ Years",
-    students: "3,200+",
-    rating: "4.9",
-    color: "purple",
-  },
-];
 
 const getColorClasses = (color: string) => {
   const colorMap = {
@@ -64,6 +38,8 @@ const getColorClasses = (color: string) => {
 };
 
 const Faculty = () => {
+  const facultyData = digitalMarketingCourseData.faculty;
+  
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {

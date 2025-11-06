@@ -106,3 +106,153 @@ export function generateDigitalMarketingSchema(cityName: string, url: string) {
     teaches: course.teaches,
   };
 }
+
+// FAQ Schema
+export function generateFAQSchema(cityName: string, url: string) {
+  const { faq } = digitalMarketingCourseData;
+
+  // Replace {city} placeholder with actual city name
+  const replaceCity = (text: string) => text.replace(/{city}/g, cityName);
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faq.map((item) => ({
+      "@type": "Question",
+      name: replaceCity(item.question),
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: replaceCity(item.answer),
+      },
+    })),
+  };
+}
+
+// Reviews Schema
+export function generateReviewsSchema(url: string) {
+  const { reviews } = digitalMarketingCourseData;
+
+  return reviews.map((review) => ({
+    "@context": "https://schema.org",
+    "@type": "Review",
+    author: {
+      "@type": "Person",
+      name: review.name,
+    },
+    reviewBody: review.text,
+    itemReviewed: {
+      "@type": "Course",
+      name: "Digital Marketing Course",
+    },
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: "5",
+      bestRating: "5",
+    },
+  }));
+}
+
+// Faculty Schema
+export function generateFacultySchema() {
+  const { faculty } = digitalMarketingCourseData;
+
+  return faculty.map((instructor) => ({
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: instructor.name,
+    jobTitle: instructor.designation,
+    image: `https://www.edurup.in${instructor.image}`,
+    sameAs: instructor.url,
+    knowsAbout: instructor.subjects,
+    worksFor: {
+      "@type": "Organization",
+      name: "Edurup Learning",
+    },
+  }));
+}
+
+// Job Roles Schema (ProductAnalyst)
+export function generateJobRolesSchema() {
+  const { productAnalyst } = digitalMarketingCourseData;
+
+  return productAnalyst.titles.map((title) => ({
+    "@context": "https://schema.org",
+    "@type": "Occupation",
+    name: title.replace(/\n/g, " "),
+    occupationLocation: {
+      "@type": "Country",
+      name: "India",
+    },
+    estimatedSalary: {
+      "@type": "MonetaryAmount",
+      currency: "INR",
+      value: {
+        "@type": "QuantitativeValue",
+        minValue: "800000",
+        maxValue: "1000000",
+      },
+    },
+  }));
+}
+
+// Curriculum Schema (ItemList)
+export function generateCurriculumSchema() {
+  const { curriculum } = digitalMarketingCourseData;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Digital Marketing Course Curriculum",
+    description:
+      "Comprehensive curriculum covering all aspects of Digital Marketing",
+    numberOfItems: curriculum.length,
+    itemListElement: curriculum.map((module, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": "CourseModule",
+        name: module.title,
+        description: module.description.join(" "),
+        timeRequired: module.duration,
+        courseCode: `${module.title.replace(/\s+/g, "-").toLowerCase()}`,
+      },
+    })),
+  };
+}
+
+// Organization Schema (Company)
+export function generateOrganizationSchema() {
+  const { provider } = digitalMarketingCourseData;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: provider.name,
+    url: provider.url,
+    sameAs: provider.sameAs,
+    logo: "https://www.edurup.in/logo.png",
+    description:
+      "Edurup Learning - Professional courses with 100% placement support",
+    foundingDate: "2020",
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "IN",
+    },
+  };
+}
+
+// Generate all schemas
+export function generateAllDigitalMarketingSchemas(
+  cityName: string,
+  url: string
+) {
+  return [
+    generateDigitalMarketingSchema(cityName, url),
+    generateFAQSchema(cityName, url),
+    generateCurriculumSchema(),
+    generateOrganizationSchema(),
+    ...generateReviewsSchema(url),
+    ...generateFacultySchema(),
+    ...generateJobRolesSchema(),
+  ];
+}

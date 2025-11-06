@@ -9,6 +9,7 @@ import FullStackDeveloperCourse from "@/components/courses/full-stack-developer"
 import {
   getDigitalMarketingMetadata,
   generateDigitalMarketingSchema,
+  generateAllDigitalMarketingSchemas,
 } from "./seo/digital-marketing";
 import {
   getDataAnalyticsMetadata,
@@ -190,34 +191,37 @@ export default async function CoursesPageServer({
   const url = `https://www.edurup.in/${slug}`;
 
   // Generate Course Schema based on course key
-  const generateCourseSchema = () => {
+  const generateCourseSchemas = () => {
     switch (courseKey) {
       case "digital-marketing-course":
-        return generateDigitalMarketingSchema(cityName, url);
+        return generateAllDigitalMarketingSchemas(cityName, url);
       case "data-analytics-course":
-        return generateDataAnalyticsSchema(cityName, url);
+        return [generateDataAnalyticsSchema(cityName, url)];
       case "data-science-and-ai-course":
-        return generateDataScienceAndAISchema(cityName, url);
+        return [generateDataScienceAndAISchema(cityName, url)];
       case "full-stack-developer-course":
-        return generateFullStackDeveloperSchema(cityName, url);
+        return [generateFullStackDeveloperSchema(cityName, url)];
       default:
-        return null;
+        return [];
     }
   };
 
-  const courseSchema = generateCourseSchema();
+  const courseSchemas = generateCourseSchemas().filter(
+    (schema) => schema !== null && schema !== undefined
+  );
 
   return (
     <>
-      {courseSchema && (
+      {courseSchemas.map((schema, index) => (
         <Script
-          id="course-schema"
+          key={`schema-${index}`}
+          id={`course-schema-${index}`}
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(courseSchema),
+            __html: JSON.stringify(schema),
           }}
         />
-      )}
+      ))}
       <CourseComponent cityName={cityName} />
     </>
   );

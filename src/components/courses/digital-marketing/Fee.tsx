@@ -1,31 +1,18 @@
 import React from "react";
 import { CheckCircle, Clock, Users, GraduationCap, Shield, Star, Zap } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import { digitalMarketingCourseData } from "./data";
 
-const fee = [
-  { 
-    description: "Spend only two hours/day",
-    icon: Clock,
-    color: "text-blue-600"
-  },
-  { 
-    description: "One-on-one mentorship and doubt resolution",
-    icon: Users,
-    color: "text-green-600"
-  },
-  { 
-    description: "Network with your peers and industry experts",
-    icon: GraduationCap,
-    color: "text-purple-600"
-  },
-  { 
-    description: "Job Guaranteed with Placement Services",
-    icon: Shield,
-    color: "text-orange-600"
-  },
-];
+const iconMap: Record<string, typeof Clock> = {
+  Clock,
+  Users,
+  GraduationCap,
+  Shield,
+};
 
 const Fee = () => {
+  const { fee, course } = digitalMarketingCourseData;
+  const scholarship = fee.scholarship;
   return (
     <>
       <div className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-white to-gray-50/30">
@@ -40,7 +27,7 @@ const Fee = () => {
               Post Graduate Program <span className="text-green-600">Fee</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              30% Scholarship Available for eligible students
+              {scholarship.percentage}% Scholarship Available for eligible students
             </p>
           </div>
 
@@ -52,22 +39,22 @@ const Fee = () => {
                 {/* Badge */}
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                   <div className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-6 py-2 rounded-full text-sm font-semibold shadow-lg">
-                    Most Popular
+                    {fee.badge}
                   </div>
                 </div>
 
                 {/* Price */}
                 <div className="text-center pt-4">
                   <div className="flex items-baseline justify-center gap-2 mb-2">
-                    <span className="text-6xl font-bold text-gray-900">₹70,000</span>
+                    <span className="text-6xl font-bold text-gray-900">₹{scholarship.discountedPrice.toLocaleString("en-IN")}</span>
                   </div>
-                  <div className="text-gray-500 text-lg mb-6">+ GST</div>
+                  <div className="text-gray-500 text-lg mb-6">{scholarship.gst ? "+ GST" : ""}</div>
                   
                   {/* EMI Banner */}
                   <div className="bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl p-4 mb-8 text-white shadow-lg">
                     <div className="flex items-center justify-center gap-3">
                       <Star className="w-5 h-5" />
-                      <span className="text-xl font-bold">EMI: ₹10,000/month</span>
+                      <span className="text-xl font-bold">EMI: ₹{scholarship.emi.toLocaleString("en-IN")}/month</span>
                       <Star className="w-5 h-5" />
                     </div>
                   </div>
@@ -77,9 +64,9 @@ const Fee = () => {
                     <div className="flex items-center justify-center gap-3 text-gray-700">
                       <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
                       <div className="text-left">
-                        <span className="font-semibold">Pay only ₹70,000</span> after 30% scholarship
+                        <span className="font-semibold">Pay only ₹{scholarship.discountedPrice.toLocaleString("en-IN")}</span> after {scholarship.percentage}% scholarship
                         <div className="text-sm text-gray-500 mt-1">
-                          Original fee: <span className="line-through">₹1,00,000</span>
+                          Original fee: <span className="line-through">₹{scholarship.originalPrice.toLocaleString("en-IN")}</span>
                         </div>
                       </div>
                     </div>
@@ -97,8 +84,8 @@ const Fee = () => {
                 </h3>
                 
                 <div className="space-y-6">
-                  {fee.map((item, index) => {
-                    const IconComponent = item.icon;
+                  {fee.features.map((item, index) => {
+                    const IconComponent = iconMap[item.icon] || Clock;
                     return (
                       <div 
                         key={index} 
@@ -118,12 +105,12 @@ const Fee = () => {
               <div className="pt-4">
                 <button className="w-full bg-gradient-to-r from-green-500 to-emerald-600 text-white py-4 px-8 rounded-xl font-bold text-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 hover:from-green-600 hover:to-emerald-700">
                   <div className="flex items-center justify-center gap-3">
-                    <span>Apply Now - Limited Seats Available</span>
+                    <span>{fee.cta.text}</span>
                     <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
                   </div>
                 </button>
                 <p className="text-center text-gray-500 text-sm mt-4">
-                  ⚡ Scholarship applications closing soon
+                  {fee.cta.note}
                 </p>
               </div>
             </div>

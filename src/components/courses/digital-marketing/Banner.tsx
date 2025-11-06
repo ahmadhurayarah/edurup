@@ -1,37 +1,14 @@
 "use client";
 import React from "react";
 import { Button } from "@/components/ui/button";
+import { digitalMarketingCourseData } from "./data";
 
 interface CourseBannerProps {
   cityName?: string;
-  courseData: {
-    course: {
-      name: string;
-      description: string;
-      duration: string;
-      features: Array<{ title: string; subtitle: string }>;
-      price: {
-        original: number;
-        discounted: number;
-        currency: string;
-        emi: number;
-        discountPercentage: number;
-      };
-    };
-    banner: {
-      backgroundColor: string;
-      textColor: string;
-      cohort: string;
-      cohortStartDate: string;
-    };
-  };
 }
 
-const CourseBanner = ({
-  cityName = "Bangalore",
-  courseData,
-}: CourseBannerProps) => {
-  const { course, banner } = courseData;
+const CourseBanner = ({ cityName = "Bangalore" }: CourseBannerProps) => {
+  const { course, banner } = digitalMarketingCourseData;
 
   return (
     <section

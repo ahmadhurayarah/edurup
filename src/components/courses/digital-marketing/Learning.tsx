@@ -10,32 +10,12 @@ import {
 import { CheckCircle2, BookOpen } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
-
-const curriculum = [
-  {
-    title: "Start Learning",
-    description: ["Pay 70,000 and join the course", "Live Classes by Experts"],
-    image: "/learning1.svg",
-  },
-  {
-    title: "Get Assessed",
-    description: ["Write Online Assessment", "Get Eligibility for placements"],
-    image: "/learning2.svg",
-  },
-  {
-    title: "Apply for jobs",
-    description: [
-      "Access Placement videos",
-      "Apply for Jobs",
-      "Get an offer letter",
-    ],
-    image: "/learning3.svg",
-  },
-];
+import { digitalMarketingCourseData } from "./data";
 
 const Learning = () => {
-  const [activeTab, setActiveTab] = useState(curriculum[0].title);
-  const activeItem = curriculum.find((item) => item.title === activeTab);
+  const { learning } = digitalMarketingCourseData;
+  const [activeTab, setActiveTab] = useState(learning.steps[0].title);
+  const activeItem = learning.steps.find((item) => item.title === activeTab);
   const defaultItem = {
     title: "",
     description: [],
@@ -49,13 +29,13 @@ const Learning = () => {
       <div className="text-center mb-12">
         <div className="inline-flex items-center px-3 py-1 rounded-full bg-green-100 text-[#004F4E] text-sm font-medium mb-4">
           <BookOpen className="w-4 h-4 mr-2" />
-          Learning Journey
+          {learning.heading}
         </div>
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-          The New Immersive <span className="text-[#004F4E]">Learning Experience</span>
+          {learning.title.split(" ").slice(0, -2).join(" ")} <span className="text-[#004F4E]">{learning.title.split(" ").slice(-2).join(" ")}</span>
         </h2>
         <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-          Follow our structured learning path from enrollment to job placement
+          {learning.description}
         </p>
       </div>
 
@@ -65,7 +45,7 @@ const Learning = () => {
           onValueChange={setActiveTab}
           className="px-[2rem] sm:px-[5rem] pb-[1rem] sm:pb-[8rem] w-[20rem] sm:w-[30rem]"
         >
-          {curriculum.map((item, idx) => (
+          {learning.steps.map((item, idx) => (
             <div key={idx} className="">
               <TabsList className="flex flex-col items-start py-[0.5rem]">
                 <TabsTrigger

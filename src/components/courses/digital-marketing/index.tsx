@@ -10,7 +10,6 @@ import Faculty from "./Faculty";
 import Language from "./Language";
 import ProductAnalyst from "./ProductAnalyst";
 import Reviews from "./Reviews";
-import { digitalMarketingCourseData } from "./data";
 
 interface DigitalMarketingCourseProps {
   cityName?: string;
@@ -20,7 +19,7 @@ const DigitalMarketingCourse = ({ cityName }: DigitalMarketingCourseProps) => {
   return (
     <>
       <div className="min-h-full flex flex-col overflow-x-hidden">
-        <Banner cityName={cityName} courseData={digitalMarketingCourseData} />
+        <Banner cityName={cityName} />
         <Company />
         <Curriculum />
         <ProductAnalyst />
@@ -30,7 +29,7 @@ const DigitalMarketingCourse = ({ cityName }: DigitalMarketingCourseProps) => {
         <Faculty />
         <Language />
         <PlacementAssistance />
-        <Faq />
+        <Faq cityName={cityName} />
       </div>
     </>
   );

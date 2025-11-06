@@ -1,24 +1,11 @@
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 import React from "react";
+import { digitalMarketingCourseData } from "./data";
 
 const Language = () => {
-  const tools = [
-    { name: "Google ads manager", icon: "/Language/googleads.png", color: "bg-purple-100 text-purple-700" },
-    { name: "Search console", icon: "/Language/searchconsole.png", color: "bg-blue-100 text-blue-700" },
-    { name: "Analytics", icon: "/Language/analytics.png", color: "bg-yellow-100 text-yellow-700" },
-    { name: "Adwords", icon: "/Language/adwords.png", color: "bg-orange-100 text-orange-700" },
-    { name: "Tag manager", icon: "/Language/tagmanager.png", color: "bg-red-100 text-red-700" },
-    { name: "WordPress", icon: "/Language/wordpress.png", color: "bg-green-100 text-green-700" },
-    { name: "Canva", icon: "/Language/canva.png", color: "bg-blue-100 text-blue-700" },
-    { name: "Chat gpt", icon: "/Language/chatgpt.png", color: "bg-indigo-100 text-indigo-700" },
-    { name: "Meta ads", icon: "/Language/metaads.png", color: "bg-emerald-100 text-emerald-700" },
-    { name: "Quillbot", icon: "/Language/quillbot.png", color: "bg-emerald-100 text-emerald-700" },
-    { name: "Sem rush", icon: "/Language/semrush.png", color: "bg-emerald-100 text-emerald-700" },
-    { name: "Ahref", icon: "/Language/ahrefs.png", color: "bg-emerald-100 text-emerald-700" },
-    { name: "Hootsuite", icon: "/Language/hootsuite.png", color: "bg-emerald-100 text-emerald-700" },
-      { name: "Mail chimp", icon: "/Language/mailchimp.png", color: "bg-emerald-100 text-emerald-700" },
-  ];
+  const { language } = digitalMarketingCourseData;
+  const tools = language.tools;
 
 
 
@@ -29,7 +16,7 @@ const Language = () => {
           {/* Header Section */}
           <div className="text-center mb-12">
             <h1 className="mb-4 text-3xl sm:text-5xl font-semibold text-center text-gray-900 dark:text-white">
-              Learning <span className="text-fg">Journey</span>
+              {language.heading.split(" ")[0]} <span className="text-fg">{language.heading.split(" ")[1]}</span>
             </h1>
           </div>
 
@@ -41,12 +28,12 @@ const Language = () => {
                 COURSE JOURNEY
               </p>
               <h2 className="text-3xl sm:text-5xl font-bold text-gray-900 mb-4">
-                Learn all the
+                {language.title.split(" ").slice(0, 3).join(" ")}
               </h2>
               <h2 className="text-3xl sm:text-5xl font-bold text-gray-900 mb-4">
-                Tools that are{" "}
+                {language.title.split(" ").slice(3, 5).join(" ")}{" "}
                 <span className="relative">
-                  In-demand
+                  {language.title.split(" ").slice(5).join(" ")}
                   <svg
                     className="absolute -bottom-2 left-0 w-full h-3 text-fg"
                     viewBox="0 0 200 12"
