@@ -64,13 +64,22 @@ export const Navbar = () => {
     //   href: "/full-stack-web-development",
     // },
     // { label: "Data Science", href: "/data-science" },
-    { label: "PG Digital Marketing", href: "/digital-marketing-course-bangalore" },
+    {
+      label: "PG Digital Marketing",
+      href: "/digital-marketing-course-bangalore",
+    },
     // { label: "Mern Development", href: "/mern-stack-developer-course" },
-   { label: "PG Data Analytics", href: "data-analytics-course-bangalore" },
-   { label: "PG Data Science & AI", href: "data-science-and-ai-course-bangalore" },
-    { label: "PG Full Stack Developer", href: "/full-stack-developer-course-bangalore" },
+    { label: "PG Data Analytics", href: "data-analytics-course-bangalore" },
+    {
+      label: "PG Data Science & AI",
+      href: "data-science-and-ai-course-bangalore",
+    },
+    {
+      label: "PG Full Stack Developer",
+      href: "/full-stack-developer-course-bangalore",
+    },
     { label: "PG Python", href: "/python-course-bangalore" },
-    
+
     // { label: "Finance Analyst", href: "/finance-analyst" },
     // { label: "Python", href: "/python" },
   ];
@@ -78,7 +87,7 @@ export const Navbar = () => {
     <>
       <div
         className={cn(
-          "z-50 fixed top-0 flex items-center justify-center sm:justify-around w-full sm:max-w-screen bg-white dark:bg-dark ",
+          "z-50 sticky top-0 flex items-center justify-center sm:justify-around w-full sm:max-w-screen bg-white dark:bg-dark ",
           scrolled && "dark:border-gray-600 border-gray-600 shadow-lg"
         )}
       >
@@ -125,26 +134,25 @@ export const Navbar = () => {
                   COURSES
                 </NavigationMenuTrigger>
 
-                
                 <NavigationMenuContent>
-  {courses.map((course) => (
-    <NavigationMenuLink asChild key={course.href}>
-      <Link
-        className={cn(
-          "flex text-left ml-2 w-[13.1rem] hover:text-fg py-2 transition-colors",
-          {
-            "text-fg": course.href === currentPath,
-            "text-primary": course.href !== currentPath,
-            "hover:text-fg transition-colors": true,
-          }
-        )}
-        href={course.href}
-      >
-        {course.label}
-      </Link>
-    </NavigationMenuLink>
-  ))}
-</NavigationMenuContent>
+                  {courses.map((course) => (
+                    <NavigationMenuLink asChild key={course.href}>
+                      <Link
+                        className={cn(
+                          "flex text-left ml-2 w-[13.1rem] hover:text-fg py-2 transition-colors",
+                          {
+                            "text-fg": course.href === currentPath,
+                            "text-primary": course.href !== currentPath,
+                            "hover:text-fg transition-colors": true,
+                          }
+                        )}
+                        href={course.href}
+                      >
+                        {course.label}
+                      </Link>
+                    </NavigationMenuLink>
+                  ))}
+                </NavigationMenuContent>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>

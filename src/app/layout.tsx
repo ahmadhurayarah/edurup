@@ -1,11 +1,15 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ToastProvider } from "@/providers/toast-provider";
-
+import { Navbar } from "@/components/Navbar";
+import CourseCities from "@/components/CourseCities";
+import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
+import WhatsAppCTA from "@/components/WhatsAppCTA";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.edurup.in"),
   title:
     "Edurup Learning | Job-Guaranteed Online Courses in PGP Data Science, Digital Marketing, Data Analytics & Full Stack Developer",
   description:
@@ -21,7 +25,6 @@ export const metadata: Metadata = {
     "Placement Support",
   ],
   authors: [{ name: "Edurup Learning", url: "https://www.edurup.in" }],
-  viewport: "width=device-width, initial-scale=1.0",
   icons: {
     icon: [
       {
@@ -66,6 +69,11 @@ export const metadata: Metadata = {
   robots: "index, follow",
 };
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1.0,
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -81,23 +89,23 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              "name": "Edurup Learning",
-              "url": "https://www.edurup.in",
-              "logo": "https://www.edurup.in/images/logo.png",
-              "description":
+              name: "Edurup Learning",
+              url: "https://www.edurup.in",
+              logo: "https://www.edurup.in/images/logo.png",
+              description:
                 "Edurup Learning provides job-guaranteed online and classroom courses in Digital Marketing, Data Analytics and Full Stack Development.",
-              "sameAs": [
+              sameAs: [
                 "https://www.instagram.com/edurup_learning/",
                 "https://www.linkedin.com/school/edurup-learning/",
                 "https://www.facebook.com/eduruplearning",
                 "https://maps.app.goo.gl/Lp8gWA41rM5ikMe49",
               ],
-              "contactPoint": {
+              contactPoint: {
                 "@type": "ContactPoint",
-                "telephone": "+91-XXXXXXXXXX",
-                "contactType": "Admissions",
-                "areaServed": "IN",
-                "availableLanguage": "English",
+                telephone: "+91-XXXXXXXXXX",
+                contactType: "Admissions",
+                areaServed: "IN",
+                availableLanguage: "English",
               },
             }),
           }}
@@ -115,7 +123,10 @@ export default function RootLayout({
         />
 
         {/* ✅ Google Ads Tag */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17654394600"></script>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17654394600"
+        ></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -128,7 +139,10 @@ export default function RootLayout({
         />
 
         {/* ✅ Google Analytics (GA4) Tag */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-BQJXZKCHX4"></script>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-BQJXZKCHX4"
+        ></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -166,10 +180,13 @@ export default function RootLayout({
             style={{ display: "none", visibility: "hidden" }}
           ></iframe>
         </noscript>
-
         {/* Removed ThemeProvider wrapper */}
         <ToastProvider />
+        <Navbar />
         {children}
+        <CourseCities />
+        <Footer />
+        <WhatsAppCTA />
       </body>
     </html>
   );
