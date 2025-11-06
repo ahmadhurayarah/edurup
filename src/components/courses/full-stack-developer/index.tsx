@@ -11,7 +11,11 @@ import Language from "./Language";
 import ProductAnalyst from "./ProductAnalyst";
 import Reviews from "./Reviews";
 
-const FullStackDeveloperCourse = () => {
+interface FullStackDeveloperCourseProps {
+  cityName?: string;
+}
+
+const FullStackDeveloperCourse = ({ cityName }: FullStackDeveloperCourseProps) => {
   return (
     <>
       <div className="min-h-full flex flex-col overflow-x-hidden">

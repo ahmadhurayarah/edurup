@@ -12,7 +12,11 @@ import Language from "./Language";
 import ProductAnalyst from "./ProductAnalyst";
 import Reviews from "./Reviews";
 
-const DataAnalyticsCourse = () => {
+interface DataAnalyticsCourseProps {
+  cityName?: string;
+}
+
+const DataAnalyticsCourse = ({ cityName }: DataAnalyticsCourseProps) => {
   return (
     <>
       <div className="min-h-full flex flex-col overflow-x-hidden">

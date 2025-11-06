@@ -5,18 +5,22 @@ import Company from "./Company";
 import Fee from "./Fee";
 import Learning from "./Learning";
 import PlacementAssistance from "./PlacementAssistance";
-
 import Faq from "./Faq";
 import Faculty from "./Faculty";
 import Language from "./Language";
 import ProductAnalyst from "./ProductAnalyst";
 import Reviews from "./Reviews";
+import { digitalMarketingCourseData } from "./data";
 
-const DigitalMarketingCourse = () => {
+interface DigitalMarketingCourseProps {
+  cityName?: string;
+}
+
+const DigitalMarketingCourse = ({ cityName }: DigitalMarketingCourseProps) => {
   return (
     <>
       <div className="min-h-full flex flex-col overflow-x-hidden">
-        <Banner />
+        <Banner cityName={cityName} courseData={digitalMarketingCourseData} />
         <Company />
         <Curriculum />
         <ProductAnalyst />

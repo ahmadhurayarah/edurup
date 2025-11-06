@@ -1,12 +1,36 @@
 import React from "react";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import Script from "next/script";
 import DataAnalyticsCourse from "@/components/courses/data-analytics";
 import DataScienceAndAICourse from "@/components/courses/data-science-and-ai";
 import DigitalMarketingCourse from "@/components/courses/digital-marketing";
 import FullStackDeveloperCourse from "@/components/courses/full-stack-developer";
+import {
+  getDigitalMarketingMetadata,
+  generateDigitalMarketingSchema,
+} from "./seo/digital-marketing";
+import {
+  getDataAnalyticsMetadata,
+  generateDataAnalyticsSchema,
+} from "./seo/data-analytics";
+import {
+  getDataScienceAndAIMetadata,
+  generateDataScienceAndAISchema,
+} from "./seo/data-science-and-ai";
+import {
+  getFullStackDeveloperMetadata,
+  generateFullStackDeveloperSchema,
+} from "./seo/full-stack-developer";
 
-const COURSE_COMPONENTS: Record<string, React.ComponentType> = {
+interface CourseComponentProps {
+  cityName?: string;
+}
+
+const COURSE_COMPONENTS: Record<
+  string,
+  React.ComponentType<CourseComponentProps>
+> = {
   "data-analytics-course": DataAnalyticsCourse,
   "data-science-and-ai-course": DataScienceAndAICourse,
   "digital-marketing-course": DigitalMarketingCourse,
@@ -65,200 +89,6 @@ function formatCityName(citySlug: string): string {
   );
 }
 
-function getDigitalMarketingMetadata(cityName: string, url: string): Metadata {
-  return {
-    title: `Digital Marketing Course in ${cityName} | Edurup`,
-    description: `Master Digital Marketing with hands-on projects in SEO, SEM, SMM, Content Marketing, and Google Ads. Join Digital Marketing course in ${cityName} with 100% placement support. Learn from industry experts at Edurup.`,
-    keywords: [
-      "Digital Marketing",
-      `Digital Marketing ${cityName}`,
-      "Digital Marketing Course",
-      "Digital Marketing Training",
-      "SEO Course",
-      "SEM Training",
-      "Social Media Marketing",
-      "Google Ads",
-      "Facebook Ads",
-      `Best Digital Marketing Course ${cityName}`,
-      "Digital Marketing Certification",
-      "Edurup",
-      "Online Courses",
-      "Job Guaranteed Courses",
-    ],
-    alternates: {
-      canonical: url,
-    },
-    openGraph: {
-      title: `Digital Marketing Course in ${cityName} | Edurup`,
-      description: `Master Digital Marketing with hands-on projects in SEO, SEM, SMM, Content Marketing, and Google Ads. Join Digital Marketing course in ${cityName} with 100% placement support.`,
-      url,
-      siteName: "Edurup Learning",
-      type: "website",
-      images: [
-        {
-          url: "https://www.edurup.in/og_image.png",
-          width: 1200,
-          height: 630,
-          alt: "Digital Marketing Course",
-        },
-      ],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: `Digital Marketing Course in ${cityName} | Edurup`,
-      description: `Master Digital Marketing with hands-on projects in SEO, SEM, SMM, Content Marketing, and Google Ads. Join Digital Marketing course in ${cityName} with 100% placement support.`,
-      images: ["https://www.edurup.in/og_image.png"],
-    },
-  };
-}
-
-function getDataAnalyticsMetadata(cityName: string, url: string): Metadata {
-  return {
-    title: `Data Analytics Course in ${cityName} | Edurup`,
-    description: `Learn Data Analytics with SQL, Excel, Power BI, and Tableau. Work on real datasets and build your portfolio. Join Data Analytics course in ${cityName} with 100% placement support. Get job-ready at Edurup.`,
-    keywords: [
-      "Data Analytics",
-      `Data Analytics ${cityName}`,
-      "Data Analytics Course",
-      "Data Analytics Training",
-      "SQL Course",
-      "Power BI Training",
-      "Tableau Course",
-      "Excel Analytics",
-      "Data Visualization",
-      `Best Data Analytics Course ${cityName}`,
-      "Data Analytics Certification",
-      "Edurup",
-      "Online Courses",
-      "Job Guaranteed Courses",
-    ],
-    alternates: {
-      canonical: url,
-    },
-    openGraph: {
-      title: `Data Analytics Course in ${cityName} | Edurup`,
-      description: `Learn Data Analytics with SQL, Excel, Power BI, and Tableau. Work on real datasets and build your portfolio. Join Data Analytics course in ${cityName} with 100% placement support.`,
-      url,
-      siteName: "Edurup Learning",
-      type: "website",
-      images: [
-        {
-          url: "https://www.edurup.in/og_image.png",
-          width: 1200,
-          height: 630,
-          alt: "Data Analytics Course",
-        },
-      ],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: `Data Analytics Course in ${cityName} | Edurup`,
-      description: `Learn Data Analytics with SQL, Excel, Power BI, and Tableau. Work on real datasets and build your portfolio. Join Data Analytics course in ${cityName} with 100% placement support.`,
-      images: ["https://www.edurup.in/og_image.png"],
-    },
-  };
-}
-
-function getDataScienceAndAIMetadata(cityName: string, url: string): Metadata {
-  return {
-    title: `Data Science & AI Course in ${cityName} | Edurup`,
-    description: `Master Data Science & AI with Python, Machine Learning, Deep Learning, and TensorFlow. Work on real AI projects and build your portfolio. Join Data Science & AI course in ${cityName} with 100% placement support. Get job-ready at Edurup.`,
-    keywords: [
-      "Data Science",
-      "Artificial Intelligence",
-      `Data Science ${cityName}`,
-      `AI Course ${cityName}`,
-      "Data Science Course",
-      "AI Training",
-      "Machine Learning",
-      "Deep Learning",
-      "Python Data Science",
-      "TensorFlow",
-      `Best Data Science Course ${cityName}`,
-      "Data Science Certification",
-      "AI Certification",
-      "Edurup",
-      "Online Courses",
-      "Job Guaranteed Courses",
-    ],
-    alternates: {
-      canonical: url,
-    },
-    openGraph: {
-      title: `Data Science & AI Course in ${cityName} | Edurup`,
-      description: `Master Data Science & AI with Python, Machine Learning, Deep Learning, and TensorFlow. Work on real AI projects and build your portfolio. Join Data Science & AI course in ${cityName} with 100% placement support.`,
-      url,
-      siteName: "Edurup Learning",
-      type: "website",
-      images: [
-        {
-          url: "https://www.edurup.in/og_image.png",
-          width: 1200,
-          height: 630,
-          alt: "Data Science & AI Course",
-        },
-      ],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: `Data Science & AI Course in ${cityName} | Edurup`,
-      description: `Master Data Science & AI with Python, Machine Learning, Deep Learning, and TensorFlow. Work on real AI projects and build your portfolio. Join Data Science & AI course in ${cityName} with 100% placement support.`,
-      images: ["https://www.edurup.in/og_image.png"],
-    },
-  };
-}
-
-function getFullStackDeveloperMetadata(
-  cityName: string,
-  url: string
-): Metadata {
-  return {
-    title: `Full Stack Developer Course in ${cityName} | Edurup`,
-    description: `Become a Full Stack Developer with MERN stack (MongoDB, Express, React, Node.js). Build real projects and get placement assistance. Join Full Stack Developer course in ${cityName} with 100% placement support. Learn from industry experts at Edurup.`,
-    keywords: [
-      "Full Stack Developer",
-      `Full Stack Developer ${cityName}`,
-      "Full Stack Course",
-      "MERN Stack",
-      "React Course",
-      "Node.js Training",
-      "MongoDB Course",
-      "Web Development",
-      "Frontend Development",
-      "Backend Development",
-      `Best Full Stack Course ${cityName}`,
-      "Full Stack Certification",
-      "Edurup",
-      "Online Courses",
-      "Job Guaranteed Courses",
-    ],
-    alternates: {
-      canonical: url,
-    },
-    openGraph: {
-      title: `Full Stack Developer Course in ${cityName} | Edurup`,
-      description: `Become a Full Stack Developer with MERN stack (MongoDB, Express, React, Node.js). Build real projects and get placement assistance. Join Full Stack Developer course in ${cityName} with 100% placement support.`,
-      url,
-      siteName: "Edurup Learning",
-      type: "website",
-      images: [
-        {
-          url: "https://www.edurup.in/og_image.png",
-          width: 1200,
-          height: 630,
-          alt: "Full Stack Developer Course",
-        },
-      ],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: `Full Stack Developer Course in ${cityName} | Edurup`,
-      description: `Become a Full Stack Developer with MERN stack (MongoDB, Express, React, Node.js). Build real projects and get placement assistance. Join Full Stack Developer course in ${cityName} with 100% placement support.`,
-      images: ["https://www.edurup.in/og_image.png"],
-    },
-  };
-}
-
 // Generate static params for all course-city combinations at build time
 export async function generateStaticParams() {
   const params: { slug: string }[] = [];
@@ -303,20 +133,15 @@ export async function generateMetadata({
   const cityName = formatCityName(citySlug);
   const url = `https://www.edurup.in/${slug}`;
 
-  if (courseKey === "digital-marketing-course") {
-    return getDigitalMarketingMetadata(cityName, url);
-  }
-
-  if (courseKey === "data-analytics-course") {
-    return getDataAnalyticsMetadata(cityName, url);
-  }
-
-  if (courseKey === "data-science-and-ai-course") {
-    return getDataScienceAndAIMetadata(cityName, url);
-  }
-
-  if (courseKey === "full-stack-developer-course") {
-    return getFullStackDeveloperMetadata(cityName, url);
+  switch (courseKey) {
+    case "digital-marketing-course":
+      return getDigitalMarketingMetadata(cityName, url);
+    case "data-analytics-course":
+      return getDataAnalyticsMetadata(cityName, url);
+    case "data-science-and-ai-course":
+      return getDataScienceAndAIMetadata(cityName, url);
+    case "full-stack-developer-course":
+      return getFullStackDeveloperMetadata(cityName, url);
   }
 
   return {
@@ -361,5 +186,39 @@ export default async function CoursesPageServer({
     notFound();
   }
 
-  return <CourseComponent />;
+  const cityName = formatCityName(citySlug);
+  const url = `https://www.edurup.in/${slug}`;
+
+  // Generate Course Schema based on course key
+  const generateCourseSchema = () => {
+    switch (courseKey) {
+      case "digital-marketing-course":
+        return generateDigitalMarketingSchema(cityName, url);
+      case "data-analytics-course":
+        return generateDataAnalyticsSchema(cityName, url);
+      case "data-science-and-ai-course":
+        return generateDataScienceAndAISchema(cityName, url);
+      case "full-stack-developer-course":
+        return generateFullStackDeveloperSchema(cityName, url);
+      default:
+        return null;
+    }
+  };
+
+  const courseSchema = generateCourseSchema();
+
+  return (
+    <>
+      {courseSchema && (
+        <Script
+          id="course-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(courseSchema),
+          }}
+        />
+      )}
+      <CourseComponent cityName={cityName} />
+    </>
+  );
 }

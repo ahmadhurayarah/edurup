@@ -1,0 +1,60 @@
+export const digitalMarketingCourseData = {
+  course: {
+    name: "Digital Marketing",
+    code: "DM-PGP",
+    description: "32-week online Digital Marketing Course with Certification and 100% Placement Support. Master Digital Marketing with hands-on projects in SEO, SEM, SMM, Content Marketing, and Google Ads.",
+    duration: "32 weeks",
+    durationISO: "P32W",
+    timeRequired: "PT2H",
+    mode: "online",
+    language: "en",
+    educationalLevel: "Professional",
+    startDate: "2025-11-01",
+    price: {
+      original: 100000,
+      discounted: 70000,
+      currency: "INR",
+      emi: 10000,
+      discountPercentage: 28,
+      validUntil: "2025-12-31",
+    },
+    rating: {
+      value: 4.8,
+      count: 2500,
+      best: 5,
+      worst: 1,
+    },
+    features: [
+      { title: "Live", subtitle: "Sessions on Zoom" },
+      { title: "32 Weeks", subtitle: "Course Duration" },
+      { title: "Mentorship", subtitle: "With Experienced Professionals" },
+      { title: "Placement", subtitle: "100% Support till Job" },
+    ],
+    teaches: [
+      "Search Engine Optimization (SEO)",
+      "Search Engine Marketing (SEM)",
+      "Social Media Marketing (SMM)",
+      "Content Marketing",
+      "Google Ads",
+      "Facebook Ads",
+      "Email Marketing",
+      "Web Analytics",
+    ],
+  },
+  provider: {
+    name: "Edurup Learning",
+    url: "https://www.edurup.in",
+    sameAs: [
+      "https://www.instagram.com/edurup_learning/",
+      "https://www.linkedin.com/school/edurup-learning/",
+      "https://www.facebook.com/eduruplearning",
+    ],
+  },
+  banner: {
+    backgroundColor: "#6ed290",
+    textColor: "black",
+    cohort: "14",
+    cohortStartDate: "Nov 1",
+  },
+};
+

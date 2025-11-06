@@ -10,7 +10,11 @@ import Faculty from "./Faculty";
 import Language from "./Language";
 import ProductAnalyst from "./ProductAnalyst";
 import Reviews from "./Reviews";
-const DataScienceAndAICourse = () => {
+interface DataScienceAndAICourseProps {
+  cityName?: string;
+}
+
+const DataScienceAndAICourse = ({ cityName }: DataScienceAndAICourseProps) => {
   return (
     <>
       <div className="min-h-full flex flex-col overflow-x-hidden">
