@@ -68,7 +68,7 @@ const Faculty = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
-          <motion.h1
+          <motion.h2
             className="text-2xl sm:text-5xl font-semibold text-center text-primary"
             initial={{ opacity: 0, y: -30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -77,7 +77,7 @@ const Faculty = () => {
           >
             Faculty that brings out the <span className="text-fg"> best</span>{" "}
             in you
-          </motion.h1>
+          </motion.h2>
         </motion.div>
 
         <motion.div

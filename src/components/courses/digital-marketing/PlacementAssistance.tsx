@@ -68,7 +68,7 @@ function PlacementAssistance() {
             ))}
           </div>
           <div className="hidden md:block">
-            <Image src={placementAssistance.image} alt="" width={400} height={400} />
+            <Image src={placementAssistance.image} alt="Placement Assistance" width={400} height={400} />
           </div>
         </div>
       </div>

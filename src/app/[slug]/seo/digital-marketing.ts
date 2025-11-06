@@ -7,7 +7,7 @@ export function getDigitalMarketingMetadata(
 ): Metadata {
   return {
     title: `Digital Marketing Course in ${cityName} | Edurup`,
-    description: `Master Digital Marketing with hands-on projects in SEO, SEM, SMM, Content Marketing, and Google Ads. Join Digital Marketing course in ${cityName} with 100% placement support. Learn from industry experts at Edurup.`,
+    description: `Master Digital Marketing with hands-on projects in SEO, SEM, SMM, Content Marketing & Google Ads. Join Digital Marketing course in ${cityName} with 100% placement support.`,
     keywords: [
       "Digital Marketing",
       `Digital Marketing ${cityName}`,
@@ -29,7 +29,7 @@ export function getDigitalMarketingMetadata(
     },
     openGraph: {
       title: `Digital Marketing Course in ${cityName} | Edurup`,
-      description: `Master Digital Marketing with hands-on projects in SEO, SEM, SMM, Content Marketing, and Google Ads. Join Digital Marketing course in ${cityName} with 100% placement support.`,
+      description: `Master Digital Marketing with hands-on projects in SEO, SEM, SMM, Content Marketing & Google Ads. Join Digital Marketing course in ${cityName} with 100% placement support.`,
       url,
       siteName: "Edurup Learning",
       type: "website",
@@ -45,7 +45,7 @@ export function getDigitalMarketingMetadata(
     twitter: {
       card: "summary_large_image",
       title: `Digital Marketing Course in ${cityName} | Edurup`,
-      description: `Master Digital Marketing with hands-on projects in SEO, SEM, SMM, Content Marketing, and Google Ads. Join Digital Marketing course in ${cityName} with 100% placement support.`,
+      description: `Master Digital Marketing with hands-on projects in SEO, SEM, SMM, Content Marketing & Google Ads. Join Digital Marketing course in ${cityName} with 100% placement support.`,
       images: ["https://www.edurup.in/og_image.png"],
     },
   };

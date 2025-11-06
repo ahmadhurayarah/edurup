@@ -7,17 +7,16 @@ const Language = () => {
   const { language } = digitalMarketingCourseData;
   const tools = language.tools;
 
-
-
   return (
     <>
       <div className="w-full bg-white py-12 px-4 sm:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Header Section */}
           <div className="text-center mb-12">
-            <h1 className="mb-4 text-3xl sm:text-5xl font-semibold text-center text-gray-900 dark:text-white">
-              {language.heading.split(" ")[0]} <span className="text-fg">{language.heading.split(" ")[1]}</span>
-            </h1>
+            <h2 className="mb-4 text-3xl sm:text-5xl font-semibold text-center text-gray-900 dark:text-white">
+              {language.heading.split(" ")[0]}{" "}
+              <span className="text-fg">{language.heading.split(" ")[1]}</span>
+            </h2>
           </div>
 
           {/* Main Content Row */}
@@ -49,7 +48,7 @@ const Language = () => {
                   </svg>
                 </span>
               </h2>
-              
+
               {/* Decorative Design Element */}
               <div className="mt-6">
                 <div className="h-1 bg-gradient-to-r from-fg via-fg/50 to-transparent w-64 rounded-full"></div>
@@ -64,11 +63,11 @@ const Language = () => {
                     key={index}
                     className="flex flex-col items-center justify-center text-center"
                   >
-                    <Image 
-                      src={tool.icon} 
-                      alt={tool.name} 
-                      width={60} 
-                      height={60} 
+                    <Image
+                      src={tool.icon}
+                      alt={tool.name}
+                      width={60}
+                      height={60}
                       className="w-12 h-12 sm:w-16 sm:h-16 object-contain mb-2"
                     />
                     <span className="text-xs sm:text-sm font-medium text-gray-700">
