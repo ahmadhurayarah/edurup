@@ -241,7 +241,7 @@ export function generateOrganizationSchema() {
   };
 }
 
-// Generate all schemas
+// Generate all schemas (Course + FAQ only)
 export function generateAllDigitalMarketingSchemas(
   cityName: string,
   url: string
@@ -249,10 +249,5 @@ export function generateAllDigitalMarketingSchemas(
   return [
     generateDigitalMarketingSchema(cityName, url),
     generateFAQSchema(cityName, url),
-    generateCurriculumSchema(),
-    generateOrganizationSchema(),
-    ...generateReviewsSchema(url),
-    ...generateFacultySchema(),
-    ...generateJobRolesSchema(),
   ];
 }
