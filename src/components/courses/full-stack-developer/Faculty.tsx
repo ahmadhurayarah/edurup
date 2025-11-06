@@ -8,6 +8,7 @@ import "keen-slider/keen-slider.min.css";
 import { ArrowUpRight, GraduationCap, Star, Users } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { motion } from "framer-motion";
+import { fullStackDeveloperCourseData } from "./data";
 
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -18,60 +19,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-const facultyData = [
-  {
-    name: "Rupesh Kumar",
-    designation: "Chief Marketing Officer",
-    image: "/mentor3.jpg",
-    subjects: ["Digital Marketing", "Performance Marketing"],
-    socialMedia: "linkedin",
-    url: "https://in.linkedin.com/in/neelam-rupesh",
-    experience: "8+ Years",
-    students: "2,500+",
-    rating: "4.9",
-    color: "blue",
-  },
-  {
-    name: "Sirija Neelam",
-    designation: "Data Scientist",
-    image: "/mentor1.jpeg",
-    subjects: [
-      "Python",
-      "Artificial Intelligence",
-      "Data Science & Machine Learning",
-    ],
-    socialMedia: "linkedin",
-    url: "https://www.linkedin.com/in/sirija-devi-a35561160?trk=blended-typeahead",
-    experience: "6+ Years",
-    students: "1,800+",
-    rating: "4.8",
-    color: "green",
-  },
-  {
-    name: "Mukesh Kumar",
-    designation: "General Manager",
-    image: "/mentor2.jpg",
-    subjects: ["Digital Strategy", "Product Marketing"],
-    socialMedia: "linkedin",
-    url: "https://www.linkedin.com/in/askmukesh?trk=blended-typeahead",
-    experience: "10+ Years",
-    students: "3,200+",
-    rating: "4.9",
-    color: "purple",
-  },
-  {
-    name: "Shabudeen",
-    designation: "Senior Software Engineer",
-    image: "/mentor4.jpg",
-    subjects: ["React.js & Node.js", "Frontend Development"],
-    socialMedia: null,
-    url: null,
-    experience: "5+ Years",
-    students: "1,200+",
-    rating: "4.7",
-    color: "orange",
-  },
-];
+const facultyData = fullStackDeveloperCourseData.faculty;
 
 const getColorClasses = (color: string) => {
   const colorMap = {
@@ -155,7 +103,7 @@ const Faculty = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
-          <motion.h1 
+          <motion.h2 
             className="text-2xl sm:text-5xl font-semibold text-center text-primary"
             initial={{ opacity: 0, y: -30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -164,7 +112,7 @@ const Faculty = () => {
           >
             Faculty that brings out the <span className="text-fg"> best</span>{" "}
             in you
-          </motion.h1>
+          </motion.h2>
         </motion.div>
         <motion.div
           className="w-full px-4 sm:px-6 md:px-8 lg:px-12"

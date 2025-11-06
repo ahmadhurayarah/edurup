@@ -10,28 +10,9 @@ import {
 import { CheckCircle2, BookOpen } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
+import { dataAnalyticsCourseData } from "./data";
 
-const curriculum = [
-  {
-    title: "Start Learning",
-    description: ["Pay 70,000 and join the course", "Live Classes by Experts"],
-    image: "/learning1.svg",
-  },
-  {
-    title: "Get Assessed",
-    description: ["Write Online Assessment", "Get Eligibility for placements"],
-    image: "/learning2.svg",
-  },
-  {
-    title: "Apply for jobs",
-    description: [
-      "Access Placement videos",
-      "Apply for Jobs",
-      "Get an offer letter",
-    ],
-    image: "/learning3.svg",
-  },
-];
+const curriculum = dataAnalyticsCourseData.learning.steps;
 
 const Learning = () => {
   const [activeTab, setActiveTab] = useState(curriculum[0].title);
@@ -49,13 +30,13 @@ const Learning = () => {
       <div className="text-center mb-12">
         <div className="inline-flex items-center px-3 py-1 rounded-full bg-green-100 text-[#004F4E] text-sm font-medium mb-4">
           <BookOpen className="w-4 h-4 mr-2" />
-          Learning Journey
+          {dataAnalyticsCourseData.learning.heading}
         </div>
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-          The New Immersive <span className="text-[#004F4E]">Learning Experience</span>
+          {dataAnalyticsCourseData.learning.title.split(" ").slice(0, 3).join(" ")} <span className="text-[#004F4E]">{dataAnalyticsCourseData.learning.title.split(" ").slice(3).join(" ")}</span>
         </h2>
         <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-          Follow our structured learning path from enrollment to job placement
+          {dataAnalyticsCourseData.learning.description}
         </p>
       </div>
 

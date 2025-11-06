@@ -1,32 +1,19 @@
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 import React from "react";
+import { fullStackDeveloperCourseData } from "./data";
 
 const Language = () => {
-const tools = [
-  { name: "VS Code", icon: "/Language/vscode.png", color: "bg-blue-100 text-blue-700" },
-  { name: "GitHub", icon: "/Language/github.png", color: "bg-gray-100 text-gray-700" },
-  { name: "Node.js", icon: "/Language/node.png", color: "bg-green-100 text-green-700" },
-  { name: "MongoDB", icon: "/Language/mongo.png", color: "bg-emerald-100 text-emerald-700" },
-  { name: "Express.js", icon: "/Language/express.png", color: "bg-gray-100 text-gray-700" },
-  { name: "React", icon: "/Language/react.png", color: "bg-cyan-100 text-cyan-700" },
-  { name: "Postman", icon: "/Language/postman.png", color: "bg-orange-100 text-orange-700" },
-  { name: "Redux", icon: "/Language/redux1.png", color: "bg-purple-100 text-purple-700" },
-  { name: "Docker", icon: "/Language/docker.png", color: "bg-blue-100 text-blue-700" },
-  { name: "Vercel", icon: "/Language/vercel.png", color: "bg-black-100 text-black-700" },
-];
-
-  
-
+  const tools = fullStackDeveloperCourseData.language.tools;
   return (
     <>
       <div className="w-full bg-white py-12 px-4 sm:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Header Section */}
           <div className="text-center mb-12">
-            <h1 className="mb-4 text-3xl sm:text-5xl font-semibold text-center text-gray-900 dark:text-white">
+            <h2 className="mb-4 text-3xl sm:text-5xl font-semibold text-center text-gray-900 dark:text-white">
               Learning <span className="text-fg">Journey</span>
-            </h1>
+            </h2>
           </div>
 
           {/* Main Content Row */}
@@ -36,10 +23,10 @@ const tools = [
               <p className="text-sm text-gray-500 uppercase tracking-wide mb-2">
                 COURSE JOURNEY
               </p>
-              <h2 className="text-3xl sm:text-5xl font-bold text-gray-900 mb-4">
+              <h3 className="text-3xl sm:text-5xl font-bold text-gray-900 mb-4">
                 Learn all the
-              </h2>
-              <h2 className="text-3xl sm:text-5xl font-bold text-gray-900 mb-4">
+              </h3>
+              <h3 className="text-3xl sm:text-5xl font-bold text-gray-900 mb-4">
                 Tools that are{" "}
                 <span className="relative">
                   In-demand
@@ -57,7 +44,7 @@ const tools = [
                     />
                   </svg>
                 </span>
-              </h2>
+              </h3>
               
               {/* Decorative Design Element */}
               <div className="mt-6">

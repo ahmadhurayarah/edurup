@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { dataScienceAICourseData } from "@/components/courses/data-science-and-ai/data";
 
 export function getDataScienceAndAIMetadata(
   cityName: string,
@@ -53,37 +54,67 @@ export function getDataScienceAndAIMetadata(
 }
 
 export function generateDataScienceAndAISchema(cityName: string, url: string) {
+  const { course, provider } = dataScienceAICourseData;
   return {
     "@context": "https://schema.org",
     "@type": "Course",
-    name: `PG | Data Science & AI Course in ${cityName}`,
-    description:
-      "Master Data Science & AI with Python, Machine Learning, Deep Learning, and TensorFlow. Work on real AI projects and build your portfolio. Join Data Science & AI course with 100% placement support.",
+    name: `PG | ${course.name} Course in ${cityName}`,
+    description: course.description,
     provider: {
       "@type": "Organization",
-      name: "Edurup Learning",
-      url: "https://www.edurup.in",
-      sameAs: [
-        "https://www.instagram.com/edurup_learning/",
-        "https://www.linkedin.com/school/edurup-learning/",
-        "https://www.facebook.com/eduruplearning",
-      ],
+      name: provider.name,
+      url: provider.url,
+      sameAs: provider.sameAs,
     },
-    courseCode: "DS-AI-PGP",
-    educationalLevel: "Professional",
-    courseMode: "online",
-    inLanguage: "en",
-    duration: "P32W",
-    timeRequired: "PT2H",
+    courseCode: course.code,
+    educationalLevel: course.educationalLevel,
+    courseMode: course.mode,
+    inLanguage: course.language,
+    duration: course.durationISO,
+    timeRequired: course.timeRequired,
     url: url,
-    teaches: [
-      "Python",
-      "Machine Learning",
-      "Deep Learning",
-      "TensorFlow",
-      "Data Science",
-      "Artificial Intelligence",
-      "Neural Networks",
-    ],
+    offers: {
+      "@type": "Offer",
+      price: course.price.discounted.toString(),
+      priceCurrency: course.price.currency,
+      availability: "https://schema.org/InStock",
+      url: url,
+      priceValidUntil: course.price.validUntil,
+      seller: { "@type": "Organization", name: provider.name },
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: course.rating.value.toString(),
+      reviewCount: course.rating.count.toString(),
+      bestRating: course.rating.best.toString(),
+      worstRating: course.rating.worst.toString(),
+    },
+    teaches: course.teaches,
   };
+}
+
+// FAQ Schema
+export function generateDataScienceAndAIFAQSchema(cityName: string) {
+  const { faq } = dataScienceAICourseData as any;
+  if (!faq || !Array.isArray(faq) || faq.length === 0) return null;
+  const replaceCity = (text: string) => text.replace(/\{city\}/g, cityName);
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faq.map((item: any) => ({
+      "@type": "Question",
+      name: replaceCity(item.question),
+      acceptedAnswer: { "@type": "Answer", text: replaceCity(item.answer) },
+    })),
+  };
+}
+
+// Aggregate helper (Course + FAQ only)
+export function generateAllDataScienceAndAISchemas(
+  cityName: string,
+  url: string
+) {
+  const course = generateDataScienceAndAISchema(cityName, url);
+  const faq = generateDataScienceAndAIFAQSchema(cityName);
+  return [course, faq].filter(Boolean);
 }

@@ -185,9 +185,9 @@ export default async function CoursesPageServer({
   const CourseComponent = COURSE_COMPONENTS[courseKey];
   if (!CourseComponent) {
     notFound();
-  }
+    }
 
-  const cityName = formatCityName(citySlug);
+    const cityName = formatCityName(citySlug);
   const url = `https://www.edurup.in/${slug}`;
 
   // Generate Course Schema based on course key

@@ -19,7 +19,7 @@ const FullStackDeveloperCourse = ({ cityName }: FullStackDeveloperCourseProps) =
   return (
     <>
       <div className="min-h-full flex flex-col overflow-x-hidden">
-        <Banner />
+        <Banner cityName={cityName} />
         <Company />
         <Curriculum />
         <ProductAnalyst />
@@ -29,7 +29,7 @@ const FullStackDeveloperCourse = ({ cityName }: FullStackDeveloperCourseProps) =
         <Faculty />
         <Language />
         <PlacementAssistance />
-        <Faq />
+        <Faq cityName={cityName} />
       </div>
     </>
   );

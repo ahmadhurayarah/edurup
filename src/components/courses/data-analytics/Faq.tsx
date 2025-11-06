@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { dataAnalyticsCourseData } from "./data";
 
 
 const faq = [
@@ -80,7 +81,7 @@ const Faq = () => {
       <div className="w-full flex py-[2rem] flex-col justify-center bg-gradient-to-tr to-green-300 from-blue-300">
         <div className=" flex flex-col">
           <h3 className="text-xl mb-5 sm:mt-5 sm:mb-10 sm:text-5xl font-semibold text-center text-primary dark:text-dark">
-            Digital Marketing Training FAQs
+            Data Analytics Training FAQs
           </h3>
         </div>
         <Accordion

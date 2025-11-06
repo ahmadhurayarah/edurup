@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { fullStackDeveloperCourseData } from "@/components/courses/full-stack-developer/data";
 
 export function getFullStackDeveloperMetadata(
   cityName: string,
@@ -52,30 +53,41 @@ export function getFullStackDeveloperMetadata(
 }
 
 export function generateFullStackDeveloperSchema(cityName: string, url: string) {
+  const { course, provider } = fullStackDeveloperCourseData;
   return {
     "@context": "https://schema.org",
     "@type": "Course",
-    name: `PG | Full Stack Developer Course in ${cityName}`,
-    description:
-      "Become a Full Stack Developer with MERN stack (MongoDB, Express, React, Node.js). Build real projects and get placement assistance. Join Full Stack Developer course with 100% placement support.",
+    name: `PG | ${course.name} Course in ${cityName}`,
+    description: course.description,
     provider: {
       "@type": "Organization",
-      name: "Edurup Learning",
-      url: "https://www.edurup.in",
-      sameAs: [
-        "https://www.instagram.com/edurup_learning/",
-        "https://www.linkedin.com/school/edurup-learning/",
-        "https://www.facebook.com/eduruplearning",
-      ],
+      name: provider.name,
+      url: provider.url,
     },
-    courseCode: "FSD-PGP",
-    educationalLevel: "Professional",
-    courseMode: "online",
-    inLanguage: "en",
-    duration: "P32W",
-    timeRequired: "PT2H",
+    courseCode: course.code,
+    educationalLevel: course.educationalLevel,
+    courseMode: course.mode,
+    inLanguage: course.language,
+    duration: course.durationISO,
+    timeRequired: course.timeRequired,
     url: url,
-    teaches: [
+    offers: {
+      "@type": "Offer",
+      price: course.price.discounted.toString(),
+      priceCurrency: course.price.currency,
+      availability: "https://schema.org/InStock",
+      url: url,
+      priceValidUntil: course.price.validUntil,
+      seller: { "@type": "Organization", name: provider.name },
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: course.rating?.value?.toString?.() || "4.8",
+      reviewCount: course.rating?.count?.toString?.() || "1000",
+      bestRating: course.rating?.best?.toString?.() || "5",
+      worstRating: course.rating?.worst?.toString?.() || "1",
+    },
+    teaches: course.teaches || [
       "MongoDB",
       "Express.js",
       "React",
@@ -85,5 +97,31 @@ export function generateFullStackDeveloperSchema(cityName: string, url: string) 
       "Web Development",
     ],
   };
+}
+
+// FAQ Schema
+export function generateFullStackDeveloperFAQSchema(cityName: string) {
+  const { faq } = (fullStackDeveloperCourseData as any);
+  if (!faq || !Array.isArray(faq) || faq.length === 0) return null;
+  const replaceCity = (text: string) => text.replace(/\{city\}/g, cityName);
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faq.map((item: any) => ({
+      "@type": "Question",
+      name: replaceCity(item.question),
+      acceptedAnswer: { "@type": "Answer", text: replaceCity(item.answer) },
+    })),
+  };
+}
+
+// Aggregate helper (Course + FAQ only)
+export function generateAllFullStackDeveloperSchemas(
+  cityName: string,
+  url: string
+) {
+  const course = generateFullStackDeveloperSchema(cityName, url);
+  const faq = generateFullStackDeveloperFAQSchema(cityName);
+  return [course, faq].filter(Boolean);
 }
 

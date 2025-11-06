@@ -1,40 +1,5 @@
 import Image from "next/image";
-
-const stories = [
-  {
-    name: "Vansh Agrawal",
-    role: "Fresher",
-    from: "IIT Kharagpur",
-    company: "Zomato",
-    title: "Product Analyst",
-    text: "I got an offer from Zomato for PA role, the learning at NextLeap helped me a lot. Thank you for the course and all the learning 💗",
-    profile: "/person1.jpg",
-    fromLogo: "/iit.png",
-    companyLogo: "/zomato.png",
-  },
-  {
-    name: "Vanshu Saini",
-    role: "JM Financial Ltd",
-    from: "Product Management Intern",
-    company: "Phenom",
-    title: "Product Analyst",
-    text: "Great support from Arindam and the NextLeap team for placements. Even after the fellowship ended, they responded to queries and helped with placements. I enjoyed my time during the 8 weeks of the fellowship program. Mentor sessions were really helpful.",
-    profile: "/person2.jpg",
-    fromLogo: "/jm.png",
-    companyLogo: "/phenom.png",
-  },
-  {
-    name: "Ankita B",
-    role: "Byjus",
-    from: "Associate Manager",
-    company: "Inito",
-    title: "Lead Product Analyst",
-    text: "Throughout this journey, I got to collaborate with brilliant minds, learned from seasoned mentors, and put my analytical and creative skills to the test. The experience was highly enriching!",
-    profile: "/person3.jpg",
-    fromLogo: "/byjus.png",
-    companyLogo: "/inito.png",
-  },
-];
+import { fullStackDeveloperCourseData } from "./data";
 
 export default function Reviews() {
   return (
@@ -44,7 +9,7 @@ export default function Reviews() {
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        {stories.map((story, index) => (
+        {fullStackDeveloperCourseData.reviews.map((story, index) => (
           <div
             key={index}
             /* fixed height so all cards match */
@@ -106,7 +71,9 @@ export default function Reviews() {
                     className="object-contain"
                   />
                 </div>
-                <span className="font-semibold text-black">{story.company}</span>
+                <span className="font-semibold text-black">
+                  {story.company}
+                </span>
                 <span className="text-gray-700">{story.title}</span>
               </div>
             </div>

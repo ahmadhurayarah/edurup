@@ -100,7 +100,7 @@ export default async function CoursesPageServer({
                 <p className="text-xl font-semibold text-red-600 dark:text-red-400">
                   Course or city not found
                 </p>
-              </div>
+                      </div>
               <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
                 <p className="text-sm text-gray-500 dark:text-gray-400">
                   Slug:{" "}
@@ -117,7 +117,7 @@ export default async function CoursesPageServer({
   }
 
   const courseName = formatCourseName(courseKey);
-
+  
   if (citySlug && cityFound) {
     // Render course component for data-analytics-course
     if (courseKey === "data-analytics-course") {

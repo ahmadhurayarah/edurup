@@ -3,8 +3,9 @@ import { Clock, Eye, FileText, Star, ChevronDown, ChevronUp } from "lucide-react
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Separator } from "@/components/ui/separator";
+import { fullStackDeveloperCourseData } from "./data";
 
-const curriculum = [
+const curriculum = fullStackDeveloperCourseData.curriculum || [
   {
     title: "HTML, CSS, and Git Basics",
     duration: "2 weeks",

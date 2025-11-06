@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { dataAnalyticsCourseData } from "@/components/courses/data-analytics/data";
 
 export function getDataAnalyticsMetadata(
   cityName: string,
@@ -51,37 +52,67 @@ export function getDataAnalyticsMetadata(
 }
 
 export function generateDataAnalyticsSchema(cityName: string, url: string) {
+  const { course, provider } = dataAnalyticsCourseData;
   return {
     "@context": "https://schema.org",
     "@type": "Course",
-    name: `PG | Data Analytics Course in ${cityName}`,
-    description:
-      "Learn Data Analytics with SQL, Excel, Power BI, and Tableau. Work on real datasets and build your portfolio. Join Data Analytics course with 100% placement support.",
+    name: `PG | ${course.name} Course in ${cityName}`,
+    description: course.description,
     provider: {
       "@type": "Organization",
-      name: "Edurup Learning",
-      url: "https://www.edurup.in",
-      sameAs: [
-        "https://www.instagram.com/edurup_learning/",
-        "https://www.linkedin.com/school/edurup-learning/",
-        "https://www.facebook.com/eduruplearning",
-      ],
+      name: provider.name,
+      url: provider.url,
+      sameAs: provider.sameAs,
     },
-    courseCode: "DA-PGP",
-    educationalLevel: "Professional",
-    courseMode: "online",
-    inLanguage: "en",
-    duration: "P32W",
-    timeRequired: "PT2H",
+    courseCode: course.code,
+    educationalLevel: course.educationalLevel,
+    courseMode: course.mode,
+    inLanguage: course.language,
+    duration: course.durationISO,
+    timeRequired: course.timeRequired,
     url: url,
-    teaches: [
-      "SQL",
-      "Excel Data Analysis",
-      "Power BI",
-      "Tableau",
-      "Data Visualization",
-      "Statistics",
-      "Python for Analytics",
-    ],
+    offers: {
+      "@type": "Offer",
+      price: course.price.discounted.toString(),
+      priceCurrency: course.price.currency,
+      availability: "https://schema.org/InStock",
+      url: url,
+      priceValidUntil: course.price.validUntil,
+      seller: {
+        "@type": "Organization",
+        name: provider.name,
+      },
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: course.rating.value.toString(),
+      reviewCount: course.rating.count.toString(),
+      bestRating: course.rating.best.toString(),
+      worstRating: course.rating.worst.toString(),
+    },
+    teaches: course.teaches,
   };
+}
+
+// FAQ Schema
+export function generateDataAnalyticsFAQSchema(cityName: string) {
+  const { faq } = dataAnalyticsCourseData as any;
+  if (!faq || !Array.isArray(faq) || faq.length === 0) return null;
+  const replaceCity = (text: string) => text.replace(/\{city\}/g, cityName);
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faq.map((item: any) => ({
+      "@type": "Question",
+      name: replaceCity(item.question),
+      acceptedAnswer: { "@type": "Answer", text: replaceCity(item.answer) },
+    })),
+  };
+}
+
+// Aggregate helper (Course + FAQ only)
+export function generateAllDataAnalyticsSchemas(cityName: string, url: string) {
+  const course = generateDataAnalyticsSchema(cityName, url);
+  const faq = generateDataAnalyticsFAQSchema(cityName);
+  return [course, faq].filter(Boolean);
 }

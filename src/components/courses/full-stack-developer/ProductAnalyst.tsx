@@ -1,16 +1,12 @@
 "use client";
 import { useEffect, useState } from 'react';
+import { fullStackDeveloperCourseData } from "./data";
 
 export default function ProductAnalyst() {
   const [currentTitle, setCurrentTitle] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   
- const titles = [
-  'Marketing\nAnalyst', 
-  'Data\nAnalyst', 
-  'Business\nAnalyst', 
-  'Product\nAnalyst'
-];
+ const titles = fullStackDeveloperCourseData.productAnalyst.titles;
 
   useEffect(() => {
     const startAnimation = () => {
@@ -63,17 +59,17 @@ export default function ProductAnalyst() {
         <div className="mt-8 w-[900px] h-1.5 bg-white mx-auto"></div>
       </div>
 
-      <div className="mt-16 flex flex-col md:flex-row gap-2">
+        <div className="mt-16 flex flex-col md:flex-row gap-2">
         {/* Average Salary Card */}
         <div className="bg-[#5a1cc4] px-24 py-8 rounded-l text-center min-w-[320px] shadow-lg">
           <p className="text-l text-gray-200">Average Analyst Salary</p>
-          <h3 className="text-4xl font-bold mt-1">8-10 Lakhs</h3>
+          <h3 className="text-4xl font-bold mt-1">{fullStackDeveloperCourseData.productAnalyst.salaries.average}</h3>
         </div>
 
         {/* Highest Salary Card */}
         <div className="bg-[#742bff] px-24 py-8 rounded-l text-center min-w-[320px] shadow-lg">
           <p className="text-l text-gray-200">Highest Salary at NextLeap</p>
-          <h3 className="text-4xl font-bold mt-1">31 Lakhs</h3>
+          <h3 className="text-4xl font-bold mt-1">{fullStackDeveloperCourseData.productAnalyst.salaries.highest}</h3>
         </div>
       </div>
     </section>

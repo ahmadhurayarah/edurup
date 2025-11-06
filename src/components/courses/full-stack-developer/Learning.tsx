@@ -10,28 +10,9 @@ import {
 import { CheckCircle2, BookOpen } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
+import { fullStackDeveloperCourseData } from "./data";
 
-const curriculum = [
-  {
-    title: "Start Learning",
-    description: ["Pay 70,000 and join the course", "Live Classes by Experts"],
-    image: "/learning1.svg",
-  },
-  {
-    title: "Get Assessed",
-    description: ["Write Online Assessment", "Get Eligibility for placements"],
-    image: "/learning2.svg",
-  },
-  {
-    title: "Apply for jobs",
-    description: [
-      "Access Placement videos",
-      "Apply for Jobs",
-      "Get an offer letter",
-    ],
-    image: "/learning3.svg",
-  },
-];
+const curriculum = fullStackDeveloperCourseData.learning.steps;
 
 const Learning = () => {
   const [activeTab, setActiveTab] = useState(curriculum[0].title);

@@ -8,6 +8,7 @@ import "keen-slider/keen-slider.min.css";
 import { ArrowUpRight, GraduationCap, Star, Users } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { motion } from "framer-motion";
+import { dataAnalyticsCourseData } from "./data";
 
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -18,61 +19,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-const facultyData = [
-  // {
-  //   name: "Rupesh Kumar",
-  //   designation: "Chief Marketing Officer",
-  //   image: "/mentor3.jpg",
-  //   subjects: ["Digital Marketing", "Performance Marketing"],
-  //   socialMedia: "linkedin",
-  //   url: "https://in.linkedin.com/in/neelam-rupesh",
-  //   experience: "8+ Years",
-  //   students: "2,500+",
-  //   rating: "4.9",
-  //   color: "blue",
-  // },
-{
-    name: "Sirija Devi",
-    designation: "Data Analyst",
-    image: "/sirija.png",
-    subjects: [
-      "Python",
-      "SQL",
-      "Power bi",
-      "Excel"
-    ],
-    socialMedia: "linkedin",
-    url: "https://www.linkedin.com/in/sirija-devi-a35561160?trk=blended-typeahead",
-    experience: "4+ Years",
-    students: "1,800+",
-    rating: "4.8",
-    color: "green",
-  },
-  // {
-  //   name: "Mukesh Kumar",
-  //   designation: "General Manager",
-  //   image: "/mentor2.jpg",
-  //   subjects: ["Digital Strategy", "Product Marketing"],
-  //   socialMedia: "linkedin",
-  //   url: "https://www.linkedin.com/in/askmukesh?trk=blended-typeahead",
-  //   experience: "10+ Years",
-  //   students: "3,200+",
-  //   rating: "4.9",
-  //   color: "purple",
-  // },
-  // {
-  //   name: "Shabudeen",
-  //   designation: "Senior Software Engineer",
-  //   image: "/mentor4.jpg",
-  //   subjects: ["React.js & Node.js", "Frontend Development"],
-  //   socialMedia: null,
-  //   url: null,
-  //   experience: "5+ Years",
-  //   students: "1,200+",
-  //   rating: "4.7",
-  //   color: "orange",
-  // },
-];
+const facultyData = dataAnalyticsCourseData.faculty;
 
 const getColorClasses = (color: string) => {
   const colorMap = {

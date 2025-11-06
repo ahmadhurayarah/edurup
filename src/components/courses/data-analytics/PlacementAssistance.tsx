@@ -10,8 +10,19 @@ import {
   UserRoundCog,
 } from "lucide-react";
 import Image from "next/image";
+import { dataAnalyticsCourseData } from "./data";
+
+const iconComponentMap: Record<string, typeof Code> = {
+  Code,
+  LineChart,
+  Briefcase,
+  GanttChartSquare,
+  ScrollText,
+  UserRoundCog,
+};
 
 function PlacementAssistance() {
+  const { placementAssistance } = dataAnalyticsCourseData;
   const [iconSize, setIconSize] = useState(40); // Default icon size
 
   useEffect(() => {
@@ -21,43 +32,23 @@ function PlacementAssistance() {
     }
   }, []);
 
-  const contentData = [
-    {
-      icon: <Code size={iconSize} className="dark:text-black" />,
-      title: "One-on-one Sessions",
-    },
-    {
-      icon: <LineChart size={iconSize} className="dark:text-black" />,
-      title: "Career Guidance",
-    },
-    {
-      icon: <Briefcase size={iconSize} className="dark:text-black" />,
-      title: "300+ Hiring Partners",
-    },
-    {
-      icon: <GanttChartSquare size={iconSize} className="dark:text-black" />,
-      title: "Resume Building",
-    },
-    {
-      icon: <ScrollText size={iconSize} className="dark:text-black" />,
-      title: "Mock Interviews",
-    },
-    {
-      icon: <UserRoundCog size={iconSize} className="dark:text-black" />,
-      title: "Soft Skills Training",
-    },
-  ];
+  const contentData = placementAssistance.features.map((item) => {
+    const IconComponent = iconComponentMap[item.icon] || Code;
+    return {
+      icon: <IconComponent size={iconSize} className="dark:text-black" />,
+      title: item.title,
+    };
+  });
 
   return (
     <>
       <div className="w-full pt-[2rem] px-[2rem] flex flex-col items-center bg-primary ">
         <div className="mb-4">
           <h3 className="text-2xl sm:text-5xl font-semibold text-center text-primary ">
-            Placement <span className="text-fg">Assistance</span>
+            {placementAssistance.heading.split(" ")[0]} <span className="text-fg">{placementAssistance.heading.split(" ")[1]}</span>
           </h3>
           <p className="text-center text-sm sm:text-lg text-gray-700 dark:text-white mt-3">
-            Stand out from your peers in front of the recruiters by ticking all
-            the right boxes and get your dream career started.
+            {placementAssistance.description}
           </p>
         </div>
         <div className="flex flex-row items-center mb-10 md:mb-0">
@@ -77,7 +68,7 @@ function PlacementAssistance() {
             ))}
           </div>
           <div className="hidden md:block">
-            <Image src="/banner-01-2.png" alt="" width={400} height={400} />
+            <Image src={placementAssistance.image} alt="Placement Assistance" width={400} height={400} />
           </div>
         </div>
       </div>

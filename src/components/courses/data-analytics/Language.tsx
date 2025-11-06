@@ -1,19 +1,11 @@
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 import React from "react";
+import { dataAnalyticsCourseData } from "./data";
 
 const Language = () => {
-  const tools = [
-     { name: "pandas", icon: "/Language/Pandas.png", color: "bg-purple-100 text-purple-700" },
-    { name: "tableau", icon: "/Language/tableau.png", color: "bg-blue-100 text-blue-700" },
-    { name: "Power BI", icon: "/Language/PowerBI.png", color: "bg-yellow-100 text-yellow-700" },
-    { name: "TensorFlow", icon: "/Language/TensorFlow.png", color: "bg-orange-100 text-orange-700" },
-    { name: "SQL", icon: "/Language/sql.png", color: "bg-red-100 text-red-700" },
-    { name: "matplotlib", icon: "/Language/Matplotlib.png", color: "bg-green-100 text-green-700" },
-    { name: "python", icon: "/Language/Python.png", color: "bg-blue-100 text-blue-700" },
-    { name: "NumPy", icon: "/Language/NumPy.png", color: "bg-indigo-100 text-indigo-700" },
-    { name: "Excel", icon: "/Language/excel.png", color: "bg-emerald-100 text-emerald-700" },
-  ];
+  const { language } = dataAnalyticsCourseData;
+  const tools = language.tools;
 
   return (
     <>
@@ -22,7 +14,7 @@ const Language = () => {
           {/* Header Section */}
           <div className="text-center mb-12">
             <h1 className="mb-4 text-3xl sm:text-5xl font-semibold text-center text-gray-900 dark:text-white">
-              Learning <span className="text-fg">Journey</span>
+              {language.heading.split(" ")[0]} <span className="text-fg">{language.heading.split(" ")[1]}</span>
             </h1>
           </div>
 
@@ -34,12 +26,12 @@ const Language = () => {
                 COURSE JOURNEY
               </p>
               <h2 className="text-3xl sm:text-5xl font-bold text-gray-900 mb-4">
-                Learn all the
+                {language.title.split(" ").slice(0, 3).join(" ")}
               </h2>
               <h2 className="text-3xl sm:text-5xl font-bold text-gray-900 mb-4">
-                Tools that are{" "}
+                {language.title.split(" ").slice(3, 5).join(" ")}{" "}
                 <span className="relative">
-                  In-demand
+                  {language.title.split(" ").slice(5).join(" ")}
                   <svg
                     className="absolute -bottom-2 left-0 w-full h-3 text-fg"
                     viewBox="0 0 200 12"

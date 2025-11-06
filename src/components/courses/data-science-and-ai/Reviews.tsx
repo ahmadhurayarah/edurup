@@ -1,42 +1,8 @@
 import Image from "next/image";
-
-const stories = [
-  {
-    name: "Akshay Naik ",
-    role: "Fresher",
-    from: "IIT Kharagpur",
-    company: "value leaf",
-    title: "Product Analyst",
-    text: "I joined the Digital Marketing course at Edurup as a fresher, and it really helped me build strong practical skills. Thanks to the training and guidance, I got placed as a Campaign Manager at Valueleaf.",
-    profile: "/Picture1.png",
-    fromLogo: "/img1.png",
-    companyLogo: "/logo1.png",
-  },
-  {
-    name: "Sree Hari Ponappan",
-    role: "Btech ",
-    from: "Product Management Intern",
-    company: "Phenom",
-    title: "Sr Marketing Manager",
-    text: "I’m a B.Tech graduate and decided to switch my career into digital marketing with Edurup’s program. The training and mentorship helped me gain real marketing skills, and today I’m working as a Marketing Manager at QpiAI.",
-    profile: "/Picture2.png",
-    fromLogo: "/img2.png",
-    companyLogo: "/logo2.png",
-  },
-  {
-    name: "SabySachi Moha patra",
-    role: "Byjus",
-    from: "Associate Manager",
-    company: "Inito",
-    title: "Company Manager",
-    text: "I was working as a Marketing Manager at Amazon and joined Edurup to upgrade my digital marketing skills. The advanced training helped me level up my career, and I’m now working as a Campaign Manager at Amazon.",
-    profile: "/Picture3.png",
-    fromLogo: "/img3.png",
-    companyLogo: "/logo3.png",
-  },
-];
+import { dataScienceAICourseData } from "./data";
 
 export default function Reviews() {
+  const stories = dataScienceAICourseData.reviews;
   return (
     <section className="bg-[#1b0944] text-white py-16 px-6">
       <h2 className="text-center text-3xl md:text-4xl font-bold mb-10">

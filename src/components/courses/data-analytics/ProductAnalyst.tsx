@@ -1,16 +1,13 @@
 "use client";
 import { useEffect, useState } from 'react';
+import { dataAnalyticsCourseData } from "./data";
 
 export default function ProductAnalyst() {
+  const { productAnalyst } = dataAnalyticsCourseData;
   const [currentTitle, setCurrentTitle] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   
- const titles = [
-  'Marketing\nAnalyst', 
-  'Data\nAnalyst', 
-  'Business\nAnalyst', 
-  'Product\nAnalyst'
-];
+ const titles = productAnalyst.titles.map(t => t.replace(/ /g,'\n'));
 
   useEffect(() => {
     const startAnimation = () => {
@@ -44,7 +41,7 @@ export default function ProductAnalyst() {
     <section className="w-full bg-[#1b0944] text-white py-24 px-4 flex flex-col items-center">
       <div className="text-center">
         <p className="text-sm uppercase tracking-wide text-gray-300 mb-8">
-          Your Future Job Title
+          {productAnalyst.heading}
         </p>
 
         <div className="relative h-40 flex items-center justify-center mb-8">
@@ -67,13 +64,13 @@ export default function ProductAnalyst() {
         {/* Average Salary Card */}
         <div className="bg-[#5a1cc4] px-24 py-8 rounded-l text-center min-w-[320px] shadow-lg">
           <p className="text-l text-gray-200">Average Analyst Salary</p>
-          <h3 className="text-4xl font-bold mt-1">8-10 Lakhs</h3>
+          <h3 className="text-4xl font-bold mt-1">{productAnalyst.salaries.average}</h3>
         </div>
 
         {/* Highest Salary Card */}
         <div className="bg-[#742bff] px-24 py-8 rounded-l text-center min-w-[320px] shadow-lg">
-          <p className="text-l text-gray-200">Highest Salary at NextLeap</p>
-          <h3 className="text-4xl font-bold mt-1">31 Lakhs</h3>
+          <p className="text-l text-gray-200">Highest Salary at {productAnalyst.salaries.highestCompany}</p>
+          <h3 className="text-4xl font-bold mt-1">{productAnalyst.salaries.highest}</h3>
         </div>
       </div>
     </section>

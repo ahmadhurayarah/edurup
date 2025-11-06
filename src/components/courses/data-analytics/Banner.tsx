@@ -2,30 +2,38 @@
 "use client";
 import React from "react";
 import { Button } from "@/components/ui/button";
+import { dataAnalyticsCourseData } from "./data";
 
-const CourseBanner = () => {
+interface CourseBannerProps {
+  cityName?: string;
+}
+
+const CourseBanner = ({ cityName = "Bangalore" }: CourseBannerProps) => {
+  const { course, banner } = dataAnalyticsCourseData;
   return (
-    <section className="bg-[#2B1F5F] text-white py-12 px-4 sm:px-16">
+    <section
+      className="py-12 px-4 sm:px-16"
+      style={{ backgroundColor: banner.backgroundColor, color: banner.textColor }}
+    >
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start gap-10 lg:gap-16">
 
         {/* Left: Course Info */}
         <div className="flex-1 flex flex-col gap-4 sm:gap-6">
           <h1 className="text-3xl sm:text-5xl font-bold leading-snug">
-            PG | Data Analytics Course in Bangalore with Placement  
+            PG | {course.name} Course in {cityName} with Placement
           </h1>
-          <p className="text-base sm:text-lg text-gray-300">
-            32-week online Data Analytics Course with Certification and 100% Placement Support
+          <p className="text-base sm:text-lg" style={{ color: banner.textColor === "white" ? "#D1D5DB" : undefined }}>
+            {course.description}
           </p>
 
           {/* Features */}
           <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-6 mt-4 text-gray-300">
-            {[
-              { title: "Live", subtitle: "Sessions on Zoom" },
-              { title: "32 Weeks", subtitle: "Course Duration" },
-              { title: "Mentorship", subtitle: "With Experienced Professionals" },
-              { title: "Placement", subtitle: "100% Support till Job" }
-            ].map((feature, idx) => (
-              <div key={idx} className="flex flex-col items-start bg-[#3B2A80] px-4 py-2 rounded-md w-full sm:w-auto">
+            {course.features.map((feature, idx) => (
+              <div
+                key={idx}
+                className="flex flex-col items-start px-4 py-2 rounded-md w-full sm:w-auto"
+                style={{ backgroundColor: banner.textColor === "white" ? "#3B2A80" : "#F3F4F6" }}
+              >
                 <span className="font-semibold">{feature.title}</span>
                 <span className="text-xs sm:text-sm">{feature.subtitle}</span>
               </div>
@@ -46,21 +54,21 @@ const CourseBanner = () => {
         {/* Right: Pricing Box */}
         <div className="flex-1 w-full lg:max-w-lg bg-white text-black rounded-2xl shadow-2xl p-6 sm:p-8 relative">
           <div className="absolute top-3 right-3 bg-green-600 text-white text-xs sm:text-sm font-semibold px-3 py-1 rounded-full">
-            28% OFF
+            {course.price.discountPercentage}% OFF
           </div>
 
           <div className="mb-5">
-            <span className="text-gray-600 text-sm sm:text-base">Cohort 14 starts on</span>
-            <h2 className="text-2xl sm:text-3xl font-bold mt-1">Nov 1</h2>
+            <span className="text-gray-600 text-sm sm:text-base">Cohort {banner.cohort} starts on</span>
+            <h2 className="text-2xl sm:text-3xl font-bold mt-1">{banner.cohortStartDate}</h2>
           </div>
 
           <div className="mb-5">
             <span className="text-gray-600 text-sm sm:text-base">Cost</span>
             <h3 className="text-3xl sm:text-4xl font-bold mt-1">
-              ₹70,000 <span className="text-gray-400 line-through text-base sm:text-lg">₹1,00,000</span>
+              ₹{course.price.discounted.toLocaleString("en-IN")} <span className="text-gray-400 line-through text-base sm:text-lg">₹{course.price.original.toLocaleString("en-IN")}</span>
             </h3>
             <p className="text-xs sm:text-sm text-gray-600 mt-2">
-              EMI starts from ₹10,000/month
+              EMI starts from ₹{course.price.emi.toLocaleString("en-IN")}/month
             </p>
           </div>
 
@@ -69,7 +77,7 @@ const CourseBanner = () => {
           </Button>
 
           <p className="text-xs text-gray-500 mt-3 text-center">
-            Discount coupon of 28% available at checkout
+            Discount coupon of {course.price.discountPercentage}% available at checkout
           </p>
         </div>
 

@@ -10,6 +10,7 @@ import {
   UserRoundCog,
 } from "lucide-react";
 import Image from "next/image";
+import { fullStackDeveloperCourseData } from "./data";
 
 function PlacementAssistance() {
   const [iconSize, setIconSize] = useState(40); // Default icon size
@@ -21,32 +22,21 @@ function PlacementAssistance() {
     }
   }, []);
 
-  const contentData = [
-    {
-      icon: <Code size={iconSize} className="dark:text-black" />,
-      title: "One-on-one Sessions",
-    },
-    {
-      icon: <LineChart size={iconSize} className="dark:text-black" />,
-      title: "Career Guidance",
-    },
-    {
-      icon: <Briefcase size={iconSize} className="dark:text-black" />,
-      title: "300+ Hiring Partners",
-    },
-    {
-      icon: <GanttChartSquare size={iconSize} className="dark:text-black" />,
-      title: "Resume Building",
-    },
-    {
-      icon: <ScrollText size={iconSize} className="dark:text-black" />,
-      title: "Mock Interviews",
-    },
-    {
-      icon: <UserRoundCog size={iconSize} className="dark:text-black" />,
-      title: "Soft Skills Training",
-    },
-  ];
+  const iconMap: Record<string, any> = {
+    Code,
+    LineChart,
+    Briefcase,
+    GanttChartSquare,
+    ScrollText,
+    UserRoundCog,
+  };
+
+  const contentData = fullStackDeveloperCourseData.placementAssistance.features.map(
+    (f) => ({
+      icon: f.icon,
+      title: f.title,
+    })
+  );
 
   return (
     <>
@@ -67,7 +57,12 @@ function PlacementAssistance() {
                 key={index}
                 className="gap-y-5 flex flex-col items-center justify-center bg-fg h-[8rem] w-[8rem] sm:h-[10rem] sm:w-[10rem] rounded-xl p-2 sm:p-4"
               >
-                <div className="">{item.icon}</div>
+                <div className="">
+                  {(() => {
+                    const IconC = iconMap[item.icon] || Code;
+                    return <IconC size={iconSize} className="dark:text-black" />;
+                  })()}
+                </div>
                 <div className=" h-10">
                   <h3 className="text-center text-sm sm:text-lg dark:text-black ">
                     {item.title}
@@ -77,7 +72,7 @@ function PlacementAssistance() {
             ))}
           </div>
           <div className="hidden md:block">
-            <Image src="/banner-01-2.png" alt="" width={400} height={400} />
+            <Image src={fullStackDeveloperCourseData.placementAssistance.image} alt="Placement Assistance" width={400} height={400} />
           </div>
         </div>
       </div>
