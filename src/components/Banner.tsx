@@ -13,12 +13,13 @@ const Banner = () => {
   const [phoneNumber, setPhoneNumber] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setLoading(true);
+const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+  setLoading(true);
 
-    toast.promise(
-      axios.post("/api/liveDemo", {
+  try {
+    await toast.promise(
+      axios.post("http://localhost:3001/api/liveDemo", {
         fullName,
         email,
         phoneNumber,
@@ -29,12 +30,20 @@ const Banner = () => {
           setFullName("");
           setEmail("");
           setPhoneNumber("");
-          return "Message sent successfully!";
+          return "Message sent successfully! Check your email for confirmation.";
         },
-        error: "Failed to send message!",
+        error: (error) => {
+          const message = error.response?.data?.message || "Failed to send message!";
+          return message;
+        },
       }
     );
-  };
+  } catch (error) {
+    console.error("Submission error:", error);
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
     <>
