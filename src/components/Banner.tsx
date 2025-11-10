@@ -6,6 +6,7 @@ import { ArrowRight, CheckCircle } from "lucide-react";
 import React, { useState } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
+import { submitLiveDemoWithFallback } from "./../app/utils/backend-check";
 
 const Banner = () => {
   const [fullName, setFullName] = useState<string>("");
@@ -13,37 +14,37 @@ const Banner = () => {
   const [phoneNumber, setPhoneNumber] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
 
-const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-  e.preventDefault();
-  setLoading(true);
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
 
-  try {
-    await toast.promise(
-      axios.post("http://localhost:3001/api/liveDemo", {
-        fullName,
-        email,
-        phoneNumber,
-      }),
-      {
-        loading: "Sending message...",
-        success: () => {
-          setFullName("");
-          setEmail("");
-          setPhoneNumber("");
-          return "Message sent successfully! Check your email for confirmation.";
-        },
-        error: (error) => {
-          const message = error.response?.data?.message || "Failed to send message!";
-          return message;
-        },
-      }
-    );
-  } catch (error) {
-    console.error("Submission error:", error);
-  } finally {
-    setLoading(false);
-  }
-};
+    try {
+      await toast.promise(
+        submitLiveDemoWithFallback({
+          fullName,
+          email,
+          phoneNumber,
+        }),
+        {
+          loading: "Sending message...",
+          success: (result) => {
+            setFullName("");
+            setEmail("");
+            setPhoneNumber("");
+            return result.message || "Message sent successfully! Check your email for confirmation.";
+          },
+          error: (error) => {
+            const message = error.message || "Failed to send message!";
+            return message;
+          },
+        }
+      );
+    } catch (error) {
+      console.error("Submission error:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <>
