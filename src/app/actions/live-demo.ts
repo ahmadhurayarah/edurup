@@ -1,7 +1,7 @@
 'use server';
 
 import nodemailer from 'nodemailer';
-import { MongoClient, ObjectId } from 'mongodb';
+import { MongoClient } from 'mongodb';
 
 // MongoDB connection function
 async function connectToDatabase() {
@@ -46,7 +46,7 @@ async function saveToDatabase(formData: {
     const existingRequest = await collection.findOne({ email: demoRequest.email });
     if (existingRequest) {
       console.log('⚠️ Request with this email already exists:', demoRequest.email);
-      return { exists: true, id: existingRequest._id.toString() }; // Convert to string
+      return { exists: true, id: existingRequest._id };
     }
 
     // Insert new request
@@ -55,7 +55,7 @@ async function saveToDatabase(formData: {
     
     return { 
       success: true, 
-      id: result.insertedId.toString(), // Convert ObjectId to string
+      id: result.insertedId,
       exists: false
     };
 
@@ -114,19 +114,15 @@ export async function submitLiveDemoForm(formData: {
       };
     }
 
-    // Return plain JavaScript objects (no MongoDB objects)
     return {
       success: true,
       message: 'Live demo request submitted successfully! We\'ll contact you soon.',
       data: {
-        id: dbResult?.id || 'temp', // This is now a string
+        id: dbResult?.id || 'temp',
         fullName: formData.fullName,
         email: formData.email,
       },
-      emailResults: { // Ensure plain object
-        admin: emailResults.admin,
-        user: emailResults.user
-      },
+      emailResults,
       dbSaved: !!dbResult
     };
 

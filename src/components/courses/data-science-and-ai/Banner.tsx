@@ -9,6 +9,14 @@ interface CourseBannerProps {
 
 const CourseBanner = ({ cityName = "Bangalore" }: CourseBannerProps) => {
   const { course, banner } = dataScienceAICourseData;
+
+    const handleEnrollClick = () => {
+    // Open admission form in new tab
+    const admissionUrl = `/admission-form?course=${encodeURIComponent(course.name)}`;
+    window.open(admissionUrl, '_blank');
+  };
+
+  
   return (
     <section
       className="py-12 px-4 sm:px-16"
@@ -77,9 +85,19 @@ const CourseBanner = ({ cityName = "Bangalore" }: CourseBannerProps) => {
             </p>
           </div>
 
-          <Button className="w-full bg-black text-white flex justify-center items-center gap-2 mt-4 py-3 sm:py-4 hover:bg-gray-900 transition text-sm sm:text-base">
+        <Button 
+            onClick={handleEnrollClick}
+            className="w-full bg-black text-white flex justify-center items-center gap-2 mt-4 py-3 sm:py-4 hover:bg-gray-900 transition text-sm sm:text-base"
+          >
             Enroll Now &rarr;
           </Button>
+ <Button 
+            onClick={handleEnrollClick}
+            className="w-full bg-black text-white flex justify-center items-center gap-2 mt-4 py-3 sm:py-4 hover:bg-gray-900 transition text-sm sm:text-base"
+          >
+            Enroll Now &rarr;
+          </Button>
+
 
           <p className="text-xs text-gray-500 mt-3 text-center">
             Discount coupon of {course.price.discountPercentage}% available at
