@@ -1,4 +1,6 @@
-"use client";
+'use client';
+
+import { Suspense } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
@@ -6,7 +8,9 @@ import { useSearchParams } from "next/navigation";
 import { submitAdmissionForm } from "../actions/admission";
 import toast from "react-hot-toast";
 
-const AdmissionForm = () => {
+export const dynamic = "force-dynamic"; // ✅ prevents Next.js prerender error
+
+const AdmissionFormContent = () => {
   const searchParams = useSearchParams();
   const courseName = searchParams.get("course") || "Data Analytics";
   
@@ -260,4 +264,10 @@ const AdmissionForm = () => {
   );
 };
 
-export default AdmissionForm;
+export default function AdmissionFormPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <AdmissionFormContent />
+    </Suspense>
+  );
+}

@@ -18,6 +18,8 @@ const Banner = () => {
     e.preventDefault();
     setLoading(true);
 
+    
+
     try {
       await toast.promise(
         submitLiveDemoWithFallback({
