@@ -63,7 +63,7 @@ export default function ProductAnalyst() {
       <div className="mt-12 sm:mt-16 flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center w-full max-w-4xl">
         {/* Average Salary Card */}
         <div className="bg-[#5a1cc4] px-8 sm:px-16 md:px-24 py-6 sm:py-8 rounded-lg sm:rounded-l text-center w-full sm:min-w-[280px] md:min-w-[320px] shadow-lg">
-          <p className="text-sm sm:text-base text-gray-200 mb-2">Average Analyst Salary</p>
+          <p className="text-sm sm:text-base text-gray-200 mb-2">Average Salary</p>
           <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold">{productAnalyst.salaries.average}</h3>
         </div>
 
