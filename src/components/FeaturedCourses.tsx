@@ -27,57 +27,57 @@ const FeaturedCourses = () => {
   const allCourses = [
     // Software Courses
     {
-      title: "PGP - Data Science &  AI",
-      duration: "8 MONTHS",
-      batchStart: "Nov 15, 2025",
+      title: "Data Science &  AI",
+      duration: "8 WEEKS",
+      batchStart: "Nov 30, 2025",
       scholarship: "Yes",
-      emi: "Rs. 9,900",
+      emi: "Rs. 5,000",
       eligibility: "Open for All",
       enrolled: "400+",
       color: "blue",
       category: "software",
       features: [
-        "Get a post Graduate certificate on completion of course",
+        "Get a industry certificate on completion of course",
         "Unlimited mock interviews for your interview practice",
         "Access to 1000+ coding challenges & Projects",
-        "100% Placement Assistance (Lifetime)",
-        "No coding experience required",
+        "1 year placement support",
+        
       ],
     },
     {
-      title: "PGP- Full Stack Developer",
-      duration: "6-8 MONTHS",
-      batchStart: "Nov 5, 2025",
+      title: "Full Stack Software Developer",
+      duration: "8 WEEKS",
+      batchStart: "Nov 30, 2025",
       scholarship: "Yes",
-      emi: "Rs. 9,900",
+      emi: "Rs. 5,000",
       eligibility: "Open for All",
       enrolled: "300+",
       color: "green",
       category: "software",
       features: [
-        "Get a post Graduate certificate on completion of course",
+        "Get a industry certificate on completion of course",
         "Unlimited mock interviews for your interview practice",
         "Access to 1000+ coding challenges & Projects",
-        "100% Placement Assistance (Lifetime)",
-        "No coding experience required",
+        "1 year placement support",
+        
       ],
     },
     {
-      title: "PGP - Data Analyst",
-      duration: "3 MONTHS",
+      title: "Data Analyst",
+      duration: "8 WEEKS",
       batchStart: "Dec 15, 2025",
       scholarship: "Yes",
-      emi: "Rs. 5,500",
+      emi: "Rs. 5,000",
       eligibility: "Open for All",
       enrolled: "850+",
       color: "purple",
       category: "software",
       features: [
-        "Get a post Graduate certificate on completion of course",
+        "Get a industry certificate on completion of course",
         "Unlimited mock interviews for your interview practice",
         "Access to 1000+ coding challenges & Projects",
-        "100% Placement Assistance (Lifetime)",
-        "No coding experience required",
+        "1 year placement support",
+       
       ],
     },
     // Business Courses
@@ -485,7 +485,7 @@ const FeaturedCourses = () => {
     <>
       <div className="pt-[1.3rem] sm:pt-[2rem] pb-[4rem] px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center dark:bg-dark">
         <h1 className="mb-4 text-3xl sm:text-5xl font-semibold text-center text-gray-900 dark:text-white">
-          Featured{" "}
+          Industry Certified{" "}
           <span className="text-blue-600 dark:text-blue-400">Courses</span>
         </h1>
         <Tabs
