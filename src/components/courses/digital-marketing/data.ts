@@ -264,7 +264,7 @@ export const digitalMarketingCourseData = {
         color: "text-purple-600",
       },
       {
-        description: "1 year placeent support",
+        description: "1 year placement support",
         icon: "Shield",
         color: "text-orange-600",
       },
