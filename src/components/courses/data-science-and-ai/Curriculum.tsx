@@ -15,169 +15,110 @@ import { dataScienceAICourseData } from "./data";
 const curriculum = dataScienceAICourseData.curriculum.length
   ? dataScienceAICourseData.curriculum
   : [
-      {
-        title: "Python Fundamentals",
-        duration: "2 weeks",
-        lessons: "10 lessons",
-        projects: "1 mini project",
-        description: [
-          "Python Basics: Syntax, Variables, Data Types",
-          "Conditional Statements, Loops, Functions",
-          "Lists, Tuples, Sets, Dictionaries",
-          "File Handling & Exception Handling",
-          "Mini Project: “Student Result Calculator”",
-        ],
-      },
-      {
-        title: "Data Analysis with NumPy & Pandas",
-        duration: "3 weeks",
-        lessons: "12 lessons",
-        projects: "1 mini project",
-        description: [
-          "NumPy Arrays, Operations, Broadcasting",
-          "Pandas DataFrames, Series, Indexing",
-          "Data Cleaning, Handling Missing Values, Filtering",
-          "Merging, Grouping, and Aggregations",
-          "Mini Project: “Analyze Sales Data (Excel/CSV)”",
-        ],
-      },
-      {
-        title: "Data Visualization",
-        duration: "2 weeks",
-        lessons: "10 lessons",
-        projects: "1 project",
-        description: [
-          "Matplotlib & Seaborn for plotting",
-          "Line, Bar, Pie, Scatter, Heatmaps",
-          "Real-world dataset visualization (Kaggle Datasets)",
-          "Project: “Exploratory Data Analysis on Covid / Netflix Dataset”",
-        ],
-      },
-      {
-        title: "Statistics & Probability for Data Science",
-        duration: "2 weeks",
-        lessons: "10 lessons",
-        projects: "1 project",
-        description: [
-          "Descriptive Statistics (Mean, Median, Mode, Variance, SD)",
-          "Probability, Permutations & Combinations",
-          "Correlation, Covariance",
-          "Normal Distribution, Hypothesis Testing (t-test, chi-square)",
-          "Project: “Statistical Analysis on Real Dataset”",
-        ],
-      },
-      {
-        title: "Introduction to Machine Learning",
-        duration: "2 weeks",
-        lessons: "10 lessons",
-        projects: "1 mini project",
-        description: [
-          "What is ML? Supervised vs Unsupervised Learning",
-          "Data Preprocessing: Encoding, Scaling, Splitting",
-          "Evaluation Metrics: Accuracy, Precision, Recall, F1",
-          "ML Pipeline & Workflow",
-          "Mini Project: “Predict Student Scores”",
-        ],
-      },
-      {
-        title: "Supervised Learning – Regression",
-        duration: "2 weeks",
-        lessons: "8 lessons",
-        projects: "1 project",
-        description: [
-          "Linear Regression, Polynomial Regression",
-          "Ridge & Lasso Regularization",
-          "Model Evaluation: R², RMSE",
-          "Project: “House Price Prediction”",
-        ],
-      },
-      {
-        title: "Supervised Learning – Classification",
-        duration: "3 weeks",
-        lessons: "12 lessons",
-        projects: "1 project",
-        description: [
-          "Logistic Regression, KNN, Decision Tree, Random Forest",
-          "SVM, Naïve Bayes",
-          "Cross Validation & Hyperparameter Tuning (GridSearchCV)",
-          "Project: “Loan Approval / Diabetes Prediction”",
-        ],
-      },
-      {
-        title: "Unsupervised Learning",
-        duration: "2 weeks",
-        lessons: "10 lessons",
-        projects: "1 project",
-        description: [
-          "Clustering: K-Means, Hierarchical",
-          "Dimensionality Reduction: PCA",
-          "Anomaly Detection & Customer Segmentation",
-          "Project: “Customer Segmentation for Marketing”",
-        ],
-      },
-      {
-        title: "Introduction to Neural Networks",
-        duration: "2 weeks",
-        lessons: "10 lessons",
-        projects: "1 project",
-        description: [
-          "What is Deep Learning? Perceptron Concept",
-          "Activation Functions (ReLU, Sigmoid, Softmax)",
-          "Building Neural Networks with TensorFlow/Keras",
-          "Project: “Handwritten Digit Recognition (MNIST)”",
-        ],
-      },
-      {
-        title: "Convolutional Neural Networks (CNN)",
-        duration: "2 weeks",
-        lessons: "8 lessons",
-        projects: "1 project",
-        description: [
-          "Image Data Preprocessing",
-          "CNN Architecture (Conv, Pooling, Flatten, Dense)",
-          "Data Augmentation",
-          "Project: “Image Classification using CNN”",
-        ],
-      },
-      {
-        title: "Natural Language Processing (NLP)",
-        duration: "2 weeks",
-        lessons: "8 lessons",
-        projects: "1 project",
-        description: [
-          "Text Preprocessing (Tokenization, Lemmatization)",
-          "Bag of Words, TF-IDF",
-          "Sentiment Analysis with Logistic Regression",
-          "Project: “Twitter Sentiment Analysis / Movie Review Classification”",
-        ],
-      },
-      {
-        title: "Model Deployment & Career Readiness",
-        duration: "2 weeks",
-        lessons: "10 lessons",
-        projects: "1 final project",
-        description: [
-          "Flask / Streamlit for Model Deployment",
-          "Deploy on Render / Hugging Face Spaces",
-          "GitHub Project Upload & Documentation",
-          "Resume Building & Interview Prep",
-          "Final Project Demo: “AI-Powered Data Science Capstone”",
-        ],
-      },
-      {
-        title: "Final Projects (Choose Any 2–3 for Portfolio)",
-        duration: "—",
-        lessons: "—",
-        projects: "3 projects",
-        description: [
-          "House Price Prediction",
-          "Customer Segmentation Dashboard",
-          "Sentiment Analysis (Twitter / Reviews)",
-          "Image Classification (CNN)",
-          "Sales Forecasting using Time Series",
-        ],
-      },
-    ];
+    {
+      "title": "Week 1: Introduction to Data Analytics",
+      "duration": "1 week",
+      "lessons": "5 modules",
+      "projects": "Industry applications overview",
+      "description": [
+        "What is Data Analytics?",
+        "Career Paths & Industry Applications",
+        "Understanding Data Types and Formats",
+        "Data Collection, Cleaning, and Preprocessing Basics",
+        "Tools Overview: Excel, SQL, Power BI, Tableau"
+      ]
+    },
+    {
+      "title": "Week 2: Excel for Data Analytics – Basics",
+      "duration": "1 week",
+      "lessons": "5 modules",
+      "projects": "Basic charts and data analysis",
+      "description": [
+        "Excel Interface, Shortcuts, and Functions",
+        "Data Cleaning & Formatting Techniques",
+        "Sorting, Filtering, Conditional Formatting",
+        "Formulas: IF, COUNTIFS, SUMIFS, VLOOKUP, INDEX-MATCH",
+        "Basic Charts and Graphs"
+      ]
+    },
+    {
+      "title": "Week 3: Advanced Excel & Dashboards",
+      "duration": "1 week",
+      "lessons": "5 modules",
+      "projects": "Sales Data Analysis Case Study",
+      "description": [
+        "Advanced Formulas & Nested Functions",
+        "Data Validation & What-If Analysis",
+        "Pivot Tables & Pivot Charts",
+        "Excel Dashboards for Reporting",
+        "Case Study: Sales Data Analysis in Excel"
+      ]
+    },
+    {
+      "title": "Week 4: SQL for Data Analytics – Basics",
+      "duration": "1 week",
+      "lessons": "5 modules",
+      "projects": "Real-time query practice",
+      "description": [
+        "Introduction to Databases & SQL",
+        "SELECT, WHERE, ORDER BY, LIMIT",
+        "Filtering and Sorting Data",
+        "Aggregate Functions: COUNT, SUM, AVG, MIN, MAX",
+        "Real-time Query Practice"
+      ]
+    },
+    {
+      "title": "Week 5: SQL – Advanced Queries",
+      "duration": "1 week",
+      "lessons": "5 modules",
+      "projects": "Company Sales Data Analysis",
+      "description": [
+        "Joins (INNER, LEFT, RIGHT, FULL)",
+        "Subqueries and CTEs",
+        "GROUP BY and HAVING",
+        "Data Manipulation (INSERT, UPDATE, DELETE)",
+        "SQL Project: Analyze Company Sales Data"
+      ]
+    },
+    {
+      "title": "Week 6: Power BI – Basics & Data Modeling",
+      "duration": "1 week",
+      "lessons": "5 modules",
+      "projects": "Data modeling with Power Query",
+      "description": [
+        "Introduction to Power BI Interface",
+        "Importing Data from Excel/SQL",
+        "Power Query Editor for Data Cleaning",
+        "Data Modeling & Relationships",
+        "DAX Functions for Calculations"
+      ]
+    },
+    {
+      "title": "Week 7: Power BI – Dashboard Development",
+      "duration": "1 week",
+      "lessons": "4 modules",
+      "projects": "Business Insights Dashboard",
+      "description": [
+        "Creating Interactive Dashboards",
+        "Slicers, Filters & Visual Formatting",
+        "Publishing & Sharing Reports",
+        "Power BI Project: Business Insights Dashboard"
+      ]
+    },
+    {
+      "title": "Week 8: Tableau for Data Visualization",
+      "duration": "1 week",
+      "lessons": "5 modules",
+      "projects": "Real-World Dataset Dashboard",
+      "description": [
+        "Introduction to Tableau Workspace",
+        "Connecting Excel/SQL Data",
+        "Charts: Bar, Line, Pie, Maps",
+        "Calculated Fields & Parameters",
+        "Tableau Dashboard Project: Real-World Dataset"
+      ],
+    },
+  ];
 
 const Curriculum = () => {
   const [expandedModule, setExpandedModule] = useState<number | null>(null);

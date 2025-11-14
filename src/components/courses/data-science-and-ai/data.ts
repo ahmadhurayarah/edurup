@@ -1,9 +1,9 @@
 export const dataScienceAICourseData = {
   course: {
-    name: "Data Science & AI",
+    name: "Certified Data Scientist",
     code: "DSAI-PGP",
     description:
-      "32-week online Data Science & AI Course with Certification and 100% Placement Support.",
+      "Learn Data Science, Machine Learning & AI with hands-on projects. Become a job-ready in just 32 weeks with expert mentorhip.",
     duration: "32 weeks",
     durationISO: "P32W",
     timeRequired: "PT2H",
@@ -12,10 +12,10 @@ export const dataScienceAICourseData = {
     educationalLevel: "Professional",
     startDate: "2025-11-01",
     price: {
-      original: 100000,
-      discounted: 70000,
+      original: 20000,
+      discounted: 14000,
       currency: "INR",
-      emi: 10000,
+      emi: 5000,
       discountPercentage: 28,
       validUntil: "2025-12-31",
     },
@@ -28,8 +28,7 @@ export const dataScienceAICourseData = {
     features: [
       { title: "Live", subtitle: "Sessions on Zoom" },
       { title: "32 Weeks", subtitle: "Course Duration" },
-      { title: "Mentorship", subtitle: "With Experienced Professionals" },
-      { title: "Placement", subtitle: "100% Support till Job" },
+      { title: "Placement", subtitle: "1 year support" },
     ],
     teaches: [
       "Python",
@@ -55,7 +54,7 @@ export const dataScienceAICourseData = {
     backgroundColor: "#6ed290",
     textColor: "black",
     cohort: "14",
-    cohortStartDate: "Nov 1",
+    cohortStartDate: "Nov 30",
   },
   company: {
     heading: "500+ Companies have hired",
@@ -292,19 +291,19 @@ export const dataScienceAICourseData = {
     },
   ],
   curriculumHighlights: {
-    duration: "8 months",
+    duration: "8 weeks",
     format: "Live + Recorded",
     projects: "15+ Real-world",
     mentorship: "1:1 Support",
-    placement: "Guaranteed",
+    placement: "1 Year Support",
     certificate: "Industry Recognized",
     rating: { value: 4.8, reviews: 1400 },
   },
   fee: {
     scholarship: {
       percentage: 30,
-      originalPrice: 100000,
-      discountedPrice: 70000,
+      originalPrice: 20000,
+      discountedPrice: 14000,
       emi: 10000,
       gst: true,
     },
@@ -325,7 +324,7 @@ export const dataScienceAICourseData = {
         color: "text-purple-600",
       },
       {
-        description: "Job Guaranteed with Placement Services",
+        description: "1 year placement support",
         icon: "Shield",
         color: "text-orange-600",
       },
@@ -419,6 +418,48 @@ export const dataScienceAICourseData = {
     ],
     image: "/banner-01-2.png",
   },
+  faq: [
+    {
+      "question": "What is the duration of the Edurup Data Science Course in {city}?",
+      "answer": "The Edurup Data Science Course is an 8-week live online training program that helps you master Data Science, Machine Learning, and AI through practical, project-based learning."
+    },
+    {
+      "question": "What is the course fee for the Data Science Course at Edurup?",
+      "answer": "The actual course fee is ₹20,000, but with the Edurup Scholarship, you can enroll for just ₹14,000."
+    },
+    {
+      "question": "Does Edurup provide placement support after course completion?",
+      "answer": "Yes. Edurup offers 1-year of dedicated Placement Support, including resume building, interview preparation, and job referrals through our hiring network."
+    },
+    {
+      "question": "Is this Data Science Course available offline in {city}?",
+      "answer": "The course is conducted live online, allowing you to learn from {city}-based experts and attend career events organized locally."
+    },
+    {
+      "question": "What will I learn in this Data Science course?",
+      "answer": "You'll learn Python, Statistics, Machine Learning, Data Visualization, and AI Tools — all with hands-on projects guided by industry mentors."
+    },
+    {
+      "question": "Is this course suitable for beginners?",
+      "answer": "Yes. The course is ideal for beginners and working professionals who want to start a career in Data Science or upskill in AI and Machine Learning."
+    },
+    {
+      "question": "What certification will I receive after completing the course?",
+      "answer": "Upon successful completion, you'll receive an industry-recognized Edurup Data Science & AI Certification, validating your expertise in Data Science."
+    },
+    {
+      "question": "Do you offer EMI or installment options for the fee?",
+      "answer": "Yes. Edurup provides flexible EMI options, making it easier to pay the discounted ₹14,000 course fee in monthly installments."
+    },
+    {
+      "question": "What kind of job roles can I apply for after completing this course?",
+      "answer": "After completing the course, you can apply for roles such as Data Analyst, Junior Data Scientist, Machine Learning Engineer, or AI Research Assistant."
+    },
+    {
+      "question": "How can I apply for the Edurup Scholarship?",
+      "answer": "You can apply during registration. Eligible candidates will automatically receive a ₹6,000 scholarship discount, bringing the total course fee down to ₹14,000."
+    },
+  ],
   productAnalyst: {
     heading: "Your Future Job Title",
     titles: [
@@ -428,8 +469,8 @@ export const dataScienceAICourseData = {
       "Data Analyst",
     ],
     salaries: {
-      average: "8-10 Lakhs",
-      highest: "31 Lakhs",
+      average: "4-7 Lakhs",
+      highest: "14 Lakhs",
       highestCompany: "Top Firms",
     },
   },

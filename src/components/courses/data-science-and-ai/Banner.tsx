@@ -29,7 +29,7 @@ const CourseBanner = ({ cityName = "Bangalore" }: CourseBannerProps) => {
         {/* Left: Course Info */}
         <div className="flex-1 flex flex-col gap-4 sm:gap-6">
           <h1 className="text-3xl sm:text-5xl font-bold leading-snug">
-            PG | {course.name} Course in {cityName} with Placement
+            Certified Data Scientist
           </h1>
           <p className="text-base sm:text-lg">{course.description}</p>
 
@@ -91,12 +91,7 @@ const CourseBanner = ({ cityName = "Bangalore" }: CourseBannerProps) => {
           >
             Enroll Now &rarr;
           </Button>
- <Button 
-            onClick={handleEnrollClick}
-            className="w-full bg-black text-white flex justify-center items-center gap-2 mt-4 py-3 sm:py-4 hover:bg-gray-900 transition text-sm sm:text-base"
-          >
-            Enroll Now &rarr;
-          </Button>
+
 
 
           <p className="text-xs text-gray-500 mt-3 text-center">

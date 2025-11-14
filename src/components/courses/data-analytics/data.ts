@@ -3,7 +3,7 @@ export const dataAnalyticsCourseData = {
     name: "Data Analytics",
     code: "DA-PGP",
     description:
-      "32-week online Data Analytics Course with Certification and 100% Placement Support.",
+      "8-week online Data Analytics Course with Certification. Learn Python, Power Bi, Excel.",
     duration: "32 weeks",
     durationISO: "P32W",
     timeRequired: "PT2H",
@@ -12,10 +12,10 @@ export const dataAnalyticsCourseData = {
     educationalLevel: "Professional",
     startDate: "2025-11-01",
     price: {
-      original: 100000,
-      discounted: 70000,
+      original: 20000,
+      discounted: 14000,
       currency: "INR",
-      emi: 10000,
+      emi: 5000,
       discountPercentage: 28,
       validUntil: "2025-12-31",
     },
@@ -28,8 +28,7 @@ export const dataAnalyticsCourseData = {
     features: [
       { title: "Live", subtitle: "Sessions on Zoom" },
       { title: "32 Weeks", subtitle: "Course Duration" },
-      { title: "Mentorship", subtitle: "With Experienced Professionals" },
-      { title: "Placement", subtitle: "100% Support till Job" },
+      { title: "Placement", subtitle: "1 Year Support" },
     ],
     teaches: [
       "Excel",
@@ -55,7 +54,7 @@ export const dataAnalyticsCourseData = {
     backgroundColor: "#2B1F5F",
     textColor: "white",
     cohort: "14",
-    cohortStartDate: "Nov 1",
+    cohortStartDate: "Dec 7",
   },
   company: {
     heading: "500+ Companies have hired",
@@ -115,176 +114,118 @@ export const dataAnalyticsCourseData = {
       color: "green",
     },
   ],
+ 
   curriculum: [
     {
-      title: "Python Fundamentals",
-      duration: "2 weeks",
-      lessons: "10 lessons",
-      projects: "1 mini project",
-      description: [
-        "Python Basics: Syntax, Variables, Data Types",
-        "Conditional Statements, Loops, Functions",
-        "Lists, Tuples, Sets, Dictionaries",
-        "File Handling & Exception Handling",
-        'Mini Project: "Student Result Calculator"',
-      ],
+      "title": "Week 1: Introduction to Data Analytics",
+      "duration": "1 week",
+      "lessons": "5 modules",
+      "projects": "Industry applications overview",
+      "description": [
+        "What is Data Analytics?",
+        "Career Paths & Industry Applications",
+        "Understanding Data Types and Formats",
+        "Data Collection, Cleaning, and Preprocessing Basics",
+        "Tools Overview: Excel, SQL, Power BI, Tableau"
+      ]
     },
     {
-      title: "Data Analysis with NumPy & Pandas",
-      duration: "3 weeks",
-      lessons: "12 lessons",
-      projects: "1 mini project",
-      description: [
-        "NumPy Arrays, Operations, Broadcasting",
-        "Pandas DataFrames, Series, Indexing",
-        "Data Cleaning, Handling Missing Values, Filtering",
-        "Merging, Grouping, and Aggregations",
-        'Mini Project: "Analyze Sales Data (Excel/CSV)"',
-      ],
+      "title": "Week 2: Excel for Data Analytics – Basics",
+      "duration": "1 week",
+      "lessons": "5 modules",
+      "projects": "Basic charts and data analysis",
+      "description": [
+        "Excel Interface, Shortcuts, and Functions",
+        "Data Cleaning & Formatting Techniques",
+        "Sorting, Filtering, Conditional Formatting",
+        "Formulas: IF, COUNTIFS, SUMIFS, VLOOKUP, INDEX-MATCH",
+        "Basic Charts and Graphs"
+      ]
     },
     {
-      title: "Data Visualization",
-      duration: "2 weeks",
-      lessons: "10 lessons",
-      projects: "1 project",
-      description: [
-        "Matplotlib & Seaborn for plotting",
-        "Line, Bar, Pie, Scatter, Heatmaps",
-        "Real-world dataset visualization (Kaggle Datasets)",
-        'Project: "Exploratory Data Analysis on Covid / Netflix Dataset"',
-      ],
+      "title": "Week 3: Advanced Excel & Dashboards",
+      "duration": "1 week",
+      "lessons": "5 modules",
+      "projects": "Sales Data Analysis Case Study",
+      "description": [
+        "Advanced Formulas & Nested Functions",
+        "Data Validation & What-If Analysis",
+        "Pivot Tables & Pivot Charts",
+        "Excel Dashboards for Reporting",
+        "Case Study: Sales Data Analysis in Excel"
+      ]
     },
     {
-      title: "Statistics & Probability for Data Science",
-      duration: "2 weeks",
-      lessons: "10 lessons",
-      projects: "1 project",
-      description: [
-        "Descriptive Statistics (Mean, Median, Mode, Variance, SD)",
-        "Probability, Permutations & Combinations",
-        "Correlation, Covariance",
-        "Normal Distribution, Hypothesis Testing (t-test, chi-square)",
-        'Project: "Statistical Analysis on Real Dataset"',
-      ],
+      "title": "Week 4: SQL for Data Analytics – Basics",
+      "duration": "1 week",
+      "lessons": "5 modules",
+      "projects": "Real-time query practice",
+      "description": [
+        "Introduction to Databases & SQL",
+        "SELECT, WHERE, ORDER BY, LIMIT",
+        "Filtering and Sorting Data",
+        "Aggregate Functions: COUNT, SUM, AVG, MIN, MAX",
+        "Real-time Query Practice"
+      ]
     },
     {
-      title: "Introduction to Machine Learning",
-      duration: "2 weeks",
-      lessons: "10 lessons",
-      projects: "1 mini project",
-      description: [
-        "What is ML? Supervised vs Unsupervised Learning",
-        "Data Preprocessing: Encoding, Scaling, Splitting",
-        "Evaluation Metrics: Accuracy, Precision, Recall, F1",
-        "ML Pipeline & Workflow",
-        'Mini Project: "Predict Student Scores"',
-      ],
+      "title": "Week 5: SQL – Advanced Queries",
+      "duration": "1 week",
+      "lessons": "5 modules",
+      "projects": "Company Sales Data Analysis",
+      "description": [
+        "Joins (INNER, LEFT, RIGHT, FULL)",
+        "Subqueries and CTEs",
+        "GROUP BY and HAVING",
+        "Data Manipulation (INSERT, UPDATE, DELETE)",
+        "SQL Project: Analyze Company Sales Data"
+      ]
     },
     {
-      title: "Supervised Learning – Regression",
-      duration: "2 weeks",
-      lessons: "8 lessons",
-      projects: "1 project",
-      description: [
-        "Linear Regression, Polynomial Regression",
-        "Ridge & Lasso Regularization",
-        "Model Evaluation: R², RMSE",
-        'Project: "House Price Prediction"',
-      ],
+      "title": "Week 6: Power BI – Basics & Data Modeling",
+      "duration": "1 week",
+      "lessons": "5 modules",
+      "projects": "Data modeling with Power Query",
+      "description": [
+        "Introduction to Power BI Interface",
+        "Importing Data from Excel/SQL",
+        "Power Query Editor for Data Cleaning",
+        "Data Modeling & Relationships",
+        "DAX Functions for Calculations"
+      ]
     },
     {
-      title: "Supervised Learning – Classification",
-      duration: "3 weeks",
-      lessons: "12 lessons",
-      projects: "1 project",
-      description: [
-        "Logistic Regression, KNN, Decision Tree, Random Forest",
-        "SVM, Naïve Bayes",
-        "Cross Validation & Hyperparameter Tuning (GridSearchCV)",
-        'Project: "Loan Approval / Diabetes Prediction"',
-      ],
+      "title": "Week 7: Power BI – Dashboard Development",
+      "duration": "1 week",
+      "lessons": "4 modules",
+      "projects": "Business Insights Dashboard",
+      "description": [
+        "Creating Interactive Dashboards",
+        "Slicers, Filters & Visual Formatting",
+        "Publishing & Sharing Reports",
+        "Power BI Project: Business Insights Dashboard"
+      ]
     },
     {
-      title: "Unsupervised Learning",
-      duration: "2 weeks",
-      lessons: "10 lessons",
-      projects: "1 project",
-      description: [
-        "Clustering: K-Means, Hierarchical",
-        "Dimensionality Reduction: PCA",
-        "Anomaly Detection & Customer Segmentation",
-        'Project: "Customer Segmentation for Marketing"',
-      ],
-    },
-    {
-      title: "Introduction to Neural Networks",
-      duration: "2 weeks",
-      lessons: "10 lessons",
-      projects: "1 project",
-      description: [
-        "What is Deep Learning? Perceptron Concept",
-        "Activation Functions (ReLU, Sigmoid, Softmax)",
-        "Building Neural Networks with TensorFlow/Keras",
-        'Project: "Handwritten Digit Recognition (MNIST)"',
-      ],
-    },
-    {
-      title: "Convolutional Neural Networks (CNN)",
-      duration: "2 weeks",
-      lessons: "8 lessons",
-      projects: "1 project",
-      description: [
-        "Image Data Preprocessing",
-        "CNN Architecture (Conv, Pooling, Flatten, Dense)",
-        "Data Augmentation",
-        'Project: "Image Classification using CNN"',
-      ],
-    },
-    {
-      title: "Natural Language Processing (NLP)",
-      duration: "2 weeks",
-      lessons: "8 lessons",
-      projects: "1 project",
-      description: [
-        "Text Preprocessing (Tokenization, Lemmatization)",
-        "Bag of Words, TF-IDF",
-        "Sentiment Analysis with Logistic Regression",
-        'Project: "Twitter Sentiment Analysis / Movie Review Classification"',
-      ],
-    },
-    {
-      title: "Model Deployment & Career Readiness",
-      duration: "2 weeks",
-      lessons: "10 lessons",
-      projects: "1 final project",
-      description: [
-        "Flask / Streamlit for Model Deployment",
-        "Deploy on Render / Hugging Face Spaces",
-        "GitHub Project Upload & Documentation",
-        "Resume Building & Interview Prep",
-        'Final Project Demo: "AI-Powered Data Science Capstone"',
-      ],
-    },
-    {
-      title: "Final Projects (Choose Any 2–3 for Portfolio)",
-      duration: "—",
-      lessons: "—",
-      projects: "3 projects",
-      description: [
-        "House Price Prediction",
-        "Customer Segmentation Dashboard",
-        "Sentiment Analysis (Twitter / Reviews)",
-        "Image Classification (CNN)",
-        "Sales Forecasting using Time Series",
+      "title": "Week 8: Tableau for Data Visualization",
+      "duration": "1 week",
+      "lessons": "5 modules",
+      "projects": "Real-World Dataset Dashboard",
+      "description": [
+        "Introduction to Tableau Workspace",
+        "Connecting Excel/SQL Data",
+        "Charts: Bar, Line, Pie, Maps",
+        "Calculated Fields & Parameters",
+        "Tableau Dashboard Project: Real-World Dataset"
       ],
     },
   ],
   fee: {
     scholarship: {
       percentage: 30,
-      originalPrice: 100000,
-      discountedPrice: 70000,
-      emi: 10000,
+      originalPrice: 20000,
+      discountedPrice: 14000,
+      emi: 5000,
       gst: true,
     },
     features: [
@@ -304,17 +245,59 @@ export const dataAnalyticsCourseData = {
         color: "text-purple-600",
       },
       {
-        description: "Job Guaranteed with Placement Services",
+        description: "1 Year Placement Support",
         icon: "Shield",
         color: "text-orange-600",
       },
     ],
     badge: "Most Popular",
     cta: {
-      text: "Apply Now - Limited Seats Available",
+      text: "Enroll Now",
       note: "⚡ Scholarship applications closing soon",
     },
   },
+ faq : [
+  {
+    question: "What is the duration of the Edurup Data Analytics Course in {city}?",
+    answer: "The Edurup Data Analytics Course is an 8-week live online training program that helps you master data analytics tools and techniques through real-world projects."
+  },
+  {
+    question: "What is the course fee for the Edurup Data Analytics Course?",
+    answer: "The actual fee is ₹20,000, but with the Edurup Scholarship, you can enroll for just ₹14,000."
+  },
+  {
+    question: "Is this Data Analytics Course conducted online or offline?",
+    answer: "This is a 100% live online course, so you can learn from anywhere with interactive mentor-led classes and practical sessions."
+  },
+  {
+    question: "Does Edurup offer placement support for this course?",
+    answer: "Yes. Edurup provides 1-year placement support, including resume building, mock interviews, and job referrals through our dedicated career team."
+  },
+  {
+    question: "What will I learn in the Data Analytics Course?",
+    answer: "You'll learn Excel, SQL, Python for Data Analysis, Power BI, Tableau, Statistics, and Dashboard Creation — everything needed to become a job-ready Data Analyst."
+  },
+  {
+    question: "Is the course suitable for beginners?",
+    answer: "Yes. The course is designed for beginners and working professionals who want to start a career in data analytics or switch from a non-technical background."
+  },
+  {
+    question: "What certification will I receive after the course?",
+    answer: "After successful completion, you'll receive an industry-recognized Edurup Data Analytics Certification, validating your skills in data analytics and visualization."
+  },
+  {
+    question: "Do you offer EMI or installment options for the fee?",
+    answer: "Yes. Edurup offers flexible EMI options, allowing students to pay the discounted ₹14,000 fee in easy monthly installments."
+  },
+  {
+    question: "What kind of job roles can I apply for after completing this course?",
+    answer: "You can apply for roles such as Data Analyst, Business Analyst, Reporting Analyst, or BI Developer after completing the course."
+  },
+  {
+    question: "How can I apply for the Edurup Scholarship?",
+    answer: "You can apply during registration. Eligible students automatically receive a ₹6,000 scholarship discount, reducing the total course fee to ₹14,000."
+  },
+],
   language: {
     heading: "Learning Journey",
     title: "Learn all the Tools that are In-demand",
@@ -417,8 +400,8 @@ export const dataAnalyticsCourseData = {
       "BI Analyst",
     ],
     salaries: {
-      average: "8-10 Lakhs",
-      highest: "31 Lakhs",
+      average: "4-6 Lakhs",
+      highest: "12 Lakhs",
       highestCompany: "Top Firms",
     },
   },

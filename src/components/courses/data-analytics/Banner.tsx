@@ -30,7 +30,7 @@ const CourseBanner = ({ cityName = "Bangalore" }: CourseBannerProps) => {
         {/* Left: Course Info */}
         <div className="flex-1 flex flex-col gap-4 sm:gap-6">
           <h1 className="text-3xl sm:text-5xl font-bold leading-snug">
-            PG | {course.name} Course in {cityName} with Placement
+            Certified Data Analyst
           </h1>
           <p className="text-base sm:text-lg" style={{ color: banner.textColor === "white" ? "#D1D5DB" : undefined }}>
             {course.description}

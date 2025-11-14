@@ -24,7 +24,7 @@ const Fee = () => {
               Limited Time Offer
             </div>
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-              Post Graduate Program <span className="text-green-600">Fee</span>
+              Certified Data Analytics <span className="text-green-600">Fee</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
               {scholarship.percentage}% Scholarship Available for eligible students

@@ -426,130 +426,52 @@ export const digitalMarketingCourseData = {
   },
   faq: [
     {
-      question: "What is the Digital Marketing Course at Edurup Learning?",
-      answer:
-        "Edurup Learning's Digital Marketing Course in {city} is an industry-oriented training program covering SEO, Google Ads, Social Media Marketing, Email Marketing, and Analytics — with 100% placement support.",
+      "question": "What is the duration of the Digital Marketing course in {city}?",
+      "answer": "The course duration is 2 months (8 weeks), designed for beginners and working professionals. It includes live sessions, hands-on projects, and personalized mentorship."
     },
     {
-      question: "Who can enroll in the Digital Marketing Course?",
-      answer:
-        "Anyone — students, fresh graduates, working professionals, or entrepreneurs — who wants to build a career in online marketing can join this course. No prior experience is required.",
+      "question": "Is this a live or recorded Digital Marketing course?",
+      "answer": "This is a 100% live instructor-led course conducted in {city} (with online access available). Learners can interact directly with trainers and work on real-time projects."
     },
     {
-      question: "What is the duration of the course?",
-      answer:
-        "The PGP in Digital Marketing is an 8-month program, including hands-on projects, live campaigns, and placement assistance.",
+      "question": "Who can join this course?",
+      "answer": "Anyone can join — students, job seekers, entrepreneurs, freelancers, and professionals who want to build a career or business in Digital Marketing course. No prior experience is required."
     },
     {
-      question: "Does Edurup provide placement support?",
-      answer:
-        "Yes. Edurup Learning offers 100% placement support through dedicated placement training, resume building, mock interviews, and recruiter connections with top {city} companies.",
+      "question": "What topics are covered in this 2-month program?",
+      "answer": "The course covers all key areas: Digital Marketing Fundamentals, SEO (Search Engine Optimization), Social Media Marketing, Google Ads (Search & Display), Analytics (Google Analytics GA4), Email Marketing, and AI Tools for Marketing."
     },
     {
-      question: "What tools will I learn during the course?",
-      answer:
-        "You'll get hands-on training on top industry tools such as Google Ads, Meta Ads, Google Analytics, Semrush, Mailchimp, WordPress, and more.",
+      "question": "Do you provide certification after completion?",
+      "answer": "Yes. Upon successful completion, learners receive a Digital Marketing course Certification from our {city} center — recognized by employers and freelancing platforms."
     },
     {
-      question: "What are the eligibility criteria?",
-      answer:
-        "Anyone with basic computer knowledge and interest in digital marketing can apply. Both technical and non-technical backgrounds are welcome.",
+      "question": "Is there any placement support after the course?",
+      "answer": "Yes, we provide 100% placement support including resume building, interview preparation, and job referrals with top marketing agencies and companies in {city}."
     },
     {
-      question: "Is this course available online or offline?",
-      answer:
-        "The course is available in both classroom ({city}) and live online formats, so you can choose based on your preference.",
+      "question": "Will I get hands-on practice during the course?",
+      "answer": "Absolutely! You’ll work on live campaigns, website SEO, ad creation, and analytics dashboards using real tools like Google Ads, Analytics, and Meta Ads Manager."
     },
     {
-      question: "What is the average salary after completing this course?",
-      answer:
-        "Freshers completing the course can expect a starting salary between ₹3 LPA to ₹6 LPA, depending on performance, role, and company.",
+      "question": "What are the class timings and batch options?",
+      "answer": "We offer weekday and weekend batches in both morning and evening slots for flexibility. Batch schedules can be adjusted for working professionals."
     },
     {
-      question: "How much does the digital marketing course cost?",
-      answer:
-        "The total fee is ₹1,00,000, but Edurup offers a 30% scholarship for early applicants and flexible EMI options.",
+      "question": "Do you offer online learning options for non-{city} students?",
+      "answer": "Yes, live online classes are available. You can join remotely and still access all recordings, assignments, and mentor support."
     },
     {
-      question: "Why choose Edurup Learning over other institutes in {city}?",
-      answer:
-        "Edurup offers a practical, placement-driven approach with real-time campaign projects, 1:1 mentorship, and partnerships with leading digital agencies.",
+      "question": "What is the fee structure for the course?",
+      "answer": "The fee depends on the mode (live/offline/online) and current offers. Contact our {city} admission team for the latest pricing and EMI options."
     },
     {
-      question: "What are the modules covered in the Digital Marketing Course?",
-      answer:
-        "The course covers 12+ modules including SEO, Google Ads, Social Media Marketing, Content Marketing, Email Marketing, Web Analytics, Affiliate Marketing, and Marketing Automation.",
+      "question": "Are there any projects or assignments?",
+      "answer": "Yes, you’ll complete a final project involving a full-funnel digital marketing campaign combining SEO, SMM, Ads, and Email — reviewed by mentors."
     },
     {
-      question: "Will I get to work on live digital marketing campaigns?",
-      answer:
-        "Yes! You'll work on real-time campaigns using live Google Ads and Meta Ads accounts to gain hands-on experience.",
-    },
-    {
-      question: "What certifications will I receive after the course?",
-      answer:
-        "You'll receive an Edurup Learning PGP Certificate and guidance to earn Google Ads, HubSpot, and Meta Blueprint certifications.",
-    },
-    {
-      question:
-        "How is this course different from other digital marketing institutes in {city}?",
-      answer:
-        "Edurup focuses on project-based learning, 1:1 mentorship, and placement guarantee, while many institutes only provide theoretical sessions.",
-    },
-    {
-      question: "Can I learn digital marketing without a technical background?",
-      answer:
-        "Absolutely! The program is designed for beginners with no coding or technical background required.",
-    },
-    {
-      question: "Do you provide demo classes before enrolling?",
-      answer:
-        "Yes, we offer a free demo class so you can understand the teaching methodology and course structure before joining.",
-    },
-    {
-      question: "What kind of companies hire Edurup students?",
-      answer:
-        "Our students are placed in top companies like TCS, Wipro, Adobe, Un Academy, Flipkart, Lumen, Valueleaf, MetricFox, Amazon, Qpi AI, and startup digital agencies across {city} and India.",
-    },
-    {
-      question: "What is the batch size for each session?",
-      answer:
-        "We maintain small batches (15–20 students) to ensure personalized attention and better learning outcomes.",
-    },
-    {
-      question: "Can I switch from online to offline classes midway?",
-      answer:
-        "Yes, Edurup allows a flexible learning mode, so you can switch between online and classroom sessions as per convenience.",
-    },
-    {
-      question: "Will I get internship opportunities?",
-      answer:
-        "Yes, after completing the main modules, students are provided with internship opportunities to gain real-world project experience.",
-    },
-    {
-      question: "How can I enrol in the course?",
-      answer:
-        "You can enrol online via the 'Apply Now' button or visit our {city} campus. Our counsellors will guide you through scholarship and EMI options.",
-    },
-    {
-      question: "What if I miss a class?",
-      answer:
-        "All sessions are recorded and available on the learning portal. You can revisit missed classes anytime.",
-    },
-    {
-      question: "Do you provide doubt-clearing or mentorship sessions?",
-      answer:
-        "Yes, Edurup offers weekly mentorship sessions and 1:1 doubt-clearing with instructors and campaign managers.",
-    },
-    {
-      question: "What career roles can I apply for after this course?",
-      answer:
-        "After completing the program, you can apply for roles like Digital Marketing Executive, SEO Specialist, Google Ads Expert, Social Media Manager, or Campaign Manager.",
-    },
-    {
-      question: "How do I contact Edurup Learning for more details?",
-      answer:
-        "You can reach us via:\n• Website: https://edurup.in\n• Email: neelam@edurup.in\n• Phone: +91-9964150039\nOr visit our {city} training centre for career counselling.",
+      "question": "Why should I choose this Digital Marketing course in {city}?",
+      "answer": "Live instructor-led classes, Practical training with real tools, 100% placement support, AI & automation modules, Personalized mentorship, Certificate recognized by companies."
     },
   ],
   curriculumHighlights: {
