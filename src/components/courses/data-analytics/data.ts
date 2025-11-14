@@ -4,7 +4,7 @@ export const dataAnalyticsCourseData = {
     code: "DA-PGP",
     description:
       "8-week online Data Analytics Course with Certification. Learn Python, Power Bi, Excel.",
-    duration: "32 weeks",
+    duration: "8 weeks",
     durationISO: "P32W",
     timeRequired: "PT2H",
     mode: "online",
@@ -27,7 +27,7 @@ export const dataAnalyticsCourseData = {
     },
     features: [
       { title: "Live", subtitle: "Sessions on Zoom" },
-      { title: "32 Weeks", subtitle: "Course Duration" },
+      { title: "8 Weeks", subtitle: "Course Duration" },
       { title: "Placement", subtitle: "1 Year Support" },
     ],
     teaches: [
