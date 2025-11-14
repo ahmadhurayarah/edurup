@@ -3,8 +3,8 @@ export const dataScienceAICourseData = {
     name: "Certified Data Scientist",
     code: "DSAI-PGP",
     description:
-      "Learn Data Science, Machine Learning & AI with hands-on projects. Become a job-ready in just 32 weeks with expert mentorhip.",
-    duration: "32 weeks",
+      "Learn Data Science, Machine Learning & AI with hands-on projects. Become a job-ready in just 8 weeks with expert mentorhip.",
+    duration: "8 weeks",
     durationISO: "P32W",
     timeRequired: "PT2H",
     mode: "online",
@@ -27,7 +27,7 @@ export const dataScienceAICourseData = {
     },
     features: [
       { title: "Live", subtitle: "Sessions on Zoom" },
-      { title: "32 Weeks", subtitle: "Course Duration" },
+      { title: "8 Weeks", subtitle: "Course Duration" },
       { title: "Placement", subtitle: "1 year support" },
     ],
     teaches: [

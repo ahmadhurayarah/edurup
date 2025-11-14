@@ -4,7 +4,7 @@ export const fullStackDeveloperCourseData = {
     code: "FSD-PGP",
     description:
       "32-week online Full Stack Development Course with certification and 100% placement support.",
-    duration: "32 weeks",
+    duration: "8 weeks",
     durationISO: "P32W",
     timeRequired: "PT2H",
     mode: "online",
@@ -36,7 +36,7 @@ export const fullStackDeveloperCourseData = {
     ],
     features: [
       { title: "Live", subtitle: "Sessions on Zoom" },
-      { title: "32 Weeks", subtitle: "Course Duration" },
+      { title: "8 Weeks", subtitle: "Course Duration" },
       { title: "Mentorship", subtitle: "With Experienced Professionals" },
       { title: "Placement", subtitle: "100% Support till Job" },
     ],
