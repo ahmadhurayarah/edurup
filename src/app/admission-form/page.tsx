@@ -251,13 +251,13 @@ const AdmissionFormContent = () => {
             <button type="submit" hidden></button>
 
             {/* Original Confirm Button */}
-            <Button
+            {/* <Button
               type="submit"
               disabled={loading}
               className="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 px-6 rounded-md font-semibold text-lg transition-colors duration-200"
             >
               {loading ? "Submitting..." : "Confirm Your Admission"}
-            </Button>
+            </Button> */}
           </form>
 
           <p className="text-center text-gray-500 text-sm mt-6">
