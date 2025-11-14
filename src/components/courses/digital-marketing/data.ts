@@ -27,7 +27,7 @@ export const digitalMarketingCourseData = {
     },
     features: [
       { title: "Live", subtitle: "Sessions on Zoom" },
-      { title: "32 Weeks", subtitle: "Course Duration" },
+      { title: "8 Weeks", subtitle: "Course Duration" },
       { title: "Placement", subtitle: "1 year support" },
     ],
     teaches: [
