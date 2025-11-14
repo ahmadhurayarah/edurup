@@ -21,12 +21,7 @@ async function saveAdmissionToDatabase(formData: {
   name: string;
   email: string;
   phone: string;
-  qualification: string;
-  mode: string;
-  dob: string;
-  gender: string;
-  emergencyContact: string;
-  address: string;
+ 
   courseName: string;
 }) {
   let client = null;
@@ -44,12 +39,12 @@ async function saveAdmissionToDatabase(formData: {
       name: formData.name.trim(),
       email: formData.email.trim().toLowerCase(),
       phone: formData.phone.trim(),
-      qualification: formData.qualification,
-      mode: formData.mode,
-      dob: formData.dob,
-      gender: formData.gender,
-      emergencyContact: formData.emergencyContact.trim(),
-      address: formData.address.trim(),
+      // qualification: formData.qualification,
+      // mode: formData.mode,
+      // dob: formData.dob,
+      // gender: formData.gender,
+      // emergencyContact: formData.emergencyContact.trim(),
+      // address: formData.address.trim(),
       courseName: formData.courseName,
       createdAt: new Date(),
       updatedAt: new Date(),
@@ -91,12 +86,12 @@ export async function submitAdmissionForm(formData: {
   name: string;
   email: string;
   phone: string;
-  qualification: string;
-  mode: string;
-  dob: string;
-  gender: string;
-  emergencyContact: string;
-  address: string;
+  // qualification: string;
+  // mode: string;
+  // dob: string;
+  // gender: string;
+  // emergencyContact: string;
+  // address: string;
   courseName: string;
 }) {
   let dbResult = null;
@@ -106,7 +101,7 @@ export async function submitAdmissionForm(formData: {
     console.log('📝 Processing admission request via server action:', formData.email);
 
     // Validate required fields
-    const requiredFields = ['name', 'email', 'phone', 'qualification', 'mode', 'dob', 'gender', 'emergencyContact', 'address', 'courseName'];
+    const requiredFields = ['name', 'email', 'phone', 'courseName'];
     const missingFields = requiredFields.filter(field => !formData[field as keyof typeof formData]);
     
     if (missingFields.length > 0) {
@@ -216,12 +211,6 @@ async function sendAdmissionEmails(formData: any) {
             <p><strong>Name:</strong> ${formData.name}</p>
             <p><strong>Email:</strong> ${formData.email}</p>
             <p><strong>Phone:</strong> ${formData.phone}</p>
-            <p><strong>Qualification:</strong> ${formData.qualification}</p>
-            <p><strong>Mode:</strong> ${formData.mode}</p>
-            <p><strong>DOB:</strong> ${formData.dob}</p>
-            <p><strong>Gender:</strong> ${formData.gender}</p>
-            <p><strong>Emergency Contact:</strong> ${formData.emergencyContact}</p>
-            <p><strong>Address:</strong> ${formData.address}</p>
             <p><strong>Submitted:</strong> ${new Date().toLocaleString()}</p>
           </div>
         </div>

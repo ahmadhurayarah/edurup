@@ -17,12 +17,12 @@ const AdmissionFormContent = () => {
     name: "",
     email: "",
     phone: "",
-    qualification: "",
-    mode: "",
-    dob: "",
-    gender: "",
-    emergencyContact: "",
-    address: ""
+    // qualification: "",
+    // mode: "",
+    // dob: "",
+    // gender: "",
+    // emergencyContact: "",
+    // address: ""
   });
 
   const [loading, setLoading] = useState(false);
@@ -52,12 +52,12 @@ const AdmissionFormContent = () => {
                 name: "",
                 email: "",
                 phone: "",
-                qualification: "",
-                mode: "",
-                dob: "",
-                gender: "",
-                emergencyContact: "",
-                address: ""
+                // qualification: "",
+                // mode: "",
+                // dob: "",
+                // gender: "",
+                // emergencyContact: "",
+                // address: ""
               });
               return result.message;
             } else {
@@ -77,7 +77,7 @@ const AdmissionFormContent = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 py-8 px-4">
+    <div className="min-h-[600px] bg-gradient-to-br from-purple-50 to-blue-50 py-8 px-4 ">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
         
         {/* Left Section - Admission Form */}
@@ -142,7 +142,7 @@ const AdmissionFormContent = () => {
             </div>
 
             {/* Qualification */}
-            <div>
+            {/* <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Highest Qualification *
               </label>
@@ -163,7 +163,7 @@ const AdmissionFormContent = () => {
               </select>
             </div>
 
-            {/* Mode */}
+           
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Preferred Mode *
@@ -181,7 +181,7 @@ const AdmissionFormContent = () => {
               </select>
             </div>
 
-            {/* Date of Birth */}
+          
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Date of Birth *
@@ -196,7 +196,7 @@ const AdmissionFormContent = () => {
               />
             </div>
 
-            {/* Gender */}
+         
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Gender *
@@ -216,7 +216,6 @@ const AdmissionFormContent = () => {
               </select>
             </div>
 
-            {/* Emergency Contact */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Emergency Contact Number *
@@ -232,7 +231,7 @@ const AdmissionFormContent = () => {
               />
             </div>
 
-            {/* Address */}
+        
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Address *
@@ -246,7 +245,7 @@ const AdmissionFormContent = () => {
                 rows={3}
                 className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-purple-600 focus:border-transparent resize-none"
               />
-            </div>
+            </div> */}
 
             {/* Hidden button (not visible, triggered by Pay Now) */}
             <button type="submit" hidden></button>
@@ -269,9 +268,9 @@ const AdmissionFormContent = () => {
         {/* Right Section - Fee Summary */}
         <div className="bg-white rounded-2xl shadow-2xl p-6 sm:p-8 flex flex-col h-full justify-between">
           <div>
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">Available Coupons</h2>
+            <h2 className="text-xl font-semibold text-gray-900 mb-4">Program Fee</h2>
 
-            <div className="bg-green-50 border border-green-200 rounded-xl p-4 mb-6">
+            {/* <div className="bg-green-50 border border-green-200 rounded-xl p-4 mb-6">
               <div className="flex justify-between items-center">
                 <div>
                   <p className="font-semibold text-green-700">DAF15KEARLYBIRD</p><br/>
@@ -280,7 +279,7 @@ const AdmissionFormContent = () => {
                 </div>
                 <span className="text-green-600 font-medium">Applied ✓</span>
               </div>
-            </div>
+            </div> */}
 
             <div className="border-t border-gray-200 pt-4 text-gray-700 space-y-2">
               <div className="flex justify-between">
@@ -319,6 +318,7 @@ const AdmissionFormContent = () => {
           >
             {loading ? "Processing..." : "Pay Now →"}
           </button>
+          
         </div>
       </div>
     </div>
