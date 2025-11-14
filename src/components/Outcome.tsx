@@ -76,7 +76,7 @@ const Outcomes = () => {
       color: "orange"
     },
     {
-      title: "100% Job Assurance",
+      title: "1 year job support",
       description: "Get all the support to crack your dream tech job",
       icon: CheckCircle,
       color: "red"

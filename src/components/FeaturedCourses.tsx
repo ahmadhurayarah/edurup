@@ -27,7 +27,7 @@ const FeaturedCourses = () => {
   const allCourses = [
     // Software Courses
     {
-      title: "Data Science &  AI",
+      title: "Data Science with  AI",
       duration: "8 WEEKS",
       batchStart: "Nov 30, 2025",
       scholarship: "Yes",
@@ -37,7 +37,7 @@ const FeaturedCourses = () => {
       color: "blue",
       category: "software",
       features: [
-        "Get a industry certificate on completion of course",
+        "Get A industry certificate on completion of course",
         "Unlimited mock interviews for your interview practice",
         "Access to 1000+ coding challenges & Projects",
         "1 year placement support",
@@ -55,7 +55,7 @@ const FeaturedCourses = () => {
       color: "green",
       category: "software",
       features: [
-        "Get a industry certificate on completion of course",
+        "Get A industry certificate on completion of course",
         "Unlimited mock interviews for your interview practice",
         "Access to 1000+ coding challenges & Projects",
         "1 year placement support",
@@ -73,7 +73,7 @@ const FeaturedCourses = () => {
       color: "purple",
       category: "software",
       features: [
-        "Get a industry certificate on completion of course",
+        "Get A industry certificate on completion of course",
         "Unlimited mock interviews for your interview practice",
         "Access to 1000+ coding challenges & Projects",
         "1 year placement support",
@@ -92,7 +92,7 @@ const FeaturedCourses = () => {
       color: "orange",
       category: "business",
       features: [
-        "Get a professional certificate on completion of course",
+        "Get A professional certificate on completion of course",
         "Unlimited mock interviews for your interview practice",
         "Access to 10,000+ coding questions in our Arena",
         "100% Placement Assistance (Lifetime)",
@@ -110,7 +110,7 @@ const FeaturedCourses = () => {
       color: "red",
       category: "business",
       features: [
-        "Get a professional certificate on completion of course",
+        "Get A professional certificate on completion of course",
         "Unlimited mock interviews for your interview practice",
         "Access to 10,000+ coding questions in our Arena",
         "100% Placement Assistance (Lifetime)",
@@ -128,7 +128,7 @@ const FeaturedCourses = () => {
       color: "teal",
       category: "business",
       features: [
-        "Get a professional certificate on completion of course",
+        "Get A professional certificate on completion of course",
         "Unlimited mock interviews for your interview practice",
         "Access to 10,000+ coding questions in our Arena",
         "100% Placement Assistance (Lifetime)",
