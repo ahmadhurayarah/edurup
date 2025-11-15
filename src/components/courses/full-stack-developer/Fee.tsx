@@ -30,10 +30,10 @@ const Fee = () => {
               Limited Time Offer
             </div>
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-              Post Graduate Program <span className="text-green-600">Fee</span>
+              Certified Full Stack Developer <span className="text-green-600">Fee</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              30% Scholarship Available for eligible students
+              #1 Full Stack Developer Course For Student, Job seekers , Professionals
             </p>
           </div>
 
@@ -143,7 +143,7 @@ const Fee = () => {
               <div className="pt-4">
                 <button className="w-full bg-gradient-to-r from-green-500 to-emerald-600 text-white py-4 px-8 rounded-xl font-bold text-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 hover:from-green-600 hover:to-emerald-700">
                   <div className="flex items-center justify-center gap-3">
-                    <span>Apply Now - Limited Seats Available</span>
+                    <span>Enroll Now</span>
                     <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
                   </div>
                 </button>

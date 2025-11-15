@@ -317,7 +317,7 @@ export const dataScienceAICourseData = {
       {
         title: "Start Learning",
         description: [
-          "Pay 70,000 and join the course",
+          "Pay 14,000 and join the course",
           "Live Classes by Experts",
         ],
         image: "/learning1.svg",

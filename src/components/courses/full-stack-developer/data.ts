@@ -3,19 +3,19 @@ export const fullStackDeveloperCourseData = {
     name: "Full Stack Developer",
     code: "FSD-PGP",
     description:
-      "32-week online Full Stack Development Course with certification and 100% placement support.",
+      "8-week online Full Stack Development Course .Learn React, Node, Mongo DB, JavaScript.",
     duration: "8 weeks",
     durationISO: "P32W",
     timeRequired: "PT2H",
     mode: "online",
     language: "en",
     educationalLevel: "Professional",
-    startDate: "2025-11-01",
+    startDate: "2025-11-30",
     price: {
-      original: 100000,
-      discounted: 70000,
+      original: 20000,
+      discounted: 14000,
       currency: "INR",
-      emi: 10000,
+      emi: 5000,
       discountPercentage: 28,
       validUntil: "2025-12-31",
     },
@@ -37,8 +37,7 @@ export const fullStackDeveloperCourseData = {
     features: [
       { title: "Live", subtitle: "Sessions on Zoom" },
       { title: "8 Weeks", subtitle: "Course Duration" },
-      { title: "Mentorship", subtitle: "With Experienced Professionals" },
-      { title: "Placement", subtitle: "100% Support till Job" },
+      { title: "Placement", subtitle: "1 Year Support" },
     ],
   },
   provider: {
@@ -49,7 +48,7 @@ export const fullStackDeveloperCourseData = {
     backgroundColor: "#2B1F5F",
     textColor: "white",
     cohort: "14",
-    cohortStartDate: "Nov 1",
+    cohortStartDate: "Nov 30",
   },
   company: {
     heading: "500+ Companies have hired",
@@ -149,172 +148,210 @@ export const fullStackDeveloperCourseData = {
       color: "orange",
     },
   ],
+    faq: [
+      {
+      "question": "What is the Full Stack Developer Course offered in {city}?",
+      "answer": "This is an 8-week MERN Stack training program covering HTML, CSS, JavaScript, React, Node.js, MongoDB, and GitHub through live interactive classes."
+    },
+    {
+      "question": "What is the course fee?",
+      "answer": "The actual fee is ₹20,000, but after scholarship the final fee is ₹14,000."
+    },
+    {
+      "question": "Are the classes live or recorded?",
+      "answer": "All sessions are live interactive classes, with recordings provided after every session."
+    },
+    {
+      "question": "Do I need any coding experience before joining?",
+      "answer": "No. This program is designed for absolute beginners to intermediate learners. Basic computer knowledge is enough."
+    },
+    {
+      "question": "What is the duration of the course?",
+      "answer": "The course duration is 8 weeks (2 months)."
+    },
+    {
+      "question": "Will I get a certificate after completion?",
+      "answer": "Yes, you will receive a Full Stack Developer Course Completion Certificate."
+    },
+    {
+      "question": "What topics are covered in this course?",
+      "answer": "You will learn: HTML, CSS, JavaScript (Basic to Intermediate), React.js, Node.js & Express, MongoDB, Git & GitHub, MERN Integration, Deployment (Vercel / Render)."
+    },
+    {
+      "question": "What is the class schedule?",
+      "answer": "Flexible batches are available: Weekday live classes, Weekend live batches. Recordings are provided for all."
+    },
+    {
+      "question": "Will I work on real projects?",
+      "answer": "Yes. You will build mini-projects every week and a final MERN Stack Project."
+    },
+    {
+      "question": "Do you provide placement support?",
+      "answer": "Yes, the program includes: Resume building, Interview preparation, Placement assistance, Job referrals for full-stack roles."
+    },
+    {
+      "question": "What salary can I expect after this course?",
+      "answer": "Freshers typically start from ₹2.8 LPA to ₹4.5 LPA, depending on skills, projects, and interview performance."
+    },
+    {
+      "question": "Is the fee refundable?",
+      "answer": "No, the course fee is non-refundable, as seats are limited and classes are live."
+    },
+    {
+      "question": "Will I get support if I miss a class?",
+      "answer": "Yes. You will get: Class recording, Notes & assignments, Doubt clearing support."
+    },
+    {
+      "question": "How do I enroll in the course?",
+      "answer": "You can enroll by: Paying the registration fee, Blocking your seat in your preferred batch. A counselor will guide you through the entire process."
+    },
+    {
+      "question": "Is this course suitable for working professionals and students?",
+      "answer": "Yes. The course is structured to support: Students, Job seekers, Working professionals switching to IT, Beginners with zero coding background."
+    },
+],
   curriculum: [
     {
-      title: "HTML, CSS, and Git Basics",
-      duration: "2 weeks",
-      lessons: "8 lessons",
-      projects: "2 projects",
-      description: [
-        "HTML5: Structure, tags, semantic elements",
-        "CSS3: Selectors, Flexbox, Grid, Responsive Design",
-        "CSS Frameworks: Tailwind / Bootstrap",
-        "Git & GitHub: version control, repository, branching, commits",
-        "Mini Project: “Personal Portfolio Website",
-      ],
+        "title": "HTML & CSS",
+        "duration": "2 weeks",
+        "lessons": "10 modules",
+        "projects": "Build simple responsive webpages",
+        "description": [
+            "What is the Web? How websites work",
+            "HTML Basics",
+            "HTML5 Semantic Tags",
+            "Forms & Input types",
+            "CSS Basics",
+            "Box Model, Margins, Padding",
+            "Flexbox",
+            "CSS Grid",
+            "Responsive Design (Media Queries)",
+            "Basic Website Layouting"
+        ]
     },
     {
-      title: "JavaScript Fundamentals",
-      duration: "3 weeks",
-      lessons: "12 lessons",
-      projects: "3 projects",
-      description: [
-        "Variables, Data Types, Operators",
-        "Functions, Loops, Conditional statements",
-        "Arrays, Objects, ES6+ features (let/const, arrow functions, template literals)",
-        "DOM Manipulation & Events",
-        "Async JS: Promises, Async/Await",
-        "Mini Project: “Todo List App” (Vanilla JS)",
-      ],
+        "title": "JavaScript Fundamentals",
+        "duration": "2 weeks",
+        "lessons": "9 modules",
+        "projects": "Add interactivity to websites",
+        "description": [
+            "Variables, Datatypes",
+            "Operators",
+            "Conditional Statements",
+            "Loops",
+            "Functions",
+            "Arrays & Objects",
+            "DOM Manipulation",
+            "Events & Event Listeners",
+            "Form Validations"
+        ]
     },
     {
-      title: "React.js Basics",
-      duration: "4 weeks",
-      lessons: "16 lessons",
-      projects: "4 projects",
-      description: [
-        "React.js Basics",
-        "Functional Components & Hooks (useState, useEffect)",
-        "Event Handling, Lists, Conditional Rendering",
-        "Folder structure & environment setup",
-        "Mini Project: “Weather App using API",
-      ],
+        "title": "Advanced JavaScript + GitHub",
+        "duration": "2 weeks",
+        "lessons": "9 modules",
+        "projects": "Build API-based front-end logic",
+        "description": [
+            "ES6 Concepts (let, const, arrow functions)",
+            "Template literals",
+            "Spread & Rest",
+            "Destructuring",
+            "Callback, Promises, async/await",
+            "JSON & API Calls (fetch)",
+            "LocalStorage",
+            "Intro to Git",
+            "GitHub workflow (clone, commit, push, pull)"
+        ]
     },
     {
-      title: "Advanced React",
-      duration: "3 weeks",
-      lessons: "14 lessons",
-      projects: "3 projects",
-      description: [
-        "Advanced React",
-        "State Management with Redux Toolkit (optional)",
-        "API Integration with Axios / Fetch",
-        "Reusable components & UI design systems",
-        "Project 1: “E-commerce Frontend with React",
-      ],
+        "title": "React.js Basics",
+        "duration": "2 weeks",
+        "lessons": "9 modules",
+        "projects": "Create component-based dynamic UI",
+        "description": [
+            "What is React & why React",
+            "Vite/CRA Setup",
+            "JSX",
+            "Components",
+            "Props & State",
+            "Event Handling",
+            "Lists & Keys",
+            "Basic Forms",
+            "Component Styling (CSS Modules / Inline / Tailwind optional)"
+        ]
     },
     {
-      title: "Node.js Fundamentals",
-      duration: "2 weeks",
-      lessons: "10 lessons",
-      projects: "2 projects",
-      description: [
-        "Node.js Fundamentals",
-        "File System, Event Loop, Async Programming",
-        "Express.js introduction, Routes & Middleware",
-        "REST API basics",
-        "Mini Project: “Simple CRUD API",
-      ],
+        "title": "React.js Intermediate",
+        "duration": "2 weeks",
+        "lessons": "6 modules",
+        "projects": "Build real frontend applications with routing & APIs",
+        "description": [
+            "Hooks: useState, useEffect",
+            "React Router (Navigation)",
+            "API Integration using Axios",
+            "Controlled vs Uncontrolled Forms",
+            "Reusable components",
+            "React project folder structure"
+        ]
     },
     {
-      title: "MongoDB & Mongoose",
-      duration: "1 week",
-      lessons: "6 lessons",
-      projects: "1 project",
-      description: [
-        "NoSQL vs SQL databases",
-        "MongoDB CRUD Operations",
-        "Mongoose Schema, Models, and Validation",
-        "Relationship between collections (One-to-Many)",
-        "Mini Project: “Student Management API",
-      ],
+        "title": "Node.js & Express.js (Backend Fundamentals)",
+        "duration": "2 weeks",
+        "lessons": "9 modules",
+        "projects": "Develop backend REST APIs",
+        "description": [
+            "Intro to Node.js",
+            "NPM basics",
+            "Creating Express server",
+            "Routing",
+            "Middleware",
+            "Nodemon",
+            "REST API Basics",
+            "MVC Structure",
+            "Error Handling",
+            "Using Postman for testing"
+        ]
     },
     {
-      title: "Authentication & Authorization",
-      duration: "1 week",
-      lessons: "6 lessons",
-      projects: "1 project",
-      description: [
-        "JWT Authentication & Security concepts",
-        "Password Hashing (bcrypt)",
-        "Login/Signup functionality",
-        "Protecting routes & middleware authentication",
-        "Project 2: “User Auth System with JWT",
-      ],
+        "title": "MongoDB & Mongoose (Database Layer)",
+        "duration": "2 weeks",
+        "lessons": "9 modules",
+        "projects": "Build server + database applications",
+        "description": [
+            "NoSQL vs SQL",
+            "Introduction to MongoDB",
+            "Collections & Documents",
+            "CRUD Operations",
+            "Connecting Node with MongoDB",
+            "Mongoose Schema & Models",
+            "User & Product Models",
+            "Basic Authentication (Register/Login)",
+            "JWT Basics"
+        ]
     },
     {
-      title: "Advanced Backend",
-      duration: "1 week",
-      lessons: "6 lessons",
-      projects: "1 project",
-      description: [
-        "File uploads (Multer/Cloudinary)",
-        "Error handling & validation",
-        " Environment variables (.env)",
-        " API documentation using Postman / Swagger",
-        " Deploying backend on Render / Railway",
-        "Project 3: “Blog API”",
-      ],
+        "title": "MERN Integration + Deployment",
+        "duration": "2 weeks",
+        "lessons": "8 modules",
+        "projects": "Final Project Build",
+        "description": [
+            "Connecting React frontend to Node backend",
+            "Login + Signup UI → Backend API",
+            "Protected routes (basic auth)",
+            "Axios POST/GET Integration",
+            "Using .env",
+            "GitHub Complete Workflow",
+            "Deploy Frontend → Vercel",
+            "Deploy Backend → Render / Railway"
+        ],
     },
-    {
-      title: "MERN Integration",
-      duration: "1 week",
-      lessons: "6 lessons",
-      projects: "1 project",
-      description: [
-        "Connecting React frontend with Node.js backend",
-        "Using Axios for API calls",
-        "Handling CORS & environment setup",
-        "Authentication flow (Login/Logout on both sides)",
-        " Mini Project: “Notes App (Full Stack)”",
-      ],
-    },
-    {
-      title: "Real-World Full Stack Project",
-      duration: "1 week",
-      lessons: "6 lessons",
-      projects: "1 project",
-      description: [
-        "Project planning & folder structuring",
-        "Role-based authentication",
-        " CRUD Operations on both sides",
-        " Integrating image uploads, pagination, filters",
-        " Project 4: “Job Portal / Task Manager / E-Commerce App”",
-      ],
-    },
-    {
-      title: "Deployment & DevOps Basics",
-      duration: "1 week",
-      lessons: "6 lessons",
-      projects: "1 project",
-      description: [
-        "Deploying React app on Netlify/Vercel",
-        " Deploying backend on Render/Railway",
-        " Connecting MongoDB Atlas",
-        " Environment management, SSL, Domain setup",
-        // note: CI/CD line removed in source; keep as data-neutral
-      ],
-    },
-    {
-      title: "Interview & Placement Preparation",
-      duration: "1 week",
-      lessons: "6 lessons",
-      projects: "1 project",
-      description: [
-        " Resume & LinkedIn optimization",
-        " GitHub Portfolio & Projects review",
-        " Common MERN interview questions",
-        " Mock interviews, coding tests, and DSA basics",
-        " Final Project Presentation & Demo Day",
-      ],
-    },
-  ],
+],
   fee: {
     scholarship: {
       percentage: 30,
-      originalPrice: 100000,
-      discountedPrice: 70000,
-      emi: 10000,
+      originalPrice: 20000,
+      discountedPrice: 14000,
+      emi: 5000,
       gst: true,
     },
     features: [
@@ -334,7 +371,7 @@ export const fullStackDeveloperCourseData = {
         color: "text-purple-600",
       },
       {
-        description: "Job Guaranteed with Placement Services",
+        description: "1 Year Placement Supports",
         icon: "Shield",
         color: "text-orange-600",
       },
@@ -410,7 +447,7 @@ export const fullStackDeveloperCourseData = {
       {
         title: "Start Learning",
         description: [
-          "Pay 70,000 and join the course",
+          "Pay 14,000 and join the course",
           "Live Classes by Experts",
         ],
         image: "/learning1.svg",
@@ -451,28 +488,13 @@ export const fullStackDeveloperCourseData = {
   productAnalyst: {
     heading: "Your Future Job Title",
     titles: [
-      "Marketing\nAnalyst",
-      "Data\nAnalyst",
-      "Business\nAnalyst",
-      "Product\nAnalyst",
+      "UI\nDeveloper", "Backend\ndeveloper", "Software\nengineer", "Full stack\ndeveloper",
+
     ],
     salaries: {
-      average: "8-10 Lakhs",
-      highest: "31 Lakhs",
-      highestCompany: "Top Firms",
+      average: "3-6 Lakhs",
+      highest: "14 Lakhs",
+      highestCompany: "Eduru",
     },
   },
-  faq: [
-    {
-      question:
-        "What is the Full Stack Developer Course offered by Edurup Learning in {city}?",
-      answer:
-        "The Full Stack Developer Course in {city} by Edurup Learning is a job-ready, industry-oriented program covering front-end and back-end with live projects and placement support.",
-    },
-    {
-      question: "Who can apply for the Full Stack Developer course in {city}?",
-      answer:
-        "Fresh graduates, working professionals, and non-IT learners. No strict prior coding required.",
-    },
-  ],
 };
