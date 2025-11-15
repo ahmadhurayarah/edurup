@@ -14,111 +14,107 @@ import { dataScienceAICourseData } from "./data";
 
 const curriculum = dataScienceAICourseData.curriculum.length
   ? dataScienceAICourseData.curriculum
-  : [
+  :[
     {
-      "title": "Week 1: Introduction to Data Analytics",
+      "title": "Week 1: Introduction to Data Science & Python Basics",
       "duration": "1 week",
       "lessons": "5 modules",
-      "projects": "Industry applications overview",
+      "projects": "Simple data calculator using Python",
       "description": [
-        "What is Data Analytics?",
-        "Career Paths & Industry Applications",
-        "Understanding Data Types and Formats",
-        "Data Collection, Cleaning, and Preprocessing Basics",
-        "Tools Overview: Excel, SQL, Power BI, Tableau"
+        "What is Data Science? Industry scope & career paths",
+        "Installing Python & Jupyter Notebook",
+        "Python fundamentals: Data types, operators, loops, and conditions",
+        "Functions and libraries (NumPy, Pandas intro)",
+        "Mini Project: Simple data calculator using Python"
       ]
     },
     {
-      "title": "Week 2: Excel for Data Analytics – Basics",
+      "title": "Week 2: Data Handling with Python",
       "duration": "1 week",
       "lessons": "5 modules",
-      "projects": "Basic charts and data analysis",
+      "projects": "Clean and organize real-world eCommerce dataset",
       "description": [
-        "Excel Interface, Shortcuts, and Functions",
-        "Data Cleaning & Formatting Techniques",
-        "Sorting, Filtering, Conditional Formatting",
-        "Formulas: IF, COUNTIFS, SUMIFS, VLOOKUP, INDEX-MATCH",
-        "Basic Charts and Graphs"
+        "Working with NumPy arrays and Pandas DataFrames",
+        "Importing/exporting data (CSV, Excel, JSON)",
+        "Data cleaning and transformation",
+        "Handling missing data and duplicates",
+        "Mini Project: Clean and organize real-world eCommerce dataset"
       ]
     },
     {
-      "title": "Week 3: Advanced Excel & Dashboards",
+      "title": "Week 3: Exploratory Data Analysis (EDA) & Visualization",
       "duration": "1 week",
       "lessons": "5 modules",
-      "projects": "Sales Data Analysis Case Study",
+      "projects": "EDA on employee performance dataset",
       "description": [
-        "Advanced Formulas & Nested Functions",
-        "Data Validation & What-If Analysis",
-        "Pivot Tables & Pivot Charts",
-        "Excel Dashboards for Reporting",
-        "Case Study: Sales Data Analysis in Excel"
+        "Descriptive analysis and summary statistics",
+        "Correlation and feature relationships",
+        "Data visualization using Matplotlib & Seaborn",
+        "Identifying trends and outliers",
+        "Mini Project: EDA on employee performance dataset"
       ]
     },
     {
-      "title": "Week 4: SQL for Data Analytics – Basics",
-      "duration": "1 week",
-      "lessons": "5 modules",
-      "projects": "Real-time query practice",
-      "description": [
-        "Introduction to Databases & SQL",
-        "SELECT, WHERE, ORDER BY, LIMIT",
-        "Filtering and Sorting Data",
-        "Aggregate Functions: COUNT, SUM, AVG, MIN, MAX",
-        "Real-time Query Practice"
-      ]
-    },
-    {
-      "title": "Week 5: SQL – Advanced Queries",
-      "duration": "1 week",
-      "lessons": "5 modules",
-      "projects": "Company Sales Data Analysis",
-      "description": [
-        "Joins (INNER, LEFT, RIGHT, FULL)",
-        "Subqueries and CTEs",
-        "GROUP BY and HAVING",
-        "Data Manipulation (INSERT, UPDATE, DELETE)",
-        "SQL Project: Analyze Company Sales Data"
-      ]
-    },
-    {
-      "title": "Week 6: Power BI – Basics & Data Modeling",
-      "duration": "1 week",
-      "lessons": "5 modules",
-      "projects": "Data modeling with Power Query",
-      "description": [
-        "Introduction to Power BI Interface",
-        "Importing Data from Excel/SQL",
-        "Power Query Editor for Data Cleaning",
-        "Data Modeling & Relationships",
-        "DAX Functions for Calculations"
-      ]
-    },
-    {
-      "title": "Week 7: Power BI – Dashboard Development",
+      "title": "Week 4: Statistics & Probability for Data Science",
       "duration": "1 week",
       "lessons": "4 modules",
-      "projects": "Business Insights Dashboard",
+      "projects": "Data-driven business decision-making case study",
       "description": [
-        "Creating Interactive Dashboards",
-        "Slicers, Filters & Visual Formatting",
-        "Publishing & Sharing Reports",
-        "Power BI Project: Business Insights Dashboard"
+        "Mean, Median, Mode, Variance, Standard Deviation",
+        "Probability, distributions, and sampling",
+        "Hypothesis testing (t-test, chi-square)",
+        "Case Study: Data-driven business decision-making"
       ]
     },
     {
-      "title": "Week 8: Tableau for Data Visualization",
+      "title": "Week 5: Machine Learning Foundations",
       "duration": "1 week",
-      "lessons": "5 modules",
-      "projects": "Real-World Dataset Dashboard",
+      "lessons": "4 modules",
+      "projects": "Predict student exam results using regression",
       "description": [
-        "Introduction to Tableau Workspace",
-        "Connecting Excel/SQL Data",
-        "Charts: Bar, Line, Pie, Maps",
-        "Calculated Fields & Parameters",
-        "Tableau Dashboard Project: Real-World Dataset"
+        "What is Machine Learning?",
+        "Linear & Logistic Regression",
+        "Data splitting (train/test), accuracy metrics",
+        "Mini Project: Predict student exam results using regression"
+      ]
+    },
+    {
+      "title": "Week 6: Advanced Machine Learning",
+      "duration": "1 week",
+      "lessons": "4 modules",
+      "projects": "Predict customer churn using classification",
+      "description": [
+        "Decision Trees, Random Forest, KNN",
+        "Overfitting, model optimization",
+        "Feature engineering & scaling",
+        "Mini Project: Predict customer churn using classification"
+      ]
+    },
+    {
+      "title": "Week 7: SQL for Data Analysis",
+      "duration": "1 week",
+      "lessons": "4 modules",
+      "projects": "Analyze company sales and profit data using SQL",
+      "description": [
+        "SQL basics: SELECT, WHERE, GROUP BY, ORDER BY",
+        "JOINS, Subqueries, and Aggregations",
+        "Querying large datasets efficiently",
+        "Mini Project: Analyze company sales and profit data using SQL"
+      ]
+    },
+    {
+      "title": "Week 8: Real-World Case Studies & Projects",
+      "duration": "1 week",
+      "lessons": "4 modules",
+      "projects": "Final mini projects submission",
+      "description": [
+        "End-to-End data workflow with Python and SQL",
+        "Real-world data cleaning and prediction exercises",
+        "Evaluation & feedback by mentor",
+        "Submission of final mini projects"
       ],
     },
-  ];
+];
 
 const Curriculum = () => {
   const [expandedModule, setExpandedModule] = useState<number | null>(null);

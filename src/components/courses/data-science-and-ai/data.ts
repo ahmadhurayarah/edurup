@@ -128,168 +128,105 @@ export const dataScienceAICourseData = {
   ],
   curriculum: [
     {
-      title: "Python Fundamentals",
-      duration: "2 weeks",
-      lessons: "10 lessons",
-      projects: "1 mini project",
-      description: [
-        "Python Basics: Syntax, Variables, Data Types",
-        "Conditional Statements, Loops, Functions",
-        "Lists, Tuples, Sets, Dictionaries",
-        "File Handling & Exception Handling",
-        "Mini Project: “Student Result Calculator”",
-      ],
+      "title": "Week 1: Introduction to Data Science & Python Basics",
+      "duration": "1 week",
+      "lessons": "5 modules",
+      "projects": "Simple data calculator using Python",
+      "description": [
+        "What is Data Science? Industry scope & career paths",
+        "Installing Python & Jupyter Notebook",
+        "Python fundamentals: Data types, operators, loops, and conditions",
+        "Functions and libraries (NumPy, Pandas intro)",
+        "Mini Project: Simple data calculator using Python"
+      ]
     },
     {
-      title: "Data Analysis with NumPy & Pandas",
-      duration: "3 weeks",
-      lessons: "12 lessons",
-      projects: "1 mini project",
-      description: [
-        "NumPy Arrays, Operations, Broadcasting",
-        "Pandas DataFrames, Series, Indexing",
-        "Data Cleaning, Handling Missing Values, Filtering",
-        "Merging, Grouping, and Aggregations",
-        "Mini Project: “Analyze Sales Data (Excel/CSV)”",
-      ],
+      "title": "Week 2: Data Handling with Python",
+      "duration": "1 week",
+      "lessons": "5 modules",
+      "projects": "Clean and organize real-world eCommerce dataset",
+      "description": [
+        "Working with NumPy arrays and Pandas DataFrames",
+        "Importing/exporting data (CSV, Excel, JSON)",
+        "Data cleaning and transformation",
+        "Handling missing data and duplicates",
+        "Mini Project: Clean and organize real-world eCommerce dataset"
+      ]
     },
     {
-      title: "Data Visualization",
-      duration: "2 weeks",
-      lessons: "10 lessons",
-      projects: "1 project",
-      description: [
-        "Matplotlib & Seaborn for plotting",
-        "Line, Bar, Pie, Scatter, Heatmaps",
-        "Real-world dataset visualization (Kaggle Datasets)",
-        "Project: “Exploratory Data Analysis on Covid / Netflix Dataset”",
-      ],
+      "title": "Week 3: Exploratory Data Analysis (EDA) & Visualization",
+      "duration": "1 week",
+      "lessons": "5 modules",
+      "projects": "EDA on employee performance dataset",
+      "description": [
+        "Descriptive analysis and summary statistics",
+        "Correlation and feature relationships",
+        "Data visualization using Matplotlib & Seaborn",
+        "Identifying trends and outliers",
+        "Mini Project: EDA on employee performance dataset"
+      ]
     },
     {
-      title: "Statistics & Probability for Data Science",
-      duration: "2 weeks",
-      lessons: "10 lessons",
-      projects: "1 project",
-      description: [
-        "Descriptive Statistics (Mean, Median, Mode, Variance, SD)",
-        "Probability, Permutations & Combinations",
-        "Correlation, Covariance",
-        "Normal Distribution, Hypothesis Testing (t-test, chi-square)",
-        "Project: “Statistical Analysis on Real Dataset”",
-      ],
+      "title": "Week 4: Statistics & Probability for Data Science",
+      "duration": "1 week",
+      "lessons": "4 modules",
+      "projects": "Data-driven business decision-making case study",
+      "description": [
+        "Mean, Median, Mode, Variance, Standard Deviation",
+        "Probability, distributions, and sampling",
+        "Hypothesis testing (t-test, chi-square)",
+        "Case Study: Data-driven business decision-making"
+      ]
     },
     {
-      title: "Introduction to Machine Learning",
-      duration: "2 weeks",
-      lessons: "10 lessons",
-      projects: "1 mini project",
-      description: [
-        "What is ML? Supervised vs Unsupervised Learning",
-        "Data Preprocessing: Encoding, Scaling, Splitting",
-        "Evaluation Metrics: Accuracy, Precision, Recall, F1",
-        "ML Pipeline & Workflow",
-        "Mini Project: “Predict Student Scores”",
-      ],
+      "title": "Week 5: Machine Learning Foundations",
+      "duration": "1 week",
+      "lessons": "4 modules",
+      "projects": "Predict student exam results using regression",
+      "description": [
+        "What is Machine Learning?",
+        "Linear & Logistic Regression",
+        "Data splitting (train/test), accuracy metrics",
+        "Mini Project: Predict student exam results using regression"
+      ]
     },
     {
-      title: "Supervised Learning – Regression",
-      duration: "2 weeks",
-      lessons: "8 lessons",
-      projects: "1 project",
-      description: [
-        "Linear Regression, Polynomial Regression",
-        "Ridge & Lasso Regularization",
-        "Model Evaluation: R², RMSE",
-        "Project: “House Price Prediction”",
-      ],
+      "title": "Week 6: Advanced Machine Learning",
+      "duration": "1 week",
+      "lessons": "4 modules",
+      "projects": "Predict customer churn using classification",
+      "description": [
+        "Decision Trees, Random Forest, KNN",
+        "Overfitting, model optimization",
+        "Feature engineering & scaling",
+        "Mini Project: Predict customer churn using classification"
+      ]
     },
     {
-      title: "Supervised Learning – Classification",
-      duration: "3 weeks",
-      lessons: "12 lessons",
-      projects: "1 project",
-      description: [
-        "Logistic Regression, KNN, Decision Tree, Random Forest",
-        "SVM, Naïve Bayes",
-        "Cross Validation & Hyperparameter Tuning (GridSearchCV)",
-        "Project: “Loan Approval / Diabetes Prediction”",
-      ],
+      "title": "Week 7: SQL for Data Analysis",
+      "duration": "1 week",
+      "lessons": "4 modules",
+      "projects": "Analyze company sales and profit data using SQL",
+      "description": [
+        "SQL basics: SELECT, WHERE, GROUP BY, ORDER BY",
+        "JOINS, Subqueries, and Aggregations",
+        "Querying large datasets efficiently",
+        "Mini Project: Analyze company sales and profit data using SQL"
+      ]
     },
     {
-      title: "Unsupervised Learning",
-      duration: "2 weeks",
-      lessons: "10 lessons",
-      projects: "1 project",
-      description: [
-        "Clustering: K-Means, Hierarchical",
-        "Dimensionality Reduction: PCA",
-        "Anomaly Detection & Customer Segmentation",
-        "Project: “Customer Segmentation for Marketing”",
+      "title": "Week 8: Real-World Case Studies & Projects",
+      "duration": "1 week",
+      "lessons": "4 modules",
+      "projects": "Final mini projects submission",
+      "description": [
+        "End-to-End data workflow with Python and SQL",
+        "Real-world data cleaning and prediction exercises",
+        "Evaluation & feedback by mentor",
+        "Submission of final mini projects"
       ],
     },
-    {
-      title: "Introduction to Neural Networks",
-      duration: "2 weeks",
-      lessons: "10 lessons",
-      projects: "1 project",
-      description: [
-        "What is Deep Learning? Perceptron Concept",
-        "Activation Functions (ReLU, Sigmoid, Softmax)",
-        "Building Neural Networks with TensorFlow/Keras",
-        "Project: “Handwritten Digit Recognition (MNIST)”",
-      ],
-    },
-    {
-      title: "Convolutional Neural Networks (CNN)",
-      duration: "2 weeks",
-      lessons: "8 lessons",
-      projects: "1 project",
-      description: [
-        "Image Data Preprocessing",
-        "CNN Architecture (Conv, Pooling, Flatten, Dense)",
-        "Data Augmentation",
-        "Project: “Image Classification using CNN”",
-      ],
-    },
-    {
-      title: "Natural Language Processing (NLP)",
-      duration: "2 weeks",
-      lessons: "8 lessons",
-      projects: "1 project",
-      description: [
-        "Text Preprocessing (Tokenization, Lemmatization)",
-        "Bag of Words, TF-IDF",
-        "Sentiment Analysis with Logistic Regression",
-        "Project: “Twitter Sentiment Analysis / Movie Review Classification”",
-      ],
-    },
-    {
-      title: "Model Deployment & Career Readiness",
-      duration: "2 weeks",
-      lessons: "10 lessons",
-      projects: "1 final project",
-      description: [
-        "Flask / Streamlit for Model Deployment",
-        "Deploy on Render / Hugging Face Spaces",
-        "GitHub Project Upload & Documentation",
-        "Resume Building & Interview Prep",
-        "Final Project Demo: “AI-Powered Data Science Capstone”",
-      ],
-    },
-    {
-      title: "Final Projects (Choose Any 2–3 for Portfolio)",
-      duration: "—",
-      lessons: "—",
-      projects: "3 projects",
-      description: [
-        "House Price Prediction",
-        "Customer Segmentation Dashboard",
-        "Sentiment Analysis (Twitter / Reviews)",
-        "Image Classification (CNN)",
-        "Sales Forecasting using Time Series",
-      ],
-    },
-  ],
+],
   curriculumHighlights: {
     duration: "8 weeks",
     format: "Live + Recorded",
